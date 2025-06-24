@@ -1,0 +1,1314 @@
+
+[24/06/2025 10:46:05] Action requested: list
+[24/06/2025 10:46:05] Database connection successful
+[24/06/2025 10:46:05] Subcontractor column already exists in attendees table
+[24/06/2025 10:46:05] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:46:05] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:46:05] Action requested: list
+[24/06/2025 10:46:05] Database connection successful
+[24/06/2025 10:46:05] Subcontractor column already exists in attendees table
+[24/06/2025 10:46:05] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:46:05] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:46:25] Action requested: list
+[24/06/2025 10:46:25] Database connection successful
+[24/06/2025 10:46:25] Subcontractor column already exists in attendees table
+[24/06/2025 10:46:25] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:46:25] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:46:39] Action requested: list
+[24/06/2025 10:46:39] Database connection successful
+[24/06/2025 10:46:39] Subcontractor column already exists in attendees table
+[24/06/2025 10:46:39] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:46:39] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:46:47] Action requested: list
+[24/06/2025 10:46:47] Database connection successful
+[24/06/2025 10:46:47] Subcontractor column already exists in attendees table
+[24/06/2025 10:46:47] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:46:47] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:46:58] Action requested: list
+[24/06/2025 10:46:58] Database connection successful
+[24/06/2025 10:46:58] Subcontractor column already exists in attendees table
+[24/06/2025 10:46:58] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:46:58] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:47:18] Action requested: list
+[24/06/2025 10:47:18] Database connection successful
+[24/06/2025 10:47:18] Subcontractor column already exists in attendees table
+[24/06/2025 10:47:18] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:47:18] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:47:55] Action requested: list
+[24/06/2025 10:47:55] Database connection successful
+[24/06/2025 10:47:55] Subcontractor column already exists in attendees table
+[24/06/2025 10:47:55] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:47:55] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:52:14] Action requested: list
+[24/06/2025 10:52:14] Database connection successful
+[24/06/2025 10:52:14] Subcontractor column already exists in attendees table
+[24/06/2025 10:52:14] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:52:14] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:52:17] Action requested: list
+[24/06/2025 10:52:17] Database connection successful
+[24/06/2025 10:52:17] Subcontractor column already exists in attendees table
+[24/06/2025 10:52:17] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:52:17] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:55:18] Action requested: list
+[24/06/2025 10:55:18] Database connection successful
+[24/06/2025 10:55:18] Subcontractor column already exists in attendees table
+[24/06/2025 10:55:18] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:55:18] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:57:02] Action requested: list
+[24/06/2025 10:57:02] Database connection successful
+[24/06/2025 10:57:02] Subcontractor column already exists in attendees table
+[24/06/2025 10:57:02] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:57:02] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:57:03] Action requested: list
+[24/06/2025 10:57:03] Database connection successful
+[24/06/2025 10:57:03] Subcontractor column already exists in attendees table
+[24/06/2025 10:57:03] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:57:03] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:57:52] Action requested: list
+[24/06/2025 10:57:52] Database connection successful
+[24/06/2025 10:57:52] Subcontractor column already exists in attendees table
+[24/06/2025 10:57:52] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:57:52] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 10:59:00] Action requested: list
+[24/06/2025 10:59:00] Database connection successful
+[24/06/2025 10:59:00] Subcontractor column already exists in attendees table
+[24/06/2025 10:59:00] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:59:00] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:01:26] Action requested: list
+[24/06/2025 11:01:26] Database connection successful
+[24/06/2025 11:01:26] Subcontractor column already exists in attendees table
+[24/06/2025 11:01:26] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:01:26] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:01:27] Action requested: list
+[24/06/2025 11:01:27] Database connection successful
+[24/06/2025 11:01:27] Subcontractor column already exists in attendees table
+[24/06/2025 11:01:27] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:01:27] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:02:16] Action requested: list
+[24/06/2025 11:02:16] Database connection successful
+[24/06/2025 11:02:16] Subcontractor column already exists in attendees table
+[24/06/2025 11:02:16] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:02:16] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:03:11] Action requested: list
+[24/06/2025 11:03:11] Database connection successful
+[24/06/2025 11:03:11] Subcontractor column already exists in attendees table
+[24/06/2025 11:03:11] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:03:11] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:11:12] Action requested: list
+[24/06/2025 11:11:12] Database connection successful
+[24/06/2025 11:11:12] Subcontractor column already exists in attendees table
+[24/06/2025 11:11:12] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:11:12] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:11:20] Action requested: list
+[24/06/2025 11:11:20] Database connection successful
+[24/06/2025 11:11:21] Subcontractor column already exists in attendees table
+[24/06/2025 11:11:21] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:11:21] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:11:28] Action requested: list
+[24/06/2025 11:11:28] Database connection successful
+[24/06/2025 11:11:28] Subcontractor column already exists in attendees table
+[24/06/2025 11:11:28] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:11:28] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:13:08] Action requested: list
+[24/06/2025 11:13:08] Database connection successful
+[24/06/2025 11:13:08] Subcontractor column already exists in attendees table
+[24/06/2025 11:13:08] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:13:08] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:14:51] Action requested: list
+[24/06/2025 11:14:51] Database connection successful
+[24/06/2025 11:14:51] Subcontractor column already exists in attendees table
+[24/06/2025 11:14:51] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:14:51] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:14:51] Action requested: list
+[24/06/2025 11:14:51] Database connection successful
+[24/06/2025 11:14:51] Subcontractor column already exists in attendees table
+[24/06/2025 11:14:51] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:14:51] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:15:12] Action requested: list
+[24/06/2025 11:15:12] Database connection successful
+[24/06/2025 11:15:12] Subcontractor column already exists in attendees table
+[24/06/2025 11:15:12] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:15:12] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:22:01] Action requested: list
+[24/06/2025 11:22:01] Database connection successful
+[24/06/2025 11:22:01] Subcontractor column already exists in attendees table
+[24/06/2025 11:22:01] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:22:01] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:22:56] Action requested: list
+[24/06/2025 11:22:56] Database connection successful
+[24/06/2025 11:22:56] Subcontractor column already exists in attendees table
+[24/06/2025 11:22:56] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:22:56] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:22:56] Action requested: list
+[24/06/2025 11:22:56] Database connection successful
+[24/06/2025 11:22:56] Subcontractor column already exists in attendees table
+[24/06/2025 11:22:56] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:22:56] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:23:09] Action requested: list
+[24/06/2025 11:23:09] Database connection successful
+[24/06/2025 11:23:09] Subcontractor column already exists in attendees table
+[24/06/2025 11:23:09] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:23:09] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 11:23:19] Action requested: list
+[24/06/2025 11:23:19] Database connection successful
+[24/06/2025 11:23:19] Subcontractor column already exists in attendees table
+[24/06/2025 11:23:19] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:23:19] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 14:43:41] Authentication failed - user not logged in
+[24/06/2025 14:50:50] Authentication failed - user not logged in
+[24/06/2025 14:53:12] Action requested: list
+[24/06/2025 14:53:12] Database connection successful
+[24/06/2025 14:53:12] Subcontractor column already exists in attendees table
+[24/06/2025 14:53:12] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:53:12] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 12
+)
+
+[24/06/2025 14:54:36] Action requested: delete
+[24/06/2025 14:54:36] Database connection successful
+[24/06/2025 14:54:36] Subcontractor column already exists in attendees table
+[24/06/2025 14:54:36] Deleting attendee: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-04
+    [id] => 45
+    [name] => Anthony Titiosho
+)
+
+[24/06/2025 14:54:36] Deleted attendee result: Array
+(
+    [id] => 45
+    [name] => Anthony Titiosho
+    [rows_affected] => 1
+)
+
+[24/06/2025 14:54:36] Action requested: list
+[24/06/2025 14:54:36] Database connection successful
+[24/06/2025 14:54:36] Subcontractor column already exists in attendees table
+[24/06/2025 14:54:36] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:54:36] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 11
+)
+
+[24/06/2025 14:55:31] Action requested: list
+[24/06/2025 14:55:31] Database connection successful
+[24/06/2025 14:55:31] Subcontractor column already exists in attendees table
+[24/06/2025 14:55:31] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:55:31] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 11
+)
+
+[24/06/2025 14:55:31] Action requested: list
+[24/06/2025 14:55:31] Database connection successful
+[24/06/2025 14:55:31] Subcontractor column already exists in attendees table
+[24/06/2025 14:55:31] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:55:31] Found today attendees and previous attendees: Array
+(
+    [today_count] => 0
+    [previous_count] => 11
+)
+
+[24/06/2025 14:55:40] Action requested: add
+[24/06/2025 14:55:40] Database connection successful
+[24/06/2025 14:55:40] Subcontractor column already exists in attendees table
+[24/06/2025 14:55:40] Adding attendee: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+    [name] => Alex Stratulat
+    [subcontractor] => Panacea
+)
+
+[24/06/2025 14:55:40] Added attendee successfully: Array
+(
+    [id] => 68
+    [name] => Alex Stratulat
+    [subcontractor] => Panacea
+)
+
+[24/06/2025 14:55:41] Action requested: list
+[24/06/2025 14:55:41] Database connection successful
+[24/06/2025 14:55:41] Subcontractor column already exists in attendees table
+[24/06/2025 14:55:41] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:55:41] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 14:56:48] Action requested: list
+[24/06/2025 14:56:48] Database connection successful
+[24/06/2025 14:56:48] Subcontractor column already exists in attendees table
+[24/06/2025 14:56:48] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:56:48] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:01:13] Action requested: list
+[24/06/2025 15:01:13] Database connection successful
+[24/06/2025 15:01:13] Subcontractor column already exists in attendees table
+[24/06/2025 15:01:13] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:01:13] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:01:15] Action requested: list
+[24/06/2025 15:01:15] Database connection successful
+[24/06/2025 15:01:15] Subcontractor column already exists in attendees table
+[24/06/2025 15:01:15] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:01:15] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:02:21] Action requested: list
+[24/06/2025 15:02:21] Database connection successful
+[24/06/2025 15:02:21] Subcontractor column already exists in attendees table
+[24/06/2025 15:02:21] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:02:21] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:21:26] Action requested: list
+[24/06/2025 15:21:26] Database connection successful
+[24/06/2025 15:21:26] Subcontractor column already exists in attendees table
+[24/06/2025 15:21:26] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:21:26] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:23:12] Action requested: list
+[24/06/2025 15:23:12] Database connection successful
+[24/06/2025 15:23:12] Subcontractor column already exists in attendees table
+[24/06/2025 15:23:12] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:23:12] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:23:19] Action requested: list
+[24/06/2025 15:23:19] Database connection successful
+[24/06/2025 15:23:19] Subcontractor column already exists in attendees table
+[24/06/2025 15:23:19] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:23:19] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:30:56] Action requested: list
+[24/06/2025 15:30:56] Database connection successful
+[24/06/2025 15:30:56] Subcontractor column already exists in attendees table
+[24/06/2025 15:30:56] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:30:56] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:30:57] Action requested: list
+[24/06/2025 15:30:57] Database connection successful
+[24/06/2025 15:30:57] Subcontractor column already exists in attendees table
+[24/06/2025 15:30:57] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:30:57] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:31:22] Action requested: list
+[24/06/2025 15:31:22] Database connection successful
+[24/06/2025 15:31:22] Subcontractor column already exists in attendees table
+[24/06/2025 15:31:22] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:22] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:31:22] Action requested: list
+[24/06/2025 15:31:22] Database connection successful
+[24/06/2025 15:31:22] Subcontractor column already exists in attendees table
+[24/06/2025 15:31:22] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:22] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:31:53] Action requested: list
+[24/06/2025 15:31:53] Database connection successful
+[24/06/2025 15:31:53] Subcontractor column already exists in attendees table
+[24/06/2025 15:31:53] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:53] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:31:54] Action requested: list
+[24/06/2025 15:31:54] Database connection successful
+[24/06/2025 15:31:54] Subcontractor column already exists in attendees table
+[24/06/2025 15:31:54] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:54] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:32:29] Action requested: list
+[24/06/2025 15:32:29] Database connection successful
+[24/06/2025 15:32:29] Subcontractor column already exists in attendees table
+[24/06/2025 15:32:29] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:32:29] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:32:32] Action requested: list
+[24/06/2025 15:32:32] Database connection successful
+[24/06/2025 15:32:32] Subcontractor column already exists in attendees table
+[24/06/2025 15:32:32] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:32:32] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:32:45] Action requested: list
+[24/06/2025 15:32:45] Database connection successful
+[24/06/2025 15:32:45] Subcontractor column already exists in attendees table
+[24/06/2025 15:32:45] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:32:45] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:34:17] Action requested: list
+[24/06/2025 15:34:17] Database connection successful
+[24/06/2025 15:34:17] Subcontractor column already exists in attendees table
+[24/06/2025 15:34:17] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:17] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:34:18] Action requested: list
+[24/06/2025 15:34:18] Database connection successful
+[24/06/2025 15:34:18] Subcontractor column already exists in attendees table
+[24/06/2025 15:34:18] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:18] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:34:43] Action requested: list
+[24/06/2025 15:34:43] Database connection successful
+[24/06/2025 15:34:43] Subcontractor column already exists in attendees table
+[24/06/2025 15:34:43] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:43] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:34:43] Action requested: list
+[24/06/2025 15:34:43] Database connection successful
+[24/06/2025 15:34:43] Subcontractor column already exists in attendees table
+[24/06/2025 15:34:43] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:43] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:35:04] Action requested: list
+[24/06/2025 15:35:04] Database connection successful
+[24/06/2025 15:35:04] Subcontractor column already exists in attendees table
+[24/06/2025 15:35:04] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:35:04] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:35:04] Action requested: list
+[24/06/2025 15:35:04] Database connection successful
+[24/06/2025 15:35:04] Subcontractor column already exists in attendees table
+[24/06/2025 15:35:04] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:35:04] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:35:28] Action requested: list
+[24/06/2025 15:35:28] Database connection successful
+[24/06/2025 15:35:28] Subcontractor column already exists in attendees table
+[24/06/2025 15:35:28] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:35:28] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:46:51] Action requested: list
+[24/06/2025 15:46:51] Database connection successful
+[24/06/2025 15:46:51] Subcontractor column already exists in attendees table
+[24/06/2025 15:46:51] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:46:51] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:46:52] Action requested: list
+[24/06/2025 15:46:52] Database connection successful
+[24/06/2025 15:46:52] Subcontractor column already exists in attendees table
+[24/06/2025 15:46:52] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:46:52] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 15:48:06] Action requested: list
+[24/06/2025 15:48:06] Database connection successful
+[24/06/2025 15:48:06] Subcontractor column already exists in attendees table
+[24/06/2025 15:48:06] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:48:06] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 16:10:39] Action requested: list
+[24/06/2025 16:10:39] Database connection successful
+[24/06/2025 16:10:39] Subcontractor column already exists in attendees table
+[24/06/2025 16:10:39] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:10:39] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 16:10:40] Action requested: list
+[24/06/2025 16:10:40] Database connection successful
+[24/06/2025 16:10:40] Subcontractor column already exists in attendees table
+[24/06/2025 16:10:40] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:10:40] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 16:23:58] Action requested: list
+[24/06/2025 16:23:58] Database connection successful
+[24/06/2025 16:23:58] Subcontractor column already exists in attendees table
+[24/06/2025 16:23:58] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:23:58] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 16:24:32] Action requested: list
+[24/06/2025 16:24:32] Database connection successful
+[24/06/2025 16:24:32] Subcontractor column already exists in attendees table
+[24/06/2025 16:24:32] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:24:32] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 16:33:25] Action requested: list
+[24/06/2025 16:33:25] Database connection successful
+[24/06/2025 16:33:25] Subcontractor column already exists in attendees table
+[24/06/2025 16:33:25] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:33:25] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 16:33:29] Action requested: list
+[24/06/2025 16:33:29] Database connection successful
+[24/06/2025 16:33:29] Subcontractor column already exists in attendees table
+[24/06/2025 16:33:29] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:33:29] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:41:27] Action requested: list
+[24/06/2025 18:41:27] Database connection successful
+[24/06/2025 18:41:27] Subcontractor column already exists in attendees table
+[24/06/2025 18:41:27] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:41:27] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:42:26] Action requested: list
+[24/06/2025 18:42:26] Database connection successful
+[24/06/2025 18:42:26] Subcontractor column already exists in attendees table
+[24/06/2025 18:42:26] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:42:26] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:47:54] Action requested: list
+[24/06/2025 18:47:54] Database connection successful
+[24/06/2025 18:47:54] Subcontractor column already exists in attendees table
+[24/06/2025 18:47:54] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:47:54] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:47:55] Action requested: list
+[24/06/2025 18:47:55] Database connection successful
+[24/06/2025 18:47:55] Subcontractor column already exists in attendees table
+[24/06/2025 18:47:55] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:47:55] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:48:06] Action requested: list
+[24/06/2025 18:48:06] Database connection successful
+[24/06/2025 18:48:06] Subcontractor column already exists in attendees table
+[24/06/2025 18:48:06] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:48:06] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:48:12] Action requested: list
+[24/06/2025 18:48:12] Database connection successful
+[24/06/2025 18:48:12] Subcontractor column already exists in attendees table
+[24/06/2025 18:48:12] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:48:12] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:55:31] Action requested: list
+[24/06/2025 18:55:31] Database connection successful
+[24/06/2025 18:55:31] Subcontractor column already exists in attendees table
+[24/06/2025 18:55:31] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:55:31] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:58:23] Action requested: list
+[24/06/2025 18:58:23] Database connection successful
+[24/06/2025 18:58:23] Subcontractor column already exists in attendees table
+[24/06/2025 18:58:23] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:58:23] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:58:24] Action requested: list
+[24/06/2025 18:58:24] Database connection successful
+[24/06/2025 18:58:24] Subcontractor column already exists in attendees table
+[24/06/2025 18:58:24] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:58:24] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 18:58:30] Action requested: list
+[24/06/2025 18:58:30] Database connection successful
+[24/06/2025 18:58:30] Subcontractor column already exists in attendees table
+[24/06/2025 18:58:30] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:58:30] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 19:00:34] Action requested: list
+[24/06/2025 19:00:34] Database connection successful
+[24/06/2025 19:00:34] Subcontractor column already exists in attendees table
+[24/06/2025 19:00:34] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:00:34] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 19:00:34] Action requested: list
+[24/06/2025 19:00:34] Database connection successful
+[24/06/2025 19:00:34] Subcontractor column already exists in attendees table
+[24/06/2025 19:00:34] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:00:34] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 19:04:38] Action requested: list
+[24/06/2025 19:04:38] Database connection successful
+[24/06/2025 19:04:38] Subcontractor column already exists in attendees table
+[24/06/2025 19:04:38] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:04:38] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 19:05:03] Action requested: list
+[24/06/2025 19:05:03] Database connection successful
+[24/06/2025 19:05:03] Subcontractor column already exists in attendees table
+[24/06/2025 19:05:03] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:05:03] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 19:07:24] Action requested: list
+[24/06/2025 19:07:24] Database connection successful
+[24/06/2025 19:07:24] Subcontractor column already exists in attendees table
+[24/06/2025 19:07:24] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:07:24] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 19:09:47] Action requested: list
+[24/06/2025 19:09:47] Database connection successful
+[24/06/2025 19:09:47] Subcontractor column already exists in attendees table
+[24/06/2025 19:09:47] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:09:47] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+
+[24/06/2025 19:09:49] Action requested: list
+[24/06/2025 19:09:49] Database connection successful
+[24/06/2025 19:09:49] Subcontractor column already exists in attendees table
+[24/06/2025 19:09:49] Listing attendees for date: Array
+(
+    [project_id] => 1
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:09:49] Found today attendees and previous attendees: Array
+(
+    [today_count] => 1
+    [previous_count] => 11
+)
+

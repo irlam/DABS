@@ -1,0 +1,6692 @@
+
+[24/06/2025 10:57:03] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 10:57:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.146
+    [timestamp] => 24/06/2025 10:57:03
+)
+
+[24/06/2025 10:57:03] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:57:03] POST parameters: Array
+(
+)
+
+[24/06/2025 10:57:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:57:03] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:03
+)
+
+[24/06/2025 10:57:03] Processing LIST action
+[24/06/2025 10:57:03] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:03] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 10:57:03] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 10:57:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.146
+    [timestamp] => 24/06/2025 10:57:03
+)
+
+[24/06/2025 10:57:03] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:57:03] POST parameters: Array
+(
+)
+
+[24/06/2025 10:57:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:57:03] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:03
+)
+
+[24/06/2025 10:57:03] Processing LIST action
+[24/06/2025 10:57:03] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:03] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 10:57:25] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 10:57:25] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.147
+    [timestamp] => 24/06/2025 10:57:25
+)
+
+[24/06/2025 10:57:25] GET parameters: Array
+(
+)
+
+[24/06/2025 10:57:25] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 10:57:25] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:25] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 10:57:25] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:25
+)
+
+[24/06/2025 10:57:25] Processing ADD action
+[24/06/2025 10:57:25] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => mmm
+)
+
+[24/06/2025 10:57:25] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 10:57:44] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 10:57:44] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.146
+    [timestamp] => 24/06/2025 10:57:44
+)
+
+[24/06/2025 10:57:44] GET parameters: Array
+(
+)
+
+[24/06/2025 10:57:44] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 10:57:44] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:44] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 10:57:44] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:44
+)
+
+[24/06/2025 10:57:44] Processing ADD action
+[24/06/2025 10:57:44] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => mmm
+)
+
+[24/06/2025 10:57:44] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 10:57:52] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 10:57:52] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.146
+    [timestamp] => 24/06/2025 10:57:52
+)
+
+[24/06/2025 10:57:52] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:57:52] POST parameters: Array
+(
+)
+
+[24/06/2025 10:57:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:52] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:57:52] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:52
+)
+
+[24/06/2025 10:57:52] Processing LIST action
+[24/06/2025 10:57:52] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:52] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:52] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 10:59:01] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 10:59:01] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.163.101
+    [timestamp] => 24/06/2025 10:59:01
+)
+
+[24/06/2025 10:59:01] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 10:59:01] POST parameters: Array
+(
+)
+
+[24/06/2025 10:59:01] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:59:01] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:59:01] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:59:01
+)
+
+[24/06/2025 10:59:01] Processing LIST action
+[24/06/2025 10:59:01] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:59:01] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 10:59:01] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:01:26] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:01:26] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:01:26
+)
+
+[24/06/2025 11:01:26] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:01:26] POST parameters: Array
+(
+)
+
+[24/06/2025 11:01:26] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:26] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:01:26] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:01:26
+)
+
+[24/06/2025 11:01:26] Processing LIST action
+[24/06/2025 11:01:26] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:26] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:26] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:01:27] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:01:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.252
+    [timestamp] => 24/06/2025 11:01:27
+)
+
+[24/06/2025 11:01:27] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:01:27] POST parameters: Array
+(
+)
+
+[24/06/2025 11:01:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:01:27] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:01:27
+)
+
+[24/06/2025 11:01:27] Processing LIST action
+[24/06/2025 11:01:27] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:27] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:02:16] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:02:16] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:02:16
+)
+
+[24/06/2025 11:02:16] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:02:16] POST parameters: Array
+(
+)
+
+[24/06/2025 11:02:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:02:16] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:02:16] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:02:16
+)
+
+[24/06/2025 11:02:16] Processing LIST action
+[24/06/2025 11:02:16] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:02:16] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:02:16] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:02:38] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:02:38] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:02:38
+)
+
+[24/06/2025 11:02:38] GET parameters: Array
+(
+)
+
+[24/06/2025 11:02:38] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 11:02:38] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:02:38] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 11:02:38] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:02:38
+)
+
+[24/06/2025 11:02:38] Processing ADD action
+[24/06/2025 11:02:38] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => nnn
+)
+
+[24/06/2025 11:02:38] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 11:03:12] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:03:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.109
+    [timestamp] => 24/06/2025 11:03:12
+)
+
+[24/06/2025 11:03:12] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:03:12] POST parameters: Array
+(
+)
+
+[24/06/2025 11:03:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:03:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:03:12] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:03:12
+)
+
+[24/06/2025 11:03:12] Processing LIST action
+[24/06/2025 11:03:12] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:03:12] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:03:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:11:12] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.7
+    [timestamp] => 24/06/2025 11:11:12
+)
+
+[24/06/2025 11:11:12] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:11:12] POST parameters: Array
+(
+)
+
+[24/06/2025 11:11:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:11:12] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:12
+)
+
+[24/06/2025 11:11:12] Processing LIST action
+[24/06/2025 11:11:12] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:12] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:11:14] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:14] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.8
+    [timestamp] => 24/06/2025 11:11:14
+)
+
+[24/06/2025 11:11:14] GET parameters: Array
+(
+)
+
+[24/06/2025 11:11:14] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 11:11:14] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:14] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 11:11:14] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:14
+)
+
+[24/06/2025 11:11:14] Processing ADD action
+[24/06/2025 11:11:14] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => nnn
+)
+
+[24/06/2025 11:11:14] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 11:11:15] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:15] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.8
+    [timestamp] => 24/06/2025 11:11:15
+)
+
+[24/06/2025 11:11:15] GET parameters: Array
+(
+)
+
+[24/06/2025 11:11:15] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 11:11:15] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:15] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 11:11:15] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:15
+)
+
+[24/06/2025 11:11:15] Processing ADD action
+[24/06/2025 11:11:15] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => nnn
+)
+
+[24/06/2025 11:11:15] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 11:11:16] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:16] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.7
+    [timestamp] => 24/06/2025 11:11:16
+)
+
+[24/06/2025 11:11:16] GET parameters: Array
+(
+)
+
+[24/06/2025 11:11:16] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 11:11:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:16] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 11:11:16] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:16
+)
+
+[24/06/2025 11:11:16] Processing ADD action
+[24/06/2025 11:11:16] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => nnn
+)
+
+[24/06/2025 11:11:16] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 11:11:16] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:16] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.8
+    [timestamp] => 24/06/2025 11:11:16
+)
+
+[24/06/2025 11:11:16] GET parameters: Array
+(
+)
+
+[24/06/2025 11:11:16] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 11:11:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:16] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 11:11:16] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:16
+)
+
+[24/06/2025 11:11:16] Processing ADD action
+[24/06/2025 11:11:16] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => nnn
+)
+
+[24/06/2025 11:11:16] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 11:11:21] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:21] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.7
+    [timestamp] => 24/06/2025 11:11:21
+)
+
+[24/06/2025 11:11:21] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:11:21] POST parameters: Array
+(
+)
+
+[24/06/2025 11:11:21] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:21] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:11:21] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:21
+)
+
+[24/06/2025 11:11:21] Processing LIST action
+[24/06/2025 11:11:21] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:21] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:21] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:11:28] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:28] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.8
+    [timestamp] => 24/06/2025 11:11:28
+)
+
+[24/06/2025 11:11:28] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:11:28] POST parameters: Array
+(
+)
+
+[24/06/2025 11:11:28] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:28] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:11:28] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:28
+)
+
+[24/06/2025 11:11:28] Processing LIST action
+[24/06/2025 11:11:28] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:28] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:28] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:11:48] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:11:48] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.7
+    [timestamp] => 24/06/2025 11:11:48
+)
+
+[24/06/2025 11:11:48] GET parameters: Array
+(
+)
+
+[24/06/2025 11:11:48] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 11:11:48] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:48] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 11:11:48] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:11:48
+)
+
+[24/06/2025 11:11:48] Processing ADD action
+[24/06/2025 11:11:48] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => nnn
+)
+
+[24/06/2025 11:11:48] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 11:13:08] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:13:08] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.163.7
+    [timestamp] => 24/06/2025 11:13:08
+)
+
+[24/06/2025 11:13:08] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:13:08] POST parameters: Array
+(
+)
+
+[24/06/2025 11:13:08] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:13:08] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:13:08] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:13:08
+)
+
+[24/06/2025 11:13:08] Processing LIST action
+[24/06/2025 11:13:08] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:13:08] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:13:08] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:14:50] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:14:50] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.19
+    [timestamp] => 24/06/2025 11:14:50
+)
+
+[24/06/2025 11:14:50] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:14:50] POST parameters: Array
+(
+)
+
+[24/06/2025 11:14:50] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:50] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:14:50] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:14:50
+)
+
+[24/06/2025 11:14:50] Processing LIST action
+[24/06/2025 11:14:50] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:50] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:50] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:14:51] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:14:51] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.19
+    [timestamp] => 24/06/2025 11:14:51
+)
+
+[24/06/2025 11:14:51] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:14:51] POST parameters: Array
+(
+)
+
+[24/06/2025 11:14:51] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:51] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:14:51] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:14:51
+)
+
+[24/06/2025 11:14:51] Processing LIST action
+[24/06/2025 11:14:51] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:51] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:51] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:15:02] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:15:02] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.19
+    [timestamp] => 24/06/2025 11:15:02
+)
+
+[24/06/2025 11:15:02] GET parameters: Array
+(
+)
+
+[24/06/2025 11:15:02] POST parameters: Array
+(
+    [0] => action
+    [1] => title
+    [2] => description
+    [3] => area
+    [4] => priority
+    [5] => labor_count
+    [6] => date
+)
+
+[24/06/2025 11:15:02] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:15:02] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 11:15:02] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:15:02
+)
+
+[24/06/2025 11:15:02] Processing ADD action
+[24/06/2025 11:15:02] Error in ADD action: Array
+(
+    [error] => Valid briefing ID is required
+    [activity_title] => nnn
+)
+
+[24/06/2025 11:15:02] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 
+    [response_size] => 256
+)
+
+[24/06/2025 11:15:13] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:15:13] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.19
+    [timestamp] => 24/06/2025 11:15:13
+)
+
+[24/06/2025 11:15:13] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:15:13] POST parameters: Array
+(
+)
+
+[24/06/2025 11:15:13] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:15:13] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:15:13] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:15:13
+)
+
+[24/06/2025 11:15:13] Processing LIST action
+[24/06/2025 11:15:13] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:15:13] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:15:13] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:22:01] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:22:01] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.194.15
+    [timestamp] => 24/06/2025 11:22:01
+)
+
+[24/06/2025 11:22:01] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:22:01] POST parameters: Array
+(
+)
+
+[24/06/2025 11:22:01] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:01] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:22:01] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:22:01
+)
+
+[24/06/2025 11:22:01] Processing LIST action
+[24/06/2025 11:22:01] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:01] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:01] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:22:56] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:22:56] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.163.53
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:22:56] POST parameters: Array
+(
+)
+
+[24/06/2025 11:22:56] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:22:56] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] Processing LIST action
+[24/06/2025 11:22:56] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:22:56] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:22:56] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.186.47
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:22:56] POST parameters: Array
+(
+)
+
+[24/06/2025 11:22:56] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:22:56] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] Processing LIST action
+[24/06/2025 11:22:56] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:23:09] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:23:09] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.186.47
+    [timestamp] => 24/06/2025 11:23:09
+)
+
+[24/06/2025 11:23:09] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:23:09] POST parameters: Array
+(
+)
+
+[24/06/2025 11:23:09] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:09] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:23:09] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:23:09
+)
+
+[24/06/2025 11:23:09] Processing LIST action
+[24/06/2025 11:23:09] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:09] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:09] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 11:23:20] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 11:23:20] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.186.46
+    [timestamp] => 24/06/2025 11:23:20
+)
+
+[24/06/2025 11:23:20] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 11:23:20] POST parameters: Array
+(
+)
+
+[24/06/2025 11:23:20] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:20] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:23:20] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 11:23:20
+)
+
+[24/06/2025 11:23:20] Processing LIST action
+[24/06/2025 11:23:20] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:20] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:20] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 14:43:41] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:43:41] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.147
+    [timestamp] => 24/06/2025 14:43:41
+)
+
+[24/06/2025 14:43:41] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:43:41] POST parameters: Array
+(
+)
+
+[24/06/2025 14:43:41] Authentication failed - user not logged in: Array
+(
+    [session_id] => e79rf6rro7il5bnib6utfi1rf8
+    [ip_address] => 162.158.216.147
+)
+
+[24/06/2025 14:43:41] Sending JSON response: Array
+(
+    [action] => unknown
+    [success] => 
+    [response_size] => 235
+)
+
+[24/06/2025 14:50:49] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:50:49] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.99
+    [timestamp] => 24/06/2025 14:50:49
+)
+
+[24/06/2025 14:50:49] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:50:49] POST parameters: Array
+(
+)
+
+[24/06/2025 14:50:49] Authentication failed - user not logged in: Array
+(
+    [session_id] => e79rf6rro7il5bnib6utfi1rf8
+    [ip_address] => 172.69.224.99
+)
+
+[24/06/2025 14:50:49] Sending JSON response: Array
+(
+    [action] => unknown
+    [success] => 
+    [response_size] => 235
+)
+
+[24/06/2025 14:53:12] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:53:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.78
+    [timestamp] => 24/06/2025 14:53:12
+)
+
+[24/06/2025 14:53:12] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:53:12] POST parameters: Array
+(
+)
+
+[24/06/2025 14:53:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:53:12] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:53:12
+)
+
+[24/06/2025 14:53:12] Processing LIST action
+[24/06/2025 14:53:12] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:12] Found activities: Array
+(
+    [count] => 0
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 240
+)
+
+[24/06/2025 14:53:35] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:53:35] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.78
+    [timestamp] => 24/06/2025 14:53:35
+)
+
+[24/06/2025 14:53:35] GET parameters: Array
+(
+)
+
+[24/06/2025 14:53:35] POST parameters: Array
+(
+    [0] => action
+    [1] => id
+    [2] => briefing_id
+    [3] => date
+    [4] => time
+    [5] => priority
+    [6] => title
+    [7] => description
+    [8] => area
+    [9] => labor_count
+    [10] => contractors
+    [11] => assigned_to
+)
+
+[24/06/2025 14:53:35] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:35] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 14:53:35] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:53:35
+)
+
+[24/06/2025 14:53:35] Processing ADD action
+[24/06/2025 14:53:35] Creating new activity: Array
+(
+    [title] => mm
+    [date] => 2025-06-24
+    [time] => 14:53
+    [briefing_id] => 20
+    [priority] => medium
+    [labor_count] => 1
+    [created_by] => System Admin
+)
+
+[24/06/2025 14:53:35] Activity created successfully: Array
+(
+    [id] => 52
+    [title] => mm
+    [briefing_id] => 20
+)
+
+[24/06/2025 14:53:35] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 1
+    [response_size] => 331
+)
+
+[24/06/2025 14:53:35] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:53:35] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.78
+    [timestamp] => 24/06/2025 14:53:35
+)
+
+[24/06/2025 14:53:35] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:53:35] POST parameters: Array
+(
+)
+
+[24/06/2025 14:53:35] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:35] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:53:35] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:53:35
+)
+
+[24/06/2025 14:53:35] Processing LIST action
+[24/06/2025 14:53:35] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:35] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:35] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 624
+)
+
+[24/06/2025 14:53:53] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:53:53] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=get&id=52
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.78
+    [timestamp] => 24/06/2025 14:53:53
+)
+
+[24/06/2025 14:53:53] GET parameters: Array
+(
+    [action] => get
+    [id] => 52
+)
+
+[24/06/2025 14:53:53] POST parameters: Array
+(
+)
+
+[24/06/2025 14:53:53] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:53] Action requested: Array
+(
+    [action] => get
+    [method] => GET
+)
+
+[24/06/2025 14:53:53] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:53:53
+)
+
+[24/06/2025 14:53:53] Processing GET action
+[24/06/2025 14:53:53] Retrieving activity details: Array
+(
+    [id] => 52
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:53] Found activity: Array
+(
+    [id] => 52
+    [title] => mm
+)
+
+[24/06/2025 14:53:53] Sending JSON response: Array
+(
+    [action] => get
+    [success] => 1
+    [response_size] => 555
+)
+
+[24/06/2025 14:54:11] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:54:11] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.78
+    [timestamp] => 24/06/2025 14:54:11
+)
+
+[24/06/2025 14:54:11] GET parameters: Array
+(
+)
+
+[24/06/2025 14:54:11] POST parameters: Array
+(
+    [0] => action
+    [1] => id
+    [2] => briefing_id
+    [3] => date
+    [4] => time
+    [5] => priority
+    [6] => title
+    [7] => description
+    [8] => area
+    [9] => labor_count
+    [10] => contractors
+    [11] => assigned_to
+)
+
+[24/06/2025 14:54:11] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:54:11] Action requested: Array
+(
+    [action] => update
+    [method] => POST
+)
+
+[24/06/2025 14:54:11] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:54:11
+)
+
+[24/06/2025 14:54:11] Processing UPDATE action
+[24/06/2025 14:54:11] Updating activity: Array
+(
+    [id] => 52
+    [old_title] => mm
+    [new_title] => mm
+    [date] => 2025-06-24
+    [priority] => medium
+    [updated_by] => System Admin
+)
+
+[24/06/2025 14:54:11] Activity updated successfully: Array
+(
+    [id] => 52
+    [title] => mm
+    [rows_affected] => 1
+)
+
+[24/06/2025 14:54:11] Sending JSON response: Array
+(
+    [action] => update
+    [success] => 1
+    [response_size] => 334
+)
+
+[24/06/2025 14:54:11] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:54:11] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.78
+    [timestamp] => 24/06/2025 14:54:11
+)
+
+[24/06/2025 14:54:11] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:54:11] POST parameters: Array
+(
+)
+
+[24/06/2025 14:54:11] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:54:11] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:54:11] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:54:11
+)
+
+[24/06/2025 14:54:11] Processing LIST action
+[24/06/2025 14:54:11] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:54:11] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:54:11] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 638
+)
+
+[24/06/2025 14:55:31] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:55:31] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.99
+    [timestamp] => 24/06/2025 14:55:31
+)
+
+[24/06/2025 14:55:31] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:55:31] POST parameters: Array
+(
+)
+
+[24/06/2025 14:55:31] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:31] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:55:31] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:55:31
+)
+
+[24/06/2025 14:55:31] Processing LIST action
+[24/06/2025 14:55:31] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:31] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:31] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 638
+)
+
+[24/06/2025 14:55:31] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:55:31] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.99
+    [timestamp] => 24/06/2025 14:55:31
+)
+
+[24/06/2025 14:55:31] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:55:31] POST parameters: Array
+(
+)
+
+[24/06/2025 14:55:31] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:31] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:55:31] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:55:31
+)
+
+[24/06/2025 14:55:31] Processing LIST action
+[24/06/2025 14:55:31] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:31] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:31] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 638
+)
+
+[24/06/2025 14:56:48] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 14:56:48] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.51
+    [timestamp] => 24/06/2025 14:56:48
+)
+
+[24/06/2025 14:56:48] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 14:56:48] POST parameters: Array
+(
+)
+
+[24/06/2025 14:56:48] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:56:48] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:56:48] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 14:56:48
+)
+
+[24/06/2025 14:56:48] Processing LIST action
+[24/06/2025 14:56:48] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:56:48] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 14:56:48] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 638
+)
+
+[24/06/2025 15:01:13] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:01:13] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.194.113
+    [timestamp] => 24/06/2025 15:01:13
+)
+
+[24/06/2025 15:01:13] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:01:13] POST parameters: Array
+(
+)
+
+[24/06/2025 15:01:13] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:13] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:01:13] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:01:13
+)
+
+[24/06/2025 15:01:13] Processing LIST action
+[24/06/2025 15:01:13] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:13] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:13] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 638
+)
+
+[24/06/2025 15:01:15] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:01:15] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.194.113
+    [timestamp] => 24/06/2025 15:01:15
+)
+
+[24/06/2025 15:01:15] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:01:15] POST parameters: Array
+(
+)
+
+[24/06/2025 15:01:15] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:15] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:01:15] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:01:15
+)
+
+[24/06/2025 15:01:15] Processing LIST action
+[24/06/2025 15:01:15] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:15] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:15] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 638
+)
+
+[24/06/2025 15:02:21] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:02:21] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.147
+    [timestamp] => 24/06/2025 15:02:21
+)
+
+[24/06/2025 15:02:21] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:02:21] POST parameters: Array
+(
+)
+
+[24/06/2025 15:02:21] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:02:21] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:02:21] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:02:21
+)
+
+[24/06/2025 15:02:21] Processing LIST action
+[24/06/2025 15:02:21] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:02:21] Found activities: Array
+(
+    [count] => 1
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:02:21] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 638
+)
+
+[24/06/2025 15:03:06] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:03:06] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_activities.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.61
+    [timestamp] => 24/06/2025 15:03:06
+)
+
+[24/06/2025 15:03:06] GET parameters: Array
+(
+)
+
+[24/06/2025 15:03:06] POST parameters: Array
+(
+    [0] => action
+    [1] => id
+    [2] => briefing_id
+    [3] => date
+    [4] => time
+    [5] => priority
+    [6] => title
+    [7] => description
+    [8] => area
+    [9] => labor_count
+    [10] => contractors
+    [11] => assigned_to
+)
+
+[24/06/2025 15:03:06] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:03:06] Action requested: Array
+(
+    [action] => add
+    [method] => POST
+)
+
+[24/06/2025 15:03:06] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:03:06
+)
+
+[24/06/2025 15:03:06] Processing ADD action
+[24/06/2025 15:03:06] Creating new activity: Array
+(
+    [title] => Vents
+    [date] => 2025-06-24
+    [time] => 15:02
+    [briefing_id] => 20
+    [priority] => medium
+    [labor_count] => 2
+    [created_by] => System Admin
+)
+
+[24/06/2025 15:03:06] Activity created successfully: Array
+(
+    [id] => 53
+    [title] => Vents
+    [briefing_id] => 20
+)
+
+[24/06/2025 15:03:06] Sending JSON response: Array
+(
+    [action] => add
+    [success] => 1
+    [response_size] => 334
+)
+
+[24/06/2025 15:03:06] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:03:06] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.61
+    [timestamp] => 24/06/2025 15:03:06
+)
+
+[24/06/2025 15:03:06] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:03:06] POST parameters: Array
+(
+)
+
+[24/06/2025 15:03:06] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:03:06] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:03:06] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:03:06
+)
+
+[24/06/2025 15:03:06] Processing LIST action
+[24/06/2025 15:03:06] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:03:06] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:03:06] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:06:16] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:06:16] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.18
+    [timestamp] => 24/06/2025 15:06:16
+)
+
+[24/06/2025 15:06:16] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:06:16] POST parameters: Array
+(
+)
+
+[24/06/2025 15:06:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:06:16] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:06:16] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:06:16
+)
+
+[24/06/2025 15:06:16] Processing LIST action
+[24/06/2025 15:06:16] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:06:16] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:06:16] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:11:16] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:11:16] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.129
+    [timestamp] => 24/06/2025 15:11:16
+)
+
+[24/06/2025 15:11:16] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:11:16] POST parameters: Array
+(
+)
+
+[24/06/2025 15:11:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:11:16] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:11:16] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:11:16
+)
+
+[24/06/2025 15:11:16] Processing LIST action
+[24/06/2025 15:11:16] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:11:16] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:11:16] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:16:16] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:16:16] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.135
+    [timestamp] => 24/06/2025 15:16:16
+)
+
+[24/06/2025 15:16:16] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:16:16] POST parameters: Array
+(
+)
+
+[24/06/2025 15:16:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:16:16] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:16:16] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:16:16
+)
+
+[24/06/2025 15:16:16] Processing LIST action
+[24/06/2025 15:16:16] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:16:16] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:16:16] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:21:16] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:21:16] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.185
+    [timestamp] => 24/06/2025 15:21:16
+)
+
+[24/06/2025 15:21:16] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:21:16] POST parameters: Array
+(
+)
+
+[24/06/2025 15:21:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:21:16] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:21:16] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:21:16
+)
+
+[24/06/2025 15:21:16] Processing LIST action
+[24/06/2025 15:21:16] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:21:16] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:21:16] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:21:27] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:21:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.185
+    [timestamp] => 24/06/2025 15:21:27
+)
+
+[24/06/2025 15:21:27] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:21:27] POST parameters: Array
+(
+)
+
+[24/06/2025 15:21:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:21:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:21:27] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:21:27
+)
+
+[24/06/2025 15:21:27] Processing LIST action
+[24/06/2025 15:21:27] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:21:27] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:21:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:23:13] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:23:13] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.185
+    [timestamp] => 24/06/2025 15:23:13
+)
+
+[24/06/2025 15:23:13] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:23:13] POST parameters: Array
+(
+)
+
+[24/06/2025 15:23:13] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:13] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:23:13] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:23:13
+)
+
+[24/06/2025 15:23:13] Processing LIST action
+[24/06/2025 15:23:13] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:13] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:13] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:23:19] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:23:19] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.184
+    [timestamp] => 24/06/2025 15:23:19
+)
+
+[24/06/2025 15:23:19] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:23:19] POST parameters: Array
+(
+)
+
+[24/06/2025 15:23:19] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:19] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:23:19] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:23:19
+)
+
+[24/06/2025 15:23:19] Processing LIST action
+[24/06/2025 15:23:19] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:19] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:19] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:28:20] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:28:20] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.91.249
+    [timestamp] => 24/06/2025 15:28:20
+)
+
+[24/06/2025 15:28:20] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:28:20] POST parameters: Array
+(
+)
+
+[24/06/2025 15:28:20] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:28:20] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:28:20] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:28:20
+)
+
+[24/06/2025 15:28:20] Processing LIST action
+[24/06/2025 15:28:20] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:28:20] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:28:20] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:30:57] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:30:57] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.114
+    [timestamp] => 24/06/2025 15:30:57
+)
+
+[24/06/2025 15:30:57] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:30:57] POST parameters: Array
+(
+)
+
+[24/06/2025 15:30:57] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:57] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:30:57] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:30:57
+)
+
+[24/06/2025 15:30:57] Processing LIST action
+[24/06/2025 15:30:57] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:57] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:57] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:30:57] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:30:57] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.114
+    [timestamp] => 24/06/2025 15:30:57
+)
+
+[24/06/2025 15:30:57] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:30:57] POST parameters: Array
+(
+)
+
+[24/06/2025 15:30:57] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:57] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:30:57] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:30:57
+)
+
+[24/06/2025 15:30:57] Processing LIST action
+[24/06/2025 15:30:57] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:57] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:57] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:31:21] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:31:21] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.115
+    [timestamp] => 24/06/2025 15:31:21
+)
+
+[24/06/2025 15:31:21] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:21] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:21] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:21] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:21] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:31:21
+)
+
+[24/06/2025 15:31:21] Processing LIST action
+[24/06/2025 15:31:21] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:21] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:21] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:31:22] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:31:22] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.115
+    [timestamp] => 24/06/2025 15:31:22
+)
+
+[24/06/2025 15:31:22] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:22] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:22] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:22] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:22] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:31:22
+)
+
+[24/06/2025 15:31:22] Processing LIST action
+[24/06/2025 15:31:22] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:22] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:22] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:31:54] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:31:54] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.19
+    [timestamp] => 24/06/2025 15:31:54
+)
+
+[24/06/2025 15:31:54] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:54] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:54] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:54] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:54] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:31:54
+)
+
+[24/06/2025 15:31:54] Processing LIST action
+[24/06/2025 15:31:54] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:54] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:54] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:31:54] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:31:54] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.19
+    [timestamp] => 24/06/2025 15:31:54
+)
+
+[24/06/2025 15:31:54] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:31:54] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:54] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:54] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:54] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:31:54
+)
+
+[24/06/2025 15:31:54] Processing LIST action
+[24/06/2025 15:31:54] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:54] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:54] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:32:29] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:32:29] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.56
+    [timestamp] => 24/06/2025 15:32:29
+)
+
+[24/06/2025 15:32:29] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:32:29] POST parameters: Array
+(
+)
+
+[24/06/2025 15:32:29] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:29] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:32:29] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:32:29
+)
+
+[24/06/2025 15:32:29] Processing LIST action
+[24/06/2025 15:32:29] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:29] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:29] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:32:32] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:32:32] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.56
+    [timestamp] => 24/06/2025 15:32:32
+)
+
+[24/06/2025 15:32:32] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:32:32] POST parameters: Array
+(
+)
+
+[24/06/2025 15:32:32] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:32] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:32:32] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:32:32
+)
+
+[24/06/2025 15:32:32] Processing LIST action
+[24/06/2025 15:32:32] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:32] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:32] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:32:45] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:32:45] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.56
+    [timestamp] => 24/06/2025 15:32:45
+)
+
+[24/06/2025 15:32:45] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:32:45] POST parameters: Array
+(
+)
+
+[24/06/2025 15:32:45] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:45] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:32:45] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:32:45
+)
+
+[24/06/2025 15:32:45] Processing LIST action
+[24/06/2025 15:32:45] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:45] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:45] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:34:17] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:34:17] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:34:17
+)
+
+[24/06/2025 15:34:17] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:17] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:17] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:17] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:17] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:34:17
+)
+
+[24/06/2025 15:34:17] Processing LIST action
+[24/06/2025 15:34:17] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:17] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:17] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:34:18] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:34:18] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:34:18
+)
+
+[24/06/2025 15:34:18] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:18] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:18] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:18] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:18] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:34:18
+)
+
+[24/06/2025 15:34:18] Processing LIST action
+[24/06/2025 15:34:18] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:18] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:18] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:34:43] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:34:43] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:43] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:43] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:43] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] Processing LIST action
+[24/06/2025 15:34:43] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:34:43] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:34:43] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:34:43] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:43] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:43] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] Processing LIST action
+[24/06/2025 15:34:43] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:35:03] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:35:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:35:03] POST parameters: Array
+(
+)
+
+[24/06/2025 15:35:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:35:03] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] Processing LIST action
+[24/06/2025 15:35:03] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:35:03] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:35:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:35:03] POST parameters: Array
+(
+)
+
+[24/06/2025 15:35:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:35:03] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] Processing LIST action
+[24/06/2025 15:35:03] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:35:28] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:35:28] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:35:28
+)
+
+[24/06/2025 15:35:28] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:35:28] POST parameters: Array
+(
+)
+
+[24/06/2025 15:35:28] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:28] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:35:28] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:35:28
+)
+
+[24/06/2025 15:35:28] Processing LIST action
+[24/06/2025 15:35:28] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:28] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:28] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:40:04] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:40:04] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.200
+    [timestamp] => 24/06/2025 15:40:04
+)
+
+[24/06/2025 15:40:04] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:40:04] POST parameters: Array
+(
+)
+
+[24/06/2025 15:40:04] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:40:04] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:40:04] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:40:04
+)
+
+[24/06/2025 15:40:04] Processing LIST action
+[24/06/2025 15:40:04] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:40:04] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:40:04] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:45:04] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:45:04] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.184
+    [timestamp] => 24/06/2025 15:45:04
+)
+
+[24/06/2025 15:45:04] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:45:04] POST parameters: Array
+(
+)
+
+[24/06/2025 15:45:04] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:45:04] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:45:04] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:45:04
+)
+
+[24/06/2025 15:45:04] Processing LIST action
+[24/06/2025 15:45:04] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:45:04] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:45:04] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:46:52] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:46:52] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.178
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:46:52] POST parameters: Array
+(
+)
+
+[24/06/2025 15:46:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:46:52] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] Processing LIST action
+[24/06/2025 15:46:52] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:46:52] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:46:52] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.177
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:46:52] POST parameters: Array
+(
+)
+
+[24/06/2025 15:46:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:46:52] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] Processing LIST action
+[24/06/2025 15:46:52] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:48:06] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:48:06] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.91.250
+    [timestamp] => 24/06/2025 15:48:06
+)
+
+[24/06/2025 15:48:06] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:48:06] POST parameters: Array
+(
+)
+
+[24/06/2025 15:48:06] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:48:06] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:48:06] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:48:06
+)
+
+[24/06/2025 15:48:06] Processing LIST action
+[24/06/2025 15:48:06] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:48:06] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:48:06] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:51:53] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:51:53] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.26.83
+    [timestamp] => 24/06/2025 15:51:53
+)
+
+[24/06/2025 15:51:53] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:51:53] POST parameters: Array
+(
+)
+
+[24/06/2025 15:51:53] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:51:53] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:51:53] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:51:53
+)
+
+[24/06/2025 15:51:53] Processing LIST action
+[24/06/2025 15:51:53] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:51:53] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:51:53] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 15:56:53] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 15:56:53] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.146
+    [timestamp] => 24/06/2025 15:56:53
+)
+
+[24/06/2025 15:56:53] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 15:56:53] POST parameters: Array
+(
+)
+
+[24/06/2025 15:56:53] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:56:53] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:56:53] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 15:56:53
+)
+
+[24/06/2025 15:56:53] Processing LIST action
+[24/06/2025 15:56:53] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:56:53] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 15:56:53] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:01:53] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:01:53] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.99.72
+    [timestamp] => 24/06/2025 16:01:53
+)
+
+[24/06/2025 16:01:53] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:01:53] POST parameters: Array
+(
+)
+
+[24/06/2025 16:01:53] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:01:53] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:01:53] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:01:53
+)
+
+[24/06/2025 16:01:53] Processing LIST action
+[24/06/2025 16:01:53] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:01:53] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:01:53] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:06:53] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:06:53] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.194.73
+    [timestamp] => 24/06/2025 16:06:53
+)
+
+[24/06/2025 16:06:53] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:06:53] POST parameters: Array
+(
+)
+
+[24/06/2025 16:06:53] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:06:53] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:06:53] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:06:53
+)
+
+[24/06/2025 16:06:53] Processing LIST action
+[24/06/2025 16:06:53] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:06:53] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:06:53] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:10:39] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:10:39] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.91.16
+    [timestamp] => 24/06/2025 16:10:39
+)
+
+[24/06/2025 16:10:39] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:10:39] POST parameters: Array
+(
+)
+
+[24/06/2025 16:10:39] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:39] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:10:39] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:10:39
+)
+
+[24/06/2025 16:10:39] Processing LIST action
+[24/06/2025 16:10:39] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:39] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:39] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:10:40] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:10:40] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.91.16
+    [timestamp] => 24/06/2025 16:10:40
+)
+
+[24/06/2025 16:10:40] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:10:40] POST parameters: Array
+(
+)
+
+[24/06/2025 16:10:40] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:40] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:10:40] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:10:40
+)
+
+[24/06/2025 16:10:40] Processing LIST action
+[24/06/2025 16:10:40] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:40] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:40] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:15:41] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:15:41] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.212
+    [timestamp] => 24/06/2025 16:15:41
+)
+
+[24/06/2025 16:15:41] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:15:41] POST parameters: Array
+(
+)
+
+[24/06/2025 16:15:41] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:15:41] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:15:41] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:15:41
+)
+
+[24/06/2025 16:15:41] Processing LIST action
+[24/06/2025 16:15:41] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:15:41] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:15:41] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:20:41] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:20:41] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.67
+    [timestamp] => 24/06/2025 16:20:41
+)
+
+[24/06/2025 16:20:41] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:20:41] POST parameters: Array
+(
+)
+
+[24/06/2025 16:20:41] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:20:41] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:20:41] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:20:41
+)
+
+[24/06/2025 16:20:41] Processing LIST action
+[24/06/2025 16:20:41] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:20:41] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:20:41] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:23:58] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:23:58] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.85.111
+    [timestamp] => 24/06/2025 16:23:58
+)
+
+[24/06/2025 16:23:58] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:23:58] POST parameters: Array
+(
+)
+
+[24/06/2025 16:23:58] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:23:58] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:23:58] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:23:58
+)
+
+[24/06/2025 16:23:58] Processing LIST action
+[24/06/2025 16:23:58] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:23:58] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:23:58] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:24:32] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:24:32] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.19
+    [timestamp] => 24/06/2025 16:24:32
+)
+
+[24/06/2025 16:24:32] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:24:32] POST parameters: Array
+(
+)
+
+[24/06/2025 16:24:32] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:24:32] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:24:32] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:24:32
+)
+
+[24/06/2025 16:24:32] Processing LIST action
+[24/06/2025 16:24:32] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:24:32] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:24:32] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:29:33] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:29:33] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.127
+    [timestamp] => 24/06/2025 16:29:33
+)
+
+[24/06/2025 16:29:33] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:29:33] POST parameters: Array
+(
+)
+
+[24/06/2025 16:29:33] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:29:33] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:29:33] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:29:33
+)
+
+[24/06/2025 16:29:33] Processing LIST action
+[24/06/2025 16:29:33] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:29:33] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:29:33] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:33:25] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:33:25] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.81
+    [timestamp] => 24/06/2025 16:33:25
+)
+
+[24/06/2025 16:33:25] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:33:25] POST parameters: Array
+(
+)
+
+[24/06/2025 16:33:25] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:25] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:33:25] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:33:25
+)
+
+[24/06/2025 16:33:25] Processing LIST action
+[24/06/2025 16:33:25] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:25] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:25] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:33:29] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:33:29] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.81
+    [timestamp] => 24/06/2025 16:33:29
+)
+
+[24/06/2025 16:33:29] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:33:29] POST parameters: Array
+(
+)
+
+[24/06/2025 16:33:29] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:29] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:33:29] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:33:29
+)
+
+[24/06/2025 16:33:29] Processing LIST action
+[24/06/2025 16:33:29] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:29] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:29] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:38:30] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:38:30] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.184
+    [timestamp] => 24/06/2025 16:38:30
+)
+
+[24/06/2025 16:38:30] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:38:30] POST parameters: Array
+(
+)
+
+[24/06/2025 16:38:30] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:38:30] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:38:30] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:38:30
+)
+
+[24/06/2025 16:38:30] Processing LIST action
+[24/06/2025 16:38:30] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:38:30] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:38:30] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:43:30] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:43:30] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.19
+    [timestamp] => 24/06/2025 16:43:30
+)
+
+[24/06/2025 16:43:30] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:43:30] POST parameters: Array
+(
+)
+
+[24/06/2025 16:43:30] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:43:30] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:43:30] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:43:30
+)
+
+[24/06/2025 16:43:30] Processing LIST action
+[24/06/2025 16:43:30] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:43:30] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:43:30] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:48:30] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:48:30] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.45
+    [timestamp] => 24/06/2025 16:48:30
+)
+
+[24/06/2025 16:48:30] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:48:30] POST parameters: Array
+(
+)
+
+[24/06/2025 16:48:30] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:48:30] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:48:30] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:48:30
+)
+
+[24/06/2025 16:48:30] Processing LIST action
+[24/06/2025 16:48:30] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:48:30] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:48:30] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 16:53:30] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 16:53:30] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.163.53
+    [timestamp] => 24/06/2025 16:53:30
+)
+
+[24/06/2025 16:53:30] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 16:53:30] POST parameters: Array
+(
+)
+
+[24/06/2025 16:53:30] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:53:30] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:53:30] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 16:53:30
+)
+
+[24/06/2025 16:53:30] Processing LIST action
+[24/06/2025 16:53:30] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:53:30] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 16:53:30] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:41:27] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:41:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.60
+    [timestamp] => 24/06/2025 18:41:27
+)
+
+[24/06/2025 18:41:27] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:41:27] POST parameters: Array
+(
+)
+
+[24/06/2025 18:41:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:41:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:41:27] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:41:27
+)
+
+[24/06/2025 18:41:27] Processing LIST action
+[24/06/2025 18:41:27] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:41:27] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:41:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:42:27] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:42:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.34
+    [timestamp] => 24/06/2025 18:42:27
+)
+
+[24/06/2025 18:42:27] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:42:27] POST parameters: Array
+(
+)
+
+[24/06/2025 18:42:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:42:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:42:27] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:42:27
+)
+
+[24/06/2025 18:42:27] Processing LIST action
+[24/06/2025 18:42:27] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:42:27] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:42:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:46:27] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:46:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.99.70
+    [timestamp] => 24/06/2025 18:46:27
+)
+
+[24/06/2025 18:46:27] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:46:27] POST parameters: Array
+(
+)
+
+[24/06/2025 18:46:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:46:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:46:27] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:46:27
+)
+
+[24/06/2025 18:46:27] Processing LIST action
+[24/06/2025 18:46:27] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:46:27] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:46:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:47:54] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:47:54] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.168
+    [timestamp] => 24/06/2025 18:47:54
+)
+
+[24/06/2025 18:47:54] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:47:54] POST parameters: Array
+(
+)
+
+[24/06/2025 18:47:54] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:54] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:47:54] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:47:54
+)
+
+[24/06/2025 18:47:54] Processing LIST action
+[24/06/2025 18:47:54] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:54] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:54] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:47:54] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:47:54] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.169
+    [timestamp] => 24/06/2025 18:47:54
+)
+
+[24/06/2025 18:47:54] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:47:54] POST parameters: Array
+(
+)
+
+[24/06/2025 18:47:54] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:54] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:47:54] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:47:54
+)
+
+[24/06/2025 18:47:54] Processing LIST action
+[24/06/2025 18:47:54] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:54] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:54] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:48:06] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:48:06] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.169
+    [timestamp] => 24/06/2025 18:48:06
+)
+
+[24/06/2025 18:48:06] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:48:06] POST parameters: Array
+(
+)
+
+[24/06/2025 18:48:06] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:06] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:48:06] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:48:06
+)
+
+[24/06/2025 18:48:06] Processing LIST action
+[24/06/2025 18:48:06] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:06] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:06] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:48:12] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:48:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.168
+    [timestamp] => 24/06/2025 18:48:12
+)
+
+[24/06/2025 18:48:12] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:48:12] POST parameters: Array
+(
+)
+
+[24/06/2025 18:48:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:48:12] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:48:12
+)
+
+[24/06/2025 18:48:12] Processing LIST action
+[24/06/2025 18:48:12] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:12] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:53:12] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:53:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.115
+    [timestamp] => 24/06/2025 18:53:12
+)
+
+[24/06/2025 18:53:12] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:53:12] POST parameters: Array
+(
+)
+
+[24/06/2025 18:53:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:53:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:53:12] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:53:12
+)
+
+[24/06/2025 18:53:12] Processing LIST action
+[24/06/2025 18:53:12] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:53:12] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:53:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:55:30] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:55:30] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.67
+    [timestamp] => 24/06/2025 18:55:30
+)
+
+[24/06/2025 18:55:30] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:55:30] POST parameters: Array
+(
+)
+
+[24/06/2025 18:55:30] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:55:30] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:55:30] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:55:30
+)
+
+[24/06/2025 18:55:30] Processing LIST action
+[24/06/2025 18:55:30] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:55:30] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:55:30] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:58:12] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:58:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.127
+    [timestamp] => 24/06/2025 18:58:12
+)
+
+[24/06/2025 18:58:12] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:58:12] POST parameters: Array
+(
+)
+
+[24/06/2025 18:58:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:58:12] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:58:12
+)
+
+[24/06/2025 18:58:12] Processing LIST action
+[24/06/2025 18:58:12] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:12] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:58:23] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:58:23] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.127
+    [timestamp] => 24/06/2025 18:58:23
+)
+
+[24/06/2025 18:58:23] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:58:23] POST parameters: Array
+(
+)
+
+[24/06/2025 18:58:23] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:23] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:58:23] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:58:23
+)
+
+[24/06/2025 18:58:23] Processing LIST action
+[24/06/2025 18:58:23] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:23] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:23] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:58:23] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:58:23] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.127
+    [timestamp] => 24/06/2025 18:58:23
+)
+
+[24/06/2025 18:58:23] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:58:23] POST parameters: Array
+(
+)
+
+[24/06/2025 18:58:23] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:23] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:58:23] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:58:23
+)
+
+[24/06/2025 18:58:23] Processing LIST action
+[24/06/2025 18:58:23] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:23] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:23] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 18:58:30] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 18:58:30] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.127
+    [timestamp] => 24/06/2025 18:58:30
+)
+
+[24/06/2025 18:58:30] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 18:58:30] POST parameters: Array
+(
+)
+
+[24/06/2025 18:58:30] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:30] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:58:30] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 18:58:30
+)
+
+[24/06/2025 18:58:30] Processing LIST action
+[24/06/2025 18:58:30] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:30] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:30] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:00:33] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:00:33] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.44
+    [timestamp] => 24/06/2025 19:00:33
+)
+
+[24/06/2025 19:00:33] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:00:33] POST parameters: Array
+(
+)
+
+[24/06/2025 19:00:33] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:33] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:00:33] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:00:33
+)
+
+[24/06/2025 19:00:33] Processing LIST action
+[24/06/2025 19:00:33] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:33] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:33] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:00:34] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:00:34] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.44
+    [timestamp] => 24/06/2025 19:00:34
+)
+
+[24/06/2025 19:00:34] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:00:34] POST parameters: Array
+(
+)
+
+[24/06/2025 19:00:34] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:34] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:00:34] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:00:34
+)
+
+[24/06/2025 19:00:34] Processing LIST action
+[24/06/2025 19:00:34] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:34] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:34] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:04:38] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:04:38] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.19
+    [timestamp] => 24/06/2025 19:04:38
+)
+
+[24/06/2025 19:04:38] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:04:38] POST parameters: Array
+(
+)
+
+[24/06/2025 19:04:38] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:04:38] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:04:38] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:04:38
+)
+
+[24/06/2025 19:04:38] Processing LIST action
+[24/06/2025 19:04:38] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:04:38] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:04:38] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:05:03] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:05:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.19
+    [timestamp] => 24/06/2025 19:05:03
+)
+
+[24/06/2025 19:05:03] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:05:03] POST parameters: Array
+(
+)
+
+[24/06/2025 19:05:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:05:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:05:03] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:05:03
+)
+
+[24/06/2025 19:05:03] Processing LIST action
+[24/06/2025 19:05:03] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:05:03] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:05:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:05:35] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:05:35] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.185
+    [timestamp] => 24/06/2025 19:05:35
+)
+
+[24/06/2025 19:05:35] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:05:35] POST parameters: Array
+(
+)
+
+[24/06/2025 19:05:35] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:05:35] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:05:35] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:05:35
+)
+
+[24/06/2025 19:05:35] Processing LIST action
+[24/06/2025 19:05:35] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:05:35] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:05:35] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:07:24] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:07:24] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.160
+    [timestamp] => 24/06/2025 19:07:24
+)
+
+[24/06/2025 19:07:24] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:07:24] POST parameters: Array
+(
+)
+
+[24/06/2025 19:07:24] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:07:24] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:07:24] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:07:24
+)
+
+[24/06/2025 19:07:24] Processing LIST action
+[24/06/2025 19:07:24] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:07:24] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:07:24] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:09:47] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:09:47] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.142
+    [timestamp] => 24/06/2025 19:09:47
+)
+
+[24/06/2025 19:09:47] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:09:47] POST parameters: Array
+(
+)
+
+[24/06/2025 19:09:47] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:47] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:09:47] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:09:47
+)
+
+[24/06/2025 19:09:47] Processing LIST action
+[24/06/2025 19:09:47] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:47] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:47] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+
+[24/06/2025 19:09:49] === NEW ACTIVITIES API REQUEST STARTED ===
+[24/06/2025 19:09:49] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_activities.php?action=list&date=2025-06-24
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.143
+    [timestamp] => 24/06/2025 19:09:49
+)
+
+[24/06/2025 19:09:49] GET parameters: Array
+(
+    [action] => list
+    [date] => 2025-06-24
+)
+
+[24/06/2025 19:09:49] POST parameters: Array
+(
+)
+
+[24/06/2025 19:09:49] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:49] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:09:49] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 19:09:49
+)
+
+[24/06/2025 19:09:49] Processing LIST action
+[24/06/2025 19:09:49] Loading activities for date: Array
+(
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:49] Found activities: Array
+(
+    [count] => 2
+    [date] => 2025-06-24
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:49] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1065
+)
+

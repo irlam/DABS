@@ -1,0 +1,238 @@
+/**
+ * weather.css
+ * 
+ * Daily Activity Briefing System (DABS) - Weather Widget Styles
+ * 
+ * WHAT THIS FILE DOES:
+ * This file contains all the styling for the weather display on your DABS dashboard.
+ * It creates a modern, professional appearance for weather information that's easy
+ * to read at a glance, with special attention to highlighting weather conditions
+ * that affect construction work - especially high wind warnings for crane safety.
+ * 
+ * KEY FEATURES:
+ * - Responsive design that works on phones, tablets, and computers
+ * - Clean, modern appearance with subtle animations and effects
+ * - Color-coded temperature and priority displays
+ * - High-visibility warning styles for wind alerts
+ * - Accessible text with good contrast and readable sizes
+ * - Smooth hover effects and transitions
+ * - UK-specific formatting for all data display
+ * 
+ * Current Date and Time (UK Format): 03/06/2025 10:10:15
+ * Current User's Login: irlamkeep
+ * 
+ * @author irlamkeep
+ * @version 2.0
+ * @date 03/06/2025
+ * @website dabs.defecttracker.uk
+ */
+
+/* ---------- MAIN CONTAINER STYLES ---------- */
+
+/* The main container for the entire weather widget */
+.weather-container {
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Add a subtle hover effect to the container */
+.weather-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* ---------- CURRENT WEATHER SECTION ---------- */
+
+/* The section showing current weather conditions */
+.current-weather {
+    padding: 16px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #f6f9fc, #edf1f7);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Weather icon styling - makes icons look crisp */
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Current temperature - large, bold, and easy to read */
+.current-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    line-height: 1.1;
+}
+
+/* Weather description text */
+.weather-description {
+    font-size: 1.1rem;
+    color: #4b5563;
+    text-transform: capitalize;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* Weather details section (feels like, wind, etc.) */
+.weather-details {
+    padding: 10px 0;
+    font-size: 0.95rem;
+}
+
+/* Each individual weather detail (wind speed, humidity, etc.) */
+.weather-details div {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.2s;
+}
+
+/* Highlight detail rows on hover */
+.weather-details div:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Icons in the weather details */
+.weather-details i {
+    width: 22px;
+    text-align: center;
+    color: #2563eb;
+    margin-right: 10px;
+}
+
+/* ---------- FORECAST SECTION ---------- */
+
+/* Heading for the weekly forecast */
+.weekly-forecast-heading {
+    font-size: 1.4rem;
+    color: #1f2937;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    border-left: 4px solid #2563eb;
+    padding-left: 10px;
+}
+
+/* Container for the scrollable forecast cards */
+.weekly-forecast {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 10px 0;
+    margin: 15px -5px;
+    /* Smooth scrolling for touch devices */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Hide scrollbar but maintain functionality */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+/* Style the scrollbar for browsers that support it */
+.weekly-forecast::-webkit-scrollbar {
+    height: 6px;
+}
+
+.weekly-forecast::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.weekly-forecast::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 20px;
+}
+
+/* Individual day forecast card */
+.forecast-day {
+    flex: 0 0 160px;
+    padding: 14px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #f7fafc);
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+    transition: all 0.25s ease;
+    border: 1px solid #f0f4f8;
+}
+
+/* Lift and highlight cards on hover */
+.forecast-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #e2e8f0;
+}
+
+/* Day name display at top of each card */
+.forecast-date {
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Icons in forecast cards */
+.forecast-day .weather-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+/* Temperature display styling */
+.forecast-temps {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* High temperature (maximum) */
+.forecast-high {
+    color: #dc2626;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* Low temperature (minimum) */
+.forecast-low {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Weather description on forecast cards */
+.forecast-description {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-transform: capitalize;
+    margin: 8px 0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Wind information display */
+.forecast-wind {
+    font-size: 0.9rem;
+    color: #4b5563;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #f3f4f6;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.forecast-wind i {
+    color: #6b7280;
+    margin-right:

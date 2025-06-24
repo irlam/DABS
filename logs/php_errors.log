@@ -1,0 +1,68 @@
+
+[24-Jun-2025 10:46:05 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 10:52:16 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 10:57:02 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 10:57:52 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 11:01:26 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 11:11:20 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 11:11:28 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 11:14:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 11:22:56 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 11:23:08 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 11:23:19 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750757890,"current_project":1}
+[24-Jun-2025 14:50:49 Europe/London] isUserLoggedIn() called. Session data: []
+[24-Jun-2025 14:50:49 Europe/London] [24/06/2025 14:50:49] Unauthorized access attempt | Context: {"ip":"172.69.224.99","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/137.0.0.0 Safari\/537.36","timestamp":"24\/06\/2025 14:50:49","requested_uri":"\/index.php"}
+[24-Jun-2025 14:50:54 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 14:53:12 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 14:56:47 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:01:13 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:23:18 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:30:57 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:30:57 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function getEnhancedFeaturesHTML() in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php:4049
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4049
+[24-Jun-2025 15:31:21 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:31:53 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:32:29 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:32:31 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:32:44 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:34:17 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:34:43 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:35:03 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:46:51 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 15:46:51 Europe/London] PHP Parse error:  Unclosed '{' on line 794 does not match ')' in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/dabs-enhanced-features.php on line 1579
+[24-Jun-2025 16:10:39 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 16:24:31 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 16:33:28 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750773054,"current_project":1}
+[24-Jun-2025 16:33:28 Europe/London] PHP Parse error:  syntax error, unexpected identifier "s", expecting ";" in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/dabs-enhanced-features.php on line 984
+[24-Jun-2025 18:40:54 Europe/London] isUserLoggedIn() called. Session data: []
+[24-Jun-2025 18:40:54 Europe/London] [24/06/2025 18:40:54] Unauthorized access attempt | Context: {"ip":"172.69.195.60","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/137.0.0.0 Safari\/537.36","timestamp":"24\/06\/2025 18:40:54","requested_uri":"\/"}
+[24-Jun-2025 18:41:26 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 18:41:26 Europe/London] PHP Parse error:  syntax error, unexpected identifier "s", expecting ";" in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/dabs-enhanced-features.php on line 1151
+[24-Jun-2025 18:47:54 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 18:47:54 Europe/London] PHP Parse error:  syntax error, unexpected identifier "s", expecting ";" in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/dabs-enhanced-features.php on line 932
+[24-Jun-2025 18:48:06 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 18:48:06 Europe/London] PHP Parse error:  syntax error, unexpected identifier "s", expecting ";" in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/dabs-enhanced-features.php on line 932
+[24-Jun-2025 18:48:12 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 18:48:12 Europe/London] PHP Parse error:  syntax error, unexpected identifier "s", expecting ";" in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/dabs-enhanced-features.php on line 932
+[24-Jun-2025 18:58:23 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 18:58:23 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function getEnhancedFeaturesJS() in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php:4062
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4062
+[24-Jun-2025 18:58:30 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 18:58:30 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function getEnhancedFeaturesJS() in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php:4062
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4062
+[24-Jun-2025 19:00:34 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 19:00:34 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function getEnhancedFeaturesJS() in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php:4062
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4062
+[24-Jun-2025 19:09:49 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 19:09:49 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function getEnhancedFeaturesJS() in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php:4062
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4062

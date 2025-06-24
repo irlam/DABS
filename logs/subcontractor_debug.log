@@ -1,0 +1,5022 @@
+
+[24/06/2025 10:46:04] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:46:04] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.60
+    [timestamp] => 24/06/2025 10:46:04
+)
+
+[24/06/2025 10:46:04] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:46:04] POST parameters: Array
+(
+)
+
+[24/06/2025 10:46:04] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:46:04] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:46:04] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:46:04
+)
+
+[24/06/2025 10:46:04] Processing LIST action for project: 1
+[24/06/2025 10:46:04] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:46:04] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:04] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:04] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:46:06] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:46:06] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.60
+    [timestamp] => 24/06/2025 10:46:06
+)
+
+[24/06/2025 10:46:06] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:46:06] POST parameters: Array
+(
+)
+
+[24/06/2025 10:46:06] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:46:06] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:46:06] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:46:06
+)
+
+[24/06/2025 10:46:06] Processing LIST action for project: 1
+[24/06/2025 10:46:06] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:46:06] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:06] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:06] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:46:26] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:46:26] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.60
+    [timestamp] => 24/06/2025 10:46:26
+)
+
+[24/06/2025 10:46:26] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:46:26] POST parameters: Array
+(
+)
+
+[24/06/2025 10:46:26] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:46:26] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:46:26] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:46:26
+)
+
+[24/06/2025 10:46:26] Processing LIST action for project: 1
+[24/06/2025 10:46:26] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:46:26] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:26] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:26] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:46:39] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:46:39] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.60
+    [timestamp] => 24/06/2025 10:46:39
+)
+
+[24/06/2025 10:46:39] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:46:39] POST parameters: Array
+(
+)
+
+[24/06/2025 10:46:39] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:46:39] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:46:39] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:46:39
+)
+
+[24/06/2025 10:46:39] Processing LIST action for project: 1
+[24/06/2025 10:46:39] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:46:39] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:39] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:39] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:46:47] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:46:47] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.60
+    [timestamp] => 24/06/2025 10:46:47
+)
+
+[24/06/2025 10:46:47] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:46:47] POST parameters: Array
+(
+)
+
+[24/06/2025 10:46:47] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:46:47] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:46:47] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:46:47
+)
+
+[24/06/2025 10:46:47] Processing LIST action for project: 1
+[24/06/2025 10:46:47] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:46:47] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:47] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:47] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:46:59] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:46:59] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.60
+    [timestamp] => 24/06/2025 10:46:59
+)
+
+[24/06/2025 10:46:59] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:46:59] POST parameters: Array
+(
+)
+
+[24/06/2025 10:46:59] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:46:59] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:46:59] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:46:59
+)
+
+[24/06/2025 10:46:59] Processing LIST action for project: 1
+[24/06/2025 10:46:59] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:46:59] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:59] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:46:59] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:47:18] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:47:18] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.60
+    [timestamp] => 24/06/2025 10:47:18
+)
+
+[24/06/2025 10:47:18] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:47:18] POST parameters: Array
+(
+)
+
+[24/06/2025 10:47:18] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:47:18] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:47:18] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:47:18
+)
+
+[24/06/2025 10:47:18] Processing LIST action for project: 1
+[24/06/2025 10:47:18] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:47:18] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:47:18] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:47:18] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:47:55] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:47:55] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.136
+    [timestamp] => 24/06/2025 10:47:55
+)
+
+[24/06/2025 10:47:55] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:47:55] POST parameters: Array
+(
+)
+
+[24/06/2025 10:47:55] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:47:55] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:47:55] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:47:55
+)
+
+[24/06/2025 10:47:55] Processing LIST action for project: 1
+[24/06/2025 10:47:55] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:47:55] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:47:55] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:47:55] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:52:14] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:52:14] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.136
+    [timestamp] => 24/06/2025 10:52:14
+)
+
+[24/06/2025 10:52:14] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:52:14] POST parameters: Array
+(
+)
+
+[24/06/2025 10:52:14] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:52:14] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:52:14] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:52:14
+)
+
+[24/06/2025 10:52:14] Processing LIST action for project: 1
+[24/06/2025 10:52:14] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:52:14] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:52:14] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:52:14] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:52:17] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:52:17] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.136
+    [timestamp] => 24/06/2025 10:52:17
+)
+
+[24/06/2025 10:52:17] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:52:17] POST parameters: Array
+(
+)
+
+[24/06/2025 10:52:17] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:52:17] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:52:17] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:52:17
+)
+
+[24/06/2025 10:52:17] Processing LIST action for project: 1
+[24/06/2025 10:52:17] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:52:17] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:52:17] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:52:17] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:55:19] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:55:19] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.162.98
+    [timestamp] => 24/06/2025 10:55:19
+)
+
+[24/06/2025 10:55:19] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:55:19] POST parameters: Array
+(
+)
+
+[24/06/2025 10:55:19] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:55:19] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:55:19] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:55:19
+)
+
+[24/06/2025 10:55:19] Processing LIST action for project: 1
+[24/06/2025 10:55:19] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:55:19] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:55:19] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:55:19] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:57:02] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:57:02] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.147
+    [timestamp] => 24/06/2025 10:57:02
+)
+
+[24/06/2025 10:57:02] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:57:02] POST parameters: Array
+(
+)
+
+[24/06/2025 10:57:02] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:02] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:57:02] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:02
+)
+
+[24/06/2025 10:57:02] Processing LIST action for project: 1
+[24/06/2025 10:57:02] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:57:02] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:57:02] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:57:02] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:57:03] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:57:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.146
+    [timestamp] => 24/06/2025 10:57:03
+)
+
+[24/06/2025 10:57:03] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:57:03] POST parameters: Array
+(
+)
+
+[24/06/2025 10:57:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:57:03] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:03
+)
+
+[24/06/2025 10:57:03] Processing LIST action for project: 1
+[24/06/2025 10:57:03] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:57:03] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:57:03] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:57:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:57:52] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:57:52] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.146
+    [timestamp] => 24/06/2025 10:57:52
+)
+
+[24/06/2025 10:57:52] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:57:52] POST parameters: Array
+(
+)
+
+[24/06/2025 10:57:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:57:52] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:57:52] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:57:52
+)
+
+[24/06/2025 10:57:52] Processing LIST action for project: 1
+[24/06/2025 10:57:52] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:57:52] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:57:52] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:57:52] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 10:59:00] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 10:59:00] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.163.100
+    [timestamp] => 24/06/2025 10:59:00
+)
+
+[24/06/2025 10:59:00] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 10:59:00] POST parameters: Array
+(
+)
+
+[24/06/2025 10:59:00] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 10:59:00] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 10:59:00] Database connection established successfully: Array
+(
+    [connection_type] => centralized_include
+    [timestamp] => 24/06/2025 10:59:00
+)
+
+[24/06/2025 10:59:00] Processing LIST action for project: 1
+[24/06/2025 10:59:00] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 10:59:00] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:59:00] Error in LIST action: Array
+(
+    [error] => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 10:59:00] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 
+    [response_size] => 323
+)
+
+[24/06/2025 11:01:27] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:01:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.252
+    [timestamp] => 24/06/2025 11:01:27
+)
+
+[24/06/2025 11:01:27] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:01:27] POST parameters: Array
+(
+)
+
+[24/06/2025 11:01:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:01:27] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:01:27
+)
+
+[24/06/2025 11:01:27] Processing LIST action for project: 1
+[24/06/2025 11:01:27] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:01:27] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:01:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 2628
+)
+
+[24/06/2025 11:01:27] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:01:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.252
+    [timestamp] => 24/06/2025 11:01:27
+)
+
+[24/06/2025 11:01:27] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:01:27] POST parameters: Array
+(
+)
+
+[24/06/2025 11:01:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:01:27] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:01:27
+)
+
+[24/06/2025 11:01:27] Processing LIST action for project: 1
+[24/06/2025 11:01:27] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:01:27] Found subcontractors: Array
+(
+    [count] => 7
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:01:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 2628
+)
+
+[24/06/2025 11:01:48] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:01:48] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=get&id=20
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:01:48
+)
+
+[24/06/2025 11:01:48] GET parameters: Array
+(
+    [action] => get
+    [id] => 20
+)
+
+[24/06/2025 11:01:48] POST parameters: Array
+(
+)
+
+[24/06/2025 11:01:48] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:48] Action requested: Array
+(
+    [action] => get
+    [method] => GET
+)
+
+[24/06/2025 11:01:48] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:01:48
+)
+
+[24/06/2025 11:01:48] Processing GET action
+[24/06/2025 11:01:48] Retrieving subcontractor details: Array
+(
+    [id] => 20
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:01:48] Found subcontractor: Array
+(
+    [id] => 20
+    [name] => m
+)
+
+[24/06/2025 11:01:48] Sending JSON response: Array
+(
+    [action] => get
+    [success] => 1
+    [response_size] => 543
+)
+
+[24/06/2025 11:01:52] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:01:52] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_subcontractors.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:01:52
+)
+
+[24/06/2025 11:01:52] GET parameters: Array
+(
+)
+
+[24/06/2025 11:01:52] POST parameters: Array
+(
+    [0] => action
+    [1] => id
+)
+
+[24/06/2025 11:01:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:52] Action requested: Array
+(
+    [action] => delete
+    [method] => POST
+)
+
+[24/06/2025 11:01:52] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:01:52
+)
+
+[24/06/2025 11:01:52] Processing DELETE action
+[24/06/2025 11:01:52] Attempting to delete subcontractor: Array
+(
+    [id] => 20
+    [name] => m
+    [project_id] => 1
+    [deleted_by] => System Admin
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:01:52] Deleted subcontractor tasks: Array
+(
+    [tasks_deleted] => 0
+)
+
+[24/06/2025 11:01:52] Subcontractor deletion completed: Array
+(
+    [id] => 20
+    [name] => m
+    [rows_deleted] => 1
+    [tasks_deleted] => 0
+    [success] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:01:52] Sending JSON response: Array
+(
+    [action] => delete
+    [success] => 1
+    [response_size] => 309
+)
+
+[24/06/2025 11:01:52] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:01:52] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.252
+    [timestamp] => 24/06/2025 11:01:52
+)
+
+[24/06/2025 11:01:52] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:01:52] POST parameters: Array
+(
+)
+
+[24/06/2025 11:01:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:52] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:01:52] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:01:52
+)
+
+[24/06/2025 11:01:52] Processing LIST action for project: 1
+[24/06/2025 11:01:52] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:01:52] Found subcontractors: Array
+(
+    [count] => 6
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:01:52] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 2300
+)
+
+[24/06/2025 11:01:58] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:01:58] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=get&id=19
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:01:58
+)
+
+[24/06/2025 11:01:58] GET parameters: Array
+(
+    [action] => get
+    [id] => 19
+)
+
+[24/06/2025 11:01:58] POST parameters: Array
+(
+)
+
+[24/06/2025 11:01:58] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:01:58] Action requested: Array
+(
+    [action] => get
+    [method] => GET
+)
+
+[24/06/2025 11:01:58] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:01:58
+)
+
+[24/06/2025 11:01:58] Processing GET action
+[24/06/2025 11:01:58] Retrieving subcontractor details: Array
+(
+    [id] => 19
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:01:58] Found subcontractor: Array
+(
+    [id] => 19
+    [name] => mmm
+)
+
+[24/06/2025 11:01:58] Sending JSON response: Array
+(
+    [action] => get
+    [success] => 1
+    [response_size] => 546
+)
+
+[24/06/2025 11:02:02] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:02:02] Request details: Array
+(
+    [method] => POST
+    [uri] => /ajax_subcontractors.php
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:02:02
+)
+
+[24/06/2025 11:02:02] GET parameters: Array
+(
+)
+
+[24/06/2025 11:02:02] POST parameters: Array
+(
+    [0] => action
+    [1] => id
+)
+
+[24/06/2025 11:02:02] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:02:02] Action requested: Array
+(
+    [action] => delete
+    [method] => POST
+)
+
+[24/06/2025 11:02:02] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:02:02
+)
+
+[24/06/2025 11:02:02] Processing DELETE action
+[24/06/2025 11:02:02] Attempting to delete subcontractor: Array
+(
+    [id] => 19
+    [name] => mmm
+    [project_id] => 1
+    [deleted_by] => System Admin
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:02:02] Deleted subcontractor tasks: Array
+(
+    [tasks_deleted] => 0
+)
+
+[24/06/2025 11:02:02] Subcontractor deletion completed: Array
+(
+    [id] => 19
+    [name] => mmm
+    [rows_deleted] => 1
+    [tasks_deleted] => 0
+    [success] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:02:02] Sending JSON response: Array
+(
+    [action] => delete
+    [success] => 1
+    [response_size] => 311
+)
+
+[24/06/2025 11:02:02] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:02:02] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.252
+    [timestamp] => 24/06/2025 11:02:02
+)
+
+[24/06/2025 11:02:02] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:02:02] POST parameters: Array
+(
+)
+
+[24/06/2025 11:02:02] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:02:02] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:02:02] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:02:02
+)
+
+[24/06/2025 11:02:02] Processing LIST action for project: 1
+[24/06/2025 11:02:02] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:02:02] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:02:02] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:02:16] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:02:16] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.43.253
+    [timestamp] => 24/06/2025 11:02:16
+)
+
+[24/06/2025 11:02:16] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:02:16] POST parameters: Array
+(
+)
+
+[24/06/2025 11:02:16] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:02:16] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:02:16] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:02:16
+)
+
+[24/06/2025 11:02:16] Processing LIST action for project: 1
+[24/06/2025 11:02:16] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:02:16] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:02:16] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:03:11] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:03:11] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.108
+    [timestamp] => 24/06/2025 11:03:11
+)
+
+[24/06/2025 11:03:11] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:03:11] POST parameters: Array
+(
+)
+
+[24/06/2025 11:03:11] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:03:11] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:03:11] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:03:11
+)
+
+[24/06/2025 11:03:11] Processing LIST action for project: 1
+[24/06/2025 11:03:11] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:03:11] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:03:11] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:11:12] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:11:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.8
+    [timestamp] => 24/06/2025 11:11:12
+)
+
+[24/06/2025 11:11:12] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:11:12] POST parameters: Array
+(
+)
+
+[24/06/2025 11:11:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:11:12] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:11:12
+)
+
+[24/06/2025 11:11:12] Processing LIST action for project: 1
+[24/06/2025 11:11:12] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:11:12] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:11:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:11:20] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:11:20] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.7
+    [timestamp] => 24/06/2025 11:11:20
+)
+
+[24/06/2025 11:11:20] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:11:20] POST parameters: Array
+(
+)
+
+[24/06/2025 11:11:20] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:20] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:11:20] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:11:20
+)
+
+[24/06/2025 11:11:20] Processing LIST action for project: 1
+[24/06/2025 11:11:20] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:11:20] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:11:20] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:11:28] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:11:28] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.8
+    [timestamp] => 24/06/2025 11:11:28
+)
+
+[24/06/2025 11:11:28] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:11:28] POST parameters: Array
+(
+)
+
+[24/06/2025 11:11:28] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:11:28] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:11:28] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:11:28
+)
+
+[24/06/2025 11:11:28] Processing LIST action for project: 1
+[24/06/2025 11:11:28] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:11:28] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:11:28] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:13:08] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:13:08] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.163.6
+    [timestamp] => 24/06/2025 11:13:08
+)
+
+[24/06/2025 11:13:08] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:13:08] POST parameters: Array
+(
+)
+
+[24/06/2025 11:13:08] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:13:08] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:13:08] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:13:08
+)
+
+[24/06/2025 11:13:08] Processing LIST action for project: 1
+[24/06/2025 11:13:08] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:13:08] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:13:08] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:14:51] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:14:51] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.19
+    [timestamp] => 24/06/2025 11:14:51
+)
+
+[24/06/2025 11:14:51] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:14:51] POST parameters: Array
+(
+)
+
+[24/06/2025 11:14:51] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:51] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:14:51] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:14:51
+)
+
+[24/06/2025 11:14:51] Processing LIST action for project: 1
+[24/06/2025 11:14:51] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:14:51] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:14:51] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:14:51] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:14:51] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.18
+    [timestamp] => 24/06/2025 11:14:51
+)
+
+[24/06/2025 11:14:51] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:14:51] POST parameters: Array
+(
+)
+
+[24/06/2025 11:14:51] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:14:51] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:14:51] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:14:51
+)
+
+[24/06/2025 11:14:51] Processing LIST action for project: 1
+[24/06/2025 11:14:51] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:14:51] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:14:51] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:15:12] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:15:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.19
+    [timestamp] => 24/06/2025 11:15:12
+)
+
+[24/06/2025 11:15:12] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:15:12] POST parameters: Array
+(
+)
+
+[24/06/2025 11:15:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:15:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:15:12] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:15:12
+)
+
+[24/06/2025 11:15:12] Processing LIST action for project: 1
+[24/06/2025 11:15:12] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:15:12] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:15:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:22:01] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:22:01] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.194.15
+    [timestamp] => 24/06/2025 11:22:01
+)
+
+[24/06/2025 11:22:01] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:22:01] POST parameters: Array
+(
+)
+
+[24/06/2025 11:22:01] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:01] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:22:01] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:22:01
+)
+
+[24/06/2025 11:22:01] Processing LIST action for project: 1
+[24/06/2025 11:22:01] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:22:01] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:22:01] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:22:56] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:22:56] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.186.46
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:22:56] POST parameters: Array
+(
+)
+
+[24/06/2025 11:22:56] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:22:56] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] Processing LIST action for project: 1
+[24/06/2025 11:22:56] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:22:56] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:22:56] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:22:56] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:22:56] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.186.47
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:22:56] POST parameters: Array
+(
+)
+
+[24/06/2025 11:22:56] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:22:56] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:22:56] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:22:56
+)
+
+[24/06/2025 11:22:56] Processing LIST action for project: 1
+[24/06/2025 11:22:56] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:22:56] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:22:56] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:23:09] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:23:09] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.186.47
+    [timestamp] => 24/06/2025 11:23:09
+)
+
+[24/06/2025 11:23:09] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:23:09] POST parameters: Array
+(
+)
+
+[24/06/2025 11:23:09] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:09] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:23:09] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:23:09
+)
+
+[24/06/2025 11:23:09] Processing LIST action for project: 1
+[24/06/2025 11:23:09] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:23:09] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:23:09] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 11:23:19] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 11:23:19] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.186.46
+    [timestamp] => 24/06/2025 11:23:19
+)
+
+[24/06/2025 11:23:19] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 11:23:19] POST parameters: Array
+(
+)
+
+[24/06/2025 11:23:19] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 11:23:19] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 11:23:20] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 11:23:20
+)
+
+[24/06/2025 11:23:20] Processing LIST action for project: 1
+[24/06/2025 11:23:20] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 11:23:20] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 11:23:20] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 14:43:41] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 14:43:41] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.147
+    [timestamp] => 24/06/2025 14:43:41
+)
+
+[24/06/2025 14:43:41] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 14:43:41] POST parameters: Array
+(
+)
+
+[24/06/2025 14:43:41] Authentication failed - user not logged in: Array
+(
+    [session_id] => e79rf6rro7il5bnib6utfi1rf8
+    [ip_address] => 162.158.216.147
+)
+
+[24/06/2025 14:43:41] Sending JSON response: Array
+(
+    [action] => unknown
+    [success] => 
+    [response_size] => 240
+)
+
+[24/06/2025 14:50:49] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 14:50:49] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.98
+    [timestamp] => 24/06/2025 14:50:49
+)
+
+[24/06/2025 14:50:49] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 14:50:49] POST parameters: Array
+(
+)
+
+[24/06/2025 14:50:49] Authentication failed - user not logged in: Array
+(
+    [session_id] => e79rf6rro7il5bnib6utfi1rf8
+    [ip_address] => 172.69.224.98
+)
+
+[24/06/2025 14:50:49] Sending JSON response: Array
+(
+    [action] => unknown
+    [success] => 
+    [response_size] => 240
+)
+
+[24/06/2025 14:53:12] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 14:53:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.78
+    [timestamp] => 24/06/2025 14:53:12
+)
+
+[24/06/2025 14:53:12] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 14:53:12] POST parameters: Array
+(
+)
+
+[24/06/2025 14:53:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:53:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:53:12] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 14:53:12
+)
+
+[24/06/2025 14:53:12] Processing LIST action for project: 1
+[24/06/2025 14:53:12] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 14:53:12] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 14:53:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 14:55:31] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 14:55:31] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.99
+    [timestamp] => 24/06/2025 14:55:31
+)
+
+[24/06/2025 14:55:31] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 14:55:31] POST parameters: Array
+(
+)
+
+[24/06/2025 14:55:31] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:31] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:55:31] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 14:55:31
+)
+
+[24/06/2025 14:55:31] Processing LIST action for project: 1
+[24/06/2025 14:55:31] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 14:55:31] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 14:55:31] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 14:55:32] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 14:55:32] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.99
+    [timestamp] => 24/06/2025 14:55:32
+)
+
+[24/06/2025 14:55:32] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 14:55:32] POST parameters: Array
+(
+)
+
+[24/06/2025 14:55:32] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:55:32] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:55:32] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 14:55:32
+)
+
+[24/06/2025 14:55:32] Processing LIST action for project: 1
+[24/06/2025 14:55:32] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 14:55:32] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 14:55:32] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 14:56:48] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 14:56:48] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.51
+    [timestamp] => 24/06/2025 14:56:48
+)
+
+[24/06/2025 14:56:48] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 14:56:48] POST parameters: Array
+(
+)
+
+[24/06/2025 14:56:48] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 14:56:48] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 14:56:48] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 14:56:48
+)
+
+[24/06/2025 14:56:48] Processing LIST action for project: 1
+[24/06/2025 14:56:48] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 14:56:48] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 14:56:48] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:01:13] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:01:13] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.194.112
+    [timestamp] => 24/06/2025 15:01:13
+)
+
+[24/06/2025 15:01:13] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:01:13] POST parameters: Array
+(
+)
+
+[24/06/2025 15:01:13] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:13] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:01:13] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:01:13
+)
+
+[24/06/2025 15:01:13] Processing LIST action for project: 1
+[24/06/2025 15:01:13] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:01:13] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:01:13] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:01:15] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:01:15] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.194.113
+    [timestamp] => 24/06/2025 15:01:15
+)
+
+[24/06/2025 15:01:15] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:01:15] POST parameters: Array
+(
+)
+
+[24/06/2025 15:01:15] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:01:15] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:01:15] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:01:15
+)
+
+[24/06/2025 15:01:15] Processing LIST action for project: 1
+[24/06/2025 15:01:15] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:01:15] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:01:15] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:02:21] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:02:21] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.146
+    [timestamp] => 24/06/2025 15:02:21
+)
+
+[24/06/2025 15:02:21] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:02:21] POST parameters: Array
+(
+)
+
+[24/06/2025 15:02:21] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:02:21] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:02:21] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:02:21
+)
+
+[24/06/2025 15:02:21] Processing LIST action for project: 1
+[24/06/2025 15:02:21] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:02:21] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:02:21] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:21:27] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:21:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.185
+    [timestamp] => 24/06/2025 15:21:27
+)
+
+[24/06/2025 15:21:27] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:21:27] POST parameters: Array
+(
+)
+
+[24/06/2025 15:21:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:21:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:21:27] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:21:27
+)
+
+[24/06/2025 15:21:27] Processing LIST action for project: 1
+[24/06/2025 15:21:27] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:21:27] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:21:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:23:12] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:23:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.184
+    [timestamp] => 24/06/2025 15:23:12
+)
+
+[24/06/2025 15:23:12] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:23:12] POST parameters: Array
+(
+)
+
+[24/06/2025 15:23:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:23:12] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:23:12
+)
+
+[24/06/2025 15:23:12] Processing LIST action for project: 1
+[24/06/2025 15:23:12] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:23:12] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:23:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:23:19] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:23:19] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 162.158.216.184
+    [timestamp] => 24/06/2025 15:23:19
+)
+
+[24/06/2025 15:23:19] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:23:19] POST parameters: Array
+(
+)
+
+[24/06/2025 15:23:19] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:23:19] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:23:19] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:23:19
+)
+
+[24/06/2025 15:23:19] Processing LIST action for project: 1
+[24/06/2025 15:23:19] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:23:19] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:23:19] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:30:56] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:30:56] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.114
+    [timestamp] => 24/06/2025 15:30:56
+)
+
+[24/06/2025 15:30:56] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:30:56] POST parameters: Array
+(
+)
+
+[24/06/2025 15:30:56] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:56] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:30:56] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:30:56
+)
+
+[24/06/2025 15:30:56] Processing LIST action for project: 1
+[24/06/2025 15:30:56] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:30:56] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:30:56] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:30:57] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:30:57] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.114
+    [timestamp] => 24/06/2025 15:30:57
+)
+
+[24/06/2025 15:30:57] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:30:57] POST parameters: Array
+(
+)
+
+[24/06/2025 15:30:57] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:30:57] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:30:57] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:30:57
+)
+
+[24/06/2025 15:30:57] Processing LIST action for project: 1
+[24/06/2025 15:30:57] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:30:57] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:30:57] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:31:21] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:31:21] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.115
+    [timestamp] => 24/06/2025 15:31:21
+)
+
+[24/06/2025 15:31:21] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:31:21] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:21] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:21] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:21] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:31:21
+)
+
+[24/06/2025 15:31:21] Processing LIST action for project: 1
+[24/06/2025 15:31:21] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:31:21] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:31:21] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:31:22] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:31:22] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.115
+    [timestamp] => 24/06/2025 15:31:22
+)
+
+[24/06/2025 15:31:22] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:31:22] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:22] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:22] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:22] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:31:22
+)
+
+[24/06/2025 15:31:22] Processing LIST action for project: 1
+[24/06/2025 15:31:22] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:31:22] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:31:22] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:31:53] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:31:53] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.19
+    [timestamp] => 24/06/2025 15:31:53
+)
+
+[24/06/2025 15:31:53] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:31:53] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:53] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:53] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:53] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:31:53
+)
+
+[24/06/2025 15:31:53] Processing LIST action for project: 1
+[24/06/2025 15:31:53] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:31:53] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:31:53] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:31:55] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:31:55] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 141.101.98.19
+    [timestamp] => 24/06/2025 15:31:55
+)
+
+[24/06/2025 15:31:55] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:31:55] POST parameters: Array
+(
+)
+
+[24/06/2025 15:31:55] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:31:55] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:31:55] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:31:55
+)
+
+[24/06/2025 15:31:55] Processing LIST action for project: 1
+[24/06/2025 15:31:55] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:31:55] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:31:55] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:32:29] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:32:29] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.56
+    [timestamp] => 24/06/2025 15:32:29
+)
+
+[24/06/2025 15:32:29] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:32:29] POST parameters: Array
+(
+)
+
+[24/06/2025 15:32:29] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:29] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:32:29] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:32:29
+)
+
+[24/06/2025 15:32:29] Processing LIST action for project: 1
+[24/06/2025 15:32:29] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:32:29] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:32:29] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:32:32] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:32:32] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.56
+    [timestamp] => 24/06/2025 15:32:32
+)
+
+[24/06/2025 15:32:32] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:32:32] POST parameters: Array
+(
+)
+
+[24/06/2025 15:32:32] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:32] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:32:32] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:32:32
+)
+
+[24/06/2025 15:32:32] Processing LIST action for project: 1
+[24/06/2025 15:32:32] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:32:32] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:32:32] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:32:45] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:32:45] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.56
+    [timestamp] => 24/06/2025 15:32:45
+)
+
+[24/06/2025 15:32:45] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:32:45] POST parameters: Array
+(
+)
+
+[24/06/2025 15:32:45] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:32:45] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:32:45] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:32:45
+)
+
+[24/06/2025 15:32:45] Processing LIST action for project: 1
+[24/06/2025 15:32:45] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:32:45] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:32:45] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:34:17] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:34:17] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:34:17
+)
+
+[24/06/2025 15:34:17] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:34:17] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:17] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:17] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:17] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:34:17
+)
+
+[24/06/2025 15:34:17] Processing LIST action for project: 1
+[24/06/2025 15:34:17] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:34:17] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:34:17] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:34:17] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:34:17] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:34:17
+)
+
+[24/06/2025 15:34:17] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:34:17] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:17] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:17] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:17] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:34:17
+)
+
+[24/06/2025 15:34:17] Processing LIST action for project: 1
+[24/06/2025 15:34:17] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:34:17] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:34:17] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:34:43] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:34:43] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:34:43] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:43] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:43] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] Processing LIST action for project: 1
+[24/06/2025 15:34:43] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:34:43] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:34:43] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:34:43] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:34:43] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.58
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:34:43] POST parameters: Array
+(
+)
+
+[24/06/2025 15:34:43] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:34:43] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:34:43] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:34:43
+)
+
+[24/06/2025 15:34:43] Processing LIST action for project: 1
+[24/06/2025 15:34:43] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:34:43] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:34:43] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:35:03] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:35:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:35:03] POST parameters: Array
+(
+)
+
+[24/06/2025 15:35:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:35:03] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] Processing LIST action for project: 1
+[24/06/2025 15:35:03] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:35:03] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:35:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:35:03] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:35:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:35:03] POST parameters: Array
+(
+)
+
+[24/06/2025 15:35:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:35:03] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:35:03
+)
+
+[24/06/2025 15:35:03] Processing LIST action for project: 1
+[24/06/2025 15:35:03] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:35:03] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:35:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:35:28] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:35:28] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.68.229.59
+    [timestamp] => 24/06/2025 15:35:28
+)
+
+[24/06/2025 15:35:28] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:35:28] POST parameters: Array
+(
+)
+
+[24/06/2025 15:35:28] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:35:28] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:35:28] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:35:28
+)
+
+[24/06/2025 15:35:28] Processing LIST action for project: 1
+[24/06/2025 15:35:28] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:35:28] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:35:28] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:46:52] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:46:52] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.178
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:46:52] POST parameters: Array
+(
+)
+
+[24/06/2025 15:46:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:46:52] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] Processing LIST action for project: 1
+[24/06/2025 15:46:52] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:46:52] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:46:52] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:46:52] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:46:52] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.178
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:46:52] POST parameters: Array
+(
+)
+
+[24/06/2025 15:46:52] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:46:52] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:46:52] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:46:52
+)
+
+[24/06/2025 15:46:52] Processing LIST action for project: 1
+[24/06/2025 15:46:52] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:46:52] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:46:52] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 15:48:07] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 15:48:07] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.91.250
+    [timestamp] => 24/06/2025 15:48:07
+)
+
+[24/06/2025 15:48:07] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 15:48:07] POST parameters: Array
+(
+)
+
+[24/06/2025 15:48:07] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 15:48:07] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 15:48:07] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 15:48:07
+)
+
+[24/06/2025 15:48:07] Processing LIST action for project: 1
+[24/06/2025 15:48:07] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 15:48:07] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 15:48:07] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 16:10:38] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 16:10:38] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.91.16
+    [timestamp] => 24/06/2025 16:10:38
+)
+
+[24/06/2025 16:10:38] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 16:10:38] POST parameters: Array
+(
+)
+
+[24/06/2025 16:10:38] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:38] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:10:38] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 16:10:38
+)
+
+[24/06/2025 16:10:38] Processing LIST action for project: 1
+[24/06/2025 16:10:38] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 16:10:38] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 16:10:38] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 16:10:40] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 16:10:40] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.91.16
+    [timestamp] => 24/06/2025 16:10:40
+)
+
+[24/06/2025 16:10:40] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 16:10:40] POST parameters: Array
+(
+)
+
+[24/06/2025 16:10:40] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:10:40] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:10:40] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 16:10:40
+)
+
+[24/06/2025 16:10:40] Processing LIST action for project: 1
+[24/06/2025 16:10:40] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 16:10:40] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 16:10:40] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 16:23:58] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 16:23:58] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.85.111
+    [timestamp] => 24/06/2025 16:23:58
+)
+
+[24/06/2025 16:23:58] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 16:23:58] POST parameters: Array
+(
+)
+
+[24/06/2025 16:23:58] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:23:58] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:23:58] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 16:23:58
+)
+
+[24/06/2025 16:23:58] Processing LIST action for project: 1
+[24/06/2025 16:23:58] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 16:23:58] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 16:23:58] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 16:24:32] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 16:24:32] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.19
+    [timestamp] => 24/06/2025 16:24:32
+)
+
+[24/06/2025 16:24:32] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 16:24:32] POST parameters: Array
+(
+)
+
+[24/06/2025 16:24:32] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:24:32] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:24:32] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 16:24:32
+)
+
+[24/06/2025 16:24:32] Processing LIST action for project: 1
+[24/06/2025 16:24:32] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 16:24:32] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 16:24:32] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 16:33:26] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 16:33:26] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.82
+    [timestamp] => 24/06/2025 16:33:26
+)
+
+[24/06/2025 16:33:26] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 16:33:26] POST parameters: Array
+(
+)
+
+[24/06/2025 16:33:26] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:26] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:33:26] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 16:33:26
+)
+
+[24/06/2025 16:33:26] Processing LIST action for project: 1
+[24/06/2025 16:33:26] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 16:33:26] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 16:33:26] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 16:33:29] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 16:33:29] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.86.81
+    [timestamp] => 24/06/2025 16:33:29
+)
+
+[24/06/2025 16:33:29] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 16:33:29] POST parameters: Array
+(
+)
+
+[24/06/2025 16:33:29] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 16:33:29] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 16:33:29] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 16:33:29
+)
+
+[24/06/2025 16:33:29] Processing LIST action for project: 1
+[24/06/2025 16:33:29] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 16:33:29] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 16:33:29] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:41:27] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:41:27] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.60
+    [timestamp] => 24/06/2025 18:41:27
+)
+
+[24/06/2025 18:41:27] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:41:27] POST parameters: Array
+(
+)
+
+[24/06/2025 18:41:27] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:41:27] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:41:27] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:41:27
+)
+
+[24/06/2025 18:41:27] Processing LIST action for project: 1
+[24/06/2025 18:41:27] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:41:27] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:41:27] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:42:25] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:42:25] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.34
+    [timestamp] => 24/06/2025 18:42:25
+)
+
+[24/06/2025 18:42:25] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:42:25] POST parameters: Array
+(
+)
+
+[24/06/2025 18:42:25] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:42:25] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:42:25] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:42:25
+)
+
+[24/06/2025 18:42:25] Processing LIST action for project: 1
+[24/06/2025 18:42:25] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:42:25] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:42:25] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:47:55] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:47:55] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.168
+    [timestamp] => 24/06/2025 18:47:55
+)
+
+[24/06/2025 18:47:55] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:47:55] POST parameters: Array
+(
+)
+
+[24/06/2025 18:47:55] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:55] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:47:55] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:47:55
+)
+
+[24/06/2025 18:47:55] Processing LIST action for project: 1
+[24/06/2025 18:47:55] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:47:55] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:47:55] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:47:55] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:47:55] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.168
+    [timestamp] => 24/06/2025 18:47:55
+)
+
+[24/06/2025 18:47:55] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:47:55] POST parameters: Array
+(
+)
+
+[24/06/2025 18:47:55] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:47:55] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:47:55] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:47:55
+)
+
+[24/06/2025 18:47:55] Processing LIST action for project: 1
+[24/06/2025 18:47:55] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:47:55] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:47:55] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:48:06] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:48:06] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.169
+    [timestamp] => 24/06/2025 18:48:06
+)
+
+[24/06/2025 18:48:06] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:48:06] POST parameters: Array
+(
+)
+
+[24/06/2025 18:48:06] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:06] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:48:06] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:48:06
+)
+
+[24/06/2025 18:48:06] Processing LIST action for project: 1
+[24/06/2025 18:48:06] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:48:06] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:48:06] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:48:12] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:48:12] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.168
+    [timestamp] => 24/06/2025 18:48:12
+)
+
+[24/06/2025 18:48:12] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:48:12] POST parameters: Array
+(
+)
+
+[24/06/2025 18:48:12] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:48:12] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:48:12] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:48:12
+)
+
+[24/06/2025 18:48:12] Processing LIST action for project: 1
+[24/06/2025 18:48:12] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:48:12] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:48:12] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:55:31] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:55:31] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.224.67
+    [timestamp] => 24/06/2025 18:55:31
+)
+
+[24/06/2025 18:55:31] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:55:31] POST parameters: Array
+(
+)
+
+[24/06/2025 18:55:31] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:55:31] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:55:31] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:55:31
+)
+
+[24/06/2025 18:55:31] Processing LIST action for project: 1
+[24/06/2025 18:55:31] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:55:31] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:55:31] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:58:24] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:58:24] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.127
+    [timestamp] => 24/06/2025 18:58:24
+)
+
+[24/06/2025 18:58:24] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:58:24] POST parameters: Array
+(
+)
+
+[24/06/2025 18:58:24] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:24] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:58:24] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:58:24
+)
+
+[24/06/2025 18:58:24] Processing LIST action for project: 1
+[24/06/2025 18:58:24] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:58:24] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:58:24] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:58:24] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:58:24] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.127
+    [timestamp] => 24/06/2025 18:58:24
+)
+
+[24/06/2025 18:58:24] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:58:24] POST parameters: Array
+(
+)
+
+[24/06/2025 18:58:24] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:24] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:58:24] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:58:24
+)
+
+[24/06/2025 18:58:24] Processing LIST action for project: 1
+[24/06/2025 18:58:24] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:58:24] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:58:24] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 18:58:30] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 18:58:30] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.241.127
+    [timestamp] => 24/06/2025 18:58:30
+)
+
+[24/06/2025 18:58:30] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 18:58:30] POST parameters: Array
+(
+)
+
+[24/06/2025 18:58:30] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 18:58:30] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 18:58:30] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 18:58:30
+)
+
+[24/06/2025 18:58:30] Processing LIST action for project: 1
+[24/06/2025 18:58:30] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 18:58:30] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 18:58:30] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 19:00:33] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 19:00:33] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.44
+    [timestamp] => 24/06/2025 19:00:33
+)
+
+[24/06/2025 19:00:33] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 19:00:33] POST parameters: Array
+(
+)
+
+[24/06/2025 19:00:33] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:33] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:00:33] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 19:00:33
+)
+
+[24/06/2025 19:00:33] Processing LIST action for project: 1
+[24/06/2025 19:00:33] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 19:00:33] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 19:00:33] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 19:00:34] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 19:00:34] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.44
+    [timestamp] => 24/06/2025 19:00:34
+)
+
+[24/06/2025 19:00:34] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 19:00:34] POST parameters: Array
+(
+)
+
+[24/06/2025 19:00:34] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:00:34] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:00:34] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 19:00:34
+)
+
+[24/06/2025 19:00:34] Processing LIST action for project: 1
+[24/06/2025 19:00:34] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 19:00:34] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 19:00:34] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 19:04:38] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 19:04:38] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.20
+    [timestamp] => 24/06/2025 19:04:38
+)
+
+[24/06/2025 19:04:38] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 19:04:38] POST parameters: Array
+(
+)
+
+[24/06/2025 19:04:38] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:04:38] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:04:38] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 19:04:38
+)
+
+[24/06/2025 19:04:38] Processing LIST action for project: 1
+[24/06/2025 19:04:38] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 19:04:38] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 19:04:38] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 19:05:03] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 19:05:03] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.69.195.19
+    [timestamp] => 24/06/2025 19:05:03
+)
+
+[24/06/2025 19:05:03] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 19:05:03] POST parameters: Array
+(
+)
+
+[24/06/2025 19:05:03] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:05:03] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:05:03] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 19:05:03
+)
+
+[24/06/2025 19:05:03] Processing LIST action for project: 1
+[24/06/2025 19:05:03] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 19:05:03] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 19:05:03] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 19:07:24] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 19:07:24] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.71.178.160
+    [timestamp] => 24/06/2025 19:07:24
+)
+
+[24/06/2025 19:07:24] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 19:07:24] POST parameters: Array
+(
+)
+
+[24/06/2025 19:07:24] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:07:24] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:07:24] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 19:07:24
+)
+
+[24/06/2025 19:07:24] Processing LIST action for project: 1
+[24/06/2025 19:07:24] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 19:07:24] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 19:07:24] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 19:09:47] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 19:09:47] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.143
+    [timestamp] => 24/06/2025 19:09:47
+)
+
+[24/06/2025 19:09:47] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 19:09:47] POST parameters: Array
+(
+)
+
+[24/06/2025 19:09:47] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:47] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:09:47] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 19:09:47
+)
+
+[24/06/2025 19:09:47] Processing LIST action for project: 1
+[24/06/2025 19:09:47] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 19:09:47] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 19:09:47] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+
+[24/06/2025 19:09:49] === NEW SUBCONTRACTOR API REQUEST STARTED ===
+[24/06/2025 19:09:49] Request details: Array
+(
+    [method] => GET
+    [uri] => /ajax_subcontractors.php?action=list
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [ip_address] => 172.70.90.143
+    [timestamp] => 24/06/2025 19:09:49
+)
+
+[24/06/2025 19:09:49] GET parameters: Array
+(
+    [action] => list
+)
+
+[24/06/2025 19:09:49] POST parameters: Array
+(
+)
+
+[24/06/2025 19:09:49] User context established: Array
+(
+    [username] => System Admin
+    [user_id] => 1
+    [project_id] => 1
+)
+
+[24/06/2025 19:09:49] Action requested: Array
+(
+    [action] => list
+    [method] => GET
+)
+
+[24/06/2025 19:09:49] Database connection established successfully: Array
+(
+    [connection_type] => PDO
+    [timestamp] => 24/06/2025 19:09:49
+)
+
+[24/06/2025 19:09:49] Processing LIST action for project: 1
+[24/06/2025 19:09:49] Executing subcontractor query with table: dabs_subcontractors
+[24/06/2025 19:09:49] Found subcontractors: Array
+(
+    [count] => 5
+    [project_id] => 1
+    [table] => dabs_subcontractors
+)
+
+[24/06/2025 19:09:49] Sending JSON response: Array
+(
+    [action] => list
+    [success] => 1
+    [response_size] => 1969
+)
+

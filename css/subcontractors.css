@@ -1,0 +1,289 @@
+/**
+ * css/subcontractors.css
+ * 
+ * Daily Activity Briefing System (DABS) - Subcontractor Display Styles
+ * 
+ * This file contains styles for displaying and managing subcontractors in the DABS system.
+ * It defines the appearance of the subcontractor accordion, task lists, and form elements
+ * used for adding and editing subcontractor information. The styles are designed to be
+ * responsive and follow the DABS visual design language with special attention to
+ * task priority visualization.
+ * 
+ * Current Date and Time (UK Format): 29/05/2025 15:18:48
+ * Current User's Login: irlamkeep
+ * 
+ * @author irlamkeep
+ * @version 1.0
+ * @date 29/05/2025
+ * @website dabs.defecttracker.uk
+ */
+
+/* 
+ * Subcontractor Card Base Styling
+ * Contains the accordion and header
+ */
+.subcontractor-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.subcontractor-card .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.75rem 1rem;
+}
+
+.subcontractor-card .card-header h2 {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+/* 
+ * Accordion Styling 
+ * Controls the look of the expandable subcontractor items
+ */
+.subcontractor-card .accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    margin-bottom: 0.5rem;
+}
+
+.subcontractor-card .accordion-button {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+.subcontractor-card .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    z-index: 3;
+}
+
+.subcontractor-card .accordion-button:not(.collapsed) {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.subcontractor-card .accordion-body {
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* 
+ * Task List Styling 
+ * Formatting for the list of tasks assigned to subcontractors
+ */
+.task-list {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.task-list li {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.task-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6c757d;
+}
+
+/* Task Priority Styling - Visual indicators for task importance */
+.task-list li.priority-high {
+    color: #dc3545; /* Red for high priority */
+    font-weight: 600;
+}
+
+.task-list li.priority-high::before {
+    content: "!";
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.task-list li.priority-medium {
+    color: #fd7e14; /* Orange for medium priority */
+    font-weight: 500;
+}
+
+.task-list li.priority-medium::before {
+    content: "▶";
+    color: #fd7e14;
+}
+
+.task-list li.priority-low {
+    color: #20c997; /* Green for low priority */
+}
+
+.task-list li.priority-low::before {
+    content: "○";
+    color: #20c997;
+}
+
+/* 
+ * Subcontractor Form Styling 
+ * For the add/edit subcontractor form elements
+ */
+#subcontractorForm .row {
+    margin-bottom: 1rem;
+}
+
+#subcontractorForm label {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+#subcontractorForm .form-control:focus,
+#subcontractorForm .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Required field indicator */
+#subcontractorForm label::after {
+    content: " *";
+    color: #dc3545;
+}
+
+#subcontractorForm label:not([for="contactEmail"]):not([for="subcontractorStatus"])::after {
+    content: " *";
+    color: #dc3545;
+}
+
+/* 
+ * Task Row Styling in Form 
+ * Controls the appearance of task input rows in the form
+ */
+.task-row {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.task-row:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Remove task button styling */
+.remove-task-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+ * Status Badge Styling 
+ * Color-coded badges for subcontractor status
+ */
+.accordion-button .badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+    border-radius: 0.375rem;
+}
+
+/* 
+ * Edit Button Styling 
+ * For the edit subcontractor button
+ */
+.edit-subcontractor-btn {
+    transition: all 0.2s;
+}
+
+.edit-subcontractor-btn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* 
+ * Animation for Task Row Addition/Removal 
+ * Smooth transition effects when adding or removing task rows
+ */
+.task-row {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 
+ * Toast Notifications Styling 
+ * For the notification messages
+ */
+.toast-container {
+    z-index: 1100;
+}
+
+.toast {
+    min-width: 250px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.toast .toast-header {
+    padding: 0.5rem 0.75rem;
+}
+
+.toast .toast-body {
+    padding: 0.75rem;
+}
+
+/* 
+ * Responsive Adjustments for Small Screens 
+ * Layout changes for mobile devices
+ */
+@media (max-width: 767.98px) {
+    .task-row .col-md-1 {
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+    
+    .subcontractor-card .accordion-body {
+        padding: 1rem 0.75rem;
+    }
+    
+    #subcontractorForm .row > div {
+        margin-bottom: 1rem;
+    }
+    
+    .subcontractor-card .accordion-button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.95rem;
+    }
+    
+    .task-list li {
+        padding-left: 1.25rem;
+    }
+}
+
+/* Print styles - for better appearance when printing */
+@media print {
+    .subcontractor-card {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+    
+    .accordion-button::after {
+        display: none;
+    }
+    
+    .accordion-button {
+        border: none;
+    }
+    
+    .accordion-collapse {
+        display: block !important;
+    }
+    
+    .edit-subcontractor-btn,
+    #addSubcontractorBtn {
+        display: none !important;
+    }
+}

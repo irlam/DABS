@@ -1,0 +1,2107 @@
+/**
+ * =========================================================================
+ * js/activities.js - Daily Activity Briefing System (DABS)
+ * =========================================================================
+ * 
+ * PURPOSE:
+ * This file manages the Activity Schedule and Resource Allocation interface
+ * for construction sites. It provides an interactive UI for creating, editing,
+ * and organizing daily activities across different areas of the site, with
+ * comprehensive resource tracking for labor and subcontractors.
+ * 
+ * AUTHOR: irlamkeep (System Admin)
+ * DATE: 2025-06-03 19:34:40
+ * VERSION: 3.3
+ * 
+ * FEATURES:
+ * - Area-based organization of activities (Block 1, East Wing, etc.)
+ * - Carry forward activities from previous days with one click
+ * - Interactive labor allocation controls (+/- buttons)
+ * - Subcontractor selection with support for multiple contacts
+ * - On-the-fly addition of new subcontractors and areas
+ * - Detailed resource statistics by area and contractor
+ * - Color-coded priorities and modern card-based interface
+ * - Filtering capabilities by area and contractor
+ * - UK date format (DD/MM/YYYY) with Europe/London timezone
+ * 
+ * =========================================================================
+ */
+
+// Initialize the module when the document is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Log that the script is loaded
+    console.log('Activities.js loaded successfully');
+    
+    /**
+     * Debug logging helper - only logs if debug mode is enabled
+     * Helps with troubleshooting without cluttering the console in production
+     * 
+     * @param {string} message - The message to log
+     * @param {any} data - Optional data to include with the message
+     */
+    function logDebug(message, data = null) {
+        if (window.debugEnabled) {
+            if (data) {
+                console.log(`[Activities] ${message}`, data);
+            } else {
+                console.log(`[Activities] ${message}`);
+            }
+        }
+    }
+    
+    // Main DOM elements used throughout the module
+    const elements = {
+        // The container for all activities
+        activitiesList: document.getElementById('activitiesList'),
+        
+        // The modal for adding/editing activities
+        activityModal: document.getElementById('activityModal'),
+        
+        // The form inside the activity modal
+        activityForm: document.getElementById('activityForm'),
+        
+        // Display of current date in UK format
+        activityDateDisplay: document.getElementById('activityDateDisplay'),
+        
+        // Container for resource statistics
+        resourceStats: document.getElementById('resourceStats'),
+        
+        // Container for weekly statistics
+        weeklyStatsContainer: document.getElementById('weeklyStatsContainer'),
+        
+        // Container for area filter buttons
+        areaFilterContainer: document.getElementById('areaFilterContainer'),
+        
+        // Button to copy activities from previous day
+        copyActivitiesBtn: document.getElementById('copyActivitiesBtn'),
+        
+        // Notice about previous day's activities
+        prevDayNotice: document.getElementById('prevDayNotice')
+    };
+    
+    // Log what elements were found/missing for debugging
+    logDebug('DOM elements initialized', {
+        activitiesList: !!elements.activitiesList,
+        activityModal: !!elements.activityModal,
+        activityForm: !!elements.activityForm,
+        activityDateDisplay: !!elements.activityDateDisplay,
+        resourceStats: !!elements.resourceStats,
+        weeklyStatsContainer: !!elements.weeklyStatsContainer,
+        areaFilterContainer: !!elements.areaFilterContainer,
+        copyActivitiesBtn: !!elements.copyActivitiesBtn,
+        prevDayNotice: !!elements.prevDayNotice
+    });
+    
+    // CSS selectors for dynamic elements
+    const selectors = {
+        // Button to add a new activity
+        addActivity: '#addActivityBtn',
+        
+        // Buttons to edit existing activities
+        editActivity: '.edit-activity-btn',
+        
+        // Buttons to delete activities
+        deleteActivity: '.delete-activity-btn',
+        
+        // Buttons to filter activities by area
+        areaFilter: '.area-filter'
+    };
+    
+    // Current date in database format (YYYY-MM-DD)
+    let currentDate = getUKDateString();
+    
+    // Current date in UK display format (DD/MM/YYYY)
+    let currentDateUK = formatUKDate(currentDate);
+    
+    // Whether we're editing an existing activity or creating a new one
+    let isEditing = false;
+    
+    // ID of the activity being edited (if any)
+    let editingId = null;
+    
+    // List of all subcontractors for dropdowns
+    let subcontractorsList = [];
+    
+    // List of all areas for dropdowns and filtering
+    let areasList = [];
+    
+    // Currently selected area filter (empty string for all areas)
+    let currentAreaFilter = '';
+    
+    // Previous day briefing ID and date (if available)
+    let prevBriefingId = null;
+    let prevBriefingDate = null;
+    
+    // Initialize the activities panel when page loads
+    initActivities();
+    
+    /**
+     * Get today's date in YYYY-MM-DD format for database use
+     * Uses Europe/London timezone for UK operations
+     * 
+     * @param {number} offsetDays - Days to offset from today (e.g., -1 for yesterday)
+     * @returns {string} Date in YYYY-MM-DD format for UK timezone
+     */
+    function getUKDateString(offsetDays=0) {
+        // Create a date object for today
+        const d = new Date();
+        
+        // Apply the offset if provided (e.g., -1 for yesterday)
+        d.setDate(d.getDate() + offsetDays);
+        
+        // Format as YYYY-MM-DD using UK timezone (en-CA format gives YYYY-MM-DD)
+        return d.toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
+    }
+    
+    /**
+     * Format a date in nice UK format (DD/MM/YYYY)
+     * Ensures consistent UK date display throughout the application
+     * 
+     * @param {string} dateString - Date in YYYY-MM-DD format
+     * @returns {string} Date in DD/MM/YYYY format
+     */
+    function formatUKDate(dateString) {
+        // Create a date object from the YYYY-MM-DD string
+        const date = new Date(dateString + 'T00:00:00');
+        
+        // Format in DD/MM/YYYY UK format
+        return date.toLocaleDateString('en-GB', { 
+            day: '2-digit',           // 01-31 day
+            month: '2-digit',         // 01-12 month  
+            year: 'numeric',          // 4-digit year
+            timeZone: 'Europe/London' // UK timezone
+        });
+    }
+    
+    /**
+     * Set up the activities panel and all its buttons
+     * This initializes everything when the page first loads
+     */
+    function initActivities() {
+        logDebug('Initializing Activities panel');
+        
+        // Ensure the New Area Input container exists
+        createNewAreaInputIfNeeded();
+        
+        // Show today's date in UK format in the header
+        if (elements.activityDateDisplay) {
+            elements.activityDateDisplay.textContent = currentDateUK;
+        }
+        
+        // Load areas for dropdown lists and filters
+        loadAreas();
+        
+        // Load subcontractors for the dropdown lists
+        loadSubcontractors();
+        
+        // Load all activities for today
+        loadActivities();
+        
+        // Set up event listeners for all the buttons (add, edit, delete)
+        document.addEventListener('click', function(e) {
+            // Add Activity button
+            if (e.target.matches(selectors.addActivity) || e.target.closest(selectors.addActivity)) {
+                e.preventDefault();
+                logDebug('Add Activity button clicked');
+                openActivityModal();
+            }
+            
+            // Edit Activity button
+            if (e.target.matches(selectors.editActivity) || e.target.closest(selectors.editActivity)) {
+                e.preventDefault();
+                const btn = e.target.closest(selectors.editActivity);
+                const activityId = btn.dataset.id;
+                openActivityModal(activityId);
+            }
+            
+            // Delete Activity button
+            if (e.target.matches(selectors.deleteActivity) || e.target.closest(selectors.deleteActivity)) {
+                e.preventDefault();
+                const btn = e.target.closest(selectors.deleteActivity);
+                const activityId = btn.dataset.id;
+                confirmDeleteActivity(activityId);
+            }
+            
+            // Add contractor button in modal
+            if (e.target.matches('#addContractorBtn') || e.target.closest('#addContractorBtn')) {
+                e.preventDefault();
+                openAddContractorModal();
+            }
+            
+            // Labor count increment button
+            if (e.target.matches('#incrementLabor') || e.target.closest('#incrementLabor')) {
+                e.preventDefault();
+                incrementLaborCount(1);
+            }
+            
+            // Labor count decrement button
+            if (e.target.matches('#decrementLabor') || e.target.closest('#decrementLabor')) {
+                e.preventDefault();
+                incrementLaborCount(-1);
+            }
+            
+            // Copy activities from previous day button
+            if (e.target.matches('#copyActivitiesBtn') || e.target.closest('#copyActivitiesBtn')) {
+                e.preventDefault();
+                copyActivitiesFromPreviousDay();
+            }
+            
+            // Area filter buttons
+            if (e.target.matches(selectors.areaFilter) || e.target.closest(selectors.areaFilter)) {
+                e.preventDefault();
+                const btn = e.target.closest(selectors.areaFilter);
+                const area = btn.dataset.area || '';
+                filterActivitiesByArea(area);
+            }
+        });
+        
+        // Set up the Save button in the activity modal
+        const saveBtn = document.getElementById('saveActivityBtn');
+        if (saveBtn) {
+            saveBtn.addEventListener('click', saveActivity);
+            logDebug('Save Activity button listener added');
+        } else {
+            logDebug('WARNING: Save Activity button not found in DOM');
+        }
+        
+        // Set up contractor dropdown change handler
+        const contractorSelect = document.getElementById('activityContractors');
+        if (contractorSelect) {
+            contractorSelect.addEventListener('change', handleContractorSelection);
+        } else {
+            logDebug('WARNING: Activity Contractors dropdown not found');
+        }
+        
+        // Set up area dropdown change handler
+        const areaSelect = document.getElementById('activityArea');
+        if (areaSelect) {
+            areaSelect.addEventListener('change', handleAreaSelection);
+        } else {
+            logDebug('WARNING: Activity Area dropdown not found');
+        }
+        
+        // Set up labor count input handler
+        const laborCountInput = document.getElementById('laborCount');
+        if (laborCountInput) {
+            laborCountInput.addEventListener('input', updateLaborCount);
+        } else {
+            logDebug('WARNING: Labor Count input not found');
+        }
+        
+        // Set up the contractor save button
+        const saveContractorBtn = document.getElementById('saveContractorBtn');
+        if (saveContractorBtn) {
+            saveContractorBtn.addEventListener('click', saveNewContractor);
+        } else {
+            logDebug('WARNING: Save Contractor button not found');
+        }
+        
+        // Prevent normal form submit on activity form
+        const activityForm = document.getElementById('activityForm');
+        if (activityForm) {
+            activityForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Don't reload the page
+                saveActivity();     // Save the activity instead
+            });
+        } else {
+            logDebug('WARNING: Activity Form not found');
+        }
+        
+        // Prevent normal form submit on contractor form
+        const contractorForm = document.getElementById('contractorForm');
+        if (contractorForm) {
+            contractorForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                saveNewContractor();
+            });
+        } else {
+            logDebug('WARNING: Contractor Form not found');
+        }
+        
+        // Add specific Add Activity button handler for extra safety
+        const addActivityBtn = document.getElementById('addActivityBtn');
+        if (addActivityBtn) {
+            addActivityBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                logDebug('Add Activity button direct handler clicked');
+                openActivityModal();
+            });
+        } else {
+            logDebug('WARNING: Main Add Activity button not found by ID');
+        }
+        
+        logDebug('Activities panel initialized successfully');
+    }
+    
+    /**
+     * Create the New Area Input container if it doesn't exist
+     * This ensures the UI has a place for users to enter new area names
+     */
+    function createNewAreaInputIfNeeded() {
+        if (!document.getElementById('newAreaContainer')) {
+            logDebug('Creating missing newAreaContainer');
+            
+            const formGroup = document.createElement('div');
+            formGroup.id = 'newAreaContainer';
+            formGroup.className = 'mb-3 d-none';
+            formGroup.innerHTML = `
+                <label for="newAreaInput" class="form-label">New Area Name</label>
+                <input type="text" class="form-control" id="newAreaInput" placeholder="Enter new area name">
+                <small class="text-muted">New areas will be available for future activities</small>
+            `;
+            
+            const activityForm = document.getElementById('activityForm');
+            if (activityForm) {
+                // Try to find a good place to insert it
+                const areaFormGroup = activityForm.querySelector('.mb-3');
+                if (areaFormGroup) {
+                    activityForm.insertBefore(formGroup, areaFormGroup.nextSibling);
+                } else {
+                    // Just append it to the form
+                    activityForm.appendChild(formGroup);
+                }
+                
+                logDebug('Created new area input container');
+            } else {
+                logDebug('ERROR: Cannot create newAreaContainer - activityForm not found');
+            }
+        }
+    }
+    
+    /**
+     * Load areas used in activities
+     * Gets a list of all areas from the server for dropdowns and filters
+     */
+    function loadAreas() {
+        logDebug('Loading area list from server');
+        
+        // Fetch areas from the server
+        fetch('ajax_activities.php?action=get_areas')
+            .then(response => {
+                // Check for HTTP errors
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                logDebug('Areas loaded successfully', data);
+                
+                if (data.ok) {
+                    // Store the areas list
+                    areasList = data.areas || [];
+                    
+                    // Populate area dropdowns in the form
+                    populateAreaDropdown();
+                    
+                    // Set up area filter buttons
+                    setupAreaFilters(areasList);
+                }
+            })
+            .catch(error => {
+                logDebug('Error loading areas', error);
+                console.error('Failed to load areas:', error);
+                
+                // Show error notification
+                if (typeof showNotification === 'function') {
+                    showNotification('Error loading areas: ' + error.message, 'danger');
+                }
+            });
+    }
+    
+    /**
+     * Create area filter buttons in the UI
+     * Adds buttons to filter activities by area
+     * 
+     * @param {Array} areas - List of available areas
+     */
+    function setupAreaFilters(areas) {
+        // Make sure we have elements to work with
+        if (!elements.areaFilterContainer || !areas || !areas.length) return;
+        
+        // Create "All Areas" filter button (active by default)
+        let html = `
+            <button class="btn btn-outline-primary btn-sm area-filter me-2 mb-2 active" data-area="">
+                <i class="fas fa-layer-group me-1"></i> All Areas
+            </button>
+        `;
+        
+        // Create a filter button for each area
+        areas.forEach(area => {
+            if (area) {
+                html += `
+                    <button class="btn btn-outline-secondary btn-sm area-filter me-2 mb-2" data-area="${escapeHtml(area)}">
+                        <i class="fas fa-map-marker-alt me-1"></i> ${escapeHtml(area)}
+                    </button>
+                `;
+            }
+        });
+        
+        // Add buttons to the container
+        elements.areaFilterContainer.innerHTML = html;
+    }
+    
+    /**
+     * Filter activities by area
+     * Shows only activities in the selected area
+     * 
+     * @param {string} area - Area to filter by (empty for all areas)
+     */
+    function filterActivitiesByArea(area) {
+        // Store the current filter selection
+        currentAreaFilter = area;
+        
+        // Update the active state on filter buttons
+        const filterButtons = document.querySelectorAll(selectors.areaFilter);
+        filterButtons.forEach(button => {
+            if ((button.dataset.area || '') === area) {
+                // Active button gets primary styling
+                button.classList.add('active');
+                button.classList.remove('btn-outline-secondary');
+                button.classList.add('btn-outline-primary');
+            } else {
+                // Inactive buttons get secondary styling
+                button.classList.remove('active');
+                button.classList.remove('btn-outline-primary');
+                button.classList.add('btn-outline-secondary');
+            }
+        });
+        
+        // Show/hide activities based on area
+        const activityCards = document.querySelectorAll('.activity-card');
+        activityCards.forEach(card => {
+            // If no area filter or card area matches filter, show the card
+            if (!area || card.dataset.area === area) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Update area headers visibility
+        const areaHeaders = document.querySelectorAll('.area-header');
+        areaHeaders.forEach(header => {
+            if (!area || header.dataset.area === area) {
+                header.style.display = '';
+            } else {
+                header.style.display = 'none';
+            }
+        });
+        
+        // If no area filter, update the heading to "All Areas"
+        const areaFilterTitle = document.getElementById('areaFilterTitle');
+        if (areaFilterTitle) {
+            areaFilterTitle.textContent = area ? `Area: ${area}` : 'All Areas';
+        }
+    }
+    
+    /**
+     * Handle area selection from dropdown
+     * Processes when a user selects an area or "Add New Area"
+     */
+    function handleAreaSelection() {
+        const areaSelect = document.getElementById('activityArea');
+        if (!areaSelect) {
+            logDebug('ERROR: Activity Area dropdown not found in handleAreaSelection');
+            return;
+        }
+        
+        const selectedValue = areaSelect.value;
+        
+        // If "Add New" was selected, show the new area input field
+        if (selectedValue === 'new') {
+            // Reset dropdown to the first option
+            areaSelect.selectedIndex = 0;
+            
+            // Show the input field for entering a new area
+            const newAreaContainer = document.getElementById('newAreaContainer');
+            if (newAreaContainer) {
+                newAreaContainer.classList.remove('d-none');
+                
+                // Focus the input field for better UX
+                const newAreaInput = document.getElementById('newAreaInput');
+                if (newAreaInput) {
+                    newAreaInput.focus();
+                }
+            } else {
+                // Create the container if it doesn't exist
+                createNewAreaInputIfNeeded();
+                const newContainer = document.getElementById('newAreaContainer');
+                if (newContainer) {
+                    newContainer.classList.remove('d-none');
+                    const newInput = document.getElementById('newAreaInput');
+                    if (newInput) {
+                        newInput.focus();
+                    }
+                }
+            }
+        }
+    }
+	    /**
+     * Populate area dropdown with available areas
+     * Fills the dropdown with all known areas plus "Add New" option
+     * 
+     * @param {string} selectedArea - Optional pre-selected area
+     */
+    function populateAreaDropdown(selectedArea = '') {
+        const areaSelect = document.getElementById('activityArea');
+        if (!areaSelect) {
+            logDebug('ERROR: Activity Area dropdown not found in populateAreaDropdown');
+            return;
+        }
+        
+        // Clear existing options (except the first instruction option)
+        while (areaSelect.options.length > 1) {
+            areaSelect.remove(1);
+        }
+        
+        // Add all areas to the dropdown
+        areasList.forEach(area => {
+            if (area) { // Only add non-empty areas
+                const option = document.createElement('option');
+                option.value = area;
+                option.textContent = area;
+                areaSelect.appendChild(option);
+                
+                // Select this option if it matches the selected area
+                if (area === selectedArea) {
+                    option.selected = true;
+                }
+            }
+        });
+        
+        // Add "Add New Area" option at the end
+        const newOption = document.createElement('option');
+        newOption.value = 'new';
+        newOption.textContent = '+ Add New Area';
+        newOption.classList.add('text-primary', 'fw-bold');
+        areaSelect.appendChild(newOption);
+    }
+    
+    /**
+     * Load subcontractors for dropdown lists
+     * Gets all available subcontractors from the server
+     */
+    function loadSubcontractors() {
+        logDebug('Loading subcontractors from server');
+        
+        // Fetch subcontractors from the server
+        fetch('ajax_activities.php?action=get_subcontractors')
+            .then(response => {
+                // Check for HTTP errors
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                logDebug('Subcontractors loaded successfully', data);
+                
+                if (data.ok) {
+                    // Store the subcontractors list
+                    subcontractorsList = data.subcontractors || [];
+                    
+                    // Populate contractor dropdowns in the form
+                    populateContractorDropdown();
+                }
+            })
+            .catch(error => {
+                logDebug('Error loading subcontractors', error);
+                console.error('Failed to load subcontractors:', error);
+                
+                // Show error notification
+                if (typeof showNotification === 'function') {
+                    showNotification('Error loading subcontractors: ' + error.message, 'danger');
+                }
+            });
+    }
+    
+    /**
+     * Populate contractor dropdown with available contractors
+     * Fills dropdown with all known subcontractors
+     * 
+     * @param {Array} selectedContractors - Optional array of pre-selected contractors
+     */
+    function populateContractorDropdown(selectedContractors = []) {
+        const contractorSelect = document.getElementById('activityContractors');
+        if (!contractorSelect) {
+            logDebug('ERROR: Activity Contractors dropdown not found in populateContractorDropdown');
+            return;
+        }
+        
+        // Clear existing options (except the first instruction option)
+        while (contractorSelect.options.length > 1) {
+            contractorSelect.remove(1);
+        }
+        
+        // Add all contractors to the dropdown
+        if (Array.isArray(subcontractorsList)) {
+            subcontractorsList.forEach(contractor => {
+                if (!contractor) return;
+                
+                const option = document.createElement('option');
+                option.value = contractor.name || '';
+                option.textContent = `${contractor.name || ''} (${contractor.trade || 'Unknown'})`;
+                
+                // Store additional data as attributes
+                if (contractor.id) option.dataset.id = contractor.id;
+                if (contractor.trade) option.dataset.trade = contractor.trade;
+                
+                // Add contact information to data attributes for later use
+                if (contractor.contacts && contractor.contacts.length > 0) {
+                    option.dataset.contacts = JSON.stringify(contractor.contacts);
+                    option.dataset.contact = contractor.contacts[0].name || '';
+                    option.dataset.phone = contractor.contacts[0].phone || '';
+                    option.dataset.email = contractor.contacts[0].email || '';
+                } else {
+                    if (contractor.contact_name) option.dataset.contact = contractor.contact_name;
+                    if (contractor.phone) option.dataset.phone = contractor.phone;
+                    if (contractor.email) option.dataset.email = contractor.email;
+                }
+                
+                contractorSelect.appendChild(option);
+            });
+        }
+        
+        // Add "Add New Contractor" option at the end
+        const newOption = document.createElement('option');
+        newOption.value = 'new';
+        newOption.textContent = '+ Add New Contractor';
+        newOption.classList.add('text-primary', 'fw-bold');
+        contractorSelect.appendChild(newOption);
+        
+        // Update the selected contractors list with any pre-selected contractors
+        updateSelectedContractorsList(selectedContractors);
+    }
+    
+    /**
+     * Handle contractor selection from dropdown
+     * Adds the selected contractor to the list or opens the new contractor form
+     */
+    function handleContractorSelection() {
+        const contractorSelect = document.getElementById('activityContractors');
+        if (!contractorSelect) {
+            logDebug('ERROR: Activity Contractors dropdown not found in handleContractorSelection');
+            return;
+        }
+        
+        const selectedValue = contractorSelect.value;
+        
+        // Reset selection to the prompt option
+        contractorSelect.selectedIndex = 0;
+        
+        // If "Add New" was selected, open the new contractor modal
+        if (selectedValue === 'new') {
+            openAddContractorModal();
+            return;
+        }
+        
+        // Otherwise, add the selected contractor to the list
+        if (selectedValue) {
+            // Find the selected option to get its data
+            const selectedOption = Array.from(contractorSelect.options).find(option => option.value === selectedValue);
+            
+            if (selectedOption) {
+                // Add to the selected contractors list with all its data
+                addContractorToSelectedList({
+                    name: selectedValue,
+                    id: selectedOption.dataset.id,
+                    trade: selectedOption.dataset.trade,
+                    contact: selectedOption.dataset.contact,
+                    phone: selectedOption.dataset.phone,
+                    email: selectedOption.dataset.email,
+                    contacts: selectedOption.dataset.contacts ? JSON.parse(selectedOption.dataset.contacts) : null
+                });
+            }
+        }
+    }
+    
+    /**
+     * Add a contractor to the selected contractors list
+     * Creates visual contractor item in the UI
+     * 
+     * @param {Object} contractor - Contractor object with name, id, etc.
+     */
+    function addContractorToSelectedList(contractor) {
+        const selectedList = document.getElementById('selectedContractorsList');
+        if (!selectedList) {
+            logDebug('ERROR: Selected Contractors List not found in addContractorToSelectedList');
+            return;
+        }
+        
+        // Check if this contractor is already in the list to avoid duplicates
+        const existingItems = selectedList.querySelectorAll('.contractor-item');
+        for (const item of existingItems) {
+            if (item.dataset.name === contractor.name) {
+                // Already in list, show brief highlight animation
+                item.classList.add('highlight-item');
+                setTimeout(() => {
+                    item.classList.remove('highlight-item');
+                }, 1000);
+                return;
+            }
+        }
+        
+        // Create new contractor item element
+        const item = document.createElement('div');
+        item.className = 'contractor-item mb-2 p-2 border rounded d-flex align-items-center';
+        
+        // Store all contractor data as attributes for later use
+        item.dataset.name = contractor.name || '';
+        if (contractor.id) item.dataset.id = contractor.id;
+        if (contractor.trade) item.dataset.trade = contractor.trade;
+        if (contractor.contact) item.dataset.contact = contractor.contact;
+        if (contractor.phone) item.dataset.phone = contractor.phone;
+        if (contractor.email) item.dataset.email = contractor.email;
+        if (contractor.contacts) item.dataset.contacts = JSON.stringify(contractor.contacts);
+        if (contractor.isNew) item.dataset.isNew = true;
+        
+        // Create HTML for the contractor item with name, trade, and remove button
+        item.innerHTML = `
+            <div class="me-auto">
+                <div class="fw-bold">${escapeHtml(contractor.name || '')}</div>
+                <div class="small text-muted">${escapeHtml(contractor.trade || 'Unknown trade')}</div>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-danger remove-contractor" title="Remove contractor">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+        
+        // Add remove button click handler
+        const removeBtn = item.querySelector('.remove-contractor');
+        if (removeBtn) {
+            removeBtn.addEventListener('click', function() {
+                item.remove();
+            });
+        }
+        
+        // Add contact tooltip if contact information is available
+        if (contractor.contact) {
+            const contactInfo = document.createElement('div');
+            contactInfo.className = 'contact-tooltip';
+            contactInfo.innerHTML = `
+                <div><strong>${escapeHtml(contractor.contact)}</strong></div>
+                ${contractor.phone ? `<div><i class="fas fa-phone-alt me-1"></i> ${escapeHtml(contractor.phone)}</div>` : ''}
+                ${contractor.email ? `<div><i class="fas fa-envelope me-1"></i> ${escapeHtml(contractor.email)}</div>` : ''}
+            `;
+            
+            // Show tooltip on hover
+            item.addEventListener('mouseenter', function() {
+                item.appendChild(contactInfo);
+            });
+            
+            // Hide tooltip when mouse leaves
+            item.addEventListener('mouseleave', function() {
+                const tooltip = item.querySelector('.contact-tooltip');
+                if (tooltip) tooltip.remove();
+            });
+        }
+        
+        // Add the item to the selected contractors list
+        selectedList.appendChild(item);
+    }
+    
+    /**
+     * Update the selected contractors list in the form
+     * Populates the visual list with all selected contractors
+     * 
+     * @param {Array} contractors - Array of contractor objects to select
+     */
+    function updateSelectedContractorsList(contractors = []) {
+        const selectedList = document.getElementById('selectedContractorsList');
+        if (!selectedList) {
+            logDebug('ERROR: Selected Contractors List not found in updateSelectedContractorsList');
+            return;
+        }
+        
+        // Clear the current list
+        selectedList.innerHTML = '';
+        
+        // Add each contractor to the visual list
+        if (Array.isArray(contractors) && contractors.length > 0) {
+            contractors.forEach(contractor => {
+                if (!contractor) return;
+                
+                addContractorToSelectedList({
+                    name: typeof contractor === 'string' ? contractor : (contractor.name || ''),
+                    id: typeof contractor === 'object' ? contractor.id : null,
+                    trade: typeof contractor === 'object' ? contractor.trade : null,
+                    contact: typeof contractor === 'object' ? (contractor.contact_name || '') : null,
+                    phone: typeof contractor === 'object' ? contractor.phone : null,
+                    email: typeof contractor === 'object' ? contractor.email : null
+                });
+            });
+        }
+    }
+    
+    /**
+     * Open the add contractor modal
+     * Shows a form for adding a new subcontractor not yet in the system
+     */
+    function openAddContractorModal() {
+        const modal = document.getElementById('addContractorModal');
+        if (!modal) {
+            logDebug('ERROR: Add Contractor Modal not found in openAddContractorModal');
+            return;
+        }
+        
+        // Reset the form to clear any previous data
+        const form = document.getElementById('contractorForm');
+        if (form) {
+            form.reset();
+        } else {
+            logDebug('WARNING: Contractor form not found when opening modal');
+        }
+        
+        // Show the modal using Bootstrap
+        try {
+            const contractorModal = new bootstrap.Modal(modal);
+            contractorModal.show();
+        } catch (e) {
+            logDebug('ERROR: Failed to open contractor modal', e);
+            console.error('Failed to open contractor modal:', e);
+            
+            // Fallback manually show the modal
+            modal.style.display = 'block';
+            modal.classList.add('show');
+        }
+    }
+    
+    /**
+     * Save a new contractor to the database
+     * Adds contractor to the database and to the selected list
+     */
+    function saveNewContractor() {
+        const form = document.getElementById('contractorForm');
+        if (!form) {
+            logDebug('ERROR: Contractor form not found in saveNewContractor');
+            return;
+        }
+        
+        // Get form values - with safety checks
+        const nameEl = document.getElementById('contractorName');
+        const tradeEl = document.getElementById('contractorTrade');
+        
+        if (!nameEl) {
+            logDebug('ERROR: Contractor Name field not found');
+            if (typeof showNotification === 'function') {
+                showNotification('Error: Contractor name field is missing from the form', 'warning');
+            }
+            return;
+        }
+        
+        const name = nameEl.value.trim();
+        const trade = tradeEl ? tradeEl.value.trim() : '';
+        
+        // Get contact information depending on how your form is structured
+        let contactName = '';
+        let contactPhone = '';
+        let contactEmail = '';
+        const contacts = [];
+        
+        // Try to get single contact fields first
+        const singleContactName = document.getElementById('contractorContact');
+        const singleContactPhone = document.getElementById('contractorPhone');
+        const singleContactEmail = document.getElementById('contractorEmail');
+        
+        if (singleContactName && singleContactPhone) {
+            contactName = singleContactName.value.trim();
+            contactPhone = singleContactPhone.value.trim();
+            contactEmail = singleContactEmail ? singleContactEmail.value.trim() : '';
+            
+            contacts.push({
+                name: contactName,
+                phone: contactPhone,
+                email: contactEmail
+            });
+        }
+        
+        // Validate required fields
+        if (!name) {
+            if (typeof showNotification === 'function') {
+                showNotification('Contractor name is required', 'warning');
+            } else {
+                alert('Contractor name is required');
+            }
+            return;
+        }
+        
+        if (contacts.length === 0) {
+            // No contacts found, create a simple contact
+            contacts.push({
+                name: 'Contact',
+                phone: '000-000-0000',
+                email: ''
+            });
+        }
+        
+        // Show saving indicator on the button
+        const saveBtn = document.getElementById('saveContractorBtn');
+        if (saveBtn) {
+            saveBtn.disabled = true;
+            saveBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Saving...`;
+        }
+        
+        // Create form data for AJAX request
+        const formData = new FormData();
+        formData.append('action', 'add_subcontractor');
+        formData.append('name', name);
+        formData.append('trade', trade);
+        
+        // If only one contact, use the standard fields
+        if (contacts.length === 1) {
+            formData.append('contact_name', contacts[0].name);
+            formData.append('phone', contacts[0].phone);
+            formData.append('email', contacts[0].email);
+        } else {
+            // For multiple contacts, use JSON array
+            formData.append('contacts', JSON.stringify(contacts));
+            
+            // Also include first contact in standard fields for backward compatibility
+            formData.append('contact_name', contacts[0].name);
+            formData.append('phone', contacts[0].phone);
+            formData.append('email', contacts[0].email);
+        }
+        
+        logDebug('Saving contractor', {name, trade, contacts});
+        
+        // Send to server
+        fetch('ajax_activities.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            logDebug('Contractor saved successfully', data);
+            
+            if (!data.ok) {
+                throw new Error(data.error || 'Failed to save contractor');
+            }
+            
+            // Add to contractors list for dropdown
+            subcontractorsList.push({
+                id: data.id,
+                name: data.name,
+                trade: data.trade,
+                contact_name: contacts[0].name,
+                phone: contacts[0].phone,
+                email: contacts[0].email,
+                contacts: contacts
+            });
+            
+            // Update dropdown
+            populateContractorDropdown();
+            
+            // Add to selected list
+            addContractorToSelectedList({
+                name: data.name,
+                id: data.id,
+                trade: data.trade,
+                contact: contacts[0].name,
+                phone: contacts[0].phone,
+                email: contacts[0].email,
+                contacts: contacts
+            });
+            
+            // Close the modal
+            const modal = document.getElementById('addContractorModal');
+            if (modal) {
+                try {
+                    const modalInstance = bootstrap.Modal.getInstance(modal);
+                    if (modalInstance) {
+                        modalInstance.hide();
+                    } else {
+                        // Fallback manual close
+                        modal.style.display = 'none';
+                        modal.classList.remove('show');
+                        document.body.classList.remove('modal-open');
+                        const backdrop = document.querySelector('.modal-backdrop');
+                        if (backdrop) backdrop.remove();
+                    }
+                } catch (e) {
+                    logDebug('Error closing modal', e);
+                }
+            }
+            
+            // Show success notification
+            if (typeof showNotification === 'function') {
+                showNotification(`Contractor "${data.name}" added successfully`, 'success');
+            }
+        })
+        .catch(error => {
+            logDebug('Error saving contractor', error);
+            
+            // Show error notification
+            if (typeof showNotification === 'function') {
+                showNotification('Error saving contractor: ' + error.message, 'danger');
+            } else {
+                alert('Error saving contractor: ' + error.message);
+            }
+        })
+        .finally(() => {
+            // Reset button state
+            if (saveBtn) {
+                saveBtn.disabled = false;
+                saveBtn.innerHTML = 'Save Contractor';
+            }
+        });
+    }
+    
+    /**
+     * Increment or decrement the labor count
+     * Adds or removes workers from an activity using the +/- buttons
+     * 
+     * @param {number} amount - Amount to change (1 or -1)
+     */
+    function incrementLaborCount(amount) {
+        const laborInput = document.getElementById('laborCount');
+        if (!laborInput) {
+            logDebug('ERROR: Labor Count input not found in incrementLaborCount');
+            return;
+        }
+        
+        // Get current value and add the amount
+        let value = parseInt(laborInput.value) || 0;
+        value += amount;
+        
+        // Keep in valid range (0-99)
+        if (value < 0) value = 0;
+        if (value > 99) value = 99;
+        
+        // Update the input field
+        laborInput.value = value;
+        
+        // Update the visual display
+        const laborDisplay = document.getElementById('laborCountDisplay');
+        if (laborDisplay) {
+            laborDisplay.textContent = value;
+        }
+    }
+    
+    /**
+     * Update the labor count when input field changes
+     * Keeps the count within valid range (0-99)
+     */
+    function updateLaborCount() {
+        const laborInput = document.getElementById('laborCount');
+        if (!laborInput) {
+            logDebug('ERROR: Labor Count input not found in updateLaborCount');
+            return;
+        }
+        
+        // Ensure value is a valid number in range
+        let value = parseInt(laborInput.value) || 0;
+        if (isNaN(value)) value = 0;
+        if (value < 0) value = 0;
+        if (value > 99) value = 99;
+        
+        // Update the input field with valid value
+        laborInput.value = value;
+        
+        // Update visual display
+        const laborDisplay = document.getElementById('laborCountDisplay');
+        if (laborDisplay) {
+            laborDisplay.textContent = value;
+        }
+    }
+    
+    /**
+     * Copy activities from previous day
+     * Brings forward all activities from yesterday to today
+     */
+    function copyActivitiesFromPreviousDay() {
+        // Check if we have previous day data available
+        if (!prevBriefingId || !prevBriefingDate) {
+            if (typeof showNotification === 'function') {
+                showNotification('No previous day activities found to copy', 'warning');
+            } else {
+                alert('No previous day activities found to copy');
+            }
+            return;
+        }
+        
+        // Confirm before proceeding to avoid accidental clicks
+        if (!confirm(`Are you sure you want to copy all activities from ${prevBriefingDate} to today? This will not affect any activities you've already created today.`)) {
+            return;
+        }
+        
+        // Show loading indicator on the button
+        const copyBtn = elements.copyActivitiesBtn;
+        let originalBtnHtml = '';
+        
+        if (copyBtn) {
+            originalBtnHtml = copyBtn.innerHTML;
+            copyBtn.disabled = true;
+            copyBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Copying...`;
+        }
+        
+        // Set up request data
+        const formData = new FormData();
+        formData.append('action', 'copy_prev_day');
+        formData.append('prev_date', prevBriefingDate);
+        formData.append('target_date', currentDate);
+        
+        // Send the request to the server
+        fetch('ajax_activities.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            logDebug('Activities copied successfully', data);
+            
+            if (!data.ok) {
+                throw new Error(data.error || 'Failed to copy activities');
+            }
+            
+            // Show success message
+            if (typeof showNotification === 'function') {
+                showNotification(data.message || `Successfully copied ${data.count} activities from previous day`, 'success');
+            }
+            
+            // Reload activities to show the newly copied ones
+            loadActivities();
+        })
+        .catch(error => {
+            logDebug('Error copying activities', error);
+            
+            // Show error notification
+            if (typeof showNotification === 'function') {
+                showNotification('Error copying activities: ' + error.message, 'danger');
+            } else {
+                alert('Error copying activities: ' + error.message);
+            }
+        })
+        .finally(() => {
+            // Reset button state
+            if (copyBtn) {
+                copyBtn.disabled = false;
+                copyBtn.innerHTML = originalBtnHtml;
+            }
+        });
+    }
+    
+    /**
+     * Load activities from the server
+     * Gets the list of all activities for today
+     */
+    function loadActivities() {
+        logDebug('Loading activities for date', currentDate);
+        
+        // Show a loading spinner while fetching
+        if (elements.activitiesList) {
+            elements.activitiesList.innerHTML = `
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading activities...</span>
+                    </div>
+                    <div class="mt-2">Loading activities...</div>
+                </div>
+            `;
+        } else {
+            logDebug('ERROR: Activities List container not found');
+        }
+        
+        // Fetch activities from the server for the current date
+        fetch(`ajax_activities.php?action=list&date=${currentDate}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                logDebug('Activities loaded successfully', data);
+                
+                // Store previous day information for copy feature
+                prevBriefingId = data.prev_briefing_id;
+                prevBriefingDate = data.prev_briefing_exists ? data.prev_date : null;
+                
+                // Show/hide previous day notice and copy button
+                if (elements.copyActivitiesBtn) {
+                    elements.copyActivitiesBtn.classList.toggle('d-none', !data.prev_briefing_exists);
+                }
+                
+                if (elements.prevDayNotice) {
+                    if (data.prev_briefing_exists) {
+                        elements.prevDayNotice.classList.remove('d-none');
+                        elements.prevDayNotice.innerHTML = `
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Activities found from ${data.prev_date}. You can copy them to today using the button below.
+                            </div>
+                        `;
+                    } else {
+                        elements.prevDayNotice.classList.add('d-none');
+                    }
+                }
+                
+                // Display activities grouped by area if available
+                if (data.activities_by_area && elements.activitiesList) {
+                    displayActivitiesByArea(data.activities_by_area);
+                } else if (elements.activitiesList) {
+                    // Fallback to non-grouped display
+                    displayActivities(data.activities || []);
+                }
+                
+                // Display resource statistics
+                displayResourceStats(data);
+                
+                // Display weekly stats if available
+                if (data.weekly_stats) {
+                    displayWeeklyStats(data.weekly_stats);
+                }
+            })
+            .catch(error => {
+                logDebug('Error loading activities', error);
+                showLoadingError(error.message);
+            });
+    }
+    
+    /**
+     * Open activity modal for add/edit
+     * Shows the form for adding or editing an activity
+     * 
+     * @param {string|number|null} id - Activity ID for editing, null for new activity
+     */
+    function openActivityModal(id = null) {
+        logDebug('Opening activity modal', id ? 'Edit ID: ' + id : 'New activity');
+        
+        // Set editing state and ID
+        isEditing = id !== null;
+        editingId = id;
+        
+        // Check if modal exists
+        if (!elements.activityModal) {
+            logDebug('ERROR: Activity modal not found in DOM');
+            if (typeof showNotification === 'function') {
+                showNotification('Error: Activity modal not found in HTML. Check your code.', 'danger');
+            }
+            return;
+        }
+        
+        // Reset the form
+        if (elements.activityForm) {
+            elements.activityForm.reset();
+        }
+        
+        // Reset selected contractors
+        const selectedContractorsList = document.getElementById('selectedContractorsList');
+        if (selectedContractorsList) {
+            selectedContractorsList.innerHTML = '';
+        } else {
+            logDebug('WARNING: Selected contractors list not found');
+        }
+        
+        // Create New Area container if it doesn't exist
+        createNewAreaInputIfNeeded();
+        
+        // Hide new area input if visible
+        const newAreaContainer = document.getElementById('newAreaContainer');
+        if (newAreaContainer) {
+            newAreaContainer.classList.add('d-none');
+        }
+        
+        // Set modal title based on mode
+        const modalTitle = document.getElementById('activityModalLabel');
+        if (modalTitle) {
+            modalTitle.textContent = isEditing ? 'Edit Activity' : 'Add New Activity';
+        }
+        
+        // Set today's date in header
+        if (elements.activityDateDisplay) {
+            elements.activityDateDisplay.textContent = currentDateUK;
+        }
+        
+        // Set labor count to 0 by default
+        const laborInput = document.getElementById('laborCount');
+        if (laborInput) {
+            laborInput.value = 0;
+        } else {
+            logDebug('WARNING: Labor count input not found');
+        }
+        
+        const laborDisplay = document.getElementById('laborCountDisplay');
+        if (laborDisplay) {
+            laborDisplay.textContent = '0';
+        }
+        
+        // Update the Save button text
+        const saveBtn = document.getElementById('saveActivityBtn');
+        if (saveBtn) {
+            saveBtn.textContent = isEditing ? 'Update Activity' : 'Add Activity';
+        }
+        
+        // If editing, load the activity details
+        if (isEditing && id) {
+            fetch(`ajax_activities.php?action=get&id=${id}`)
+                .then(response => {
+                    if (!response.ok) throw new Error('Failed to load activity details');
+                    return response.json();
+                })
+                .then(data => {
+                    if (!data.ok || !data.activity) {
+                        throw new Error(data.error || 'Failed to load activity');
+                    }
+                    
+                    const activity = data.activity;
+                    
+                    // Populate form fields
+                    const titleField = document.getElementById('activityTitle');
+                    const descField = document.getElementById('activityDescription');
+                    
+                    if (titleField) titleField.value = activity.title || '';
+                    if (descField) descField.value = activity.description || '';
+                    
+                    // Set assigned to field
+                    const assignedField = document.getElementById('activityAssignedTo');
+                    if (assignedField) {
+                        assignedField.value = activity.assigned_to || '';
+                    }
+                    
+                    // Set priority
+                    const prioritySelect = document.getElementById('activityPriority');
+                    if (prioritySelect) {
+                        const options = Array.from(prioritySelect.options);
+                        const option = options.find(opt => opt.value === activity.priority);
+                        if (option) {
+                            option.selected = true;
+                        }
+                    }
+                    
+                    // Set area
+                    populateAreaDropdown(activity.area);
+                    
+                    // Set labor count
+                    if (laborInput) {
+                        laborInput.value = activity.labor_count || 0;
+                    }
+                    
+                    if (laborDisplay) {
+                        laborDisplay.textContent = activity.labor_count || '0';
+                    }
+                    
+                    // Set contractors
+                    updateSelectedContractorsList(activity.contractors || []);
+                })
+                .catch(error => {
+                    console.error('Error loading activity details:', error);
+                    if (typeof showNotification === 'function') {
+                        showNotification('Error loading activity details: ' + error.message, 'danger');
+                    }
+                });
+        }
+        
+        // Show the modal
+        try {
+            const modal = new bootstrap.Modal(elements.activityModal);
+            modal.show();
+        } catch (e) {
+            logDebug('ERROR: Failed to open activity modal with Bootstrap', e);
+            
+            // Try manual fallback
+            elements.activityModal.style.display = 'block';
+            elements.activityModal.classList.add('show');
+            document.body.classList.add('modal-open');
+            
+            // Create backdrop
+            const backdrop = document.createElement('div');
+            backdrop.className = 'modal-backdrop fade show';
+            document.body.appendChild(backdrop);
+        }
+    }
+    
+    /**
+     * Save activity data from the form
+     * Collects form data and sends to server for new or existing activity
+     */
+    function saveActivity() {
+        logDebug('Saving activity', isEditing ? 'Editing ID: ' + editingId : 'New');
+        
+        // Get form fields (with careful null checks)
+        const titleField = document.getElementById('activityTitle');
+        const descriptionField = document.getElementById('activityDescription');
+        const areaField = document.getElementById('activityArea');
+        const priorityField = document.getElementById('activityPriority');
+        const newAreaField = document.getElementById('newAreaInput');
+        const assignedToField = document.getElementById('activityAssignedTo'); 
+        const laborField = document.getElementById('laborCount');
+        
+        // Validate required fields exist
+        if (!titleField) {
+            logDebug('ERROR: Title field missing');
+            if (typeof showNotification === 'function') {
+                showNotification('Error: Required title field is missing', 'danger');
+            } else {
+                alert('Error: Title field is missing');
+            }
+            return;
+        }
+        
+        // Get form values (with safe defaults)
+        const title = titleField.value.trim();
+        const description = descriptionField ? descriptionField.value.trim() : '';
+        
+        // Handle area selection (including new area input)
+        let area = '';
+        const newAreaContainer = document.getElementById('newAreaContainer');
+        const isNewAreaVisible = newAreaContainer && 
+            !newAreaContainer.classList.contains('d-none') && newAreaField;
+            
+        if (isNewAreaVisible && newAreaField) {
+            // New area is being added
+            area = newAreaField.value.trim();
+        } else if (areaField) {
+            // Using existing area
+            area = areaField.value.trim();
+        }
+        
+        // Get other form values
+        const priority = priorityField ? priorityField.value : 'medium';
+        const assigned_to = assignedToField ? assignedToField.value.trim() : '';
+        const labor_count = laborField ? (parseInt(laborField.value) || 0) : 0;
+        
+        // Get selected contractors
+        const contractors = [];
+        const contractorItems = document.querySelectorAll('#selectedContractorsList .contractor-item');
+        contractorItems.forEach(item => {
+            contractors.push({
+                name: item.dataset.name,
+                id: item.dataset.id,
+                trade: item.dataset.trade,
+                is_new: item.dataset.isNew === 'true'
+            });
+        });
+        
+        // Log the data we're about to send
+        logDebug('Activity data to be saved', {
+            id: isEditing ? editingId : null,
+            title, 
+            description,
+            area,
+            priority,
+            assigned_to,
+            labor_count,
+            contractors
+        });
+        
+        // Validate required fields
+        if (!title) {
+            if (typeof showNotification === 'function') {
+                showNotification('Activity title is required', 'warning');
+            } else {
+                alert('Activity title is required');
+            }
+            return;
+        }
+        
+        // Show saving indicator
+        const saveBtn = document.getElementById('saveActivityBtn');
+        if (saveBtn) {
+            saveBtn.disabled = true;
+            saveBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Saving...`;
+        }
+        
+        // Create form data
+        const formData = new FormData();
+        formData.append('action', isEditing ? 'update' : 'add');
+        
+        if (isEditing) {
+            formData.append('id', editingId);
+        } else {
+            formData.append('date', currentDate);
+        }
+        
+        formData.append('title', title);
+        formData.append('description', description);
+        formData.append('area', area);
+        formData.append('priority', priority);
+        formData.append('assigned_to', assigned_to);
+        formData.append('labor_count', labor_count);
+        formData.append('contractors', JSON.stringify(contractors));
+        
+        // Send to server
+        fetch('ajax_activities.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            logDebug('Activity saved', data);
+            
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            
+            // Close the modal
+            if (elements.activityModal) {
+                try {
+                    const modal = bootstrap.Modal.getInstance(elements.activityModal);
+                    if (modal) modal.hide();
+                } catch (e) {
+                    // Fallback manual close
+                    elements.activityModal.style.display = 'none';
+                    elements.activityModal.classList.remove('show');
+                    document.body.classList.remove('modal-open');
+                    const backdrop = document.querySelector('.modal-backdrop');
+                    if (backdrop) backdrop.remove();
+                }
+            }
+            
+            // If we added a new area, refresh the areas list
+            if (area && !areasList.includes(area)) {
+                loadAreas();
+            }
+            
+            // Show success notification
+            if (typeof showNotification === 'function') {
+                showNotification(
+                    isEditing ? 'Activity updated successfully' : 'Activity added successfully',
+                    'success'
+                );
+            }
+            
+            // Reload activities to show the new/updated one
+            loadActivities();
+        })
+        .catch(error => {
+            logDebug('Error saving activity', error);
+            
+            // Show error notification
+            if (typeof showNotification === 'function') {
+                showNotification('Error saving activity: ' + error.message, 'danger');
+            } else {
+                alert('Error saving activity: ' + error.message);
+            }
+        })
+        .finally(() => {
+            // Reset button
+            if (saveBtn) {
+                saveBtn.disabled = false;
+                saveBtn.innerHTML = isEditing ? 'Update Activity' : 'Add Activity';
+            }
+        });
+    }
+    
+    /**
+     * Display error message when loading activities fails
+     * 
+     * @param {string} message - Error message to display
+     */
+    function showLoadingError(message) {
+        if (elements.activitiesList) {
+            elements.activitiesList.innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    <strong>Error loading activities:</strong> ${escapeHtml(message)}
+                </div>
+                <div class="text-center mt-3">
+                    <button id="addActivityBtn" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Activity
+                    </button>
+                </div>
+            `;
+        }
+    }
+    
+    /**
+     * Display activities grouped by area
+     * Creates visual sections for each area
+     * 
+     * @param {Object} activitiesByArea - Object with areas as keys and activities arrays as values
+     */
+    function displayActivitiesByArea(activitiesByArea) {
+        // If there's no container to put activities in, stop here
+        if (!elements.activitiesList) {
+            logDebug('ERROR: Activities List container not found in displayActivitiesByArea');
+            return;
+        }
+        
+        // Count total activities
+        let totalActivities = 0;
+        for (const area in activitiesByArea) {
+            if (Array.isArray(activitiesByArea[area])) {
+                totalActivities += activitiesByArea[area].length;
+            }
+        }
+        
+        // If no activities found, show a message and add button
+        if (totalActivities === 0) {
+            elements.activitiesList.innerHTML = `
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    No activities scheduled for today (${currentDateUK}).
+                </div>
+                <div class="text-center mt-3">
+                    <button id="addActivityBtn" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Activity
+                    </button>
+                </div>
+            `;
+            return;
+        }
+        
+        // Build the HTML for areas and activities
+        let html = '';
+        const sortedAreas = Object.keys(activitiesByArea).sort();
+        
+        // Process each area
+        sortedAreas.forEach(area => {
+            const activities = activitiesByArea[area];
+            if (!activities || activities.length === 0) return;
+            
+            // Create area header
+            html += `
+                <div class="area-header mb-3" data-area="${escapeHtml(area)}">
+                    <h4 class="area-title border-bottom pb-2">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        ${area ? escapeHtml(area) : 'No Area Specified'}
+                    </h4>
+                </div>
+            `;
+            
+            // Create activity cards for this area
+            html += '<div class="activity-list">';
+            
+            activities.forEach(activity => {
+                // Get the right color for priority level
+                let priorityClass = getPriorityClass(activity.priority);
+                let priorityBadge = `<span class="badge ${priorityClass} ms-2">${activity.priority}</span>`;
+                
+                // Create resource badges
+                const laborBadge = activity.labor_count > 0 ? 
+                    `<span class="badge bg-info me-1" title="Number of workers">${activity.labor_count} <i class="fas fa-hard-hat"></i></span>` : '';
+                
+                const contractorBadges = Array.isArray(activity.contractors) && activity.contractors.length > 0 ? 
+                    activity.contractors.map(contractor => 
+                        `<span class="badge bg-secondary me-1" title="Contractor">${escapeHtml(contractor)}</span>`
+                    ).join('') : '';
+                
+                // Put it all together in a nice card
+                html += `
+                    <div class="card mb-3 activity-card" data-area="${escapeHtml(area)}">
+                        <div class="card-header d-flex align-items-center ${priorityClass.replace('bg-', 'bg-light-')}">
+                            <div class="me-auto">
+                                <strong>${escapeHtml(activity.title)}</strong>
+                                ${priorityBadge}
+                            </div>
+                            <div class="btn-group btn-group-sm">
+                                <button class="btn btn-outline-primary edit-activity-btn" data-id="${activity.id}" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-outline-danger delete-activity-btn" data-id="${activity.id}" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            ${activity.description ? `<p class="card-text">${escapeHtml(activity.description)}</p>` : ''}
+                            
+                            <div class="resource-badges mt-2">
+                                ${laborBadge}
+                                ${contractorBadges}
+                            </div>
+                            
+                            ${activity.assigned_to ? `
+                                <div class="mt-2 small text-muted">
+                                    <i class="fas fa-user me-1"></i> Assigned to: ${escapeHtml(activity.assigned_to)}
+                                </div>` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+        });
+        
+        // Add the "Add Activity" button at the bottom
+        html += `
+            <div class="text-center mt-3">
+                <button id="addActivityBtn" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Activity
+                </button>
+            </div>
+        `;
+        
+        // Put the HTML on the page
+        elements.activitiesList.innerHTML = html;
+        
+        // Apply any current area filter
+        if (currentAreaFilter) {
+            filterActivitiesByArea(currentAreaFilter);
+        }
+    }
+    
+    /**
+     * Display activities in the UI (no area grouping)
+     * Falls back to classic list if area grouping isn't available
+     * 
+     * @param {Array} activities - Array of activity objects
+     */
+    function displayActivities(activities) {
+        // If there's no container to put activities in, stop here
+        if (!elements.activitiesList) return;
+        
+        // If no activities found, show a message and add button
+        if (!activities || !activities.length) {
+            elements.activitiesList.innerHTML = `
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    No activities scheduled for today (${currentDateUK}).
+                </div>
+                <div class="text-center mt-3">
+                    <button id="addActivityBtn" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Activity
+                    </button>
+                </div>
+            `;
+            return;
+        }
+        
+        // Build the HTML list of activities
+        let html = '<div class="activity-list">';
+        
+        activities.forEach(activity => {
+            // Get the right color for priority level
+            let priorityClass = getPriorityClass(activity.priority);
+            let priorityBadge = `<span class="badge ${priorityClass} ms-2">${activity.priority}</span>`;
+            
+            // Create resource badges
+            const laborBadge = activity.labor_count > 0 ? 
+                `<span class="badge bg-info me-1" title="Number of workers">${activity.labor_count} <i class="fas fa-hard-hat"></i></span>` : '';
+            
+            const contractorBadges = Array.isArray(activity.contractors) && activity.contractors.length > 0 ? 
+                activity.contractors.map(contractor => 
+                    `<span class="badge bg-secondary me-1" title="Contractor">${escapeHtml(contractor)}</span>`
+                ).join('') : '';
+            
+            // Put it all together in a nice card
+            html += `
+                <div class="card mb-3 activity-card" data-area="${escapeHtml(activity.area || '')}">
+                    <div class="card-header d-flex align-items-center ${priorityClass.replace('bg-', 'bg-light-')}">
+                        <div class="me-auto">
+                            <strong>${escapeHtml(activity.title)}</strong>
+                            ${priorityBadge}
+                        </div>
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-outline-primary edit-activity-btn" data-id="${activity.id}" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-outline-danger delete-activity-btn" data-id="${activity.id}" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        ${activity.area ? `<div class="mb-2"><i class="fas fa-map-marker-alt me-1"></i> <strong>Area:</strong> ${escapeHtml(activity.area)}</div>` : ''}
+                        ${activity.description ? `<p class="card-text">${escapeHtml(activity.description)}</p>` : ''}
+                        
+                        <div class="resource-badges mt-2">
+                            ${laborBadge}
+                            ${contractorBadges}
+                        </div>
+                        
+                        ${activity.assigned_to ? `
+                            <div class="mt-2 small text-muted">
+                                <i class="fas fa-user me-1"></i> Assigned to: ${escapeHtml(activity.assigned_to)}
+                            </div>` : ''}
+                    </div>
+                </div>
+            `;
+        });
+        
+        html += '</div>';
+        
+        // Add the "Add Activity" button at the bottom
+        html += `
+            <div class="text-center mt-3">
+                <button id="addActivityBtn" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Activity
+                </button>
+            </div>
+        `;
+        
+        // Put the HTML on the page
+        elements.activitiesList.innerHTML = html;
+    }
+    
+    /**
+     * Get the Bootstrap color class for a priority level
+     * Maps priority levels to appropriate color classes
+     * 
+     * @param {string} priority - Priority level (critical, high, medium, low)
+     * @returns {string} Bootstrap color class
+     */
+    function getPriorityClass(priority) {
+        switch (String(priority || '').toLowerCase()) {
+            case 'critical':
+                return 'bg-danger';
+            case 'high':
+                return 'bg-warning';
+            case 'medium':
+                return 'bg-primary';
+            case 'low':
+                return 'bg-success';
+            default:
+                return 'bg-secondary';
+        }
+    }
+    
+    /**
+     * Display resource statistics
+     * Shows totals for labor and contractors in a card
+     * 
+     * @param {Object} data - Data with resource statistics
+     */
+    function displayResourceStats(data) {
+        if (!elements.resourceStats) return;
+        
+        if (!data) {
+            elements.resourceStats.innerHTML = '';
+            return;
+        }
+        
+        // Format the resource statistics in a card
+        const html = `
+            <div class="card mb-3">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Today's Resource Summary</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <div class="h2 mb-0">${data.total_labor || 0}</div>
+                            <div class="text-muted">Workers</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="h2 mb-0">${data.total_contractors || 0}</div>
+                            <div class="text-muted">Contractors</div>
+                        </div>
+                    </div>
+                    
+                    ${data.contractor_names && data.contractor_names.length > 0 ? `
+                        <div class="mt-3">
+                            <h6>Contractors On Site:</h6>
+                            <div class="contractor-badges">
+                                ${data.contractor_names.map(name => 
+                                    `<span class="badge bg-secondary me-1 mb-1">${escapeHtml(name)}</span>`
+                                ).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+        
+        // Add to the container
+        elements.resourceStats.innerHTML = html;
+    }
+    
+    /**
+     * Display weekly resource statistics
+     * Shows chart of resource usage across the week
+     * 
+     * @param {Array} weeklyStats - Weekly resource statistics data
+     */
+    function displayWeeklyStats(weeklyStats) {
+        if (!elements.weeklyStatsContainer || !weeklyStats) return;
+        
+        // Check if we have any data
+        if (!Array.isArray(weeklyStats) || weeklyStats.length === 0) {
+            elements.weeklyStatsContainer.innerHTML = '';
+            return;
+        }
+        
+        // Create weekly stats HTML table
+        let html = `
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-calendar-week me-2"></i>Weekly Resource Trends</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Workers</th>
+                                    <th>Contractors</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+        `;
+        
+        // Add each day's data with visual bars
+        weeklyStats.forEach(day => {
+            // Determine if this is today
+            const isToday = day.day_date === currentDateUK;
+            
+            html += `
+                <tr${isToday ? ' class="table-primary"' : ''}>
+                    <td>${day.day_date}${isToday ? ' <span class="badge bg-primary">Today</span>' : ''}</td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary me-2 rounded" style="width: ${Math.min(day.labor_count * 10, 100)}px; height: 10px;">&nbsp;</div>
+                            ${day.labor_count}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-secondary me-2 rounded" style="width: ${Math.min(day.contractor_count * 10, 100)}px; height: 10px;">&nbsp;</div>
+                            ${day.contractor_count}
+                        </div>
+                    </td>
+                </tr>
+            `;
+        });
+        
+        html += `
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Add to the container
+        elements.weeklyStatsContainer.innerHTML = html;
+    }
+    
+    /**
+     * Confirm delete activity
+     * Shows a confirmation dialog before deleting an activity
+     * 
+     * @param {number|string} id - Activity ID to delete
+     */
+    function confirmDeleteActivity(id) {
+        // Safety check for valid ID
+        if (!id) {
+            logDebug('ERROR: Attempted to delete activity with missing ID');
+            return;
+        }
+        
+        // Ask user to confirm deletion
+        if (confirm('Are you sure you want to delete this activity?')) {
+            deleteActivity(id);
+        }
+    }
+    
+    /**
+     * Delete an activity
+     * Removes an activity from the database
+     * 
+     * @param {number|string} id - Activity ID to delete
+     */
+    function deleteActivity(id) {
+        logDebug('Deleting activity', id);
+        
+        // Create form data for request
+        const formData = new FormData();
+        formData.append('action', 'delete');
+        formData.append('id', id);
+        
+        // Send delete request to server
+        fetch('ajax_activities.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            logDebug('Activity deleted successfully', data);
+            
+            if (data.ok) {
+                // Show success notification
+                if (typeof showNotification === 'function') {
+                    showNotification('Activity deleted successfully', 'success');
+                }
+                
+                // Reload activities to update the UI
+                loadActivities();
+            } else {
+                throw new Error(data.error || 'Failed to delete activity');
+            }
+        })
+        .catch(error => {
+            logDebug('Error deleting activity', error);
+            
+            // Show error notification
+            if (typeof showNotification === 'function') {
+                showNotification('Error deleting activity: ' + error.message, 'danger');
+            } else {
+                alert('Error deleting activity: ' + error.message);
+            }
+        });
+    }
+    
+    /**
+     * Make text safe for displaying in HTML
+     * Prevents XSS attacks when inserting text into HTML
+     * 
+     * @param {string} unsafe - Text that might contain HTML characters
+     * @return {string} Escaped string safe for HTML insertion
+     */
+    function escapeHtml(unsafe) {
+        if (unsafe === null || unsafe === undefined) return '';
+        return unsafe
+            .toString()
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+    
+    // Display contractor stats if provided functions are available
+    if (typeof displayContractorStats === 'function') {
+        window.displayContractorStats = displayContractorStats;
+    }
+    
+    // Define notification function if not already available
+    if (typeof showNotification !== 'function') {
+        window.showNotification = function(message, type = 'success') {
+            // Check for notification area
+            const notificationArea = document.getElementById('notificationArea');
+            if (!notificationArea) {
+                console.log(`[Notification] ${type}: ${message}`);
+                return;
+            }
+            
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show`;
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            
+            // Add to notification area
+            notificationArea.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 150);
+            }, 5000);
+        };
+    }
+});

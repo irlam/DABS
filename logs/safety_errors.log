@@ -1,0 +1,40 @@
+Database connection not established.
+Database connection not established.
+[07/06/2025 11:52:43] Action requested: update
+[07/06/2025 11:52:43] Database connection successful
+[07/06/2025 11:52:43] Database update failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`k87747_dabs`.`briefings`, CONSTRAINT `briefings_ibfk_3` FOREIGN KEY (`updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL)
+[07/06/2025 11:53:18] Action requested: update
+[07/06/2025 11:53:18] Database connection successful
+[07/06/2025 11:53:18] Database update failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`k87747_dabs`.`briefings`, CONSTRAINT `briefings_ibfk_3` FOREIGN KEY (`updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL)
+[07/06/2025 11:54:15] Action requested: update
+[07/06/2025 11:54:15] Database connection successful
+[07/06/2025 12:11:23] Action requested: update
+[07/06/2025 12:11:23] Database connection successful
+[07/06/2025 12:11:34] Action requested: update
+[07/06/2025 12:11:34] Database connection successful
+[07/06/2025 12:17:13] Action requested: update
+[07/06/2025 12:17:13] Database connection successful
+[07/06/2025 12:17:28] Action requested: update
+[07/06/2025 12:17:28] Database connection successful
+[07/06/2025 12:19:50] Action requested: update
+[07/06/2025 12:19:50] Database connection successful
+[07/06/2025 12:39:20] Action requested: update
+[07/06/2025 12:39:20] Database connection successful
+[09/06/2025 07:17:23] Action requested: update
+[09/06/2025 07:17:23] Database connection successful
+[09/06/2025 16:28:01] Action requested: update
+[09/06/2025 16:28:01] Database connection successful
+[09/06/2025 16:28:21] Action requested: update
+[09/06/2025 16:28:21] Database connection successful
+[09/06/2025 16:28:33] Action requested: update
+[09/06/2025 16:28:33] Database connection successful
+[09/06/2025 16:29:19] Action requested: update
+[09/06/2025 16:29:19] Database connection successful
+[09/06/2025 16:29:46] Action requested: update
+[09/06/2025 16:29:46] Database connection successful
+[10/06/2025 10:39:13] Action requested: update
+[10/06/2025 10:39:13] Database connection successful
+[18/06/2025 14:02:55] Action requested: update
+[18/06/2025 14:02:55] Database connection successful
+[24/06/2025 10:41:53] Action requested: update
+[24/06/2025 10:41:53] Database connection successful
