@@ -223,6 +223,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/weather.css" rel="stylesheet">
     <link href="css/subcontractors.css" rel="stylesheet">
+    <link href="css/resource-cards.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -321,6 +322,9 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
         </div>
     </div>
 
+    <!-- Resource Statistics Container (populated by js/resource-tracker.js) -->
+    <div id="resourceStats" class="fade-in scroll-fade"></div>
+
     <!-- Activity Schedule Panel (Tab/Panel include for main activities list and modal) -->
     <div class="row mb-4">
         <div class="col-12">
@@ -346,13 +350,6 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
             </div>
             <!-- Activities List Container (dynamically updated by activities.js) -->
             <div id="activitiesList"></div>
-        </div>
-    </div>
-
-    <!-- Resource Statistics Container (populated by js/resource-tracker.js) -->
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div id="resourceStats" class="fade-in scroll-fade"></div>
         </div>
     </div>
 

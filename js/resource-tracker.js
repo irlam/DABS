@@ -51,7 +51,7 @@ function logResource(msg, data = null) {
     }
 }
 
-// Main function to load and display resource stats
+// Main function to load and display resource stats as individual cards
 function loadResourceStats() {
     const container = document.getElementById('resourceStats');
     logResource('Initializing resource statistics load...');
@@ -82,51 +82,65 @@ function loadResourceStats() {
             // Build Labour by Area list
             const areaList = listGroup(stats.labour_by_area, 'area', 'labour_count', 'layer-group');
 
-            // Use the same style for both headline stats and Labour by Contractor label
-            const headlineTextClass = "fw-bold text-primary";
-
-            // Use the same style for both badges
-            const statBadgeStyle = "background: linear-gradient(90deg, #1abc9c 0%, #2980b9 100%); color: #fff; font-weight: bold;";
-
+            // Create individual cards for each stat
             container.innerHTML = `
-                <div class="card mb-3 shadow-sm overview-card">
-                    <div class="card-header bg-primary text-white">
-                        <i class="fas fa-hard-hat me-2"></i>
-                        Resource Allocation (as of ${stats.last_update})
+                <div class="row g-3 mb-4 resource-cards">
+                    <!-- Total Labour Card -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card resource-stat-card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="stat-icon mb-2">
+                                    <i class="fas fa-users text-success"></i>
+                                </div>
+                                <h6 class="card-title mb-2">Total Labour</h6>
+                                <h3 class="stat-number text-success mb-0">${ukNumber(stats.total_labour)}</h3>
+                                <small class="text-muted">Workers</small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="mb-2">
-                            <span class="${headlineTextClass}">
-                                <i class="fas fa-users text-success me-2"></i>
-                                Total Labour (Workers):
-                            </span>
-                            <span class="badge rounded-pill fs-6" style="${statBadgeStyle}">
-                                ${ukNumber(stats.total_labour)}
-                            </span>
+
+                    <!-- Active Subcontractors Card -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card resource-stat-card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="stat-icon mb-2">
+                                    <i class="fas fa-briefcase text-info"></i>
+                                </div>
+                                <h6 class="card-title mb-2">Active Subcontractors</h6>
+                                <h3 class="stat-number text-info mb-0">${ukNumber(stats.active_contractors)}</h3>
+                                <small class="text-muted">Contractors</small>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <span class="${headlineTextClass}">
-                                <i class="fas fa-briefcase text-info me-2"></i>
-                                Active Subcontractors:
-                            </span>
-                            <span class="badge rounded-pill fs-6" style="${statBadgeStyle}">
-                                ${ukNumber(stats.active_contractors)}
-                            </span>
+                    </div>
+
+                    <!-- Labour by Contractor Card -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card resource-stat-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="stat-icon mb-2 text-center">
+                                    <i class="fas fa-user-tie text-primary"></i>
+                                </div>
+                                <h6 class="card-title mb-2 text-center">Labour by Contractor</h6>
+                                <div class="contractor-list">
+                                    ${contractorList}
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-1 mt-2">
-                            <span class="${headlineTextClass}">
-                                <i class="fas fa-user-tie me-2"></i>
-                                Labour by Contractor
-                            </span>
+                    </div>
+
+                    <!-- Labour by Area Card -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card resource-stat-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="stat-icon mb-2 text-center">
+                                    <i class="fas fa-layer-group text-warning"></i>
+                                </div>
+                                <h6 class="card-title mb-2 text-center">Labour by Area</h6>
+                                <div class="area-list">
+                                    ${areaList}
+                                </div>
+                            </div>
                         </div>
-                        ${contractorList}
-                        <div class="mb-1 mt-4">
-                            <span class="fw-bold text-primary">
-                                <i class="fas fa-layer-group me-2"></i>
-                                Labour by Area
-                            </span>
-                        </div>
-                        ${areaList}
                     </div>
                 </div>
             `;

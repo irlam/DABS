@@ -1,0 +1,96 @@
+/**
+ * Resource Cards Styling
+ * Individual cards for resource statistics
+ * Author: DABS Team
+ * Date: 19/11/2025
+ */
+
+.resource-cards {
+    margin-bottom: 2rem;
+}
+
+.resource-stat-card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: white;
+    overflow: hidden;
+}
+
+.resource-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.resource-stat-card .card-body {
+    padding: 1.5rem;
+}
+
+.resource-stat-card .stat-icon i {
+    font-size: 2.5rem;
+}
+
+.resource-stat-card .card-title {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.resource-stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.resource-stat-card .list-group {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 0.875rem;
+}
+
+.resource-stat-card .list-group-item {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0.5rem 0;
+    background: transparent;
+}
+
+.resource-stat-card .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.resource-stat-card .badge {
+    font-size: 0.875rem;
+    padding: 0.35rem 0.65rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .resource-stat-card .stat-number {
+        font-size: 2rem;
+    }
+    
+    .resource-stat-card .stat-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* Scrollbar styling for list groups */
+.resource-stat-card .list-group::-webkit-scrollbar {
+    width: 6px;
+}
+
+.resource-stat-card .list-group::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.resource-stat-card .list-group::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.resource-stat-card .list-group::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

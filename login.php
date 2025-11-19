@@ -14,9 +14,9 @@
  */
 
 // Show errors for debugging (remove or set to 0 in production)
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+error_reporting(0);
 
 // Start session and include dependencies
 ob_start();
@@ -152,15 +152,13 @@ $username = '';
 $error = '';
 $success = '';
 $showResetForm = false;
-$debugMessages = [];
 $currentDateTime = date('d/m/Y H:i:s');
 $selectedProjectId = isset($_POST['project_id']) ? intval($_POST['project_id']) : '';
 
 if (!is_dir('logs')) { mkdir('logs', 0755, true); }
 
 function addDebugMessage($message) {
-    global $debugMessages;
-    $debugMessages[] = date('d/m/Y H:i:s') . ' - ' . $message;
+    // Log to file only, no display
     $logEntry = date('d/m/Y H:i:s') . " | DEBUG | " . $message .
         " | IP: " . $_SERVER['REMOTE_ADDR'] . " | User-Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
     file_put_contents('logs/login_debug.log', $logEntry, FILE_APPEND);
@@ -301,36 +299,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             font-family: 'Roboto', Arial, sans-serif;
         }
         .login-container {
-            max-width: 440px;
+            max-width: 380px;
             width: 100%;
-            padding: 36px 32px 28px 32px;
+            padding: 24px 28px 20px 28px;
             background: rgba(255,255,255,0.97);
-            border-radius: 16px;
-            box-shadow: 0 10px 32px rgba(44,62,80,0.14);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(44,62,80,0.12);
             transition: box-shadow 0.3s;
         }
         .login-container:hover {
-            box-shadow: 0 16px 48px rgba(44,62,80,0.18);
+            box-shadow: 0 12px 36px rgba(44,62,80,0.16);
         }
         .logo-container {
             text-align: center;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
         }
         .logo {
-            max-height: 70px;
-            margin-bottom: 10px;
+            max-height: 50px;
+            margin-bottom: 8px;
         }
         .system-title {
-            font-size: 1.55rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #273c75;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
         .date-display {
-            font-size: 1rem;
+            font-size: 0.875rem;
             color: #888;
             text-align: center;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         .toggle-form {
             color: #487eb0;
@@ -446,20 +444,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         <div class="text-center mt-4">
             <small>DABS v1.0 | &copy; 2025 DefectTracker UK</small>
         </div>
-        <?php if (!empty($debugMessages)): ?>
-        <div class="debug-container">
-            <div class="debug-header">Debug Information (Dev Mode Only)</div>
-            <?php foreach($debugMessages as $message): ?>
-                <p class="debug-message"><?php echo htmlspecialchars($message); ?></p>
-            <?php endforeach; ?>
-            <div class="debug-header mt-3">Session Data</div>
-            <pre><?php print_r($_SESSION); ?></pre>
-            <div class="debug-header mt-3">Environment</div>
-            <p class="debug-message">PHP Version: <?php echo phpversion(); ?></p>
-            <p class="debug-message">Server: <?php echo $_SERVER['SERVER_SOFTWARE']; ?></p>
-            <p class="debug-message">Script Path: <?php echo $_SERVER['SCRIPT_NAME']; ?></p>
-        </div>
-        <?php endif; ?>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
