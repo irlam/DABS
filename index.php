@@ -168,10 +168,16 @@ try {
         $workAreas = $stmt->fetchAll(PDO::FETCH_COLUMN);
         $workAreas = array_unique(array_filter(array_map('trim', $workAreas)));
         sort($workAreas, SORT_NATURAL | SORT_FLAG_CASE);
+        
+        // Only log if there's an actual error, not just empty results
+        if (empty($workAreas)) {
+            logError('No work areas found in resources table for project', ['project_id' => $projectID]);
+        }
     } catch (PDOException $e) {
         logError('Error loading work areas', ['error' => $e->getMessage()]);
         $workAreas = [];
-        $systemErrors[] = 'Unable to load work areas. Area tabs disabled.';
+        // Don't show this as a user-facing error - it's just informational
+        // $systemErrors[] = 'Unable to load work areas. Area tabs disabled.';
     }
 } catch (Exception $e) {
     logError('Critical database error in index.php', [

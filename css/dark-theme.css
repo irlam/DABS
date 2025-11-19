@@ -1130,6 +1130,74 @@ table {
     color: var(--text-muted);
 }
 
+/* =================== RESOURCE STAT CARDS =================== */
+.resource-stat-card {
+    background: var(--dark-bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.resource-stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-xl), var(--glow-blue);
+}
+
+.resource-stat-card .card-body {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.resource-stat-card .card-title {
+    color: var(--text-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.875rem;
+}
+
+.resource-stat-card .stat-icon {
+    font-size: 2.5rem;
+}
+
+.resource-stat-card .stat-icon i {
+    filter: drop-shadow(0 0 10px rgba(0, 246, 255, 0.5));
+}
+
+.resource-stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.resource-stat-card .list-group {
+    background: transparent;
+}
+
+.resource-stat-card .list-group-item {
+    background: var(--dark-bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.resource-stat-card .list-group-item:hover {
+    background: var(--dark-bg-elevated);
+    border-color: var(--border-neon);
+    transform: translateX(5px);
+}
+
+.resource-stat-card .badge {
+    background: var(--gradient-cyber) !important;
+    box-shadow: var(--glow-cyan);
+    font-weight: 700;
+}
+
 /* =================== ANIMATIONS =================== */
 @keyframes fadeIn {
     from {
