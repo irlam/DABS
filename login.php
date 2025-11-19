@@ -291,79 +291,152 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            background: var(--dark-bg-primary);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Roboto', Arial, sans-serif;
+            position: relative;
         }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 128, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 246, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 0, 64, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
         .login-container {
             max-width: 380px;
             width: 100%;
-            padding: 24px 28px 20px 28px;
-            background: rgba(255,255,255,0.97);
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(44,62,80,0.12);
+            padding: 1.5rem 2rem;
+            background: var(--dark-bg-card);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-xl), var(--glow-blue);
             transition: box-shadow 0.3s;
+            position: relative;
+            z-index: 1;
+            border: 2px solid var(--border-glow);
         }
+        
         .login-container:hover {
-            box-shadow: 0 12px 36px rgba(44,62,80,0.16);
+            box-shadow: var(--shadow-xl), var(--glow-cyan);
         }
-        .logo-container {
+        
+        .system-title-top {
             text-align: center;
-            margin-bottom: 20px;
-        }
-        .logo {
-            max-height: 50px;
-            margin-bottom: 8px;
-        }
-        .system-title {
             font-size: 1.25rem;
             font-weight: 700;
-            color: #273c75;
+            background: var(--gradient-neon);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
             letter-spacing: 0.5px;
         }
-        .date-display {
-            font-size: 0.875rem;
-            color: #888;
+        
+        .logo-container {
             text-align: center;
-            margin-bottom: 8px;
+            margin-bottom: 1rem;
         }
+        
+        .logo {
+            max-height: 60px;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 0 10px rgba(0, 246, 255, 0.5));
+        }
+        
+        .date-display {
+            font-size: 1rem;
+            color: var(--neon-cyan);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-shadow: var(--glow-cyan);
+        }
+        
         .toggle-form {
-            color: #487eb0;
+            color: var(--neon-cyan);
             cursor: pointer;
             font-weight: 500;
+            text-decoration: none;
         }
-        .toggle-form:hover { text-decoration: underline; }
+        
+        .toggle-form:hover { 
+            text-decoration: underline;
+            color: var(--neon-cyan);
+        }
+        
         .btn-primary {
-            background: linear-gradient(120deg, #487eb0 0%, #4078c0 100%);
+            background: var(--gradient-neon);
             border: none;
             font-weight: 600;
+            box-shadow: var(--glow-blue);
         }
+        
         .btn-primary:hover,
         .btn-primary:focus {
-            background: linear-gradient(120deg, #4078c0 0%, #273c75 100%);
+            background: var(--gradient-cyber);
+            box-shadow: var(--glow-cyan);
         }
+        
         .input-group-text, .btn-outline-secondary {
-            background: #f1f1f1;
+            background: var(--dark-bg-tertiary);
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
         }
+        
         .form-label {
-            color: #273c75;
+            color: var(--text-primary);
             font-weight: 500;
         }
+        
+        .form-control, .form-select {
+            background: var(--dark-bg-tertiary);
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        .form-control:focus, .form-select:focus {
+            background: var(--dark-bg-elevated);
+            border-color: var(--neon-cyan);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 0.3rem rgba(0, 246, 255, 0.25);
+        }
+        
         .login-container small {
-            color: #888;
+            color: var(--text-muted);
+        }
+        
+        .alert-danger {
+            background: rgba(255, 0, 64, 0.12);
+            color: var(--neon-red);
+            border-left: 4px solid var(--neon-red);
+        }
+        
+        .alert-success {
+            background: rgba(0, 255, 136, 0.12);
+            color: var(--neon-green);
+            border-left: 4px solid var(--neon-green);
         }
     </style>
 </head>
 <body>
     <div class="login-container">
+        <div class="system-title-top">Daily Activity Briefing System</div>
         <div class="logo-container">
             <img src="images/logo.png" alt="DABS Logo" class="logo">
-            <div class="system-title">Daily Activity Briefing System</div>
-            <div class="date-display">
-                <i class="fas fa-clock me-1"></i> <?php echo $currentDateTime; ?>
+            <div class="date-display" id="liveClock">
+                <i class="fas fa-clock me-1"></i><span id="clockTime"><?php echo $currentDateTime; ?></span>
             </div>
         </div>
         <?php if ($error): ?>
@@ -430,6 +503,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Live clock functionality
+        function updateClock() {
+            const now = new Date();
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            const formattedTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('clockTime').textContent = formattedTime;
+        }
+        
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+        
+        // Toggle password visibility
         document.getElementById('togglePassword').addEventListener('click', function() {
             const passwordInput = document.getElementById('password');
             const icon = this.querySelector('i');
@@ -443,6 +535,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                 icon.classList.add('fa-eye');
             }
         });
+        
+        // Toggle between login and reset forms
         document.getElementById('showResetForm').addEventListener('click', function(e) {
             e.preventDefault();
             document.getElementById('loginForm').classList.add('d-none');
