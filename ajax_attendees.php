@@ -413,7 +413,7 @@ function validate_and_convert_date($date) {
  * DATABASE SCHEMA MANAGEMENT FUNCTION
  * 
  * This function ensures the 'dabs_attendees' table has all required columns
- * by checking for the subcontractor_name column and adding it if necessary.
+ * by checking for the subcontractor_name and email columns and adding them if necessary.
  * This provides backward compatibility when upgrading from older versions.
  * 
  * @return bool True if schema is current or successfully upgraded
@@ -440,6 +440,23 @@ function ensure_database_schema() {
             ");
             
             write_log('Database schema upgraded successfully - subcontractor_name column added');
+        }
+        
+        // Check if the email column exists in the dabs_attendees table
+        $stmt = $pdo->query("SHOW COLUMNS FROM dabs_attendees LIKE 'email'");
+        
+        // If the column doesn't exist, add it to maintain compatibility
+        if ($stmt->rowCount() === 0) {
+            write_log('Adding email column to dabs_attendees table');
+            
+            $pdo->exec("
+                ALTER TABLE dabs_attendees 
+                ADD COLUMN email VARCHAR(100) NULL 
+                AFTER subcontractor_name
+                COMMENT 'Email address for pre-filling reports'
+            ");
+            
+            write_log('Database schema upgraded successfully - email column added');
         } else {
             write_log('Database schema is current - all required columns present in dabs_attendees table');
         }
@@ -515,6 +532,7 @@ if ($action === 'list') {
                 id,
                 attendee_name,
                 COALESCE(subcontractor_name, 'N/A') as subcontractor_name,
+                COALESCE(email, '') as email,
                 DATE_FORMAT(briefing_date, '%d/%m/%Y') as briefing_date_uk,
                 COALESCE(added_by, 'Unknown') as added_by,
                 DATE_FORMAT(added_at, '%d/%m/%Y %H:%i:%s') as added_at_uk,
@@ -599,6 +617,18 @@ if ($action === 'add') {
     $date = isset($_POST['date']) ? validate_and_convert_date($_POST['date']) : date('Y-m-d');
     $name = isset($_POST['name']) ? trim($_POST['name']) : '';
     $subcontractor = isset($_POST['subcontractor']) ? trim($_POST['subcontractor']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    
+    // Validate email if provided
+    if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        write_log('Attendee email validation failed - invalid email format', ['email' => $email], 'WARNING');
+        send_json([
+            'error' => 'Invalid email',
+            'message' => 'Please provide a valid email address',
+            'table' => 'dabs_attendees',
+            'timestamp' => date('d/m/Y H:i:s')
+        ], 400);
+    }
     
     // Comprehensive name validation with detailed error reporting
     if (empty($name)) {
@@ -670,11 +700,11 @@ if ($action === 'add') {
         // Insert the new attendee record into dabs_attendees table with full audit trail
         $stmt = $pdo->prepare("
             INSERT INTO dabs_attendees 
-            (project_id, briefing_date, attendee_name, subcontractor_name, added_by, added_at) 
-            VALUES (?, ?, ?, ?, ?, NOW())
+            (project_id, briefing_date, attendee_name, subcontractor_name, email, added_by, added_at) 
+            VALUES (?, ?, ?, ?, ?, ?, NOW())
         ");
         
-        $stmt->execute([$project_id, $date, $name, $subcontractor, $username]);
+        $stmt->execute([$project_id, $date, $name, $subcontractor, $email, $username]);
         $new_id = $pdo->lastInsertId();
         
         write_log('Attendee added successfully to dabs_attendees table', [

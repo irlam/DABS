@@ -322,6 +322,33 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
         </div>
     </div>
 
+    <!-- ATTENDEES MANAGEMENT SECTION -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card fade-in scroll-fade">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <h2><i class="fas fa-user-check me-2"></i> Meeting Attendees</h2>
+                        <small class="opacity-75">Track who attended today's briefing meeting</small>
+                    </div>
+                    <button id="addAttendeeBtn" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-plus me-1"></i> Add Attendee
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div id="attendeesContainer">
+                        <div class="text-center py-4">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading attendees...</span>
+                            </div>
+                            <div class="mt-2">Loading attendees...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Resource Statistics Container (populated by js/resource-tracker.js) -->
     <div id="resourceStats" class="fade-in scroll-fade"></div>
 
@@ -749,6 +776,55 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
         </div>
     </div>
 </div>
+
+<!-- Attendee Management Modal -->
+<div class="modal fade" id="attendeeModal" tabindex="-1" aria-labelledby="attendeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="attendeeModalLabel">
+                    <i class="fas fa-user-plus me-2"></i>Add Attendee
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="attendeeForm">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="attendeeName" class="form-label">
+                            <i class="fas fa-user me-1"></i>Attendee Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="attendeeName" name="name" required 
+                            placeholder="Enter full name" maxlength="255">
+                    </div>
+                    <div class="mb-3">
+                        <label for="attendeeSubcontractor" class="form-label">
+                            <i class="fas fa-building me-1"></i>Subcontractor <span class="text-muted">(Optional)</span>
+                        </label>
+                        <input type="text" class="form-control" id="attendeeSubcontractor" name="subcontractor" 
+                            placeholder="Company name (if applicable)" maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                        <label for="attendeeEmail" class="form-label">
+                            <i class="fas fa-envelope me-1"></i>Email Address <span class="text-muted">(Optional)</span>
+                        </label>
+                        <input type="email" class="form-control" id="attendeeEmail" name="email" 
+                            placeholder="email@example.com" maxlength="100">
+                        <div class="form-text">Email will be saved for pre-filling future reports</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-1"></i>Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-1"></i>Add Attendee
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 	<!-- SCRIPTS: Bootstrap, Libraries, Global Variables -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -771,9 +847,10 @@ window.dabsContractors = <?php echo $jsContractors ?: "[]"; ?>;
 window.dabsWorkAreas = <?php echo $jsWorkAreas ?: "[]"; ?>;
 </script>
 
-<!-- All other scripts: Notes, Safety, Resource Tracker, Weather, Email, Contractor Breakdown, Subcontractors -->
+<!-- All other scripts: Notes, Safety, Resource Tracker, Weather, Email, Contractor Breakdown, Subcontractors, Attendees -->
 
 <script src="js/weather.js"></script>
+<script src="js/attendees.js"></script>
 <script src="js/notes.js" defer></script>
 <script src="js/safety.js" defer></script>
 <script src="js/resource-tracker.js" defer></script>

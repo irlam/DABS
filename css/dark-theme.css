@@ -1097,6 +1097,39 @@ table {
     box-shadow: 0 0 0 0.3rem rgba(0, 246, 255, 0.25), var(--glow-cyan);
 }
 
+/* =================== ATTENDEE CARDS =================== */
+.attendee-card {
+    background: var(--dark-bg-tertiary);
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 0.875rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.attendee-card:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-2px);
+}
+
+.attendee-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--neon-cyan);
+    margin-bottom: 0.35rem;
+}
+
+.attendee-company {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+}
+
+.attendee-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
 /* =================== ANIMATIONS =================== */
 @keyframes fadeIn {
     from {
