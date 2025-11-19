@@ -1,0 +1,32 @@
+# Dependencies
+/vendor/
+/node_modules/
+/tcpdf/
+composer.lock
+composer.json
+
+# Log files
+/logs/*.log
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-*
+
+# Reports
+/reports/
+
+# Environment files
+.env
+.env.local

@@ -219,6 +219,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <title>DABS - <?php echo htmlspecialchars($projectInfo['name']); ?> - <?php echo $currentDate; ?></title>
     <!-- Bootstrap 5.3.0, Font Awesome, and other CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dark-theme.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/weather.css" rel="stylesheet">
     <link href="css/subcontractors.css" rel="stylesheet">
@@ -226,9 +227,6 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tiny.cloud/1/cx3e21j3t5yv0ukx72zuh02xf9o75o3bgencxrbbzmad1p5c/tinymce/5/tinymce.min.js"></script>
-    <style>
-        /* ... [Unchanged: Your huge custom CSS from before] ... */
-    </style>
 </head>
 <body>
 <!-- Main Title Bar and Notification Area -->
@@ -248,33 +246,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <?php endforeach; ?>
 </div>
 <?php endif; ?>
-<!-- Debug Console -->
-<div id="debugConsole">
-    <div class="debug-header">
-        <strong><i class="fas fa-bug me-2"></i>Debug Console - UK Time: <?php echo $currentDateTime; ?></strong>
-        <div>
-            <button id="clearDebugBtn" class="btn btn-sm btn-warning">
-                <i class="fas fa-eraser me-1"></i>Clear
-            </button>
-            <button id="closeDebugBtn" class="btn btn-sm btn-danger">
-                <i class="fas fa-times me-1"></i>Close
-            </button>
-        </div>
-    </div>
-    <div class="debug-content">
-        <pre>DABS Debug Console Ready - <?php echo $currentDateTime; ?> (UK Time)
-System initialized successfully - Version 6.0.0
-Project: <?php echo htmlspecialchars($projectInfo['name']); ?>
-Project ID: <?php echo $projectID; ?>
-Briefing ID: <?php echo isset($briefingData['id']) ? $briefingData['id'] : 'Not Available'; ?>
-User: <?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Unknown'); ?>
-Activity Schedule System: Enhanced v6.0.0 with Complete Backend Integration
-Database Status: <?php echo empty($systemErrors) ? 'Connected and Operational' : 'Partial Connection - Some Features Limited'; ?>
-System Status: All components loaded successfully
-Last Updated: <?php echo $currentDateTime; ?> (UK)
-</pre>
-    </div>
-</div>
+<!-- Debug Console removed for cleaner interface -->
 <!-- Main Dashboard Container -->
 <div class="container-fluid dashboard">
     <!-- Header Section: Logo | Date/Project | Controls -->
@@ -315,9 +287,6 @@ Last Updated: <?php echo $currentDateTime; ?> (UK)
                             <i class="fas fa-user me-1"></i> <?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Unknown User'); ?>
                         </h6></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="javascript:toggleDebugConsole()">
-                            <i class="fas fa-bug me-2"></i>Debug Console
-                        </a></li>
                         <li><a class="dropdown-item" href="javascript:location.reload()">
                             <i class="fas fa-sync-alt me-2"></i>Refresh Page
                         </a></li>
@@ -805,7 +774,7 @@ window.dabsContractors = <?php echo $jsContractors ?: "[]"; ?>;
 window.dabsWorkAreas = <?php echo $jsWorkAreas ?: "[]"; ?>;
 </script>
 
-<!-- All other scripts: Notes, Safety, Resource Tracker, Weather, Email, Contractor Breakdown -->
+<!-- All other scripts: Notes, Safety, Resource Tracker, Weather, Email, Contractor Breakdown, Subcontractors -->
 
 <script src="js/weather.js"></script>
 <script src="js/notes.js" defer></script>
@@ -813,6 +782,7 @@ window.dabsWorkAreas = <?php echo $jsWorkAreas ?: "[]"; ?>;
 <script src="js/resource-tracker.js" defer></script>
 <script src="js/email-report.js"></script>
 <script src="js/contractor-daily-breakdown.js" defer></script>
+<script src="js/subcontractors.js" defer></script>
 
 <!-- ================= MODERN ACTIVITIES SCRIPT =================== -->
 <script>
@@ -1066,8 +1036,26 @@ document.getElementById('activityDate').onchange = function() {
 // Initial load (also on DOM ready)
 document.addEventListener('DOMContentLoaded', function() {
     loadActivitiesForDate(document.getElementById('activityDate').value);
+    
+    // Scroll animation for cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.scroll-fade').forEach(el => {
+        observer.observe(el);
+    });
 });
 </script>
-<!-- END Modernised DABS index.php (27/06/2025) -->
+<!-- END Modernised DABS index.php (19/11/2025) -->
 </body>
 </html>
