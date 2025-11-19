@@ -1,6 +1,7 @@
 /**
  * Resource Cards Styling
  * Individual cards for resource statistics
+ * Compatible with dark theme
  * Author: DABS Team
  * Date: 19/11/2025
  */
@@ -10,20 +11,41 @@
 }
 
 .resource-stat-card {
-    border: none;
+    border: 1px solid var(--border-color, #dee2e6);
     border-radius: 12px;
     transition: all 0.3s ease;
-    background: white;
+    background: var(--dark-bg-secondary, white);
     overflow: hidden;
+    position: relative;
+}
+
+.resource-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.resource-stat-card:hover::before {
+    transform: scaleX(1);
 }
 
 .resource-stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: var(--shadow-lg, 0 10px 20px rgba(0, 0, 0, 0.15)) !important;
+    border-color: var(--border-hover, #adb5bd);
 }
 
 .resource-stat-card .card-body {
     padding: 1.5rem;
+    background: var(--dark-bg-secondary, white);
+    color: var(--text-primary, #212529);
 }
 
 .resource-stat-card .stat-icon i {
@@ -32,7 +54,7 @@
 
 .resource-stat-card .card-title {
     font-weight: 600;
-    color: #495057;
+    color: var(--text-secondary, #495057);
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -51,9 +73,10 @@
 
 .resource-stat-card .list-group-item {
     border: none;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-color, #f0f0f0);
     padding: 0.5rem 0;
     background: transparent;
+    color: var(--text-primary, #212529);
 }
 
 .resource-stat-card .list-group-item:last-child {
@@ -82,15 +105,15 @@
 }
 
 .resource-stat-card .list-group::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--dark-bg-tertiary, #f1f1f1);
     border-radius: 10px;
 }
 
 .resource-stat-card .list-group::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--text-muted, #888);
     border-radius: 10px;
 }
 
 .resource-stat-card .list-group::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--text-secondary, #555);
 }
