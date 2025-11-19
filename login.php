@@ -336,24 +336,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             font-weight: 500;
         }
         .toggle-form:hover { text-decoration: underline; }
-        .debug-container {
-            margin-top: 22px;
-            padding: 14px;
-            border: 1px dashed #ccc;
-            background-color: #f8f9fa;
-            font-family: monospace;
-            font-size: 12px;
-            border-radius: 6px;
-        }
-        .debug-header {
-            font-weight: bold;
-            margin-bottom: 7px;
-            color: #6c757d;
-        }
-        .debug-message {
-            margin: 0;
-            padding: 2px 0;
-        }
         .btn-primary {
             background: linear-gradient(120deg, #487eb0 0%, #4078c0 100%);
             border: none;
