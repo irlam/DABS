@@ -407,7 +407,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <!-- SAFETY INFORMATION PANEL -->
     <div class="row">
         <div class="col-md-12 mb-4">
-            <div class="card fade-in scroll-fade">
+            <div class="card safety-card fade-in scroll-fade">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <div>
                         <h2><i class="fas fa-exclamation-triangle me-2"></i> Safety Information</h2>
