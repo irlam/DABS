@@ -14,6 +14,10 @@ composer.lock
 *.swp
 *~
 
+# Old CSS backups
+css/*-old.css
+css/*.css.backup
+
 # OS files
 .DS_Store
 Thumbs.db

@@ -1,238 +1,329 @@
 /**
- * weather.css
+ * weather.css - Vibrant Dark Theme
  * 
  * Daily Activity Briefing System (DABS) - Weather Widget Styles
+ * Ultra-modern neon design with high-contrast dark theme
  * 
- * WHAT THIS FILE DOES:
- * This file contains all the styling for the weather display on your DABS dashboard.
- * It creates a modern, professional appearance for weather information that's easy
- * to read at a glance, with special attention to highlighting weather conditions
- * that affect construction work - especially high wind warnings for crane safety.
- * 
- * KEY FEATURES:
- * - Responsive design that works on phones, tablets, and computers
- * - Clean, modern appearance with subtle animations and effects
- * - Color-coded temperature and priority displays
- * - High-visibility warning styles for wind alerts
- * - Accessible text with good contrast and readable sizes
- * - Smooth hover effects and transitions
- * - UK-specific formatting for all data display
- * 
- * Current Date and Time (UK Format): 03/06/2025 10:10:15
- * Current User's Login: irlamkeep
- * 
- * @author irlamkeep
- * @version 2.0
- * @date 03/06/2025
- * @website dabs.defecttracker.uk
+ * @author DABS Development Team
+ * @version 3.0
+ * @date 19/11/2025
  */
 
-/* ---------- MAIN CONTAINER STYLES ---------- */
-
-/* The main container for the entire weather widget */
+/* =================== MAIN CONTAINER STYLES =================== */
 .weather-container {
-    padding: 15px;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--dark-bg-card);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-lg), var(--glow-cyan);
     transition: all 0.3s ease;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Add a subtle hover effect to the container */
+.weather-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-cyber);
+    box-shadow: var(--glow-cyan);
+}
+
 .weather-container:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl), var(--glow-cyan);
+    transform: translateY(-5px);
+    border-color: var(--border-neon);
 }
 
-/* ---------- CURRENT WEATHER SECTION ---------- */
-
-/* The section showing current weather conditions */
+/* =================== CURRENT WEATHER SECTION =================== */
 .current-weather {
-    padding: 16px;
-    border-radius: 10px;
-    background: linear-gradient(145deg, #f6f9fc, #edf1f7);
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 246, 255, 0.05);
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Weather icon styling - makes icons look crisp */
 .weather-icon {
+    font-size: 4rem;
     width: 80px;
     height: 80px;
-    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
-    transition: transform 0.3s ease;
-}
-
-.weather-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Current temperature - large, bold, and easy to read */
-.current-temp {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e3a8a;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    line-height: 1.1;
-}
-
-/* Weather description text */
-.weather-description {
-    font-size: 1.1rem;
-    color: #4b5563;
-    text-transform: capitalize;
-    margin-top: 4px;
-    font-weight: 500;
-}
-
-/* Weather details section (feels like, wind, etc.) */
-.weather-details {
-    padding: 10px 0;
-    font-size: 0.95rem;
-}
-
-/* Each individual weather detail (wind speed, humidity, etc.) */
-.weather-details div {
-    margin-bottom: 10px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.2s;
-}
-
-/* Highlight detail rows on hover */
-.weather-details div:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* Icons in the weather details */
-.weather-details i {
-    width: 22px;
-    text-align: center;
-    color: #2563eb;
-    margin-right: 10px;
-}
-
-/* ---------- FORECAST SECTION ---------- */
-
-/* Heading for the weekly forecast */
-.weekly-forecast-heading {
-    font-size: 1.4rem;
-    color: #1f2937;
-    margin-top: 20px;
-    margin-bottom: 12px;
-    font-weight: 600;
-    border-left: 4px solid #2563eb;
-    padding-left: 10px;
-}
-
-/* Container for the scrollable forecast cards */
-.weekly-forecast {
-    display: flex;
-    overflow-x: auto;
-    gap: 12px;
-    padding: 10px 0;
-    margin: 15px -5px;
-    /* Smooth scrolling for touch devices */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    /* Hide scrollbar but maintain functionality */
-    scrollbar-width: thin;
-    scrollbar-color: #cbd5e1 transparent;
-}
-
-/* Style the scrollbar for browsers that support it */
-.weekly-forecast::-webkit-scrollbar {
-    height: 6px;
-}
-
-.weekly-forecast::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.weekly-forecast::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1;
-    border-radius: 20px;
-}
-
-/* Individual day forecast card */
-.forecast-day {
-    flex: 0 0 160px;
-    padding: 14px;
-    border-radius: 10px;
-    background: linear-gradient(145deg, #ffffff, #f7fafc);
-    text-align: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
-    transition: all 0.25s ease;
-    border: 1px solid #f0f4f8;
-}
-
-/* Lift and highlight cards on hover */
-.forecast-day:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-color: #e2e8f0;
-}
-
-/* Day name display at top of each card */
-.forecast-date {
-    font-weight: 700;
-    color: #1e3a8a;
-    margin-bottom: 8px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-/* Icons in forecast cards */
-.forecast-day .weather-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto;
-}
-
-/* Temperature display styling */
-.forecast-temps {
-    margin: 10px 0;
-    font-size: 1.1rem;
-}
-
-/* High temperature (maximum) */
-.forecast-high {
-    color: #dc2626;
-    font-weight: 600;
-    margin-right: 5px;
-}
-
-/* Low temperature (minimum) */
-.forecast-low {
-    color: #2563eb;
-    font-weight: 600;
-}
-
-/* Weather description on forecast cards */
-.forecast-description {
-    font-size: 0.9rem;
-    color: #4b5563;
-    text-transform: capitalize;
-    margin: 8px 0;
-    min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--gradient-cyber);
+    border-radius: 1rem;
+    box-shadow: var(--glow-cyan);
+    color: white;
 }
 
-/* Wind information display */
-.forecast-wind {
-    font-size: 0.9rem;
-    color: #4b5563;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: #f3f4f6;
-    display: inline-block;
-    margin-top: 6px;
+.weather-temp {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: var(--gradient-cyber);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
 }
 
-.forecast-wind i {
-    color: #6b7280;
-    margin-right:
+.weather-condition {
+    color: var(--neon-cyan);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+
+.weather-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+
+/* =================== WEATHER DETAILS =================== */
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.weather-detail-item {
+    background: var(--dark-bg-tertiary);
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.weather-detail-item:hover {
+    border-color: var(--border-neon);
+    box-shadow: var(--glow-cyan);
+    transform: translateY(-3px);
+}
+
+.weather-detail-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.weather-detail-value {
+    color: var(--neon-cyan);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.weather-detail-icon {
+    margin-right: 0.5rem;
+    color: var(--neon-cyan);
+}
+
+/* =================== WIND WARNING (CRITICAL FOR CRANE SAFETY) =================== */
+.wind-warning {
+    background: var(--gradient-danger);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-lg), var(--glow-pink);
+    border: 2px solid var(--neon-pink);
+    animation: pulseWarning 2s ease-in-out infinite;
+}
+
+@keyframes pulseWarning {
+    0%, 100% {
+        box-shadow: var(--shadow-lg), var(--glow-pink);
+    }
+    50% {
+        box-shadow: var(--shadow-xl), 0 0 40px rgba(255, 0, 110, 0.8);
+    }
+}
+
+.wind-warning-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wind-warning-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.wind-warning-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wind-warning-message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.wind-warning-speed {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* =================== FORECAST SECTION =================== */
+.weather-forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.forecast-item {
+    background: var(--dark-bg-tertiary);
+    border: 2px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.forecast-item:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--glow-purple);
+    transform: translateY(-5px);
+}
+
+.forecast-day {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.forecast-icon {
+    font-size: 2.5rem;
+    margin: 0.75rem 0;
+    filter: drop-shadow(0 0 10px rgba(0, 246, 255, 0.5));
+}
+
+.forecast-temp {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-top: 0.75rem;
+}
+
+.forecast-temp-high {
+    color: var(--neon-orange);
+}
+
+.forecast-temp-low {
+    color: var(--neon-cyan);
+}
+
+/* =================== ALERTS =================== */
+.weather-alert {
+    background: rgba(255, 165, 0, 0.12);
+    border: 2px solid var(--neon-orange);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    box-shadow: var(--glow-orange);
+}
+
+.weather-alert-icon {
+    color: var(--neon-orange);
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+}
+
+.weather-alert-text {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* =================== SUNRISE/SUNSET =================== */
+.sun-times {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: var(--dark-bg-tertiary);
+    border-radius: 0.75rem;
+    border: 2px solid var(--border-color);
+}
+
+.sun-time-item {
+    text-align: center;
+}
+
+.sun-time-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--neon-yellow);
+    filter: drop-shadow(0 0 10px rgba(255, 234, 0, 0.5));
+}
+
+.sun-time-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.sun-time-value {
+    color: var(--neon-yellow);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+/* =================== RESPONSIVE DESIGN =================== */
+@media (max-width: 768px) {
+    .current-weather {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .weather-forecast {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .weather-temp {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .weather-forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

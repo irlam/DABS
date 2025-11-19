@@ -1,526 +1,483 @@
 /**
- * Daily Activity Briefing System (DABS) - Main Stylesheet
+ * Daily Activity Briefing System (DABS) - Vibrant Dark Theme Main Stylesheet
  * 
- * FILE: dabs.css
- * 2025-06-26 UK
+ * Ultra-modern dark theme with neon accents and bold gradients
+ * Designed to POP with stunning visuals for construction management
  * 
- * This file provides the styling for the DABS application, implementing a modern,
- * responsive design suitable for display on meeting room screens and other devices.
- * It includes styling for the dashboard, timeline, cards, interactive elements,
- * and enforces a modern purple gradient for all headers, tabs, modals.
- * 
- * - Uses CSS Variables for consistent theming.
- * - Flexbox and Grid for layout.
- * - Fully responsive for all screen sizes.
- * - Animations and transitions.
- * - Print styles for physical briefing copies.
- * - High-specificity overrides at the end force modern gradient look on tabs/cards/headers/modals.
- * 
- * @author irlamkeep
- * @version 1.1
- * @date 26/06/2025 UK
+ * @author DABS Development Team
+ * @version 3.0
+ * @date 19/11/2025
  */
 
-/* =================== THEME VARIABLES =================== */
-:root {
-    /* Primary color palette */
-    --primary-color: #2c3e50;       /* Dark blue-grey for headers */
-    --secondary-color: #3498db;     /* Bright blue for highlights and buttons */
-    --accent-color: #e74c3c;        /* Red for warnings and critical items */
-    --light-color: #ecf0f1;         /* Light grey for backgrounds */
-    --dark-color: #34495e;          /* Darker blue-grey for text and headers */
-    
-    /* Functional colors */
-    --success-color: #2ecc71;       /* Green for success indicators */
-    --warning-color: #f39c12;       /* Orange for warnings */
-    --danger-color: #e74c3c;        /* Red for errors and dangers */
-    --info-color: #3498db;          /* Blue for information */
-    
-    /* Text colors */
-    --text-color: #2c3e50;          /* Default text color */
-    --text-light: #ecf0f1;          /* Light text on dark backgrounds */
-    --text-muted: #95a5a6;          /* Muted/secondary text */
-    
-    /* Layout variables */
-    --border-radius: 8px;           /* Rounded corners for cards and buttons */
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition-speed: 0.3s;
-    
-    /* Spacing */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
+/* Import dark theme variables */
+@import 'dark-theme.css';
+
+/* =================== GLOBAL OVERRIDES =================== */
+* {
+    box-sizing: border-box;
 }
 
-/* ========== BASE STYLES ========== */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f7fa;
-    color: var(--text-color);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.dashboard {
-    padding: var(--spacing-lg);
-    max-width: 1800px;
-    margin: 0 auto;
-    flex: 1;
-}
-
-/* ========== HEADER ========== */
+/* =================== HEADER SECTION =================== */
 header {
-    background-color: white;
-    padding: var(--spacing-lg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-    margin-bottom: var(--spacing-xl);
+    background: var(--dark-bg-card);
+    border: 2px solid var(--border-glow);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg), var(--glow-purple);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .logo {
-    height: 50px;
-    margin-right: var(--spacing-md);
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(0, 246, 255, 0.5));
 }
 
 .date-display {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-xs);
+    font-size: 2rem;
+    font-weight: 800;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 246, 255, 0.5);
 }
 
 .project-name {
-    font-size: 1rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-/* ========== CARD LAYOUT ========== */
-.card {
-    border: none;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    margin-bottom: var(--spacing-lg);
-    overflow: hidden;
-}
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.card-header {
-    background-color: white;
-    border-bottom: 2px solid var(--light-color);
-    padding: var(--spacing-md) var(--spacing-lg);
-    display: flex;
-    align-items: center;
-}
-.card-header h2, .card-header h3 {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-.card-header i {
-    margin-right: var(--spacing-sm);
-    color: var(--secondary-color);
-}
-.card-body {
-    padding: var(--spacing-lg);
-}
-
-/* ========== OVERVIEW CARD ========== */
-.overview-card {
-    background: linear-gradient(to right, var(--primary-color), var(--dark-color));
-    color: var(--text-light);
-}
-.overview-card .card-header {
-    background-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.overview-card .card-header h2, 
-.overview-card .card-header i {
-    color: white;
-}
-
-/* ========== TIMELINE ========== */
+/* =================== TIMELINE =================== */
 .timeline {
     position: relative;
-    padding: var(--spacing-lg) 0;
+    padding-left: 3rem;
 }
-.timeline:before {
+
+.timeline::before {
     content: '';
     position: absolute;
-    height: 100%;
-    width: 4px;
-    background-color: var(--light-color);
-    left: 75px;
+    left: 1rem;
     top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-neon);
+    border-radius: 2px;
+    box-shadow: var(--glow-purple);
 }
+
 .timeline-item {
-    display: flex;
     position: relative;
-    margin-bottom: var(--spacing-lg);
-}
-.timeline-time {
-    min-width: 70px;
-    padding-right: var(--spacing-lg);
-    text-align: right;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-.timeline-content {
-    background: white;
-    border-radius: var(--border-radius);
-    padding: var(--spacing-md);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    margin-left: 30px;
-    border-left: 4px solid var(--secondary-color);
-    flex: 1;
-}
-.timeline-content.priority-low {
-    border-left-color: var(--info-color);
-}
-.timeline-content.priority-medium {
-    border-left-color: var(--warning-color);
-}
-.timeline-content.priority-high {
-    border-left-color: var(--danger-color);
-}
-.timeline-content.priority-critical {
-    border-left-color: var(--danger-color);
-    background-color: rgba(231, 76, 60, 0.05);
-}
-.timeline-content h5 {
-    margin-top: 0;
-    color: var(--dark-color);
-    margin-bottom: var(--spacing-xs);
-}
-.assigned-to {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-top: var(--spacing-sm);
-    font-style: italic;
+    padding-bottom: 2rem;
 }
 
-/* ========== WEATHER CARD ========== */
-.weather-card {
-    background-color: white;
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--gradient-cyber);
+    border: 3px solid var(--dark-bg-primary);
+    border-radius: 50%;
+    box-shadow: var(--glow-cyan);
 }
-.weather-current {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-md);
+
+.timeline-item:hover::before {
+    transform: scale(1.3);
+    box-shadow: var(--glow-cyan), 0 0 0 8px rgba(0, 246, 255, 0.2);
 }
-.weather-temp {
-    font-size: 2rem;
+
+/* =================== PRIORITY INDICATORS =================== */
+.priority-critical {
+    background: rgba(255, 0, 110, 0.08) !important;
+    border-left-color: var(--neon-pink) !important;
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.2);
+}
+
+.priority-high {
+    background: rgba(255, 165, 0, 0.08) !important;
+    border-left-color: var(--neon-orange) !important;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+}
+
+.priority-medium {
+    background: rgba(0, 246, 255, 0.08) !important;
+    border-left-color: var(--neon-cyan) !important;
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.2);
+}
+
+.priority-low {
+    background: rgba(0, 255, 136, 0.08) !important;
+    border-left-color: var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+/* =================== STATUS BADGES =================== */
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.75rem;
     font-weight: 700;
-    color: var(--dark-color);
-}
-.weather-icon {
-    font-size: 2.5rem;
-    color: var(--secondary-color);
-}
-.weather-forecast {
-    margin-top: var(--spacing-md);
-    border-top: 1px solid var(--light-color);
-    padding-top: var(--spacing-md);
-}
-.forecast-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-xs);
-    padding: var(--spacing-xs) 0;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-md);
 }
 
-/* ========== SAFETY ========== */
-.safety-card {
-    border-left: 4px solid var(--accent-color);
-}
-.safety-list {
-    padding-left: var(--spacing-lg);
-    margin-bottom: 0;
-}
-.safety-list li {
-    margin-bottom: var(--spacing-sm);
-}
-.safety-list li:last-child {
-    margin-bottom: 0;
-}
-
-/* ========== SUBCONTRACTOR ACCORDION ========== */
-.subcontractor-card .accordion-button:not(.collapsed) {
-    background-color: rgba(52, 152, 219, 0.1);
-    color: var(--secondary-color);
-}
-.subcontractor-card .accordion-body {
-    padding: var(--spacing-lg);
-}
-
-/* ========== EDITABLE ========== */
-.editable {
-    position: relative;
-    border: 2px solid transparent;
-    transition: border var(--transition-speed), background-color var(--transition-speed);
-    padding: var(--spacing-xs);
-    border-radius: 4px;
-}
-.edit-mode .editable:hover {
-    border: 2px dashed var(--secondary-color);
-    cursor: pointer;
-}
-.editable.active {
-    border: 2px solid var(--secondary-color);
-    background-color: rgba(52, 152, 219, 0.05);
-}
-
-/* ========== BUTTONS ========== */
-.btn {
-    border-radius: 30px;
-    padding: 8px 20px;
-    transition: all var(--transition-speed);
-    font-weight: 500;
-}
-.btn-primary {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-.btn-primary:hover {
-    background-color: #2980b9;
-    border-color: #2980b9;
-}
-.btn-outline-primary {
-    color: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-.btn-outline-primary:hover {
-    background-color: var(--secondary-color);
+.status-completed {
+    background: var(--gradient-success);
     color: white;
+    box-shadow: var(--glow-green);
 }
 
-/* ========== FOOTER ========== */
-.footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: var(--spacing-md) 0;
-    border-radius: var(--border-radius);
-    margin-top: auto;
+.status-in-progress {
+    background: var(--gradient-cyber);
+    color: white;
+    box-shadow: var(--glow-cyan);
 }
 
-/* ========== NOTIFICATION ========== */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1050;
-    min-width: 300px;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s, transform 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.status-pending {
+    background: var(--gradient-warning);
+    color: white;
+    box-shadow: var(--glow-orange);
 }
 
-/* ========== MODAL ========== */
-.modal-content {
-    border-radius: var(--border-radius);
-    border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-.modal-header {
-    border-bottom: 2px solid var(--light-color);
-}
-.modal-footer {
-    border-top: 2px solid var(--light-color);
+.status-cancelled {
+    background: var(--gradient-danger);
+    color: white;
+    box-shadow: var(--glow-pink);
 }
 
-/* ========== ANIMATIONS ========== */
-@keyframes highlight {
-    0% { background-color: rgba(46, 204, 113, 0.2); }
-    100% { background-color: transparent; }
-}
-.highlight-update {
-    animation: highlight 2s ease-out;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 992px) {
-    .timeline:before {
-        left: 30px;
-    }
-    .timeline-time {
-        min-width: 50px;
-    }
-    .timeline-content {
-        margin-left: var(--spacing-md);
-    }
-    .card-header h2, .card-header h3 {
-        font-size: 1.1rem;
-    }
-}
-@media (max-width: 768px) {
-    header .col-md-4 {
-        text-align: center;
-        margin-bottom: var(--spacing-md);
-    }
-    .logo-container {
-        justify-content: center;
-    }
-    header .text-end {
-        text-align: center !important;
-    }
-    .btn {
-        margin: 5px;
-    }
-    .dashboard {
-        padding: var(--spacing-md);
-    }
-}
-
-/* ========== PRINT ========== */
-@media print {
-    body {
-        background-color: white;
-    }
-    .card {
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-    .btn, #weatherWidget, footer {
-        display: none;
-    }
-    .container-fluid {
-        width: 100%;
-    }
-    .timeline:before {
-        display: none;
-    }
-    .timeline-content {
-        margin-left: 0;
-    }
-    .print-header {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .print-footer {
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-        font-size: 0.8rem;
-        color: #666;
-    }
-}
-
-/* =====================================================================================
-   DABS Gradient/Modern UI Compatibility & Bootstrap 5 HIGH-SPECIFICITY OVERRIDES
-   Ensures modern purple gradient on all headers/tabs/cards/modals, regardless of other CSS.
-   2025-06-26 by irlamkeep
-   ===================================================================================== */
-
-/* PAGE HEADER, CARD HEADERS, TABS, MODAL HEADER: PURPLE GRADIENT */
-.page-header,
-div.page-header,
-.container-fluid .page-header {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%) !important;
-    color: #fff !important;
-    border-radius: 0.5rem !important;
-    box-shadow: 0 0.5rem 1.5rem rgba(155, 89, 182, 0.13) !important;
+/* =================== RESOURCE CARDS =================== */
+.resource-card {
+    background: var(--dark-bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    padding: 2rem !important;
 }
-.page-header::before,
-div.page-header::before {
+
+.resource-card::before {
     content: '';
-    position: absolute !important;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="2"/></g></svg>') !important;
-    pointer-events: none;
-    z-index: 0;
-}
-.page-header > *,
-div.page-header > * { position: relative; z-index: 1; color: #fff !important; }
-.page-header h1, .page-header h2, .page-header label, .page-header span,
-div.page-header h1, div.page-header h2, div.page-header label, div.page-header span { color: #fff !important; }
-
-.card-header.bg-primary,
-div.card-header.bg-primary,
-.card-header,
-div.card-header {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    font-weight: 600 !important;
-    border-radius: 0.5rem 0.5rem 0 0 !important;
-}
-.card-header i,
-div.card-header i { color: #fff !important; }
-.card-header h2, .card-header h3,
-div.card-header h2, div.card-header h3 { color: #fff !important; }
-
-.nav-tabs .nav-link.active.area-tab-active,
-ul.nav-tabs .nav-link.active.area-tab-active,
-.nav-tabs .nav-link.active,
-ul.nav-tabs .nav-link.active {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 0.5rem 0.5rem 0 0 !important;
-    font-weight: 600 !important;
-    box-shadow: 0 2px 10px rgba(155, 89, 182, 0.13) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-neon);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
-.modal-header,
-div.modal-header {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%) !important;
-    color: #fff !important;
-    border-bottom: none !important;
-    border-radius: 0.5rem 0.5rem 0 0 !important;
-}
-.modal-header .modal-title,
-div.modal-header .modal-title { color: #fff !important; }
-.modal-header .btn-close { filter: invert(1); opacity: 0.8; }
-
-.add-btn,
-button.add-btn,
-.btn.add-btn,
-button.btn.add-btn { 
-    background: linear-gradient(135deg, #27ae60 0%, #16a085 100%) !important;
-    color: #fff !important;
-}
-.add-btn:hover,
-button.add-btn:hover,
-.btn.add-btn:hover,
-button.btn.add-btn:hover {
-    background: linear-gradient(135deg, #16a085 0%, #27ae60 100%) !important;
+.resource-card:hover::before {
+    transform: scaleX(1);
 }
 
-.badge.priority-critical,
-span.badge.priority-critical { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important; color: #fff !important; }
-.badge.priority-high,
-span.badge.priority-high { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%) !important; color: #fff !important; }
-.badge.priority-medium,
-span.badge.priority-medium { background: linear-gradient(135deg, #27ae60 0%, #16a085 100%) !important; color: #fff !important; }
-.badge.priority-low,
-span.badge.priority-low { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%) !important; color: #fff !important; }
+.resource-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-xl), var(--glow-purple);
+}
 
-@media (max-width: 600px) {
-    .page-header,
-    div.page-header,
-    .container-fluid .page-header {
-        padding: 1rem !important;
+.resource-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-cyber);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: white;
+    box-shadow: var(--glow-cyan);
+    margin-bottom: 1rem;
+}
+
+.resource-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.resource-count {
+    font-size: 2rem;
+    font-weight: 800;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* =================== WEATHER WIDGET INTEGRATION =================== */
+.weather-widget {
+    background: var(--dark-bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.weather-widget .temperature {
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--gradient-cyber);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.weather-widget .condition {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.weather-widget .warning {
+    background: var(--gradient-danger);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--glow-pink);
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* =================== NOTES SECTION =================== */
+.note-item {
+    background: var(--dark-bg-card);
+    border: 2px solid var(--border-color);
+    border-left: 5px solid var(--neon-cyan);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.note-item:hover {
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-lg), var(--glow-cyan);
+    transform: translateX(8px);
+}
+
+.note-author {
+    color: var(--neon-cyan);
+    font-weight: 700;
+}
+
+.note-time {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.note-content {
+    color: var(--text-primary);
+    margin-top: 0.75rem;
+    line-height: 1.7;
+}
+
+/* =================== SAFETY ALERTS =================== */
+.safety-alert {
+    background: rgba(255, 0, 110, 0.12);
+    border: 2px solid var(--neon-pink);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-md), var(--glow-pink);
+}
+
+.safety-alert-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.safety-alert-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-danger);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: var(--glow-pink);
+}
+
+.safety-alert-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--neon-pink);
+}
+
+.safety-alert-content {
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+/* =================== BRIEFING SECTION =================== */
+.briefing-header {
+    background: var(--gradient-neon);
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-xl), var(--glow-purple);
+    text-align: center;
+}
+
+.briefing-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.briefing-date {
+    font-size: 1.25rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* =================== FOOTER =================== */
+footer {
+    background: var(--dark-bg-card);
+    border-top: 2px solid var(--border-glow);
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+footer a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--neon-pink);
+    text-shadow: var(--glow-cyan);
+}
+
+/* =================== PRINT STYLES =================== */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 }
 
-/* End DABS 2025-06-26 gradient and visual update block */
+/* =================== RESPONSIVE DESIGN =================== */
+@media (max-width: 768px) {
+    .main-title-bar h1 {
+        font-size: 1.75rem;
+    }
+    
+    .date-display {
+        font-size: 1.5rem;
+    }
+    
+    .briefing-title {
+        font-size: 1.75rem;
+    }
+    
+    .resource-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* =================== ANIMATIONS =================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* =================== LOADING STATES =================== */
+.loading {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid var(--neon-cyan);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* =================== HOVER EFFECTS =================== */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: var(--glow-cyan);
+}
