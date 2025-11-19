@@ -859,3 +859,5 @@
 19/11/2025 10:57:21 | DEBUG | Login attempt for username: admin | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
 19/11/2025 10:57:21 | DEBUG | Authentication successful for user ID: 1 | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
 19/11/2025 10:57:21 | DEBUG | Set current_project to: 1 | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 11:28:59 | DEBUG | Login page loaded | IP: ::1 | User-Agent: curl/8.5.0
+19/11/2025 11:28:59 | DEBUG | Request Method: GET | IP: ::1 | User-Agent: curl/8.5.0
