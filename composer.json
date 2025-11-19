@@ -1,0 +1,11 @@
+{
+    "name": "irlam/dabs",
+    "description": "Daily Activity Briefing System",
+    "type": "project",
+    "require": {
+        "tecnickcom/tcpdf": "^6.6"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}
