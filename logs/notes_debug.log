@@ -4333,3 +4333,3166 @@ Fra...
     [date] => 24/06/2025
 )
 
+[24/06/2025 20:13:11] Action requested: get
+[24/06/2025 20:13:11] Database connection OK
+[24/06/2025 20:13:11] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:13:11] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:13:52] Action requested: get
+[24/06/2025 20:13:52] Database connection OK
+[24/06/2025 20:13:52] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:13:52] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:17:08] Action requested: get
+[24/06/2025 20:17:08] Database connection OK
+[24/06/2025 20:17:08] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:17:08] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:21:19] Action requested: get
+[24/06/2025 20:21:19] Database connection OK
+[24/06/2025 20:21:19] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:21:19] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:24:41] Action requested: get
+[24/06/2025 20:24:41] Database connection OK
+[24/06/2025 20:24:41] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:24:41] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:28:34] Action requested: get
+[24/06/2025 20:28:34] Database connection OK
+[24/06/2025 20:28:34] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:28:34] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:28:40] Action requested: get
+[24/06/2025 20:28:40] Database connection OK
+[24/06/2025 20:28:40] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:28:40] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:28:42] Action requested: get
+[24/06/2025 20:28:42] Database connection OK
+[24/06/2025 20:28:42] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:28:42] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:28:43] Action requested: get
+[24/06/2025 20:28:43] Database connection OK
+[24/06/2025 20:28:43] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:28:43] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:28:44] Action requested: get
+[24/06/2025 20:28:44] Database connection OK
+[24/06/2025 20:28:44] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:28:44] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:28:45] Action requested: get
+[24/06/2025 20:28:45] Database connection OK
+[24/06/2025 20:28:45] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:28:45] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:33:46] Action requested: get
+[24/06/2025 20:33:46] Database connection OK
+[24/06/2025 20:33:46] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:33:46] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:39:33] Action requested: get
+[24/06/2025 20:39:33] Database connection OK
+[24/06/2025 20:39:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:39:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:39:47] Action requested: get
+[24/06/2025 20:39:47] Database connection OK
+[24/06/2025 20:39:47] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:39:47] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[24/06/2025 20:39:51] Action requested: get
+[24/06/2025 20:39:51] Database connection OK
+[24/06/2025 20:39:51] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-24
+)
+
+[24/06/2025 20:39:51] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 24/06/2025 11:42
+    [updated_by] => System Admin
+    [date] => 24/06/2025
+)
+
+[25/06/2025 07:13:53] Action requested: get
+[25/06/2025 07:13:53] Database connection OK
+[25/06/2025 07:13:53] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 07:13:53] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 07:23:46] Action requested: get
+[25/06/2025 07:23:46] Database connection OK
+[25/06/2025 07:23:46] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 07:23:46] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 07:34:56] Action requested: get
+[25/06/2025 07:34:56] Database connection OK
+[25/06/2025 07:34:56] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 07:34:56] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 07:37:58] Action requested: get
+[25/06/2025 07:37:58] Database connection OK
+[25/06/2025 07:37:58] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 07:37:58] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 08:00:25] Action requested: get
+[25/06/2025 08:00:25] Database connection OK
+[25/06/2025 08:00:25] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 08:00:25] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 08:03:36] Action requested: get
+[25/06/2025 08:03:36] Database connection OK
+[25/06/2025 08:03:36] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 08:03:36] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 08:12:03] Action requested: get
+[25/06/2025 08:12:03] Database connection OK
+[25/06/2025 08:12:03] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 08:12:03] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 08:12:24] Action requested: get
+[25/06/2025 08:12:24] Database connection OK
+[25/06/2025 08:12:24] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 08:12:24] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:36:29] Action requested: get
+[25/06/2025 10:36:29] Database connection OK
+[25/06/2025 10:36:29] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:36:29] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:37:43] Action requested: get
+[25/06/2025 10:37:43] Database connection OK
+[25/06/2025 10:37:43] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:37:43] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:43:33] Action requested: get
+[25/06/2025 10:43:33] Database connection OK
+[25/06/2025 10:43:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:43:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:51:50] Action requested: get
+[25/06/2025 10:51:50] Database connection OK
+[25/06/2025 10:51:50] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:51:50] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:51:54] Action requested: get
+[25/06/2025 10:51:54] Database connection OK
+[25/06/2025 10:51:54] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:51:54] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:52:00] Action requested: get
+[25/06/2025 10:52:00] Database connection OK
+[25/06/2025 10:52:00] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:52:00] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:55:00] Action requested: get
+[25/06/2025 10:55:00] Database connection OK
+[25/06/2025 10:55:00] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:55:00] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:55:19] Action requested: get
+[25/06/2025 10:55:19] Database connection OK
+[25/06/2025 10:55:19] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:55:19] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:58:02] Action requested: get
+[25/06/2025 10:58:02] Database connection OK
+[25/06/2025 10:58:02] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:58:02] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:58:06] Action requested: get
+[25/06/2025 10:58:06] Database connection OK
+[25/06/2025 10:58:06] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:58:06] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:58:28] Action requested: get
+[25/06/2025 10:58:28] Database connection OK
+[25/06/2025 10:58:28] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:58:28] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:59:39] Action requested: get
+[25/06/2025 10:59:39] Database connection OK
+[25/06/2025 10:59:39] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:59:39] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 10:59:42] Action requested: get
+[25/06/2025 10:59:42] Database connection OK
+[25/06/2025 10:59:42] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 10:59:42] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:05:03] Action requested: get
+[25/06/2025 11:05:03] Database connection OK
+[25/06/2025 11:05:03] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:05:03] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:05:05] Action requested: get
+[25/06/2025 11:05:05] Database connection OK
+[25/06/2025 11:05:05] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:05:05] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:05:05] Action requested: get
+[25/06/2025 11:05:05] Database connection OK
+[25/06/2025 11:05:05] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:05:05] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:15:22] Action requested: get
+[25/06/2025 11:15:22] Database connection OK
+[25/06/2025 11:15:22] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:15:22] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:16:55] Action requested: get
+[25/06/2025 11:16:55] Database connection OK
+[25/06/2025 11:16:55] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:16:55] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:17:02] Action requested: get
+[25/06/2025 11:17:02] Database connection OK
+[25/06/2025 11:17:02] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:17:02] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:17:15] Action requested: get
+[25/06/2025 11:17:15] Database connection OK
+[25/06/2025 11:17:15] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:17:15] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:31:30] Action requested: get
+[25/06/2025 11:31:30] Database connection OK
+[25/06/2025 11:31:30] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:31:30] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 11:31:32] Action requested: get
+[25/06/2025 11:31:32] Database connection OK
+[25/06/2025 11:31:32] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 11:31:32] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 12:32:46] Action requested: get
+[25/06/2025 12:32:46] Database connection OK
+[25/06/2025 12:32:46] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 12:32:46] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 12:32:49] Action requested: get
+[25/06/2025 12:32:49] Database connection OK
+[25/06/2025 12:32:49] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 12:32:49] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 12:33:37] Action requested: get
+[25/06/2025 12:33:37] Database connection OK
+[25/06/2025 12:33:37] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 12:33:37] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 12:45:27] Action requested: get
+[25/06/2025 12:45:27] Database connection OK
+[25/06/2025 12:45:27] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 12:45:27] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 12:52:05] Action requested: get
+[25/06/2025 12:52:05] Database connection OK
+[25/06/2025 12:52:05] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 12:52:05] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 12:52:20] Action requested: get
+[25/06/2025 12:52:20] Database connection OK
+[25/06/2025 12:52:20] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 12:52:20] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 12:52:30] Action requested: get
+[25/06/2025 12:52:30] Database connection OK
+[25/06/2025 12:52:30] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 12:52:30] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:43:02] Action requested: get
+[25/06/2025 13:43:02] Database connection OK
+[25/06/2025 13:43:02] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:43:02] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:44:06] Action requested: get
+[25/06/2025 13:44:06] Database connection OK
+[25/06/2025 13:44:06] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:44:06] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:45:02] Action requested: get
+[25/06/2025 13:45:02] Database connection OK
+[25/06/2025 13:45:02] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:45:02] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:46:24] Action requested: get
+[25/06/2025 13:46:24] Database connection OK
+[25/06/2025 13:46:24] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:46:24] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:46:49] Action requested: get
+[25/06/2025 13:46:49] Database connection OK
+[25/06/2025 13:46:49] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:46:49] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:47:13] Action requested: get
+[25/06/2025 13:47:13] Database connection OK
+[25/06/2025 13:47:13] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:47:13] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:47:27] Action requested: get
+[25/06/2025 13:47:27] Database connection OK
+[25/06/2025 13:47:27] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:47:27] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:49:00] Action requested: get
+[25/06/2025 13:49:00] Database connection OK
+[25/06/2025 13:49:00] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:49:00] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 13:49:26] Action requested: get
+[25/06/2025 13:49:26] Database connection OK
+[25/06/2025 13:49:26] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 13:49:26] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 14:01:34] Action requested: get
+[25/06/2025 14:01:34] Database connection OK
+[25/06/2025 14:01:34] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 14:01:34] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 14:04:51] Action requested: get
+[25/06/2025 14:04:51] Database connection OK
+[25/06/2025 14:04:51] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 14:04:51] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 14:11:54] Action requested: get
+[25/06/2025 14:11:54] Database connection OK
+[25/06/2025 14:11:54] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 14:11:54] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 14:12:23] Action requested: get
+[25/06/2025 14:12:23] Database connection OK
+[25/06/2025 14:12:23] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 14:12:23] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 14:16:58] Action requested: get
+[25/06/2025 14:16:58] Database connection OK
+[25/06/2025 14:16:58] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 14:16:58] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 14:23:22] Action requested: get
+[25/06/2025 14:23:22] Database connection OK
+[25/06/2025 14:23:22] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 14:23:22] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 15:45:30] Action requested: get
+[25/06/2025 15:45:30] Database connection OK
+[25/06/2025 15:45:30] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 15:45:30] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 15:52:17] Action requested: get
+[25/06/2025 15:52:17] Database connection OK
+[25/06/2025 15:52:17] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 15:52:17] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 15:59:46] Action requested: get
+[25/06/2025 15:59:46] Database connection OK
+[25/06/2025 15:59:46] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 15:59:46] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:05:04] Action requested: get
+[25/06/2025 16:05:04] Database connection OK
+[25/06/2025 16:05:04] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:05:04] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:28:22] Action requested: get
+[25/06/2025 16:28:22] Database connection OK
+[25/06/2025 16:28:22] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:28:22] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:28:46] Action requested: get
+[25/06/2025 16:28:46] Database connection OK
+[25/06/2025 16:28:46] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:28:46] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:29:27] Action requested: get
+[25/06/2025 16:29:27] Database connection OK
+[25/06/2025 16:29:27] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:29:27] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:31:46] Action requested: get
+[25/06/2025 16:31:46] Database connection OK
+[25/06/2025 16:31:46] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:31:46] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:32:51] Action requested: get
+[25/06/2025 16:32:51] Database connection OK
+[25/06/2025 16:32:51] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:32:51] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:35:33] Action requested: get
+[25/06/2025 16:35:33] Database connection OK
+[25/06/2025 16:35:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:35:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:39:57] Action requested: get
+[25/06/2025 16:39:57] Database connection OK
+[25/06/2025 16:39:57] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:39:57] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 16:40:33] Action requested: get
+[25/06/2025 16:40:33] Database connection OK
+[25/06/2025 16:40:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 16:40:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:36:54] Action requested: get
+[25/06/2025 18:36:54] Database connection OK
+[25/06/2025 18:36:54] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:36:54] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:13] Action requested: get
+[25/06/2025 18:37:13] Database connection OK
+[25/06/2025 18:37:13] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:13] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:14] Action requested: get
+[25/06/2025 18:37:14] Database connection OK
+[25/06/2025 18:37:14] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:14] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:15] Action requested: get
+[25/06/2025 18:37:15] Database connection OK
+[25/06/2025 18:37:15] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:15] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:15] Action requested: get
+[25/06/2025 18:37:15] Database connection OK
+[25/06/2025 18:37:15] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:15] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:15] Action requested: get
+[25/06/2025 18:37:15] Database connection OK
+[25/06/2025 18:37:15] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:15] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:16] Action requested: get
+[25/06/2025 18:37:16] Database connection OK
+[25/06/2025 18:37:16] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:16] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:17] Action requested: get
+[25/06/2025 18:37:17] Database connection OK
+[25/06/2025 18:37:17] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:17] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:17] Action requested: get
+[25/06/2025 18:37:17] Database connection OK
+[25/06/2025 18:37:17] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:17] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:37:18] Action requested: get
+[25/06/2025 18:37:18] Database connection OK
+[25/06/2025 18:37:18] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:37:18] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 25/06/2025
+)
+
+[25/06/2025 18:50:19] Action requested: history
+[25/06/2025 18:50:19] Database connection OK
+[25/06/2025 18:50:19] Sending response: Array
+(
+    [ok] => 1
+    [history] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 7
+                    [project_id] => 1
+                    [note_date] => 24/06/2025
+                    [notes] => <p>Test Note, just to make sure it works ok</p>
+                    [created_at] => 2025-06-24 11:42:25
+                    [updated_at] => 24/06/2025 11:42
+                    [updated_by] => System Admin
+                    [notes_preview] => Test Note, just to make sure it works ok
+                )
+
+            [1] => Array
+                (
+                    [id] => 6
+                    [project_id] => 1
+                    [note_date] => 18/06/2025
+                    [notes] => <p>jjjj</p>
+                    [created_at] => 2025-06-18 15:02:39
+                    [updated_at] => 18/06/2025 15:02
+                    [updated_by] => System Admin
+                    [notes_preview] => jjjj
+                )
+
+            [2] => Array
+                (
+                    [id] => 5
+                    [project_id] => 1
+                    [note_date] => 15/06/2025
+                    [notes] => <p>jjjj</p>
+                    [created_at] => 2025-06-15 10:44:26
+                    [updated_at] => 15/06/2025 10:44
+                    [updated_by] => System Admin
+                    [notes_preview] => jjjj
+                )
+
+            [3] => Array
+                (
+                    [id] => 4
+                    [project_id] => 1
+                    [note_date] => 10/06/2025
+                    [notes] => <p>vv</p>
+                    [created_at] => 2025-06-10 14:34:21
+                    [updated_at] => 10/06/2025 14:34
+                    [updated_by] => System Admin
+                    [notes_preview] => vv
+                )
+
+            [4] => Array
+                (
+                    [id] => 3
+                    [project_id] => 1
+                    [note_date] => 09/06/2025
+                    [notes] => <ol>
+<li>test notes</li>
+</ol>
+<ul>
+<li><strong>test notes 2</strong></li>
+<li><strong>tesdt notes 3</strong></li>
+<li><strong>Mick Green Loves Ba^^y Boys</strong></li>
+<li><strong>Mark Riddex is Sha**ing the Cleaner :-)</strong></li>
+<li><strong>Frank Edge is buying the breakfasts for Fridays DABS!!!!</strong></li>
+<li><strong>None of the above comments are true.</strong></li>
+<li><strong>Commets 4&amp;5 are true though :-0</strong></li>
+</ul>
+                    [created_at] => 2025-06-09 08:19:05
+                    [updated_at] => 09/06/2025 08:19
+                    [updated_by] => System Admin
+                    [notes_preview] => 
+test notes
+
+
+test notes 2
+tesdt notes 3
+Mick Green Loves Ba^^y Boys
+Mark Riddex is Sha**ing the Cleaner :-)
+Fra...
+                )
+
+            [5] => Array
+                (
+                    [id] => 2
+                    [project_id] => 1
+                    [note_date] => 04/06/2025
+                    [notes] => <ul>
+<li><strong>Test Note, just to make sure it works ok</strong></li>
+</ul>
+                    [created_at] => 2025-06-04 17:34:07
+                    [updated_at] => 04/06/2025 22:51
+                    [updated_by] => System Admin
+                    [notes_preview] => 
+Test Note, just to make sure it works ok
+
+                )
+
+            [6] => Array
+                (
+                    [id] => 1
+                    [project_id] => 1
+                    [note_date] => 03/06/2025
+                    [notes] => <ol>
+<li>test notes</li>
+</ol>
+<ul style="list-style-type: square;">
+<li><strong>test notes 2</strong></li>
+<li><strong>tesdt notes 3</strong></li>
+<li><strong>Mick Green Loves Ba^^y Boys</strong></li>
+<li><strong>Mark Riddex is Sha**ing the Cleaner :-)</strong></li>
+<li><strong>Frank Edge is buying the breakfasts for Fridays DABS!!!!</strong></li>
+<li><strong>None of the above comments are true, you F**kin Smowflakes !!!</strong></li>
+<li><strong>Commets 4&amp;5 are true though :-0</strong></li>
+</ul>
+                    [created_at] => 2025-06-03 17:01:42
+                    [updated_at] => 03/06/2025 23:43
+                    [updated_by] => System Admin
+                    [notes_preview] => 
+test notes
+
+
+test notes 2
+tesdt notes 3
+Mick Green Loves Ba^^y Boys
+Mark Riddex is Sha**ing the Cleaner :-)
+Fra...
+                )
+
+        )
+
+    [total] => 7
+    [pages] => 1
+    [page] => 1
+)
+
+[25/06/2025 18:50:33] Action requested: save
+[25/06/2025 18:50:33] Database connection OK
+[25/06/2025 18:50:33] Inserted new notes: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 18:50:33] Sending response: Array
+(
+    [ok] => 1
+    [updated_at] => 25/06/2025 18:50
+    [updated_by] => System Admin
+)
+
+[25/06/2025 19:03:20] Action requested: get
+[25/06/2025 19:03:20] Database connection OK
+[25/06/2025 19:03:20] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 19:03:20] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:28:09] Action requested: get
+[25/06/2025 20:28:09] Database connection OK
+[25/06/2025 20:28:09] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:28:09] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:28:45] Action requested: get
+[25/06/2025 20:28:45] Database connection OK
+[25/06/2025 20:28:45] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:28:45] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:38:08] Action requested: get
+[25/06/2025 20:38:08] Database connection OK
+[25/06/2025 20:38:08] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:38:08] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:50:52] Action requested: get
+[25/06/2025 20:50:52] Database connection OK
+[25/06/2025 20:50:52] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:50:52] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:51:22] Action requested: get
+[25/06/2025 20:51:22] Database connection OK
+[25/06/2025 20:51:22] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:51:22] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:51:50] Action requested: get
+[25/06/2025 20:51:50] Database connection OK
+[25/06/2025 20:51:50] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:51:50] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:53:04] Action requested: get
+[25/06/2025 20:53:04] Database connection OK
+[25/06/2025 20:53:04] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:53:04] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:54:09] Action requested: get
+[25/06/2025 20:54:09] Database connection OK
+[25/06/2025 20:54:09] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:54:09] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:54:11] Action requested: get
+[25/06/2025 20:54:11] Database connection OK
+[25/06/2025 20:54:11] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:54:11] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:54:11] Action requested: get
+[25/06/2025 20:54:11] Database connection OK
+[25/06/2025 20:54:11] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:54:11] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[25/06/2025 20:54:12] Action requested: get
+[25/06/2025 20:54:12] Database connection OK
+[25/06/2025 20:54:12] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-25
+)
+
+[25/06/2025 20:54:12] Sending response: Array
+(
+    [ok] => 1
+    [notes] => <p>Test Note, just to make sure it works ok</p>
+    [updated_at] => 25/06/2025 19:50
+    [updated_by] => System Admin
+    [date] => 25/06/2025
+)
+
+[26/06/2025 07:26:06] Action requested: get
+[26/06/2025 07:26:06] Database connection OK
+[26/06/2025 07:26:06] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:26:06] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:32:09] Action requested: get
+[26/06/2025 07:32:09] Database connection OK
+[26/06/2025 07:32:09] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:32:09] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:32:17] Action requested: get
+[26/06/2025 07:32:17] Database connection OK
+[26/06/2025 07:32:17] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:32:17] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:32:17] Action requested: get
+[26/06/2025 07:32:17] Database connection OK
+[26/06/2025 07:32:17] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:32:17] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:32:19] Action requested: get
+[26/06/2025 07:32:19] Database connection OK
+[26/06/2025 07:32:19] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:32:19] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:32:20] Action requested: get
+[26/06/2025 07:32:20] Database connection OK
+[26/06/2025 07:32:20] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:32:20] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:32:20] Action requested: get
+[26/06/2025 07:32:20] Database connection OK
+[26/06/2025 07:32:20] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:32:20] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:33:40] Action requested: get
+[26/06/2025 07:33:40] Database connection OK
+[26/06/2025 07:33:40] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:33:40] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:38:15] Action requested: get
+[26/06/2025 07:38:15] Database connection OK
+[26/06/2025 07:38:15] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:38:15] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:40:51] Action requested: get
+[26/06/2025 07:40:51] Database connection OK
+[26/06/2025 07:40:51] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:40:51] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:41:26] Action requested: get
+[26/06/2025 07:41:26] Database connection OK
+[26/06/2025 07:41:26] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:41:26] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:41:30] Action requested: get
+[26/06/2025 07:41:30] Database connection OK
+[26/06/2025 07:41:30] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:41:30] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:41:33] Action requested: get
+[26/06/2025 07:41:33] Database connection OK
+[26/06/2025 07:41:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:41:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:41:46] Action requested: get
+[26/06/2025 07:41:46] Database connection OK
+[26/06/2025 07:41:46] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:41:46] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:41:47] Action requested: get
+[26/06/2025 07:41:47] Database connection OK
+[26/06/2025 07:41:47] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:41:47] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:41:48] Action requested: get
+[26/06/2025 07:41:48] Database connection OK
+[26/06/2025 07:41:48] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:41:48] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:41:49] Action requested: get
+[26/06/2025 07:41:49] Database connection OK
+[26/06/2025 07:41:49] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:41:49] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 07:58:23] Action requested: get
+[26/06/2025 07:58:23] Database connection OK
+[26/06/2025 07:58:23] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 07:58:23] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 08:09:22] Action requested: get
+[26/06/2025 08:09:22] Database connection OK
+[26/06/2025 08:09:22] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 08:09:22] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 15:59:02] Action requested: get
+[26/06/2025 15:59:02] Database connection OK
+[26/06/2025 15:59:02] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 15:59:02] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 15:59:25] Action requested: get
+[26/06/2025 15:59:25] Database connection OK
+[26/06/2025 15:59:25] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 15:59:25] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[26/06/2025 22:47:00] Action requested: get
+[26/06/2025 22:47:00] Database connection OK
+[26/06/2025 22:47:00] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-26
+)
+
+[26/06/2025 22:47:00] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 26/06/2025
+)
+
+[27/06/2025 12:23:51] Action requested: get
+[27/06/2025 12:23:51] Database connection OK
+[27/06/2025 12:23:51] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:23:51] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:24:31] Action requested: get
+[27/06/2025 12:24:31] Database connection OK
+[27/06/2025 12:24:31] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:24:31] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:24:52] Action requested: get
+[27/06/2025 12:24:52] Database connection OK
+[27/06/2025 12:24:52] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:24:52] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:25:33] Action requested: get
+[27/06/2025 12:25:33] Database connection OK
+[27/06/2025 12:25:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:25:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:25:49] Action requested: get
+[27/06/2025 12:25:49] Database connection OK
+[27/06/2025 12:25:49] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:25:49] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:35:53] Action requested: get
+[27/06/2025 12:35:53] Database connection OK
+[27/06/2025 12:35:53] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:35:53] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:36:17] Action requested: get
+[27/06/2025 12:36:17] Database connection OK
+[27/06/2025 12:36:17] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:36:17] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:36:30] Action requested: get
+[27/06/2025 12:36:30] Database connection OK
+[27/06/2025 12:36:30] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:36:30] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:36:32] Action requested: get
+[27/06/2025 12:36:32] Database connection OK
+[27/06/2025 12:36:32] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:36:32] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:36:34] Action requested: get
+[27/06/2025 12:36:34] Database connection OK
+[27/06/2025 12:36:34] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:36:34] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:36:35] Action requested: get
+[27/06/2025 12:36:35] Database connection OK
+[27/06/2025 12:36:35] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:36:35] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:36:59] Action requested: get
+[27/06/2025 12:36:59] Database connection OK
+[27/06/2025 12:36:59] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:36:59] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:41:54] Action requested: get
+[27/06/2025 12:41:54] Database connection OK
+[27/06/2025 12:41:54] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:41:54] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:42:14] Action requested: get
+[27/06/2025 12:42:14] Database connection OK
+[27/06/2025 12:42:14] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:42:14] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:42:47] Action requested: get
+[27/06/2025 12:42:47] Database connection OK
+[27/06/2025 12:42:47] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:42:47] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:46:05] Action requested: get
+[27/06/2025 12:46:05] Database connection OK
+[27/06/2025 12:46:05] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:46:05] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:46:19] Action requested: get
+[27/06/2025 12:46:19] Database connection OK
+[27/06/2025 12:46:19] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:46:19] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:46:42] Action requested: get
+[27/06/2025 12:46:42] Database connection OK
+[27/06/2025 12:46:42] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:46:42] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:47:43] Action requested: get
+[27/06/2025 12:47:43] Database connection OK
+[27/06/2025 12:47:43] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:47:43] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:48:00] Action requested: get
+[27/06/2025 12:48:00] Database connection OK
+[27/06/2025 12:48:00] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:48:00] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 12:48:23] Action requested: get
+[27/06/2025 12:48:23] Database connection OK
+[27/06/2025 12:48:23] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 12:48:23] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 14:59:24] Action requested: get
+[27/06/2025 14:59:24] Database connection OK
+[27/06/2025 14:59:24] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 14:59:24] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 14:59:57] Action requested: get
+[27/06/2025 14:59:57] Database connection OK
+[27/06/2025 14:59:57] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 14:59:57] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:02:33] Action requested: get
+[27/06/2025 15:02:33] Database connection OK
+[27/06/2025 15:02:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:02:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:10:49] Action requested: get
+[27/06/2025 15:10:49] Database connection OK
+[27/06/2025 15:10:49] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:10:49] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:24:00] Action requested: get
+[27/06/2025 15:24:00] Database connection OK
+[27/06/2025 15:24:00] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:24:00] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:24:04] Action requested: get
+[27/06/2025 15:24:04] Database connection OK
+[27/06/2025 15:24:04] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:24:04] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:24:05] Action requested: get
+[27/06/2025 15:24:05] Database connection OK
+[27/06/2025 15:24:05] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:24:05] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:24:24] Action requested: get
+[27/06/2025 15:24:24] Database connection OK
+[27/06/2025 15:24:24] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:24:24] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:24:26] Action requested: get
+[27/06/2025 15:24:26] Database connection OK
+[27/06/2025 15:24:26] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:24:26] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:24:29] Action requested: get
+[27/06/2025 15:24:29] Database connection OK
+[27/06/2025 15:24:29] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:24:29] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:25:12] Action requested: get
+[27/06/2025 15:25:12] Database connection OK
+[27/06/2025 15:25:12] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:25:12] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:28:14] Action requested: get
+[27/06/2025 15:28:14] Database connection OK
+[27/06/2025 15:28:14] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:28:14] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:28:21] Action requested: get
+[27/06/2025 15:28:21] Database connection OK
+[27/06/2025 15:28:21] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:28:21] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:29:25] Action requested: get
+[27/06/2025 15:29:25] Database connection OK
+[27/06/2025 15:29:25] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:29:25] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:29:32] Action requested: get
+[27/06/2025 15:29:32] Database connection OK
+[27/06/2025 15:29:32] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:29:32] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:31:16] Action requested: get
+[27/06/2025 15:31:16] Database connection OK
+[27/06/2025 15:31:16] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:31:16] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[27/06/2025 15:31:54] Action requested: get
+[27/06/2025 15:31:54] Database connection OK
+[27/06/2025 15:31:54] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-06-27
+)
+
+[27/06/2025 15:31:54] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 27/06/2025
+)
+
+[04/07/2025 07:15:17] Action requested: get
+[04/07/2025 07:15:17] Database connection OK
+[04/07/2025 07:15:17] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-07-04
+)
+
+[04/07/2025 07:15:17] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 04/07/2025
+)
+
+[04/07/2025 07:16:40] Action requested: get
+[04/07/2025 07:16:40] Database connection OK
+[04/07/2025 07:16:40] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-07-04
+)
+
+[04/07/2025 07:16:40] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 04/07/2025
+)
+
+[04/09/2025 19:48:51] Action requested: get
+[04/09/2025 19:48:51] Database connection OK
+[04/09/2025 19:48:51] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-09-04
+)
+
+[04/09/2025 19:48:51] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 04/09/2025
+)
+
+[04/09/2025 19:51:43] Action requested: get
+[04/09/2025 19:51:43] Database connection OK
+[04/09/2025 19:51:43] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-09-04
+)
+
+[04/09/2025 19:51:43] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 04/09/2025
+)
+
+[19/11/2025 08:23:32] Action requested: get
+[19/11/2025 08:23:32] Database connection OK
+[19/11/2025 08:23:32] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-11-19
+)
+
+[19/11/2025 08:23:32] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 19/11/2025
+)
+
+[19/11/2025 10:57:22] Action requested: get
+[19/11/2025 10:57:22] Database connection OK
+[19/11/2025 10:57:22] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-11-19
+)
+
+[19/11/2025 10:57:22] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 19/11/2025
+)
+
+[19/11/2025 10:57:59] Action requested: history
+[19/11/2025 10:57:59] Database connection OK
+[19/11/2025 10:57:59] Sending response: Array
+(
+    [ok] => 1
+    [history] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 8
+                    [project_id] => 1
+                    [note_date] => 25/06/2025
+                    [notes] => <p>Test Note, just to make sure it works ok</p>
+                    [created_at] => 2025-06-25 19:50:33
+                    [updated_at] => 25/06/2025 19:50
+                    [updated_by] => System Admin
+                    [notes_preview] => Test Note, just to make sure it works ok
+                )
+
+            [1] => Array
+                (
+                    [id] => 7
+                    [project_id] => 1
+                    [note_date] => 24/06/2025
+                    [notes] => <p>Test Note, just to make sure it works ok</p>
+                    [created_at] => 2025-06-24 11:42:25
+                    [updated_at] => 24/06/2025 11:42
+                    [updated_by] => System Admin
+                    [notes_preview] => Test Note, just to make sure it works ok
+                )
+
+            [2] => Array
+                (
+                    [id] => 6
+                    [project_id] => 1
+                    [note_date] => 18/06/2025
+                    [notes] => <p>jjjj</p>
+                    [created_at] => 2025-06-18 15:02:39
+                    [updated_at] => 18/06/2025 15:02
+                    [updated_by] => System Admin
+                    [notes_preview] => jjjj
+                )
+
+            [3] => Array
+                (
+                    [id] => 5
+                    [project_id] => 1
+                    [note_date] => 15/06/2025
+                    [notes] => <p>jjjj</p>
+                    [created_at] => 2025-06-15 10:44:26
+                    [updated_at] => 15/06/2025 10:44
+                    [updated_by] => System Admin
+                    [notes_preview] => jjjj
+                )
+
+            [4] => Array
+                (
+                    [id] => 4
+                    [project_id] => 1
+                    [note_date] => 10/06/2025
+                    [notes] => <p>vv</p>
+                    [created_at] => 2025-06-10 14:34:21
+                    [updated_at] => 10/06/2025 14:34
+                    [updated_by] => System Admin
+                    [notes_preview] => vv
+                )
+
+            [5] => Array
+                (
+                    [id] => 3
+                    [project_id] => 1
+                    [note_date] => 09/06/2025
+                    [notes] => <ol>
+<li>test notes</li>
+</ol>
+<ul>
+<li><strong>test notes 2</strong></li>
+<li><strong>tesdt notes 3</strong></li>
+<li><strong>Mick Green Loves Ba^^y Boys</strong></li>
+<li><strong>Mark Riddex is Sha**ing the Cleaner :-)</strong></li>
+<li><strong>Frank Edge is buying the breakfasts for Fridays DABS!!!!</strong></li>
+<li><strong>None of the above comments are true.</strong></li>
+<li><strong>Commets 4&amp;5 are true though :-0</strong></li>
+</ul>
+                    [created_at] => 2025-06-09 08:19:05
+                    [updated_at] => 09/06/2025 08:19
+                    [updated_by] => System Admin
+                    [notes_preview] => 
+test notes
+
+
+test notes 2
+tesdt notes 3
+Mick Green Loves Ba^^y Boys
+Mark Riddex is Sha**ing the Cleaner :-)
+Fra...
+                )
+
+            [6] => Array
+                (
+                    [id] => 2
+                    [project_id] => 1
+                    [note_date] => 04/06/2025
+                    [notes] => <ul>
+<li><strong>Test Note, just to make sure it works ok</strong></li>
+</ul>
+                    [created_at] => 2025-06-04 17:34:07
+                    [updated_at] => 04/06/2025 22:51
+                    [updated_by] => System Admin
+                    [notes_preview] => 
+Test Note, just to make sure it works ok
+
+                )
+
+            [7] => Array
+                (
+                    [id] => 1
+                    [project_id] => 1
+                    [note_date] => 03/06/2025
+                    [notes] => <ol>
+<li>test notes</li>
+</ol>
+<ul style="list-style-type: square;">
+<li><strong>test notes 2</strong></li>
+<li><strong>tesdt notes 3</strong></li>
+<li><strong>Mick Green Loves Ba^^y Boys</strong></li>
+<li><strong>Mark Riddex is Sha**ing the Cleaner :-)</strong></li>
+<li><strong>Frank Edge is buying the breakfasts for Fridays DABS!!!!</strong></li>
+<li><strong>None of the above comments are true, you F**kin Smowflakes !!!</strong></li>
+<li><strong>Commets 4&amp;5 are true though :-0</strong></li>
+</ul>
+                    [created_at] => 2025-06-03 17:01:42
+                    [updated_at] => 03/06/2025 23:43
+                    [updated_by] => System Admin
+                    [notes_preview] => 
+test notes
+
+
+test notes 2
+tesdt notes 3
+Mick Green Loves Ba^^y Boys
+Mark Riddex is Sha**ing the Cleaner :-)
+Fra...
+                )
+
+        )
+
+    [total] => 8
+    [pages] => 1
+    [page] => 1
+)
+
+[19/11/2025 11:07:33] Action requested: get
+[19/11/2025 11:07:33] Database connection OK
+[19/11/2025 11:07:33] Fetching notes for: Array
+(
+    [project_id] => 1
+    [note_date] => 2025-11-19
+)
+
+[19/11/2025 11:07:33] Sending response: Array
+(
+    [ok] => 1
+    [notes] => 
+    [updated_at] => 
+    [updated_by] => 
+    [date] => 19/11/2025
+)
+

@@ -66,3 +66,330 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4062
+[24-Jun-2025 20:13:10 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:13:10 Europe/London] PHP Warning:  require_once(dabs-enhanced-features.php): Failed to open stream: No such file or directory in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4067
+[24-Jun-2025 20:13:10 Europe/London] PHP Fatal error:  Uncaught Error: Failed opening required 'dabs-enhanced-features.php' (include_path='.:/usr/local/php81/share/php81') in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php:4067
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/index.php on line 4067
+[24-Jun-2025 20:13:51 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:17:08 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:21:19 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:24:40 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:28:34 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:28:40 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:28:42 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:28:43 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:28:44 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:28:45 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:33:46 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:39:33 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:39:47 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[24-Jun-2025 20:39:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 07:13:44 Europe/London] isUserLoggedIn() called. Session data: []
+[25-Jun-2025 07:13:44 Europe/London] [25/06/2025 07:13:44] Unauthorized access attempt | Context: {"ip":"172.69.43.150","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/137.0.0.0 Safari\/537.36","timestamp":"25\/06\/2025 07:13:44","requested_uri":"\/index.php"}
+[25-Jun-2025 07:13:52 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 07:13:52 Europe/London] [25/06/2025 07:13:52] No briefing found for today, creating new briefing | Context: {"project_id":1,"date":"2025-06-25"}
+[25-Jun-2025 07:23:45 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 07:34:56 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 07:37:58 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 08:00:24 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 08:03:36 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 08:12:03 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 08:12:24 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:36:28 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:37:42 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:43:32 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:51:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:51:54 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:51:59 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:55:00 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:55:18 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:58:02 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:58:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:58:27 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:59:39 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 10:59:42 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:05:02 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:05:03 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:05:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:05:05 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:15:21 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:16:55 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:17:02 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:17:13 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:31:29 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 11:31:32 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 12:32:45 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 12:32:49 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 12:33:36 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 12:45:26 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 12:52:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 12:52:20 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 12:52:30 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:43:02 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:44:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:45:01 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:46:24 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:46:49 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:47:13 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:47:26 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:49:00 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 13:49:26 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 14:01:34 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 14:04:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 14:11:54 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 14:12:23 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 14:16:57 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 14:23:20 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 15:45:26 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 15:45:29 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 15:52:16 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 15:59:45 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:05:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:28:21 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:28:46 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:29:27 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:31:46 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:32:22 Europe/London] isUserLoggedIn() called. Session data: []
+[25-Jun-2025 16:32:22 Europe/London] [25/06/2025 16:32:22] Unauthorized access attempt | Context: {"ip":"172.70.58.111","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"25\/06\/2025 16:32:22","requested_uri":"\/"}
+[25-Jun-2025 16:32:22 Europe/London] isUserLoggedIn() called. Session data: []
+[25-Jun-2025 16:32:22 Europe/London] [25/06/2025 16:32:22] Unauthorized access attempt | Context: {"ip":"172.68.205.254","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"25\/06\/2025 16:32:22","requested_uri":"\/"}
+[25-Jun-2025 16:32:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:35:31 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:39:56 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:39:56 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 16:40:32 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750832032,"current_project":1}
+[25-Jun-2025 16:40:32 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:36:53 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:36:53 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:12 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:12 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:13 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:13 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:13 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:13 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:14 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:14 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:15 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:15 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:16 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:16 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:16 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:16 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:17 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:17 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 18:37:18 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 18:37:18 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 37
+[25-Jun-2025 19:03:18 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 19:03:18 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 109
+[25-Jun-2025 19:03:18 Europe/London] DABS Activity Schedule - Briefing fetch failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title' in 'field list'
+[25-Jun-2025 20:28:08 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:28:08 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 109
+[25-Jun-2025 20:28:08 Europe/London] DABS Activity Schedule - Briefing fetch failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title' in 'field list'
+[25-Jun-2025 20:28:45 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:28:45 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 109
+[25-Jun-2025 20:28:45 Europe/London] DABS Activity Schedule - Briefing fetch failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title' in 'field list'
+[25-Jun-2025 20:38:08 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:38:08 Europe/London] DABS Activity Schedule - Database connection failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'where clause'
+[25-Jun-2025 20:38:08 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 183
+[25-Jun-2025 20:38:08 Europe/London] DABS Activity Schedule - Briefing fetch failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'title' in 'field list'
+[25-Jun-2025 20:50:52 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:50:52 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:50:52 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:50:52 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[25-Jun-2025 20:51:22 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:51:22 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:51:22 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:51:22 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[25-Jun-2025 20:51:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:51:50 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:51:50 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:51:50 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[25-Jun-2025 20:53:03 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:53:03 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:53:03 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:53:03 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[25-Jun-2025 20:54:07 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:54:07 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:54:07 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:54:07 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[25-Jun-2025 20:54:09 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:54:09 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:54:09 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:54:09 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[25-Jun-2025 20:54:11 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:54:11 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:54:11 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:54:11 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[25-Jun-2025 20:54:12 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[25-Jun-2025 20:54:12 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[25-Jun-2025 20:54:12 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[25-Jun-2025 20:54:12 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 12 total briefings
+[26-Jun-2025 07:25:56 Europe/London] isUserLoggedIn() called. Session data: []
+[26-Jun-2025 07:25:56 Europe/London] [26/06/2025 07:25:56] Unauthorized access attempt | Context: {"ip":"172.71.241.39","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/137.0.0.0 Safari\/537.36","timestamp":"26\/06\/2025 07:25:56","requested_uri":"\/index.php"}
+[26-Jun-2025 07:26:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:26:04 Europe/London] [26/06/2025 07:26:04] No briefing found for today, creating new briefing | Context: {"project_id":1,"date":"2025-06-26"}
+[26-Jun-2025 07:26:04 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors
+[26-Jun-2025 07:26:04 Europe/London] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /var/www/vhosts/hosting215226.ae97b.netcup.net/dabs.defecttracker.uk/httpdocs/activity_schedule_tabs.php on line 176
+[26-Jun-2025 07:26:04 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings
+[26-Jun-2025 07:32:08 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:32:08 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:32:08 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:32:15 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:32:15 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:32:15 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:32:16 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:32:16 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:32:16 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:32:17 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:32:17 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:32:17 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:32:18 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:32:18 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:32:18 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:32:20 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:32:20 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:32:20 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:33:39 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:33:39 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:33:39 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:38:14 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:38:14 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:38:14 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:40:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:40:50 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:40:50 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:41:25 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:41:25 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:41:25 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:41:30 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:41:30 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:41:30 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:41:33 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:41:33 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:41:33 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:41:45 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:41:45 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:41:45 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:41:46 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:41:46 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:41:46 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:41:47 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:41:47 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:41:47 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:41:48 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:41:48 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:41:48 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 07:58:22 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 07:58:22 Europe/London] DABS Activity Schedule: Successfully loaded 5 contractors for user: System Admin
+[26-Jun-2025 07:58:22 Europe/London] DABS Activity Schedule: Loaded 1 today's briefings, 13 total briefings for user: System Admin
+[26-Jun-2025 08:09:20 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 15:59:01 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 15:59:24 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[26-Jun-2025 22:47:00 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750786886,"current_project":1}
+[27-Jun-2025 12:23:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:23:50 Europe/London] [27/06/2025 12:23:50] No briefing found for today, creating new briefing | Context: {"project_id":1,"date":"2025-06-27"}
+[27-Jun-2025 12:24:30 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:24:51 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:25:32 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:25:49 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:35:51 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:36:16 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:36:29 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:36:32 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:36:33 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:36:34 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:36:57 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:41:53 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:42:13 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:42:45 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:46:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:46:18 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:46:41 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:47:43 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:47:59 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 12:48:23 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 14:59:23 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 14:59:56 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:02:32 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:10:47 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:24:00 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:24:00 Europe/London] [27/06/2025 15:24:00] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:24:04 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:24:04 Europe/London] [27/06/2025 15:24:04] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:24:05 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:24:05 Europe/London] [27/06/2025 15:24:05] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:24:23 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:24:23 Europe/London] [27/06/2025 15:24:23] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:24:25 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:24:25 Europe/London] [27/06/2025 15:24:25] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:24:26 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:24:26 Europe/London] [27/06/2025 15:24:26] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:25:10 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:25:10 Europe/London] [27/06/2025 15:25:10] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:28:12 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:28:12 Europe/London] [27/06/2025 15:28:12] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:28:21 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:28:21 Europe/London] [27/06/2025 15:28:21] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:29:25 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:29:25 Europe/London] [27/06/2025 15:29:25] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:29:31 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:29:31 Europe/London] [27/06/2025 15:29:31] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:31:15 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:31:15 Europe/London] [27/06/2025 15:31:15] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[27-Jun-2025 15:31:53 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1750919164,"current_project":1}
+[27-Jun-2025 15:31:53 Europe/London] [27/06/2025 15:31:53] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[04-Jul-2025 07:15:07 Europe/London] isUserLoggedIn() called. Session data: []
+[04-Jul-2025 07:15:07 Europe/London] [04/07/2025 07:15:07] Unauthorized access attempt | Context: {"ip":"172.70.86.8","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/137.0.0.0 Safari\/537.36","timestamp":"04\/07\/2025 07:15:07","requested_uri":"\/index.php"}
+[04-Jul-2025 07:15:16 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1751609716,"current_project":1}
+[04-Jul-2025 07:15:16 Europe/London] [04/07/2025 07:15:16] No briefing found for today, creating new briefing | Context: {"project_id":1,"date":"2025-07-04"}
+[04-Jul-2025 07:15:16 Europe/London] [04/07/2025 07:15:16] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[04-Jul-2025 07:16:38 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1751609716,"current_project":1}
+[04-Jul-2025 07:16:38 Europe/London] [04/07/2025 07:16:38] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[07-Jul-2025 12:04:29 Europe/London] isUserLoggedIn() called. Session data: []
+[07-Jul-2025 12:04:29 Europe/London] [07/07/2025 12:04:29] Unauthorized access attempt | Context: {"ip":"104.23.160.39","user_agent":"Mozilla\/5.0 (compatible; wpbot\/1.3; +https:\/\/forms.gle\/ajBaxygz9jSR8p8G9)","timestamp":"07\/07\/2025 12:04:29","requested_uri":"\/"}
+[07-Jul-2025 21:33:52 Europe/London] isUserLoggedIn() called. Session data: []
+[07-Jul-2025 21:33:52 Europe/London] [07/07/2025 21:33:52] Unauthorized access attempt | Context: {"ip":"172.68.229.125","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/137.0.0.0 Safari\/537.36","timestamp":"07\/07\/2025 21:33:52","requested_uri":"\/"}
+[24-Jul-2025 08:03:28 Europe/London] isUserLoggedIn() called. Session data: []
+[24-Jul-2025 08:03:28 Europe/London] [24/07/2025 08:03:28] Unauthorized access attempt | Context: {"ip":"162.158.6.176","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"24\/07\/2025 08:03:28","requested_uri":"\/"}
+[29-Jul-2025 10:13:44 Europe/London] isUserLoggedIn() called. Session data: []
+[29-Jul-2025 10:13:44 Europe/London] [29/07/2025 10:13:44] Unauthorized access attempt | Context: {"ip":"162.158.49.48","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"29\/07\/2025 10:13:44","requested_uri":"\/"}
+[29-Jul-2025 12:53:38 Europe/London] isUserLoggedIn() called. Session data: []
+[29-Jul-2025 12:53:38 Europe/London] [29/07/2025 12:53:38] Unauthorized access attempt | Context: {"ip":"162.158.49.3","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"29\/07\/2025 12:53:38","requested_uri":"\/"}
+[02-Aug-2025 09:54:50 Europe/London] isUserLoggedIn() called. Session data: []
+[02-Aug-2025 09:54:50 Europe/London] [02/08/2025 09:54:50] Unauthorized access attempt | Context: {"ip":"162.158.38.195","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"02\/08\/2025 09:54:50","requested_uri":"\/"}
+[11-Aug-2025 09:23:24 Europe/London] isUserLoggedIn() called. Session data: []
+[11-Aug-2025 09:23:24 Europe/London] [11/08/2025 09:23:24] Unauthorized access attempt | Context: {"ip":"104.23.160.82","user_agent":"Mozilla\/5.0 (compatible; wpbot\/1.3; +https:\/\/forms.gle\/ajBaxygz9jSR8p8G9)","timestamp":"11\/08\/2025 09:23:24","requested_uri":"\/"}
+[04-Sep-2025 19:48:40 Europe/London] isUserLoggedIn() called. Session data: []
+[04-Sep-2025 19:48:41 Europe/London] [04/09/2025 19:48:41] Unauthorized access attempt | Context: {"ip":"162.158.230.147","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"04\/09\/2025 19:48:41","requested_uri":"\/"}
+[04-Sep-2025 19:48:42 Europe/London] isUserLoggedIn() called. Session data: []
+[04-Sep-2025 19:48:42 Europe/London] [04/09/2025 19:48:42] Unauthorized access attempt | Context: {"ip":"172.71.241.57","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","timestamp":"04\/09\/2025 19:48:42","requested_uri":"\/"}
+[04-Sep-2025 19:48:50 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1757011730,"current_project":1}
+[04-Sep-2025 19:48:50 Europe/London] [04/09/2025 19:48:50] No briefing found for today, creating new briefing | Context: {"project_id":1,"date":"2025-09-04"}
+[04-Sep-2025 19:48:50 Europe/London] [04/09/2025 19:48:50] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[04-Sep-2025 19:51:43 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1757011730,"current_project":1}
+[04-Sep-2025 19:51:43 Europe/London] [04/09/2025 19:51:43] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[08-Sep-2025 09:38:26 Europe/London] isUserLoggedIn() called. Session data: []
+[08-Sep-2025 09:38:26 Europe/London] [08/09/2025 09:38:26] Unauthorized access attempt | Context: {"ip":"104.23.160.83","user_agent":"Mozilla\/5.0 (compatible; wpbot\/1.3; +https:\/\/forms.gle\/ajBaxygz9jSR8p8G9)","timestamp":"08\/09\/2025 09:38:26","requested_uri":"\/"}
+[13-Sep-2025 09:35:04 Europe/London] isUserLoggedIn() called. Session data: []
+[13-Sep-2025 09:35:04 Europe/London] [13/09/2025 09:35:04] Unauthorized access attempt | Context: {"ip":"162.158.6.176","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"13\/09\/2025 09:35:04","requested_uri":"\/"}
+[13-Sep-2025 09:35:05 Europe/London] isUserLoggedIn() called. Session data: []
+[13-Sep-2025 09:35:05 Europe/London] [13/09/2025 09:35:05] Unauthorized access attempt | Context: {"ip":"162.158.230.148","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"13\/09\/2025 09:35:05","requested_uri":"\/"}
+[13-Oct-2025 18:49:51 Europe/London] isUserLoggedIn() called. Session data: []
+[13-Oct-2025 18:49:51 Europe/London] [13/10/2025 18:49:51] Unauthorized access attempt | Context: {"ip":"172.68.174.62","user_agent":"Mozilla\/5.0 (compatible; wpbot\/1.3; +https:\/\/forms.gle\/ajBaxygz9jSR8p8G9)","timestamp":"13\/10\/2025 18:49:51","requested_uri":"\/"}
+[02-Nov-2025 20:19:56 Europe/London] isUserLoggedIn() called. Session data: []
+[02-Nov-2025 20:19:56 Europe/London] [02/11/2025 20:19:56] Unauthorized access attempt | Context: {"ip":"172.69.23.62","user_agent":"Cloudflare-SSLDetector","timestamp":"02\/11\/2025 20:19:56","requested_uri":"\/"}
+[19-Nov-2025 08:23:09 Europe/London] isUserLoggedIn() called. Session data: []
+[19-Nov-2025 08:23:09 Europe/London] [19/11/2025 08:23:09] Unauthorized access attempt | Context: {"ip":"162.158.38.51","user_agent":"Plesk screenshot bot https:\/\/support.plesk.com\/hc\/en-us\/articles\/10301006946066","timestamp":"19\/11\/2025 08:23:09","requested_uri":"\/"}
+[19-Nov-2025 08:23:11 Europe/London] isUserLoggedIn() called. Session data: []
+[19-Nov-2025 08:23:11 Europe/London] [19/11/2025 08:23:11] Unauthorized access attempt | Context: {"ip":"162.158.216.184","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","timestamp":"19\/11\/2025 08:23:11","requested_uri":"\/"}
+[19-Nov-2025 08:23:30 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1763540610,"current_project":1}
+[19-Nov-2025 08:23:30 Europe/London] [19/11/2025 08:23:30] No briefing found for today, creating new briefing | Context: {"project_id":1,"date":"2025-11-19"}
+[19-Nov-2025 08:23:30 Europe/London] [19/11/2025 08:23:30] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[19-Nov-2025 10:57:09 Europe/London] isUserLoggedIn() called. Session data: []
+[19-Nov-2025 10:57:09 Europe/London] [19/11/2025 10:57:09] Unauthorized access attempt | Context: {"ip":"172.68.229.165","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","timestamp":"19\/11\/2025 10:57:09","requested_uri":"\/"}
+[19-Nov-2025 10:57:21 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1763549841,"current_project":1}
+[19-Nov-2025 10:57:21 Europe/London] [19/11/2025 10:57:21] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[19-Nov-2025 11:07:31 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1763549841,"current_project":1}
+[19-Nov-2025 11:07:31 Europe/London] [19/11/2025 11:07:31] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}

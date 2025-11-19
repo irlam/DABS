@@ -779,3 +779,83 @@
 24/06/2025 18:41:26 | DEBUG | Login attempt for username: admin | IP: 172.69.195.60 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 24/06/2025 18:41:26 | DEBUG | Authentication successful for user ID: 1 | IP: 172.69.195.60 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 24/06/2025 18:41:26 | DEBUG | Set current_project to: 1 | IP: 172.69.195.60 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:44 | DEBUG | Login page loaded | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:44 | DEBUG | Request Method: GET | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:52 | DEBUG | Login page loaded | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:52 | DEBUG | Request Method: POST | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:52 | DEBUG | POST data: ["action","username","password","project_id"] | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:52 | DEBUG | Login attempt for username: admin | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:52 | DEBUG | Authentication successful for user ID: 1 | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 07:13:52 | DEBUG | Set current_project to: 1 | IP: 172.69.43.150 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+25/06/2025 16:32:22 | DEBUG | Login page loaded | IP: 172.70.58.111 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+25/06/2025 16:32:22 | DEBUG | Request Method: GET | IP: 172.70.58.111 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+25/06/2025 16:32:22 | DEBUG | Login page loaded | IP: 172.68.205.254 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+25/06/2025 16:32:22 | DEBUG | Request Method: GET | IP: 172.68.205.254 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+26/06/2025 07:25:56 | DEBUG | Login page loaded | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+26/06/2025 07:25:56 | DEBUG | Request Method: GET | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+26/06/2025 07:26:04 | DEBUG | Login page loaded | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+26/06/2025 07:26:04 | DEBUG | Request Method: POST | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+26/06/2025 07:26:04 | DEBUG | POST data: ["action","username","password","project_id"] | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+26/06/2025 07:26:04 | DEBUG | Login attempt for username: admin | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+26/06/2025 07:26:04 | DEBUG | Authentication successful for user ID: 1 | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+26/06/2025 07:26:04 | DEBUG | Set current_project to: 1 | IP: 172.71.241.39 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:07 | DEBUG | Login page loaded | IP: 172.70.86.8 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:07 | DEBUG | Request Method: GET | IP: 172.70.86.8 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:16 | DEBUG | Login page loaded | IP: 172.70.86.70 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:16 | DEBUG | Request Method: POST | IP: 172.70.86.70 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:16 | DEBUG | POST data: ["action","username","password","project_id"] | IP: 172.70.86.70 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:16 | DEBUG | Login attempt for username: admin | IP: 172.70.86.70 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:16 | DEBUG | Authentication successful for user ID: 1 | IP: 172.70.86.70 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+04/07/2025 07:15:16 | DEBUG | Set current_project to: 1 | IP: 172.70.86.70 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+07/07/2025 12:04:29 | DEBUG | Login page loaded | IP: 104.23.160.39 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+07/07/2025 12:04:29 | DEBUG | Request Method: GET | IP: 104.23.160.39 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+07/07/2025 21:33:52 | DEBUG | Login page loaded | IP: 172.68.229.125 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+07/07/2025 21:33:52 | DEBUG | Request Method: GET | IP: 172.68.229.125 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+24/07/2025 08:03:28 | DEBUG | Login page loaded | IP: 162.158.6.176 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+24/07/2025 08:03:28 | DEBUG | Request Method: GET | IP: 162.158.6.176 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+29/07/2025 10:13:44 | DEBUG | Login page loaded | IP: 162.158.49.48 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+29/07/2025 10:13:44 | DEBUG | Request Method: GET | IP: 162.158.49.48 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+29/07/2025 12:53:38 | DEBUG | Login page loaded | IP: 162.158.49.3 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+29/07/2025 12:53:38 | DEBUG | Request Method: GET | IP: 162.158.49.3 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+02/08/2025 09:54:50 | DEBUG | Login page loaded | IP: 162.158.38.195 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+02/08/2025 09:54:50 | DEBUG | Request Method: GET | IP: 162.158.38.195 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+11/08/2025 09:23:24 | DEBUG | Login page loaded | IP: 104.23.160.82 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+11/08/2025 09:23:24 | DEBUG | Request Method: GET | IP: 104.23.160.82 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+04/09/2025 19:48:41 | DEBUG | Login page loaded | IP: 162.158.230.147 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+04/09/2025 19:48:41 | DEBUG | Request Method: GET | IP: 162.158.230.147 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+04/09/2025 19:48:42 | DEBUG | Login page loaded | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:48:42 | DEBUG | Request Method: GET | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:48:50 | DEBUG | Login page loaded | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:48:50 | DEBUG | Request Method: POST | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:48:50 | DEBUG | POST data: ["action","username","password","project_id"] | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:48:50 | DEBUG | Login attempt for username: admin | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:48:50 | DEBUG | Authentication successful for user ID: 1 | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:48:50 | DEBUG | Set current_project to: 1 | IP: 172.71.241.57 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:51:55 | DEBUG | Login page loaded | IP: 172.69.195.80 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+04/09/2025 19:51:55 | DEBUG | Request Method: GET | IP: 172.69.195.80 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36
+08/09/2025 09:38:27 | DEBUG | Login page loaded | IP: 104.23.160.90 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+08/09/2025 09:38:27 | DEBUG | Request Method: GET | IP: 104.23.160.90 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+13/09/2025 09:35:04 | DEBUG | Login page loaded | IP: 162.158.6.176 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+13/09/2025 09:35:04 | DEBUG | Request Method: GET | IP: 162.158.6.176 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+13/09/2025 09:35:05 | DEBUG | Login page loaded | IP: 162.158.38.240 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+13/09/2025 09:35:05 | DEBUG | Request Method: GET | IP: 162.158.38.240 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+13/10/2025 18:49:51 | DEBUG | Login page loaded | IP: 172.68.174.62 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+13/10/2025 18:49:51 | DEBUG | Request Method: GET | IP: 172.68.174.62 | User-Agent: Mozilla/5.0 (compatible; wpbot/1.3; +https://forms.gle/ajBaxygz9jSR8p8G9)
+19/11/2025 08:23:09 | DEBUG | Login page loaded | IP: 162.158.38.51 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+19/11/2025 08:23:09 | DEBUG | Request Method: GET | IP: 162.158.38.51 | User-Agent: Plesk screenshot bot https://support.plesk.com/hc/en-us/articles/10301006946066
+19/11/2025 08:23:11 | DEBUG | Login page loaded | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 08:23:11 | DEBUG | Request Method: GET | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 08:23:30 | DEBUG | Login page loaded | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 08:23:30 | DEBUG | Request Method: POST | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 08:23:30 | DEBUG | POST data: ["action","username","password","project_id"] | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 08:23:30 | DEBUG | Login attempt for username: admin | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 08:23:30 | DEBUG | Authentication successful for user ID: 1 | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 08:23:30 | DEBUG | Set current_project to: 1 | IP: 162.158.216.184 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:09 | DEBUG | Login page loaded | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:09 | DEBUG | Request Method: GET | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:21 | DEBUG | Login page loaded | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:21 | DEBUG | Request Method: POST | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:21 | DEBUG | POST data: ["action","username","password","project_id"] | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:21 | DEBUG | Login attempt for username: admin | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:21 | DEBUG | Authentication successful for user ID: 1 | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+19/11/2025 10:57:21 | DEBUG | Set current_project to: 1 | IP: 172.68.229.165 | User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36

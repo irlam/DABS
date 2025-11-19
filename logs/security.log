@@ -132,3 +132,9 @@
 24/06/2025 14:50:54 | login_success | User ID 1 (admin) logged in successfully | IP: 172.69.224.98
 24/06/2025 18:41:17 | password_reset_invalid_email | Reset attempted for unknown email: cirlam@gmail.com | IP: 172.69.195.60
 24/06/2025 18:41:26 | login_success | User ID 1 (admin) logged in successfully | IP: 172.69.195.60
+25/06/2025 07:13:52 | login_success | User ID 1 (admin) logged in successfully | IP: 172.69.43.150
+26/06/2025 07:26:04 | login_success | User ID 1 (admin) logged in successfully | IP: 172.71.241.39
+04/07/2025 07:15:16 | login_success | User ID 1 (admin) logged in successfully | IP: 172.70.86.70
+04/09/2025 19:48:50 | login_success | User ID 1 (admin) logged in successfully | IP: 172.71.241.57
+19/11/2025 08:23:30 | login_success | User ID 1 (admin) logged in successfully | IP: 162.158.216.184
+19/11/2025 10:57:21 | login_success | User ID 1 (admin) logged in successfully | IP: 172.68.229.165
