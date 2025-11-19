@@ -82,7 +82,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Animated background effect */
+/* Animated background effect - Enhanced with more dynamic gradients */
 body::before {
     content: '';
     position: fixed;
@@ -91,11 +91,26 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(0, 128, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(0, 246, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(255, 0, 64, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(0, 128, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 246, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0, 217, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(0, 128, 255, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(10, 14, 23, 0.95) 0%, rgba(26, 31, 46, 0.98) 100%);
     pointer-events: none;
     z-index: 0;
+    animation: backgroundShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundShift {
+    0% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.95;
+    }
 }
 
 .dashboard {
@@ -264,8 +279,8 @@ header {
 }
 
 .safety-card .card-header {
-    background: var(--gradient-danger) !important;
-    box-shadow: var(--glow-red);
+    background: var(--gradient-warning) !important;
+    box-shadow: var(--glow-orange);
 }
 
 .overview-card {
@@ -1137,6 +1152,7 @@ table {
     border-radius: 1rem;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-md);
+    animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .resource-stat-card:hover {

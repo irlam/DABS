@@ -17,6 +17,26 @@
     margin-bottom: 2rem;
 }
 
+/* Ensure horizontal spacing for resource cards row */
+.resource-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .resource-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .resource-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* =================== INDIVIDUAL RESOURCE CARD =================== */
 .resource-card {
     background: var(--dark-bg-card);
@@ -26,6 +46,17 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Pulse glow animation for resource cards */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: var(--shadow-md), 0 0 10px rgba(0, 128, 255, 0.3);
+    }
+    50% {
+        box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 246, 255, 0.6);
+    }
 }
 
 .resource-card::before {
