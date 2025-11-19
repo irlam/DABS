@@ -23,10 +23,13 @@
  * - Uses UK date format (DD/MM/YYYY) throughout
  * 
  * REQUIRED LIBRARIES:
- * - TCPDF (for PDF generation)
+ * - TCPDF (for PDF generation) - installed via Composer
  * 
  * ************************************************************************
  */
+
+// Load Composer autoloader for TCPDF
+require_once __DIR__ . '/vendor/autoload.php';
 
 // Set timezone to Europe/London for UK time
 date_default_timezone_set('Europe/London');
@@ -285,14 +288,10 @@ function getActivitiesForDate($date) {
 function generatePDF($data) {
     global $project_name, $username;
     
-    // Check if TCPDF is available, if not, try to include it
+    // TCPDF is now loaded via Composer autoloader
     if (!class_exists('TCPDF')) {
-        if (file_exists(__DIR__ . '/tcpdf/tcpdf.php')) {
-            require_once(__DIR__ . '/tcpdf/tcpdf.php');
-        } else {
-            logMessage("TCPDF library not found");
-            throw new Exception("PDF generation library (TCPDF) not found. Please install it.");
-        }
+        logMessage("ERROR: TCPDF class not found. Please run 'composer install'.");
+        throw new Exception("PDF generation library (TCPDF) not found. Please run 'composer install'.");
     }
     
     // Create new PDF document

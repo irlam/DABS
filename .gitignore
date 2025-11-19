@@ -3,7 +3,6 @@
 /node_modules/
 /tcpdf/
 composer.lock
-composer.json
 
 # Log files
 /logs/*.log
