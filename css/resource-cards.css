@@ -48,7 +48,7 @@
 .resource-card:hover {
     transform: translateY(-10px);
     border-color: var(--border-glow);
-    box-shadow: var(--shadow-xl), var(--glow-purple);
+    box-shadow: var(--shadow-xl), var(--glow-blue);
 }
 
 /* =================== CARD HEADER =================== */
@@ -199,8 +199,8 @@
 }
 
 .resource-card.vehicles .resource-icon-wrapper {
-    background: var(--gradient-purple);
-    box-shadow: var(--glow-purple);
+    background: var(--gradient-blue);
+    box-shadow: var(--glow-blue);
 }
 
 /* =================== STATUS INDICATORS =================== */
@@ -237,7 +237,7 @@
 .resource-status.unavailable {
     background: var(--gradient-danger);
     color: white;
-    box-shadow: var(--glow-pink);
+    box-shadow: var(--glow-red);
 }
 
 .resource-status-dot {
