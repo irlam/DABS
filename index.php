@@ -774,7 +774,7 @@ window.dabsContractors = <?php echo $jsContractors ?: "[]"; ?>;
 window.dabsWorkAreas = <?php echo $jsWorkAreas ?: "[]"; ?>;
 </script>
 
-<!-- All other scripts: Notes, Safety, Resource Tracker, Weather, Email, Contractor Breakdown -->
+<!-- All other scripts: Notes, Safety, Resource Tracker, Weather, Email, Contractor Breakdown, Subcontractors -->
 
 <script src="js/weather.js"></script>
 <script src="js/notes.js" defer></script>
@@ -782,6 +782,7 @@ window.dabsWorkAreas = <?php echo $jsWorkAreas ?: "[]"; ?>;
 <script src="js/resource-tracker.js" defer></script>
 <script src="js/email-report.js"></script>
 <script src="js/contractor-daily-breakdown.js" defer></script>
+<script src="js/subcontractors.js" defer></script>
 
 <!-- ================= MODERN ACTIVITIES SCRIPT =================== -->
 <script>
@@ -1035,8 +1036,26 @@ document.getElementById('activityDate').onchange = function() {
 // Initial load (also on DOM ready)
 document.addEventListener('DOMContentLoaded', function() {
     loadActivitiesForDate(document.getElementById('activityDate').value);
+    
+    // Scroll animation for cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.scroll-fade').forEach(el => {
+        observer.observe(el);
+    });
 });
 </script>
-<!-- END Modernised DABS index.php (27/06/2025) -->
+<!-- END Modernised DABS index.php (19/11/2025) -->
 </body>
 </html>

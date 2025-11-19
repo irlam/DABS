@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
         loadSubcontractors();
     }
 
+    // Add Subcontractor button
+    const addBtn = document.getElementById('addSubcontractorBtn');
+    if (addBtn) {
+        addBtn.onclick = function(e) {
+            e.preventDefault();
+            openSubcontractorModal();
+        }
+    }
+
     // Modal reset handler
     const modal = document.getElementById('subcontractorModal');
     if (modal) {
