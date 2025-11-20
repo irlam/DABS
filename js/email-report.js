@@ -720,7 +720,7 @@ async function addAllAttendees() {
         const data = await response.json();
         console.log(`[${timestamp}] Attendees data received:`, data);
         
-        if (data.ok && data.attendees && data.attendees.length > 0) {
+        if (data.success && data.attendees && data.attendees.length > 0) {
             let addedCount = 0;
             
             // Process each attendee with staggered animation

@@ -86,7 +86,7 @@ function loadResourceStats() {
             container.innerHTML = `
                 <div class="row g-3 mb-4 resource-cards">
                     <!-- Total Labour Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="card resource-stat-card h-100 shadow-sm">
                             <div class="card-body text-center p-3">
                                 <div class="stat-icon mb-2">
@@ -100,7 +100,7 @@ function loadResourceStats() {
                     </div>
 
                     <!-- Active Subcontractors Card -->
-                    <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="card resource-stat-card h-100 shadow-sm">
                             <div class="card-body text-center p-3">
                                 <div class="stat-icon mb-2">
@@ -114,7 +114,7 @@ function loadResourceStats() {
                     </div>
 
                     <!-- Labour by Contractor Card -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card resource-stat-card h-100 shadow-sm">
                             <div class="card-body p-3">
                                 <div class="stat-icon mb-2 text-center">
@@ -129,7 +129,7 @@ function loadResourceStats() {
                     </div>
 
                     <!-- Labour by Area Card -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card resource-stat-card h-100 shadow-sm">
                             <div class="card-body p-3">
                                 <div class="stat-icon mb-2 text-center">
