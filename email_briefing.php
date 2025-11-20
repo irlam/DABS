@@ -37,6 +37,9 @@ date_default_timezone_set('Europe/London');
 // Start session to access user information
 session_start();
 
+// Load database connection helper
+require_once __DIR__ . '/includes/db_connect.php';
+
 // Check if user is logged in
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     outputResponse(['error' => 'Not authenticated', 'redirect' => 'login.php']);
@@ -102,17 +105,8 @@ function outputResponse($data) {
  */
 function getProjectName($project_id) {
     try {
-        // Database connection details
-        $db_host = '10.35.233.124:3306';
-        $db_name = 'k87747_dabs';
-        $db_user = 'k87747_dabs';
-        $db_pass = 'Subaru5554346';
-        
-        $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
-        $pdo = new PDO($dsn, $db_user, $db_pass, [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-        ]);
+        // Use centralized database connection
+        $pdo = connectToDatabase();
         
         $stmt = $pdo->prepare("SELECT name FROM projects WHERE id = ?");
         $stmt->execute([$project_id]);
@@ -136,17 +130,8 @@ function getActivitiesForDate($date) {
     global $project_id;
     
     try {
-        // Database connection details
-        $db_host = '10.35.233.124:3306';
-        $db_name = 'k87747_dabs';
-        $db_user = 'k87747_dabs';
-        $db_pass = 'Subaru5554346';
-        
-        $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
-        $pdo = new PDO($dsn, $db_user, $db_pass, [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-        ]);
+        // Use centralized database connection
+        $pdo = connectToDatabase();
         
         // First check if a briefing exists
         $stmt = $pdo->prepare("SELECT id FROM briefings WHERE project_id = ? AND date = ?");
@@ -539,17 +524,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Record email sending in activity log
         try {
-            // Database connection details
-            $db_host = '10.35.233.124:3306';
-            $db_name = 'k87747_dabs';
-            $db_user = 'k87747_dabs';
-            $db_pass = 'Subaru5554346';
-            
-            $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
-            $pdo = new PDO($dsn, $db_user, $db_pass, [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-            ]);
+            // Use centralized database connection
+            $pdo = connectToDatabase();
             
             $details = "Sent DABS report for " . date('d/m/Y', strtotime($date)) . 
                       " to " . count($valid_recipients) . " recipients";
