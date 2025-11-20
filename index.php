@@ -225,11 +225,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <title>DABS - <?php echo htmlspecialchars($projectInfo['name']); ?> - <?php echo $currentDate; ?></title>
     <!-- Bootstrap 5.3.0, Font Awesome, and other CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/dark-theme.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/weather.css" rel="stylesheet">
-    <link href="css/subcontractors.css" rel="stylesheet">
-    <link href="css/resource-cards.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

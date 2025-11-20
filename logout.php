@@ -136,43 +136,10 @@ $_SESSION['logout_message'] = "You have been successfully logged out.";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logging Out - DABS System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            padding-top: 50px;
-        }
-        .logout-card {
-            max-width: 500px;
-            margin: 0 auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-        .logout-header {
-            background-color: #3498db;
-            color: white;
-            border-radius: 10px 10px 0 0;
-            padding: 20px 30px;
-        }
-        .logout-body {
-            padding: 30px;
-        }
-        .logout-icon {
-            font-size: 48px;
-            color: #3498db;
-            margin-bottom: 20px;
-        }
-        .countdown {
-            font-weight: bold;
-            color: #3498db;
-        }
-        .uk-time {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-    </style>
 </head>
-<body>
+<body class="logout-page">
     <div class="container">
         <div class="card logout-card">
             <div class="logout-header">
