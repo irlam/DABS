@@ -129,39 +129,39 @@ function createEmailModal() {
     
     console.log(`[${timestamp}] Creating modern email modal interface`);
     
-    // Modern, responsive modal HTML with Bootstrap 5 styling and accessibility features
+    // Modern, responsive modal HTML with Bootstrap 5 styling and dark theme
     const modalHTML = `
         <div class="modal fade" id="emailReportModal" tabindex="-1" aria-labelledby="emailReportModalLabel" aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content shadow-lg border-0 rounded-3">
                     <!-- Modal Header with Modern Gradient -->
-                    <div class="modal-header bg-gradient bg-primary text-white border-0 rounded-top-3">
-                        <h5 class="modal-title d-flex align-items-center fw-bold" id="emailReportModalLabel">
+                    <div class="modal-header text-white border-0 rounded-top-3" style="background: var(--gradient-neon);">
+                        <h5 class="modal-title d-flex align-items-center fw-bold text-white" id="emailReportModalLabel">
                             <i class="fas fa-envelope-open-text me-3 fa-lg"></i>
                             Send Daily Activity Report
                         </h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close modal"></button>
                     </div>
                     
-                    <!-- Modal Body with Enhanced Form Layout -->
-                    <div class="modal-body p-4 bg-light">
+                    <!-- Modal Body with Dark Theme -->
+                    <div class="modal-body p-4" style="background: var(--dark-bg-card); color: var(--text-primary);">
                         <form id="emailReportForm" class="needs-validation" novalidate>
                             <!-- Report Date Display Section -->
                             <div class="row mb-4">
                                 <div class="col-12">
-                                    <div class="card border-primary border-2">
-                                        <div class="card-header bg-primary bg-opacity-10 border-0">
-                                            <h6 class="card-title mb-0 text-primary fw-bold">
+                                    <div class="card border-2" style="background: var(--dark-bg-tertiary); border-color: var(--neon-cyan) !important;">
+                                        <div class="card-header border-0" style="background: rgba(0, 246, 255, 0.1);">
+                                            <h6 class="card-title mb-0 fw-bold" style="color: var(--neon-cyan);">
                                                 <i class="fas fa-calendar-check me-2"></i>Report Information
                                             </h6>
                                         </div>
-                                        <div class="card-body">
-                                            <label for="reportDate" class="form-label fw-semibold text-dark">
+                                        <div class="card-body" style="background: var(--dark-bg-tertiary);">
+                                            <label for="reportDate" class="form-label fw-semibold" style="color: var(--text-primary);">
                                                 Report Date (UK Format)
                                             </label>
-                                            <input type="text" class="form-control form-control-lg bg-white border-2" 
-                                                   id="reportDate" readonly>
-                                            <div class="form-text text-muted">
+                                            <input type="text" class="form-control form-control-lg border-2" 
+                                                   id="reportDate" readonly style="background: var(--dark-bg-elevated); color: var(--text-primary); border-color: var(--border-color);">
+                                            <div class="form-text" style="color: var(--text-muted);">
                                                 <i class="fas fa-info-circle me-1"></i>
                                                 This report will contain all activities and resources for the selected date
                                             </div>
@@ -173,29 +173,29 @@ function createEmailModal() {
                             <!-- Email Recipients Management Section -->
                             <div class="row mb-4">
                                 <div class="col-12">
-                                    <div class="card border-success border-2">
-                                        <div class="card-header bg-success bg-opacity-10 border-0">
-                                            <h6 class="card-title mb-0 text-success fw-bold">
+                                    <div class="card border-2" style="background: var(--dark-bg-tertiary); border-color: var(--neon-green) !important;">
+                                        <div class="card-header border-0" style="background: rgba(0, 255, 136, 0.1);">
+                                            <h6 class="card-title mb-0 fw-bold" style="color: var(--neon-green);">
                                                 <i class="fas fa-users me-2"></i>Email Recipients
                                             </h6>
                                         </div>
-                                        <div class="card-body">
-                                            <label for="emailRecipients" class="form-label fw-semibold text-dark">
+                                        <div class="card-body" style="background: var(--dark-bg-tertiary);">
+                                            <label for="emailRecipients" class="form-label fw-semibold" style="color: var(--text-primary);">
                                                 Add Email Recipients
                                             </label>
                                             <div class="email-tags-container form-control border-2 p-3" 
-                                                 style="min-height: 100px; background: #fafafa;">
+                                                 style="min-height: 100px; background: var(--dark-bg-elevated); border-color: var(--border-color);">
                                                 <div id="emailTagsContainer" class="d-flex flex-wrap gap-2 mb-2"></div>
-                                                <input type="email" id="emailInput" class="border-0 w-100 bg-transparent" 
+                                                <input type="email" id="emailInput" class="border-0 w-100" 
                                                        placeholder="Type email address and press Enter or comma to add recipient"
-                                                       style="outline: none; font-size: 1rem;">
+                                                       style="outline: none; font-size: 1rem; background: transparent; color: var(--text-primary);">
                                             </div>
                                             <div class="d-flex justify-content-between align-items-center mt-3">
-                                                <div class="form-text text-muted">
+                                                <div class="form-text" style="color: var(--text-muted);">
                                                     <i class="fas fa-lightbulb me-1"></i>
                                                     Enter multiple emails separated by commas or press Enter after each
                                                 </div>
-                                                <button type="button" class="btn btn-outline-success btn-sm" id="addAttendeesButton">
+                                                <button type="button" class="btn btn-success btn-sm" id="addAttendeesButton">
                                                     <i class="fas fa-user-friends me-2"></i>Add All Attendees
                                                 </button>
                                             </div>
@@ -207,33 +207,35 @@ function createEmailModal() {
                             <!-- Email Subject and Message Section -->
                             <div class="row mb-4">
                                 <div class="col-12">
-                                    <div class="card border-info border-2">
-                                        <div class="card-header bg-info bg-opacity-10 border-0">
-                                            <h6 class="card-title mb-0 text-info fw-bold">
+                                    <div class="card border-2" style="background: var(--dark-bg-tertiary); border-color: var(--neon-blue) !important;">
+                                        <div class="card-header border-0" style="background: rgba(0, 128, 255, 0.1);">
+                                            <h6 class="card-title mb-0 fw-bold" style="color: var(--neon-blue);">
                                                 <i class="fas fa-edit me-2"></i>Email Content
                                             </h6>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body" style="background: var(--dark-bg-tertiary);">
                                             <!-- Email Subject Field -->
                                             <div class="mb-3">
-                                                <label for="emailSubject" class="form-label fw-semibold text-dark">
-                                                    <i class="fas fa-tag me-2 text-info"></i>Email Subject Line
+                                                <label for="emailSubject" class="form-label fw-semibold" style="color: var(--text-primary);">
+                                                    <i class="fas fa-tag me-2" style="color: var(--neon-blue);"></i>Email Subject Line
                                                 </label>
                                                 <input type="text" class="form-control form-control-lg border-2" 
-                                                       id="emailSubject" placeholder="Daily Activity Briefing Report">
-                                                <div class="form-text text-muted">
+                                                       id="emailSubject" placeholder="Daily Activity Briefing Report"
+                                                       style="background: var(--dark-bg-elevated); color: var(--text-primary); border-color: var(--border-color);">
+                                                <div class="form-text" style="color: var(--text-muted);">
                                                     A clear, descriptive subject line for your email recipients
                                                 </div>
                                             </div>
                                             
                                             <!-- Email Message Field -->
                                             <div class="mb-3">
-                                                <label for="emailMessage" class="form-label fw-semibold text-dark">
-                                                    <i class="fas fa-comment-alt me-2 text-info"></i>Additional Message (Optional)
+                                                <label for="emailMessage" class="form-label fw-semibold" style="color: var(--text-primary);">
+                                                    <i class="fas fa-comment-alt me-2" style="color: var(--neon-blue);"></i>Additional Message (Optional)
                                                 </label>
                                                 <textarea class="form-control border-2" id="emailMessage" rows="4" 
-                                                         placeholder="Add a personal message to include with the report (optional)..."></textarea>
-                                                <div class="form-text text-muted">
+                                                         placeholder="Add a personal message to include with the report (optional)..."
+                                                         style="background: var(--dark-bg-elevated); color: var(--text-primary); border-color: var(--border-color);"></textarea>
+                                                <div class="form-text" style="color: var(--text-muted);">
                                                     This message will appear in the email body above the PDF attachment
                                                 </div>
                                             </div>
@@ -248,8 +250,8 @@ function createEmailModal() {
                     </div>
                     
                     <!-- Modal Footer with Enhanced Action Buttons -->
-                    <div class="modal-footer bg-white border-0 p-4">
-                        <button type="button" class="btn btn-outline-secondary btn-lg me-2" data-bs-dismiss="modal">
+                    <div class="modal-footer border-0 p-4" style="background: var(--dark-bg-tertiary); border-top: 2px solid var(--border-color) !important;">
+                        <button type="button" class="btn btn-secondary btn-lg me-2" data-bs-dismiss="modal">
                             <i class="fas fa-times me-2"></i>Cancel
                         </button>
                         <button type="button" class="btn btn-primary btn-lg px-4" id="sendEmailButton">

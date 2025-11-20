@@ -13,7 +13,7 @@
 .weather-container {
     padding: 1rem;
     border-radius: 1rem;
-    background: var(--dark-bg-card);
+    background: var(--dark-bg-card) !important;
     border: 2px solid var(--border-color);
     box-shadow: var(--shadow-lg), var(--glow-cyan);
     transition: all 0.3s ease;
@@ -37,6 +37,12 @@
     box-shadow: var(--shadow-xl), var(--glow-cyan);
     transform: translateY(-5px);
     border-color: var(--border-neon);
+}
+
+/* Ensure weather card body also has dark background */
+.weather-card .card-body {
+    background: var(--dark-bg-card) !important;
+    color: var(--text-primary) !important;
 }
 
 /* =================== CURRENT WEATHER SECTION =================== */

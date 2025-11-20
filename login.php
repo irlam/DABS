@@ -318,7 +318,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         .login-container {
             max-width: 380px;
             width: 100%;
-            padding: 1.5rem 2rem;
+            padding: 1.25rem 1.75rem;
             background: var(--dark-bg-card);
             border-radius: 1rem;
             box-shadow: var(--shadow-xl), var(--glow-blue);
@@ -334,32 +334,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         
         .system-title-top {
             text-align: center;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             font-weight: 700;
             background: var(--gradient-neon);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             letter-spacing: 0.5px;
         }
         
         .logo-container {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
         
         .logo {
-            max-height: 60px;
-            margin-bottom: 0.5rem;
+            max-height: 50px;
+            margin-bottom: 0.35rem;
             filter: drop-shadow(0 0 10px rgba(0, 246, 255, 0.5));
         }
         
         .date-display {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--neon-cyan);
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             font-weight: 600;
             text-shadow: var(--glow-cyan);
         }
