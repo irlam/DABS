@@ -364,7 +364,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
             <!-- Activities Header and Controls -->
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
                 <div class="d-flex align-items-center gap-3">
-                    <h2 class="h4 mb-0"><i class="fas fa-calendar-alt me-2"></i>Activity Schedule</h2>
+                    <h2 class="h4 mb-0 text-white"><i class="fas fa-calendar-alt me-2"></i>Activity Schedule</h2>
                     <span class="badge bg-light text-dark fs-6 uk-date" id="todayDate"><?php echo $currentDate; ?></span>
                 </div>
                 <div class="d-flex align-items-center gap-3">

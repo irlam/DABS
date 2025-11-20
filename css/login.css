@@ -46,8 +46,8 @@
 /* =================== LOGIN CONTAINER =================== */
 .login-container {
     width: 100%;
-    max-width: 480px;
-    padding: 2rem;
+    max-width: 420px;
+    padding: 1rem;
     position: relative;
     z-index: 1;
 }
@@ -56,7 +56,7 @@
     background: var(--dark-bg-card);
     border: 2px solid var(--border-glow);
     border-radius: 1.5rem;
-    padding: 3rem;
+    padding: 1.5rem 2rem;
     box-shadow: var(--shadow-xl), var(--glow-purple);
     position: relative;
     overflow: hidden;
@@ -76,19 +76,19 @@
 /* =================== LOGIN HEADER =================== */
 .login-header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .login-logo {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 1.5rem;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
     background: var(--gradient-cyber);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     box-shadow: var(--shadow-lg), var(--glow-cyan);
     animation: logoFloat 3s ease-in-out infinite;
@@ -104,30 +104,30 @@
 }
 
 .login-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     background: var(--gradient-neon);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 .login-subtitle {
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
 }
 
 /* =================== LOGIN FORM =================== */
 .login-form {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 .form-group {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
 }
 
 .form-label {
@@ -182,7 +182,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 .form-checkbox {
@@ -221,12 +221,12 @@
 /* =================== LOGIN BUTTON =================== */
 .login-btn {
     width: 100%;
-    padding: 1.25rem;
+    padding: 0.875rem;
     background: var(--gradient-neon);
     color: white;
     border: 2px solid var(--neon-cyan);
     border-radius: 0.75rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -303,7 +303,7 @@
 /* =================== LOGIN FOOTER =================== */
 .login-footer {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1.25rem;
     border-top: 2px solid var(--border-color);
 }
 
