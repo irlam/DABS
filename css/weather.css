@@ -39,10 +39,26 @@
     border-color: var(--border-neon);
 }
 
-/* Ensure weather card body also has dark background */
-.weather-card .card-body {
+/* Ensure weather card itself has dark background */
+.card.weather-card {
     background: var(--dark-bg-card) !important;
     color: var(--text-primary) !important;
+}
+
+/* Ensure weather card body also has dark background */
+.weather-card .card-body,
+.card.weather-card .card-body {
+    background: var(--dark-bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Ensure all text in weather widget has correct colors */
+.weather-card * {
+    color: inherit;
+}
+
+.weather-card .card-body * {
+    color: var(--text-primary);
 }
 
 /* =================== CURRENT WEATHER SECTION =================== */
