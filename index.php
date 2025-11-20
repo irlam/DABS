@@ -290,6 +290,12 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                             <i class="fas fa-user me-1"></i> <?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Unknown User'); ?>
                         </h6></li>
                         <li><hr class="dropdown-divider"></li>
+                        <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+                        <li><a class="dropdown-item" href="admin_panel.php">
+                            <i class="fas fa-user-shield me-2"></i>Admin Panel
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <?php endif; ?>
                         <li><a class="dropdown-item" href="javascript:location.reload()">
                             <i class="fas fa-sync-alt me-2"></i>Refresh Page
                         </a></li>

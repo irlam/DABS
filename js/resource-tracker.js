@@ -82,17 +82,17 @@ function loadResourceStats() {
             // Build Labour by Area list
             const areaList = listGroup(stats.labour_by_area, 'area', 'labour_count', 'layer-group');
 
-            // Create individual cards for each stat
+            // Create horizontal layout for metric cards
             container.innerHTML = `
                 <div class="row g-3 mb-4 resource-cards">
                     <!-- Total Labour Card -->
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="card resource-stat-card h-100 shadow-sm">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center p-3">
                                 <div class="stat-icon mb-2">
                                     <i class="fas fa-users text-success"></i>
                                 </div>
-                                <h6 class="card-title mb-2">Total Labour</h6>
+                                <h6 class="card-title mb-2 small">Total Labour</h6>
                                 <h3 class="stat-number text-success mb-0">${ukNumber(stats.total_labour)}</h3>
                                 <small class="text-muted">Workers</small>
                             </div>
@@ -100,13 +100,13 @@ function loadResourceStats() {
                     </div>
 
                     <!-- Active Subcontractors Card -->
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-lg-2 col-md-4 col-sm-6">
                         <div class="card resource-stat-card h-100 shadow-sm">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center p-3">
                                 <div class="stat-icon mb-2">
                                     <i class="fas fa-briefcase text-info"></i>
                                 </div>
-                                <h6 class="card-title mb-2">Active Subcontractors</h6>
+                                <h6 class="card-title mb-2 small">Active Subcontractors</h6>
                                 <h3 class="stat-number text-info mb-0">${ukNumber(stats.active_contractors)}</h3>
                                 <small class="text-muted">Contractors</small>
                             </div>
@@ -114,14 +114,14 @@ function loadResourceStats() {
                     </div>
 
                     <!-- Labour by Contractor Card -->
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card resource-stat-card h-100 shadow-sm">
-                            <div class="card-body">
+                            <div class="card-body p-3">
                                 <div class="stat-icon mb-2 text-center">
                                     <i class="fas fa-user-tie text-primary"></i>
                                 </div>
-                                <h6 class="card-title mb-2 text-center">Labour by Contractor</h6>
-                                <div class="contractor-list">
+                                <h6 class="card-title mb-2 text-center small">Labour by Contractor</h6>
+                                <div class="contractor-list" style="max-height: 200px; overflow-y: auto;">
                                     ${contractorList}
                                 </div>
                             </div>
@@ -129,14 +129,14 @@ function loadResourceStats() {
                     </div>
 
                     <!-- Labour by Area Card -->
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card resource-stat-card h-100 shadow-sm">
-                            <div class="card-body">
+                            <div class="card-body p-3">
                                 <div class="stat-icon mb-2 text-center">
                                     <i class="fas fa-layer-group text-warning"></i>
                                 </div>
-                                <h6 class="card-title mb-2 text-center">Labour by Area</h6>
-                                <div class="area-list">
+                                <h6 class="card-title mb-2 text-center small">Labour by Area</h6>
+                                <div class="area-list" style="max-height: 200px; overflow-y: auto;">
                                     ${areaList}
                                 </div>
                             </div>

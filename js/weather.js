@@ -471,65 +471,80 @@ const WeatherModule = (function() {
             
             debugLog('Building weather HTML');
             
-            // Build HTML for the weather widget with UK units
+            // Build HTML for the weather widget with UK units - compact horizontal layout
             let html = `
                 <div class="weather-container">
-                    <!-- Current Weather Section -->
+                    <!-- Current Weather Section - Compact Horizontal -->
                     <div class="current-weather">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="${weatherDescription}" class="weather-icon">
-                                    <div class="ms-3">
-                                        <div class="current-temp">${currentTemp}°C</div>
-                                        <div class="weather-description">${weatherDescription}</div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-md-4 text-center">
+                                <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="${weatherDescription}" class="weather-icon" style="max-width: 80px;">
+                                <div class="current-temp fs-3 fw-bold">${currentTemp}°C</div>
+                                <div class="weather-description small">${weatherDescription}</div>
+                            </div>
+                            <div class="col-lg-9 col-md-8">
+                                <div class="row g-2">
+                                    <div class="col-md-4 col-sm-6">
+                                        <small><i class="fas fa-temperature-high me-1"></i> Feels: ${feelsLike}°C</small>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="weather-details">
-                                    <div><i class="fas fa-temperature-high"></i> Feels like: ${feelsLike}°C</div>
-                                    <div><i class="fas fa-wind"></i> Wind: ${windSpeed} mph ${windDirection}</div>
-                                    <div><i class="fas fa-tint"></i> Humidity: ${humidity}%</div>
-                                    <div><i class="fas fa-eye"></i> Visibility: ${visibility}</div>
-                                    <div><i class="fas fa-compress-alt"></i> Pressure: ${pressure} hPa</div>
-                                </div>
-                            </div>
-                        </div>`;
+                                    <div class="col-md-4 col-sm-6">
+                                        <small><i class="fas fa-wind me-1"></i> Wind: ${windSpeed} mph ${windDirection}</small>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <small><i class="fas fa-tint me-1"></i> Humidity: ${humidity}%</small>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <small><i class="fas fa-eye me-1"></i> Visibility: ${visibility}</small>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <small><i class="fas fa-compress-alt me-1"></i> Pressure: ${pressure} hPa</small>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <small><i class="fas fa-clock me-1"></i> Updated: ${formatUKDateTime(current.dt * 1000, true)}</small>
+                                    </div>
+                                </div>`;
             
             // Add wind alert if applicable
             if (windAlert) {
                 html += `
-                        <div class="alert alert-${windAlert.level} my-3">
-                            <i class="fas ${windAlert.icon}"></i> <strong>${windAlert.message}</strong>
-                        </div>`;
+                                <div class="alert alert-${windAlert.level} py-2 px-3 mt-2 mb-0">
+                                    <small><i class="fas ${windAlert.icon} me-1"></i><strong>${windAlert.message}</strong></small>
+                                </div>`;
             }
             
             html += `
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Weekly Forecast Section -->
-                    <h4 class="mt-4">7-Day Forecast for Manchester</h4>
-                    <div class="weekly-forecast">`;
+                    <!-- Weekly Forecast Section - Horizontal Scrollable -->
+                    <hr class="my-3">
+                    <h6 class="mb-2">7-Day Forecast</h6>
+                    <div class="weekly-forecast d-flex overflow-auto pb-2" style="gap: 10px;">`;
             
-            // Add daily forecast cards
+            // Add daily forecast cards - more compact
             if (dailyForecasts.length > 0) {
                 dailyForecasts.forEach(dayForecast => {
-                    html += createForecastCard(dayForecast);
+                    const description = dayForecast.description.charAt(0).toUpperCase() + dayForecast.description.slice(1);
+                    const windAlert = getWindAlert(dayForecast.wind);
+                    html += `
+                        <div class="forecast-day-compact text-center p-2 border rounded" style="min-width: 100px; flex-shrink: 0;">
+                            <div class="small fw-bold">${dayForecast.day.substring(0, 3)}</div>
+                            <img src="https://openweathermap.org/img/wn/${dayForecast.icon}.png" alt="${description}" style="width: 40px;">
+                            <div class="small">
+                                <span class="fw-bold">${Math.round(dayForecast.tempMax)}°</span> / ${Math.round(dayForecast.tempMin)}°
+                            </div>
+                            <div class="small text-muted" style="font-size: 0.7rem;">
+                                <i class="fas fa-wind"></i> ${Math.round(dayForecast.wind)} mph
+                            </div>
+                            ${windAlert ? `<div class="badge bg-${windAlert.level === 'danger' ? 'danger' : 'warning'} mt-1" style="font-size: 0.65rem;"><i class="fas fa-exclamation-triangle"></i></div>` : ''}
+                        </div>`;
                 });
             } else {
-                html += `<p class="text-center w-100">Forecast data not available</p>`;
+                html += `<p class="text-center w-100 small">Forecast data not available</p>`;
             }
             
             html += `
-                    </div>
-                    
-                    <!-- Footer with update time in UK format -->
-                    <div class="weather-footer text-muted mt-3">
-                        <small>Last updated: ${lastUpdateTime} (Manchester, UK)</small>
-                        <button class="btn btn-sm btn-outline-secondary ms-2" onclick="WeatherModule.fetchWeatherData()">
-                            <i class="fas fa-sync-alt"></i>
-                        </button>
                     </div>
                 </div>`;
             
