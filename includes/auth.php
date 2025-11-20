@@ -27,9 +27,6 @@ if (session_status() === PHP_SESSION_NONE) {
  * @return bool True if user is logged in, false otherwise
  */
 function isUserLoggedIn() {
-    // Debug: Log function call and session data to diagnose issues
-    error_log("isUserLoggedIn() called. Session data: " . json_encode($_SESSION));
-    
     // Check if authenticated flag is set and is true
     if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
         // Also verify we have a valid user_id
