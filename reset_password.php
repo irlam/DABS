@@ -211,74 +211,16 @@ function sendPasswordChangeNotificationEmail($email, $name) {
     <!-- Modern CSS Framework -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Dark Theme -->
-    <link href="css/dark-theme.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <!-- Consolidated Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/login.css" rel="stylesheet">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        /* Inline critical styles for faster loading */
-        body {
-            background-color: #f5f7fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .reset-container {
-            max-width: 450px;
-            width: 100%;
-            padding: 30px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .password-strength {
-            height: 5px;
-            margin-top: 10px;
-            border-radius: 5px;
-            transition: width 0.3s, background-color 0.3s;
-        }
-        
-        .password-requirements {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 10px;
-        }
-        
-        .requirement {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 5px;
-        }
-        
-        .requirement:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ccc;
-        }
-        
-        .requirement.met:before {
-            background-color: #2ecc71;
-        }
-    </style>
 </head>
+<body class="reset-page">
 <body>
     <div class="reset-container">
         <!-- Logo and App Name -->
