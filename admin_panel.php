@@ -218,43 +218,119 @@ try {
             <!-- Email Settings Tab -->
             <div class="tab-pane fade" id="email" role="tabpanel">
                 <div class="card admin-card">
-                    <div class="card-header bg-warning text-dark">
+                    <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
                         <h5 class="mb-0"><i class="fas fa-envelope me-2"></i>Email Configuration</h5>
+                        <button class="btn btn-success btn-sm" id="saveEmailConfigBtn">
+                            <i class="fas fa-save me-1"></i>Save Settings
+                        </button>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-info">
-                            <i class="fas fa-info-circle me-2"></i>
-                            <strong>Current Configuration:</strong> The system uses PHP's built-in mail() function.
-                            For better reliability, consider configuring SMTP settings.
-                        </div>
+                        <div id="emailConfigStatus"></div>
                         
                         <form id="emailConfigForm">
+                            <!-- SMTP Enable/Disable -->
+                            <div class="mb-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="smtpEnabled" name="smtp_enabled">
+                                    <label class="form-check-label" for="smtpEnabled">
+                                        <strong>Enable SMTP</strong> (Recommended for better reliability)
+                                    </label>
+                                </div>
+                                <small class="form-text text-muted">
+                                    When disabled, the system will use PHP's built-in mail() function
+                                </small>
+                            </div>
+                            
+                            <!-- SMTP Settings Section -->
+                            <div id="smtpSettings" style="display: none;">
+                                <h6 class="mb-3"><i class="fas fa-server me-2"></i>SMTP Server Settings</h6>
+                                
+                                <div class="row">
+                                    <div class="col-md-8 mb-3">
+                                        <label for="smtpHost" class="form-label">SMTP Host</label>
+                                        <input type="text" class="form-control" id="smtpHost" name="smtp_host" 
+                                               placeholder="smtp.gmail.com">
+                                        <small class="form-text text-muted">
+                                            Example: smtp.gmail.com, smtp.office365.com, smtp.mailgun.org
+                                        </small>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="smtpPort" class="form-label">SMTP Port</label>
+                                        <input type="number" class="form-control" id="smtpPort" name="smtp_port" 
+                                               value="587" min="1" max="65535">
+                                        <small class="form-text text-muted">Common: 587 (TLS), 465 (SSL), 25</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="smtpEncryption" class="form-label">Encryption</label>
+                                        <select class="form-select" id="smtpEncryption" name="smtp_encryption">
+                                            <option value="tls">TLS (Recommended)</option>
+                                            <option value="ssl">SSL</option>
+                                            <option value="">None</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8 mb-3">
+                                        <div class="form-check form-switch mt-4">
+                                            <input class="form-check-input" type="checkbox" id="smtpAuth" 
+                                                   name="smtp_auth" checked>
+                                            <label class="form-check-label" for="smtpAuth">
+                                                Require Authentication
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row" id="smtpAuthSection">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="smtpUsername" class="form-label">SMTP Username</label>
+                                        <input type="text" class="form-control" id="smtpUsername" 
+                                               name="smtp_username" placeholder="your-email@example.com">
+                                        <small class="form-text text-muted">Usually your email address</small>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="smtpPassword" class="form-label">SMTP Password</label>
+                                        <input type="password" class="form-control" id="smtpPassword" 
+                                               name="smtp_password" placeholder="Leave blank to keep existing">
+                                        <small class="form-text text-muted">
+                                            Your email password or app-specific password
+                                        </small>
+                                    </div>
+                                </div>
+                                
+                                <hr class="my-4">
+                            </div>
+                            
+                            <!-- From Address Settings -->
+                            <h6 class="mb-3"><i class="fas fa-user me-2"></i>Sender Information</h6>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="emailFrom" class="form-label">From Email Address</label>
-                                    <input type="email" class="form-control" id="emailFrom" 
-                                           value="no-reply@defecttracker.uk" required>
+                                    <input type="email" class="form-control" id="emailFrom" name="from_email"
+                                           value="noreply@example.com" required>
                                     <small class="form-text text-muted">Email address that appears as sender</small>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="emailFromName" class="form-label">From Name</label>
-                                    <input type="text" class="form-control" id="emailFromName" 
-                                           value="DABS" required>
+                                    <input type="text" class="form-control" id="emailFromName" name="from_name"
+                                           value="DABS System" required>
                                     <small class="form-text text-muted">Name that appears as sender</small>
                                 </div>
                             </div>
                             
                             <hr class="my-4">
                             
-                            <h6 class="mb-3">Test Email Functionality</h6>
+                            <!-- Test Email Section -->
+                            <h6 class="mb-3"><i class="fas fa-vial me-2"></i>Test Email Functionality</h6>
                             <div class="row">
                                 <div class="col-md-8 mb-3">
                                     <label for="testEmailAddress" class="form-label">Test Email Address</label>
                                     <input type="email" class="form-control" id="testEmailAddress" 
-                                           placeholder="Enter email to test" required>
+                                           placeholder="Enter email to test">
                                 </div>
                                 <div class="col-md-4 d-flex align-items-end mb-3">
-                                    <button type="submit" class="btn btn-primary w-100">
+                                    <button type="button" class="btn btn-primary w-100" id="sendTestEmailBtn">
                                         <i class="fas fa-paper-plane me-1"></i>Send Test Email
                                     </button>
                                 </div>
@@ -265,14 +341,54 @@ try {
                         
                         <hr class="my-4">
                         
+                        <!-- SMTP Configuration Examples -->
+                        <div class="alert alert-info">
+                            <h6><i class="fas fa-info-circle me-2"></i>Common SMTP Providers</h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <strong>Gmail:</strong>
+                                    <ul class="mb-2">
+                                        <li>Host: smtp.gmail.com</li>
+                                        <li>Port: 587 (TLS) or 465 (SSL)</li>
+                                        <li>Note: Use App Password, not regular password</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Office 365:</strong>
+                                    <ul class="mb-2">
+                                        <li>Host: smtp.office365.com</li>
+                                        <li>Port: 587 (TLS)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <strong>SendGrid:</strong>
+                                    <ul class="mb-0">
+                                        <li>Host: smtp.sendgrid.net</li>
+                                        <li>Port: 587 (TLS) or 465 (SSL)</li>
+                                        <li>Username: apikey</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Mailgun:</strong>
+                                    <ul class="mb-0">
+                                        <li>Host: smtp.mailgun.org</li>
+                                        <li>Port: 587 (TLS) or 465 (SSL)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="alert alert-warning">
                             <h6><i class="fas fa-exclamation-triangle me-2"></i>Troubleshooting Email Issues</h6>
                             <ul class="mb-0">
-                                <li>Check that your server has mail() function enabled</li>
-                                <li>Verify SPF/DKIM records are configured for your domain</li>
+                                <li>Verify SMTP credentials are correct</li>
+                                <li>Check firewall allows outbound connections on SMTP ports</li>
+                                <li>For Gmail, enable "Less secure app access" or use App Password</li>
                                 <li>Check spam folders - emails may be filtered</li>
                                 <li>Review email logs in the Log Viewer tab (email_log.txt)</li>
-                                <li>Consider using SMTP instead of mail() for better deliverability</li>
+                                <li>Verify SPF/DKIM records are configured for your domain</li>
                             </ul>
                         </div>
                     </div>

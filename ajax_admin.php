@@ -67,6 +67,14 @@ try {
             readLogFile();
             break;
             
+        case 'get_email_settings':
+            getEmailSettings();
+            break;
+            
+        case 'save_email_settings':
+            saveEmailSettings();
+            break;
+            
         case 'test_email':
             testEmailSettings();
             break;
@@ -323,13 +331,85 @@ function readLogFile() {
 }
 
 // ============================================================================
+// Email Configuration Functions
+// ============================================================================
+
+function getEmailSettings() {
+    require_once __DIR__ . '/includes/email_config.php';
+    
+    try {
+        $emailConfig = new EmailConfig();
+        $settings = $emailConfig->getSettings();
+        
+        // Don't send password to client
+        if (isset($settings['smtp_password'])) {
+            $settings['smtp_password'] = ''; // Clear for security
+        }
+        
+        echo json_encode(['success' => true, 'settings' => $settings]);
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'message' => 'Failed to load email settings: ' . $e->getMessage()]);
+    }
+}
+
+function saveEmailSettings() {
+    require_once __DIR__ . '/includes/email_config.php';
+    
+    try {
+        $settings = [
+            'smtp_enabled' => isset($_POST['smtp_enabled']) ? 1 : 0,
+            'smtp_host' => trim($_POST['smtp_host'] ?? ''),
+            'smtp_port' => intval($_POST['smtp_port'] ?? 587),
+            'smtp_encryption' => $_POST['smtp_encryption'] ?? 'tls',
+            'smtp_auth' => isset($_POST['smtp_auth']) ? 1 : 0,
+            'smtp_username' => trim($_POST['smtp_username'] ?? ''),
+            'smtp_password' => $_POST['smtp_password'] ?? '',
+            'from_email' => trim($_POST['from_email'] ?? ''),
+            'from_name' => trim($_POST['from_name'] ?? '')
+        ];
+        
+        // Validate
+        if (empty($settings['from_email']) || !filter_var($settings['from_email'], FILTER_VALIDATE_EMAIL)) {
+            echo json_encode(['success' => false, 'message' => 'Valid from email address is required']);
+            return;
+        }
+        
+        if (empty($settings['from_name'])) {
+            echo json_encode(['success' => false, 'message' => 'From name is required']);
+            return;
+        }
+        
+        if ($settings['smtp_enabled']) {
+            if (empty($settings['smtp_host'])) {
+                echo json_encode(['success' => false, 'message' => 'SMTP host is required when SMTP is enabled']);
+                return;
+            }
+        }
+        
+        $emailConfig = new EmailConfig();
+        $userId = $_SESSION['user_id'] ?? null;
+        
+        $result = $emailConfig->saveSettings($settings, $userId);
+        
+        if ($result) {
+            logUserActivity('update_email_settings', 'Updated email configuration settings');
+            echo json_encode(['success' => true, 'message' => 'Email settings saved successfully']);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Failed to save email settings']);
+        }
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'message' => 'Error saving settings: ' . $e->getMessage()]);
+    }
+}
+
+// ============================================================================
 // Email Testing Functions
 // ============================================================================
 
 function testEmailSettings() {
+    require_once __DIR__ . '/includes/email_config.php';
+    
     $email = $_POST['email'] ?? '';
-    $from = $_POST['from'] ?? 'no-reply@defecttracker.uk';
-    $fromName = $_POST['from_name'] ?? 'DABS';
     
     if (empty($email)) {
         echo json_encode(['success' => false, 'message' => 'Email address required']);
@@ -341,64 +421,28 @@ function testEmailSettings() {
         return;
     }
     
-    $subject = 'DABS Email Test - ' . date('d/m/Y H:i:s');
-    $message = '
-    <html>
-    <head><title>DABS Email Test</title></head>
-    <body style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4;">
-        <div style="max-width: 600px; margin: 0 auto; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <h2 style="color: #667eea; margin-top: 0;">DABS Email Test</h2>
-            <p>This is a test email from the Daily Activity Briefing System (DABS).</p>
-            <p><strong>Test Details:</strong></p>
-            <ul>
-                <li>Sent at: ' . date('d/m/Y H:i:s') . ' (UK Time)</li>
-                <li>Sent by: ' . htmlspecialchars($_SESSION['user_name']) . '</li>
-                <li>From address: ' . htmlspecialchars($from) . '</li>
-            </ul>
-            <p>If you received this email, your email configuration is working correctly!</p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
-            <p style="color: #666; font-size: 12px; margin-bottom: 0;">
-                This is an automated test message from DABS. Please do not reply to this email.
-            </p>
-        </div>
-    </body>
-    </html>
-    ';
-    
-    $headers = [
-        'MIME-Version: 1.0',
-        'Content-type: text/html; charset=utf-8',
-        'From: ' . $fromName . ' <' . $from . '>',
-        'Reply-To: ' . $from,
-        'X-Mailer: PHP/' . phpversion()
-    ];
-    
-    // Log the attempt
-    $logFile = __DIR__ . '/logs/email_log.txt';
-    $logEntry = '[' . date('d/m/Y H:i:s') . '] Test email attempt to: ' . $email . ' from admin panel' . PHP_EOL;
-    file_put_contents($logFile, $logEntry, FILE_APPEND);
-    
-    // Attempt to send email
-    $result = mail($email, $subject, $message, implode("\r\n", $headers));
-    
-    if ($result) {
-        $logEntry = '[' . date('d/m/Y H:i:s') . '] Test email sent successfully to: ' . $email . PHP_EOL;
-        file_put_contents($logFile, $logEntry, FILE_APPEND);
+    try {
+        $emailConfig = new EmailConfig();
+        $result = $emailConfig->testConfiguration($email);
         
-        logUserActivity('test_email', "Sent test email to: $email");
-        
-        echo json_encode([
-            'success' => true, 
-            'message' => 'Test email sent successfully! Check the inbox (and spam folder) of ' . $email
-        ]);
-    } else {
-        $logEntry = '[' . date('d/m/Y H:i:s') . '] Test email FAILED to: ' . $email . PHP_EOL;
-        file_put_contents($logFile, $logEntry, FILE_APPEND);
-        
+        if ($result) {
+            logUserActivity('test_email', "Sent test email to: $email");
+            
+            echo json_encode([
+                'success' => true, 
+                'message' => 'Test email sent successfully! Check the inbox (and spam folder) of ' . $email
+            ]);
+        } else {
+            echo json_encode([
+                'success' => false, 
+                'message' => 'Failed to send test email. Check SMTP configuration and logs.',
+                'debug' => 'Check email_log.txt for details'
+            ]);
+        }
+    } catch (Exception $e) {
         echo json_encode([
             'success' => false, 
-            'message' => 'Failed to send test email. Check server mail configuration and logs.',
-            'debug' => 'PHP mail() function returned false. Check server mail settings and email_log.txt'
+            'message' => 'Error sending test email: ' . $e->getMessage()
         ]);
     }
 }

@@ -265,6 +265,170 @@ function displayLogContent(content, filename) {
 }
 
 // ============================================================================
+// Email Configuration Functions
+// ============================================================================
+
+function loadEmailSettings() {
+    fetch('ajax_admin.php?action=get_email_settings')
+        .then(res => res.json())
+        .then(data => {
+            if (data.success && data.settings) {
+                populateEmailForm(data.settings);
+            } else {
+                showNotification('Failed to load email settings', 'warning');
+            }
+        })
+        .catch(err => {
+            showNotification('Error loading email settings: ' + err.message, 'danger');
+        });
+}
+
+function populateEmailForm(settings) {
+    // SMTP settings
+    document.getElementById('smtpEnabled').checked = Boolean(settings.smtp_enabled);
+    document.getElementById('smtpHost').value = settings.smtp_host || '';
+    document.getElementById('smtpPort').value = settings.smtp_port || 587;
+    document.getElementById('smtpEncryption').value = settings.smtp_encryption || 'tls';
+    document.getElementById('smtpAuth').checked = Boolean(settings.smtp_auth);
+    document.getElementById('smtpUsername').value = settings.smtp_username || '';
+    // Don't populate password for security
+    document.getElementById('smtpPassword').value = '';
+    document.getElementById('smtpPassword').placeholder = 'Leave blank to keep existing';
+    
+    // From settings
+    document.getElementById('emailFrom').value = settings.from_email || 'noreply@example.com';
+    document.getElementById('emailFromName').value = settings.from_name || 'DABS System';
+    
+    // Toggle SMTP section visibility
+    toggleSmtpSection();
+}
+
+function toggleSmtpSection() {
+    const smtpEnabled = document.getElementById('smtpEnabled').checked;
+    const smtpSettings = document.getElementById('smtpSettings');
+    
+    if (smtpEnabled) {
+        smtpSettings.style.display = 'block';
+    } else {
+        smtpSettings.style.display = 'none';
+    }
+    
+    toggleSmtpAuth();
+}
+
+function toggleSmtpAuth() {
+    const smtpAuth = document.getElementById('smtpAuth').checked;
+    const smtpAuthSection = document.getElementById('smtpAuthSection');
+    
+    if (smtpAuth) {
+        smtpAuthSection.style.display = 'flex';
+    } else {
+        smtpAuthSection.style.display = 'none';
+    }
+}
+
+function saveEmailSettings() {
+    const form = document.getElementById('emailConfigForm');
+    const formData = new FormData(form);
+    formData.append('action', 'save_email_settings');
+    
+    // Handle checkboxes explicitly
+    if (document.getElementById('smtpEnabled').checked) {
+        formData.set('smtp_enabled', '1');
+    }
+    if (document.getElementById('smtpAuth').checked) {
+        formData.set('smtp_auth', '1');
+    }
+    
+    const statusDiv = document.getElementById('emailConfigStatus');
+    statusDiv.innerHTML = '<div class="alert alert-info">Saving settings...</div>';
+    
+    fetch('ajax_admin.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                statusDiv.innerHTML = `
+                    <div class="alert alert-success alert-dismissible fade show">
+                        <i class="fas fa-check-circle me-2"></i>${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `;
+                // Reload settings
+                setTimeout(() => {
+                    loadEmailSettings();
+                    statusDiv.innerHTML = '';
+                }, 3000);
+            } else {
+                statusDiv.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        <i class="fas fa-exclamation-triangle me-2"></i>${data.message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                `;
+            }
+        })
+        .catch(err => {
+            statusDiv.innerHTML = `
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <i class="fas fa-times-circle me-2"></i>Error: ${err.message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+        });
+}
+
+function testEmail() {
+    const emailAddress = document.getElementById('testEmailAddress').value;
+    if (!emailAddress) {
+        showNotification('Please enter an email address', 'warning');
+        return;
+    }
+    
+    const resultDiv = document.getElementById('emailTestResult');
+    resultDiv.innerHTML = '<div class="text-center py-3"><div class="spinner-border text-primary"></div><div>Sending test email...</div></div>';
+    
+    const formData = new FormData();
+    formData.append('action', 'test_email');
+    formData.append('email', emailAddress);
+    
+    fetch('ajax_admin.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-success test-result">
+                        <h6><i class="fas fa-check-circle me-2"></i>Test Email Sent Successfully</h6>
+                        <p class="mb-0">${data.message}</p>
+                        <small class="d-block mt-2">Check ${emailAddress} inbox and spam folder</small>
+                    </div>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger test-result">
+                        <h6><i class="fas fa-exclamation-triangle me-2"></i>Test Email Failed</h6>
+                        <p class="mb-0">${data.message}</p>
+                        ${data.debug ? `<pre class="mt-2 mb-0"><code>${escapeHtml(data.debug)}</code></pre>` : ''}
+                    </div>
+                `;
+            }
+        })
+        .catch(err => {
+            resultDiv.innerHTML = `
+                <div class="alert alert-danger test-result">
+                    <h6><i class="fas fa-times-circle me-2"></i>Error</h6>
+                    <p class="mb-0">${err.message}</p>
+                </div>
+            `;
+        });
+}
+
+// ============================================================================
 // Email Testing Functions
 // ============================================================================
 
@@ -373,6 +537,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load log files
     loadLogFiles();
     
+    // Load email settings
+    loadEmailSettings();
+    
     // User management event listeners
     document.getElementById('addUserBtn').addEventListener('click', showAddUserModal);
     document.getElementById('saveUserBtn').addEventListener('click', saveUser);
@@ -381,6 +548,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loadLogBtn').addEventListener('click', loadLogContent);
     document.getElementById('refreshLogsBtn').addEventListener('click', loadLogFiles);
     
-    // Email testing event listener
-    document.getElementById('emailConfigForm').addEventListener('submit', testEmail);
+    // Email configuration event listeners
+    document.getElementById('smtpEnabled').addEventListener('change', toggleSmtpSection);
+    document.getElementById('smtpAuth').addEventListener('change', toggleSmtpAuth);
+    document.getElementById('saveEmailConfigBtn').addEventListener('click', saveEmailSettings);
+    document.getElementById('sendTestEmailBtn').addEventListener('click', testEmail);
 });
