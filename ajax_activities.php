@@ -210,14 +210,32 @@ if ($action === 'import_previous_day') {
     $current_briefing = $stmt->fetch(PDO::FETCH_ASSOC);
     
     if (!$current_briefing) {
+        // Get previous day's briefing to copy safety_info and notes for consistency
+        $prev_briefing_stmt = $pdo->prepare("SELECT safety_info, notes FROM briefings WHERE project_id=? AND date=? LIMIT 1");
+        $prev_briefing_stmt->execute([$project_id, $previous_date]);
+        $prev_briefing = $prev_briefing_stmt->fetch(PDO::FETCH_ASSOC);
+        
+        // Use previous day's values if available, otherwise use defaults
+        $safety_info = '<ul><li>Follow all standard safety protocols</li><li>Wear appropriate PPE at all times</li><li>Report any safety concerns immediately</li></ul>';
+        $notes = 'Daily briefing notes for ' . date('d/m/Y', strtotime($current_date));
+        
+        if ($prev_briefing) {
+            if (!empty($prev_briefing['safety_info'])) {
+                $safety_info = $prev_briefing['safety_info'];
+            }
+            if (!empty($prev_briefing['notes'])) {
+                $notes = $prev_briefing['notes'];
+            }
+        }
+        
         // Create briefing for current date
         $insert_briefing = $pdo->prepare("INSERT INTO briefings (project_id, date, overview, safety_info, notes, created_by, last_updated, status) VALUES (?, ?, ?, ?, ?, ?, NOW(), 'draft')");
         $insert_briefing->execute([
             $project_id,
             $current_date,
             'Daily briefing for ' . date('d/m/Y', strtotime($current_date)),
-            '<ul><li>Follow all standard safety protocols</li><li>Wear appropriate PPE at all times</li><li>Report any safety concerns immediately</li></ul>',
-            'Daily briefing notes for ' . date('d/m/Y', strtotime($current_date)),
+            $safety_info,
+            $notes,
             $user_id
         ]);
         $current_briefing_id = $pdo->lastInsertId();
