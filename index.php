@@ -715,31 +715,12 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form id="activityForm" autocomplete="off">
-                <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+                <div class="modal-body">
                     <input type="hidden" id="activityId" name="id" value="">
                     <input type="hidden" id="activityBriefingId" name="briefing_id" value="<?php echo isset($briefingData['id']) ? $briefingData['id'] : '0'; ?>">
                     <input type="hidden" id="activityDate" name="date" value="<?php echo $currentDateISO; ?>">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="activityTime" class="form-label">
-                                <i class="fas fa-clock me-1"></i>Scheduled Time <span class="text-muted">(Optional)</span>
-                            </label>
-                            <input type="time" class="form-control" id="activityTime" name="time" value="08:00">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="activityPriority" class="form-label">
-                                <i class="fas fa-flag me-1"></i>Priority Level
-                            </label>
-                            <select class="form-select" id="activityPriority" name="priority">
-                                <option value="low">Low Priority</option>
-                                <option value="medium" selected>Medium Priority</option>
-                                <option value="high">High Priority</option>
-                                <option value="critical">Critical Priority</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
+                    <div class="row mb-2">
+                        <div class="col-md-12 mb-2">
                             <label for="activityTitle" class="form-label">
                                 <i class="fas fa-heading me-1"></i>Activity Title <span class="text-danger">*</span>
                             </label>
@@ -747,49 +728,64 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                                 placeholder="Brief description of the activity" maxlength="255">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                            <label for="activityDescription" class="form-label">
-                                <i class="fas fa-align-left me-1"></i>Detailed Description
+                    <div class="row mb-2">
+                        <div class="col-md-6 mb-2">
+                            <label for="activityTime" class="form-label">
+                                <i class="fas fa-clock me-1"></i>Time
                             </label>
-                            <textarea class="form-control" id="activityDescription" name="description" rows="3"
-                                placeholder="Detailed description of what needs to be done (optional)"></textarea>
+                            <input type="time" class="form-control" id="activityTime" name="time" value="08:00">
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label for="activityPriority" class="form-label">
+                                <i class="fas fa-flag me-1"></i>Priority
+                            </label>
+                            <select class="form-select" id="activityPriority" name="priority">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                                <option value="critical">Critical</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="activityArea" class="form-label">
-                                <i class="fas fa-map-marker-alt me-1"></i>Construction Area
-                            </label>
-                            <input type="text" class="form-control" id="activityArea" name="area" 
-                                placeholder="e.g., Building A, Site Access, East Wing" maxlength="100">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="activityLaborCount" class="form-label">
-                                <i class="fas fa-users me-1"></i>Workers Required
-                            </label>
-                            <input type="number" min="0" max="999" class="form-control" id="activityLaborCount" 
-                                name="labor_count" value="1" placeholder="Number of workers needed">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
+                    <div class="row mb-2">
+                        <div class="col-md-6 mb-2">
                             <label for="activityContractors" class="form-label">
-                                <i class="fas fa-hard-hat me-1"></i>Assigned Contractors
+                                <i class="fas fa-hard-hat me-1"></i>Contractors
                             </label>
                             <!-- Modern Select2 multi-select dropdown (populated via JS) -->
                             <select class="form-select" id="activityContractors" name="contractors[]" multiple="multiple" style="width:100%;"></select>
-                            <div class="small text-muted mt-1">
-                                <i class="fas fa-info-circle me-1"></i>
-                                Click to select multiple contractors
-                            </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-2">
+                            <label for="activityArea" class="form-label">
+                                <i class="fas fa-map-marker-alt me-1"></i>Area
+                            </label>
+                            <input type="text" class="form-control" id="activityArea" name="area" 
+                                placeholder="e.g., Block 1" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-6 mb-2">
+                            <label for="activityLaborCount" class="form-label">
+                                <i class="fas fa-users me-1"></i>Workers
+                            </label>
+                            <input type="number" min="0" max="999" class="form-control" id="activityLaborCount" 
+                                name="labor_count" value="1" placeholder="Number">
+                        </div>
+                        <div class="col-md-6 mb-2">
                             <label for="activityAssignedTo" class="form-label">
                                 <i class="fas fa-user-check me-1"></i>Assigned To
                             </label>
                             <input type="text" class="form-control" id="activityAssignedTo" name="assigned_to" 
-                                placeholder="Person responsible for this activity" maxlength="100">
+                                placeholder="Person responsible" maxlength="100">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-12 mb-2">
+                            <label for="activityDescription" class="form-label">
+                                <i class="fas fa-align-left me-1"></i>Description
+                            </label>
+                            <textarea class="form-control" id="activityDescription" name="description" rows="2"
+                                placeholder="Detailed description (optional)"></textarea>
                         </div>
                     </div>
                 </div>
