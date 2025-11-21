@@ -1096,10 +1096,12 @@ table {
 }
 
 /* Fix for select2 inside modal */
+/* Bootstrap modal z-index is 1055, so we use 1056 to ensure select2 appears above modal */
 .modal .select2-container {
     z-index: 1056 !important;
 }
 
+/* Select2 dropdown needs even higher z-index to appear above the container */
 .modal .select2-dropdown {
     z-index: 10560 !important;
 }
