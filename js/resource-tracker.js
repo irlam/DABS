@@ -126,7 +126,7 @@ function loadResourceStats() {
                                         <i class="fas fa-user-tie text-primary"></i>
                                     </div>
                                     <h6 class="card-title mb-2 text-center small">Labour by Contractor</h6>
-                                    <div class="contractor-list" style="max-height: 200px; overflow-y: auto;">
+                                    <div class="contractor-list">
                                         ${contractorList}
                                     </div>
                                 </div>
@@ -141,7 +141,7 @@ function loadResourceStats() {
                                         <i class="fas fa-layer-group text-warning"></i>
                                     </div>
                                     <h6 class="card-title mb-2 text-center small">Labour by Area</h6>
-                                    <div class="area-list" style="max-height: 200px; overflow-y: auto;">
+                                    <div class="area-list">
                                         ${areaList}
                                     </div>
                                 </div>
