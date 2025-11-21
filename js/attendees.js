@@ -49,7 +49,7 @@
         
         attendees.forEach(attendee => {
             html += `
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-4 col-lg-2-4">
                     <div class="attendee-card">
                         <div class="d-flex justify-content-between align-items-start">
                             <div class="flex-grow-1">

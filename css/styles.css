@@ -3608,3 +3608,12 @@ body.login-page-main .alert-success {
 
 /* =================== END OF PASSWORD RESET PAGE ADDITIONAL STYLES =================== */
 
+/* =================== 5 COLUMN LAYOUT FOR ATTENDEES =================== */
+@media (min-width: 992px) {
+    .col-lg-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+/* =================== END OF 5 COLUMN LAYOUT =================== */
+

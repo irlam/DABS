@@ -190,11 +190,92 @@ if ($action === 'delete') {
     send_json(['ok'=>true,'action'=>'delete','id'=>$id]);
 }
 
+// --- IMPORT PREVIOUS DAY ---
+if ($action === 'import_previous_day') {
+    $current_date = trim($_POST['current_date'] ?? date('Y-m-d'));
+    $previous_date = trim($_POST['previous_date'] ?? '');
+    
+    write_log('IMPORT PREVIOUS DAY', ['current_date'=>$current_date, 'previous_date'=>$previous_date]);
+    
+    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $current_date)) {
+        send_json(['ok'=>false,'error'=>'Invalid current date format']);
+    }
+    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $previous_date)) {
+        send_json(['ok'=>false,'error'=>'Invalid previous date format']);
+    }
+    
+    // Get or create briefing for current date
+    $stmt = $pdo->prepare("SELECT id FROM briefings WHERE project_id=? AND date=?");
+    $stmt->execute([$project_id, $current_date]);
+    $current_briefing = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    if (!$current_briefing) {
+        // Get previous day's briefing to copy safety_info and notes for consistency
+        $prev_briefing_stmt = $pdo->prepare("SELECT safety_info, notes FROM briefings WHERE project_id=? AND date=? LIMIT 1");
+        $prev_briefing_stmt->execute([$project_id, $previous_date]);
+        $prev_briefing = $prev_briefing_stmt->fetch(PDO::FETCH_ASSOC);
+        
+        // Use previous day's values if available, otherwise use defaults
+        $safety_info = '<ul><li>Follow all standard safety protocols</li><li>Wear appropriate PPE at all times</li><li>Report any safety concerns immediately</li></ul>';
+        $notes = 'Daily briefing notes for ' . date('d/m/Y', strtotime($current_date));
+        
+        if ($prev_briefing) {
+            if (!empty($prev_briefing['safety_info'])) {
+                $safety_info = $prev_briefing['safety_info'];
+            }
+            if (!empty($prev_briefing['notes'])) {
+                $notes = $prev_briefing['notes'];
+            }
+        }
+        
+        // Create briefing for current date
+        $insert_briefing = $pdo->prepare("INSERT INTO briefings (project_id, date, overview, safety_info, notes, created_by, last_updated, status) VALUES (?, ?, ?, ?, ?, ?, NOW(), 'draft')");
+        $insert_briefing->execute([
+            $project_id,
+            $current_date,
+            'Daily briefing for ' . date('d/m/Y', strtotime($current_date)),
+            $safety_info,
+            $notes,
+            $user_id
+        ]);
+        $current_briefing_id = $pdo->lastInsertId();
+    } else {
+        $current_briefing_id = $current_briefing['id'];
+    }
+    
+    // Get activities from previous day
+    $stmt = $pdo->prepare("SELECT a.* FROM activities a LEFT JOIN briefings b ON a.briefing_id=b.id WHERE b.project_id=? AND a.date=?");
+    $stmt->execute([$project_id, $previous_date]);
+    $previous_activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    $imported_count = 0;
+    foreach ($previous_activities as $activity) {
+        // Insert copied activity with new date and briefing
+        $insert_stmt = $pdo->prepare("INSERT INTO activities (briefing_id, date, time, title, description, area, priority, labor_count, contractors, assigned_to, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())");
+        $insert_stmt->execute([
+            $current_briefing_id,
+            $current_date,
+            $activity['time'],
+            $activity['title'],
+            $activity['description'],
+            $activity['area'],
+            $activity['priority'],
+            $activity['labor_count'],
+            $activity['contractors'],
+            $activity['assigned_to']
+        ]);
+        $imported_count++;
+    }
+    
+    write_log('IMPORT SUCCESS', ['count'=>$imported_count]);
+    send_json(['ok'=>true,'action'=>'import_previous_day','count'=>$imported_count,'current_date'=>$current_date,'previous_date'=>$previous_date]);
+}
+
 // --- Unknown action ---
 send_json([
     'ok' => false,
     'error' => 'Unknown or missing action',
-    'valid_actions' => ['list', 'get', 'add', 'update', 'delete'],
+    'valid_actions' => ['list', 'get', 'add', 'update', 'delete', 'import_previous_day'],
     'message' => 'Specify a valid action parameter'
 ]);
 ?>

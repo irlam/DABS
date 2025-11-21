@@ -122,13 +122,33 @@ try {
             'project_id' => $projectID,
             'date' => $currentDateISO
         ]);
+        
+        // Get previous briefing's safety_info and notes to carry them forward
+        $previousDate = date('Y-m-d', strtotime($currentDateISO . ' -1 day'));
+        $prevStmt = $pdo->prepare("SELECT safety_info, notes FROM briefings WHERE project_id = ? AND date = ? ORDER BY date DESC LIMIT 1");
+        $prevStmt->execute([$projectID, $previousDate]);
+        $previousBriefing = $prevStmt->fetch(PDO::FETCH_ASSOC);
+        
+        $safety_info = '<ul><li>Follow all standard safety protocols</li><li>Wear appropriate PPE at all times</li><li>Report any safety concerns immediately</li></ul>';
+        $notes = 'Daily briefing notes for ' . $currentDate;
+        
+        // If previous briefing exists, use its safety_info and notes
+        if ($previousBriefing) {
+            if (!empty($previousBriefing['safety_info'])) {
+                $safety_info = $previousBriefing['safety_info'];
+            }
+            if (!empty($previousBriefing['notes'])) {
+                $notes = $previousBriefing['notes'];
+            }
+        }
+        
         $stmt = $pdo->prepare("INSERT INTO briefings (project_id, date, overview, safety_info, notes, created_by, last_updated, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->execute([
             $projectID,
             $currentDateISO,
             'Daily briefing for ' . $currentDate,
-            '<ul><li>Follow all standard safety protocols</li><li>Wear appropriate PPE at all times</li><li>Report any safety concerns immediately</li></ul>',
-            'Daily briefing notes for ' . $currentDate,
+            $safety_info,
+            $notes,
             $_SESSION['user_id'] ?? 1,
             date('Y-m-d H:i:s'),
             'draft'
@@ -370,6 +390,10 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                     <span class="badge bg-light text-dark fs-6 uk-date" id="todayDate"><?php echo $currentDate; ?></span>
                 </div>
                 <div class="d-flex align-items-center gap-3">
+                    <!-- Import Previous Day Button -->
+                    <button id="importPreviousDayBtn" class="btn btn-warning" title="Import activities from previous day">
+                        <i class="fas fa-file-import me-2"></i>Import Previous Day
+                    </button>
                     <!-- Add Activity Button -->
                     <button id="addActivityBtn" class="btn add-btn-gradient" title="Add New Activity for Today">
                         <span class="add-btn-glow"></span>
@@ -681,7 +705,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
 
 <!-- Activity Management Modal -->
 <div class="modal fade" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="activityModalLabel">
@@ -691,7 +715,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form id="activityForm" autocomplete="off">
-                <div class="modal-body">
+                <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
                     <input type="hidden" id="activityId" name="id" value="">
                     <input type="hidden" id="activityBriefingId" name="briefing_id" value="<?php echo isset($briefingData['id']) ? $briefingData['id'] : '0'; ?>">
                     <input type="hidden" id="activityDate" name="date" value="<?php echo $currentDateISO; ?>">
@@ -757,7 +781,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                             <select class="form-select" id="activityContractors" name="contractors[]" multiple="multiple" style="width:100%;"></select>
                             <div class="small text-muted mt-1">
                                 <i class="fas fa-info-circle me-1"></i>
-                                Hold Ctrl or use checkboxes to select multiple. If not listed, select "Other".
+                                Click to select multiple contractors
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -994,6 +1018,11 @@ function loadActivitiesForDate(dateISO) {
 
 function setupContractorsDropdown(selected) {
     // selected: array of contractor names to pre-select (e.g. from DB, comma separated)
+    // First destroy any existing Select2 instance
+    if ($('#activityContractors').hasClass('select2-hidden-accessible')) {
+        $('#activityContractors').select2('destroy');
+    }
+    
     let options = (window.dabsContractors || []).map(function(c) {
         return {id: c, text: c};
     });
@@ -1006,12 +1035,19 @@ function setupContractorsDropdown(selected) {
         const optionElem = new Option(opt.text, opt.id, false, false);
         $('#activityContractors').append(optionElem);
     });
+    
+    // Initialize Select2 with improved configuration
     $('#activityContractors').select2({
         placeholder: "Select contractor(s)...",
         allowClear: true,
         width: '100%',
-        dropdownParent: $('#activityModal')
+        dropdownParent: $('#activityModal'),
+        closeOnSelect: false,
+        theme: 'bootstrap-5',
+        selectionCssClass: 'form-select',
+        dropdownCssClass: 'select2-dropdown-dark'
     });
+    
     if (selected && selected.length > 0) {
         $('#activityContractors').val(selected).trigger('change');
     } else {
@@ -1111,6 +1147,44 @@ document.getElementById('deleteActivityBtn').onclick = function() {
         debugError("Delete activity failed", err);
     });
 };
+
+// Import previous day's activities
+document.getElementById('importPreviousDayBtn').onclick = function() {
+    const currentDate = document.getElementById('activityDate').value;
+    if (!confirm('Import activities from the previous day? This will copy all activities to today.')) {
+        return;
+    }
+    
+    // Calculate previous day
+    const dateObj = new Date(currentDate);
+    dateObj.setDate(dateObj.getDate() - 1);
+    const previousDay = dateObj.toISOString().split('T')[0];
+    
+    showNotification('Importing activities from previous day...', 'info');
+    
+    fetch('ajax_activities.php', {
+        method: 'POST',
+        body: new URLSearchParams({
+            action: 'import_previous_day',
+            current_date: currentDate,
+            previous_date: previousDay
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data.ok) {
+            showNotification(`Successfully imported ${data.count || 0} activities from ${previousDay}`, 'success');
+            loadActivitiesForDate(currentDate);
+        } else {
+            showNotification(data.error || 'Failed to import activities.', 'danger');
+        }
+    })
+    .catch(err => {
+        showNotification('Error importing activities.', 'danger');
+        debugError("Import activities failed", err);
+    });
+};
+
 // Reload activities when date changes
 document.getElementById('activityDate').onchange = function() {
     loadActivitiesForDate(this.value);
