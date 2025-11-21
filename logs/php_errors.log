@@ -393,3 +393,4 @@ Stack trace:
 [19-Nov-2025 10:57:21 Europe/London] [19/11/2025 10:57:21] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
 [19-Nov-2025 11:07:31 Europe/London] isUserLoggedIn() called. Session data: {"user_id":1,"user_name":"System Admin","user_role":"admin","authenticated":true,"last_activity":1763549841,"current_project":1}
 [19-Nov-2025 11:07:31 Europe/London] [19/11/2025 11:07:31] Error loading work areas | Context: {"error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'where clause'"}
+[21-Nov-2025 13:06:57 Europe/London] [21/11/2025 13:06:57] Unauthorized access attempt | Context: {"ip":"::1","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) HeadlessChrome\/142.0.0.0 Safari\/537.36","timestamp":"21\/11\/2025 13:06:57","requested_uri":"\/index.php"}

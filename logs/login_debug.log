@@ -863,3 +863,5 @@
 19/11/2025 11:28:59 | DEBUG | Request Method: GET | IP: ::1 | User-Agent: curl/8.5.0
 21/11/2025 13:03:34 | DEBUG | Login page loaded | IP: ::1 | User-Agent: curl/8.5.0
 21/11/2025 13:03:34 | DEBUG | Request Method: GET | IP: ::1 | User-Agent: curl/8.5.0
+21/11/2025 13:06:57 | DEBUG | Login page loaded | IP: ::1 | User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/142.0.0.0 Safari/537.36
+21/11/2025 13:06:57 | DEBUG | Request Method: GET | IP: ::1 | User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/142.0.0.0 Safari/537.36

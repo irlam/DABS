@@ -1106,7 +1106,7 @@ window.editActivity = function(id) {
         });
 };
 
-// Save handler (always sends action=add or action=update)
+// Consolidated DOM initialization - all event handlers in one place
 document.addEventListener('DOMContentLoaded', function() {
     // Add button handler - wrapped in DOMContentLoaded to ensure button exists
     const addActivityBtn = document.getElementById('addActivityBtn');
@@ -1178,10 +1178,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         };
     }
-});
-
-// Import previous day's activities
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // Import previous day's activities handler
     const importPreviousDayBtn = document.getElementById('importPreviousDayBtn');
     if (importPreviousDayBtn) {
         importPreviousDayBtn.onclick = function() {
@@ -1228,9 +1226,8 @@ document.addEventListener('DOMContentLoaded', function() {
             loadActivitiesForDate(this.value);
         };
     }
-});
-// Initial load (also on DOM ready)
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // Initial load of activities
     loadActivitiesForDate(document.getElementById('activityDate').value);
     
     // Scroll animation for cards
