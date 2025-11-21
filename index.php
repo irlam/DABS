@@ -584,6 +584,16 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
         </div>
     </div>
 
+    <!-- SEND REPORT BUTTON SECTION -->
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <button id="sendReportBtn" class="btn add-btn-gradient" onclick="emailReport()" title="Send Daily Activity Report">
+                <span class="add-btn-glow"></span>
+                <i class="fas fa-paper-plane me-2"></i>Send Report
+            </button>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer class="footer mt-4">
         <div class="container-fluid">
@@ -873,6 +883,17 @@ window.briefingData = {
 };
 window.dabsContractors = <?php echo $jsContractors ?: "[]"; ?>;
 window.dabsWorkAreas = <?php echo $jsWorkAreas ?: "[]"; ?>;
+
+// Email report function - opens the email modal
+function emailReport() {
+    // This function is defined in js/email-report.js as openEmailModal()
+    if (typeof openEmailModal === 'function') {
+        openEmailModal();
+    } else {
+        console.error('Email report module not loaded');
+        alert('Email report feature is not available. Please refresh the page and try again.');
+    }
+}
 </script>
 
 <!-- All other scripts: Notes, Safety, Resource Tracker, Weather, Email, Contractor Breakdown, Subcontractors, Attendees -->
@@ -1084,107 +1105,130 @@ window.editActivity = function(id) {
             }
         });
 };
-// Add button handler
-document.getElementById('addActivityBtn').onclick = function() {
-    openActivityModal('add');
-};
-// Save handler (always sends action=add or action=update)
-document.getElementById('activityForm').onsubmit = function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const isEdit = !!formData.get('id');
-    // Contractors: collect from select2 and join as comma-separated
-    const contractors = $('#activityContractors').val() || [];
-    formData.delete('contractors[]');
-    formData.set('contractors', contractors.join(','));
-    // Always set the correct action for backend (add or update)
-    formData.set('action', isEdit ? 'update' : 'add');
-    fetch('ajax_activities.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(r => r.json())
-    .then(data => {
-        if (data.ok) {
-            showNotification('Activity ' + (isEdit ? 'updated' : 'added') + ' successfully!', 'success');
-            bootstrap.Modal.getInstance(document.getElementById('activityModal')).hide();
-            loadActivitiesForDate(document.getElementById('activityDate').value);
-        } else {
-            showNotification(data.error || 'Failed to save activity.', 'danger');
-        }
-    })
-    .catch(err => {
-        showNotification('Error saving activity.', 'danger');
-        debugError("Save activity failed", err);
-    });
-};
-// Delete handler
-document.getElementById('deleteActivityBtn').onclick = function() {
-    const id = document.getElementById('activityId').value;
-    if (!id) return;
-    if (!confirm('Are you sure you want to delete this activity?')) return;
-    fetch('ajax_activities.php', {
-        method: 'POST',
-        body: new URLSearchParams({action: 'delete', id: id})
-    })
-    .then(r => r.json())
-    .then(data => {
-        if (data.ok) {
-            showNotification('Activity deleted.', 'success');
-            bootstrap.Modal.getInstance(document.getElementById('activityModal')).hide();
-            loadActivitiesForDate(document.getElementById('activityDate').value);
-        } else {
-            showNotification(data.error || 'Failed to delete activity.', 'danger');
-        }
-    })
-    .catch(err => {
-        showNotification('Error deleting activity.', 'danger');
-        debugError("Delete activity failed", err);
-    });
-};
 
-// Import previous day's activities
-document.getElementById('importPreviousDayBtn').onclick = function() {
-    const currentDate = document.getElementById('activityDate').value;
-    if (!confirm('Import activities from the previous day? This will copy all activities to today.')) {
-        return;
+// Save handler (always sends action=add or action=update)
+document.addEventListener('DOMContentLoaded', function() {
+    // Add button handler - wrapped in DOMContentLoaded to ensure button exists
+    const addActivityBtn = document.getElementById('addActivityBtn');
+    if (addActivityBtn) {
+        addActivityBtn.onclick = function() {
+            openActivityModal('add');
+        };
     }
     
-    // Calculate previous day
-    const dateObj = new Date(currentDate);
-    dateObj.setDate(dateObj.getDate() - 1);
-    const previousDay = dateObj.toISOString().split('T')[0];
+    // Activity form submission handler
+    const activityForm = document.getElementById('activityForm');
+    if (activityForm) {
+        activityForm.onsubmit = function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const isEdit = !!formData.get('id');
+            // Contractors: collect from select2 and join as comma-separated
+            const contractors = $('#activityContractors').val() || [];
+            formData.delete('contractors[]');
+            formData.set('contractors', contractors.join(','));
+            // Always set the correct action for backend (add or update)
+            formData.set('action', isEdit ? 'update' : 'add');
+            fetch('ajax_activities.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.ok) {
+                    showNotification('Activity ' + (isEdit ? 'updated' : 'added') + ' successfully!', 'success');
+                    bootstrap.Modal.getInstance(document.getElementById('activityModal')).hide();
+                    loadActivitiesForDate(document.getElementById('activityDate').value);
+                } else {
+                    showNotification(data.error || 'Failed to save activity.', 'danger');
+                }
+            })
+            .catch(err => {
+                showNotification('Error saving activity.', 'danger');
+                debugError("Save activity failed", err);
+            });
+        };
+    }
     
-    showNotification('Importing activities from previous day...', 'info');
-    
-    fetch('ajax_activities.php', {
-        method: 'POST',
-        body: new URLSearchParams({
-            action: 'import_previous_day',
-            current_date: currentDate,
-            previous_date: previousDay
-        })
-    })
-    .then(r => r.json())
-    .then(data => {
-        if (data.ok) {
-            showNotification(`Successfully imported ${data.count || 0} activities from ${previousDay}`, 'success');
-            loadActivitiesForDate(currentDate);
-        } else {
-            showNotification(data.error || 'Failed to import activities.', 'danger');
-        }
-    })
-    .catch(err => {
-        showNotification('Error importing activities.', 'danger');
-        debugError("Import activities failed", err);
-    });
-};
+    // Delete handler
+    const deleteActivityBtn = document.getElementById('deleteActivityBtn');
+    if (deleteActivityBtn) {
+        deleteActivityBtn.onclick = function() {
+            const id = document.getElementById('activityId').value;
+            if (!id) return;
+            if (!confirm('Are you sure you want to delete this activity?')) return;
+            fetch('ajax_activities.php', {
+                method: 'POST',
+                body: new URLSearchParams({action: 'delete', id: id})
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.ok) {
+                    showNotification('Activity deleted.', 'success');
+                    bootstrap.Modal.getInstance(document.getElementById('activityModal')).hide();
+                    loadActivitiesForDate(document.getElementById('activityDate').value);
+                } else {
+                    showNotification(data.error || 'Failed to delete activity.', 'danger');
+                }
+            })
+            .catch(err => {
+                showNotification('Error deleting activity.', 'danger');
+                debugError("Delete activity failed", err);
+            });
+        };
+    }
+});
 
-// Reload activities when date changes
-document.getElementById('activityDate').onchange = function() {
-    loadActivitiesForDate(this.value);
-};
+// Import previous day's activities
+document.addEventListener('DOMContentLoaded', function() {
+    const importPreviousDayBtn = document.getElementById('importPreviousDayBtn');
+    if (importPreviousDayBtn) {
+        importPreviousDayBtn.onclick = function() {
+            const currentDate = document.getElementById('activityDate').value;
+            if (!confirm('Import activities from the previous day? This will copy all activities to today.')) {
+                return;
+            }
+            
+            // Calculate previous day
+            const dateObj = new Date(currentDate);
+            dateObj.setDate(dateObj.getDate() - 1);
+            const previousDay = dateObj.toISOString().split('T')[0];
+            
+            showNotification('Importing activities from previous day...', 'info');
+            
+            fetch('ajax_activities.php', {
+                method: 'POST',
+                body: new URLSearchParams({
+                    action: 'import_previous_day',
+                    current_date: currentDate,
+                    previous_date: previousDay
+                })
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.ok) {
+                    showNotification(`Successfully imported ${data.count || 0} activities from ${previousDay}`, 'success');
+                    loadActivitiesForDate(currentDate);
+                } else {
+                    showNotification(data.error || 'Failed to import activities.', 'danger');
+                }
+            })
+            .catch(err => {
+                showNotification('Error importing activities.', 'danger');
+                debugError("Import activities failed", err);
+            });
+        };
+    }
+
+    // Reload activities when date changes
+    const activityDate = document.getElementById('activityDate');
+    if (activityDate) {
+        activityDate.onchange = function() {
+            loadActivitiesForDate(this.value);
+        };
+    }
+});
 // Initial load (also on DOM ready)
 document.addEventListener('DOMContentLoaded', function() {
     loadActivitiesForDate(document.getElementById('activityDate').value);
