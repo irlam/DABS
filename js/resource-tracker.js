@@ -82,69 +82,55 @@ function loadResourceStats() {
             // Build Labour by Area list
             const areaList = listGroup(stats.labour_by_area, 'area', 'labour_count', 'layer-group');
 
-            // Create 2x2 grid layout for metric cards
+            // Create 4-column horizontal grid layout for metric cards
             container.innerHTML = `
                 <div class="resource-cards mb-4">
-                    <!-- First Row -->
-                    <div class="row g-3 mb-3">
-                        <!-- Total Labour Card -->
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card resource-stat-card shadow-sm">
-                                <div class="card-body text-center p-3">
-                                    <div class="stat-icon mb-2">
-                                        <i class="fas fa-users text-success"></i>
-                                    </div>
-                                    <h6 class="card-title mb-2 small">Total Labour</h6>
-                                    <h3 class="stat-number text-success mb-0">${ukNumber(stats.total_labour)}</h3>
-                                    <small class="text-muted">Workers</small>
-                                </div>
+                    <!-- Total Labour Card -->
+                    <div class="card resource-stat-card shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="stat-icon mb-2">
+                                <i class="fas fa-users text-success"></i>
                             </div>
+                            <h6 class="card-title mb-2 small">Total Labour</h6>
+                            <h3 class="stat-number text-success mb-0">${ukNumber(stats.total_labour)}</h3>
+                            <small class="text-muted">Workers</small>
                         </div>
+                    </div>
 
-                        <!-- Active Subcontractors Card -->
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card resource-stat-card shadow-sm">
-                                <div class="card-body text-center p-3">
-                                    <div class="stat-icon mb-2">
-                                        <i class="fas fa-briefcase text-info"></i>
-                                    </div>
-                                    <h6 class="card-title mb-2 small">Active Subcontractors</h6>
-                                    <h3 class="stat-number text-info mb-0">${ukNumber(stats.active_contractors)}</h3>
-                                    <small class="text-muted">Contractors</small>
-                                </div>
+                    <!-- Active Subcontractors Card -->
+                    <div class="card resource-stat-card shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="stat-icon mb-2">
+                                <i class="fas fa-briefcase text-info"></i>
+                            </div>
+                            <h6 class="card-title mb-2 small">Active Subcontractors</h6>
+                            <h3 class="stat-number text-info mb-0">${ukNumber(stats.active_contractors)}</h3>
+                            <small class="text-muted">Contractors</small>
+                        </div>
+                    </div>
+
+                    <!-- Labour by Contractor Card -->
+                    <div class="card resource-stat-card shadow-sm">
+                        <div class="card-body p-3">
+                            <div class="stat-icon mb-2 text-center">
+                                <i class="fas fa-user-tie text-primary"></i>
+                            </div>
+                            <h6 class="card-title mb-2 text-center small">Labour by Contractor</h6>
+                            <div class="contractor-list">
+                                ${contractorList}
                             </div>
                         </div>
                     </div>
 
-                    <!-- Second Row -->
-                    <div class="row g-3">
-                        <!-- Labour by Contractor Card -->
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card resource-stat-card shadow-sm">
-                                <div class="card-body p-3">
-                                    <div class="stat-icon mb-2 text-center">
-                                        <i class="fas fa-user-tie text-primary"></i>
-                                    </div>
-                                    <h6 class="card-title mb-2 text-center small">Labour by Contractor</h6>
-                                    <div class="contractor-list">
-                                        ${contractorList}
-                                    </div>
-                                </div>
+                    <!-- Labour by Area Card -->
+                    <div class="card resource-stat-card shadow-sm">
+                        <div class="card-body p-3">
+                            <div class="stat-icon mb-2 text-center">
+                                <i class="fas fa-layer-group text-warning"></i>
                             </div>
-                        </div>
-
-                        <!-- Labour by Area Card -->
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="card resource-stat-card shadow-sm">
-                                <div class="card-body p-3">
-                                    <div class="stat-icon mb-2 text-center">
-                                        <i class="fas fa-layer-group text-warning"></i>
-                                    </div>
-                                    <h6 class="card-title mb-2 text-center small">Labour by Area</h6>
-                                    <div class="area-list">
-                                        ${areaList}
-                                    </div>
-                                </div>
+                            <h6 class="card-title mb-2 text-center small">Labour by Area</h6>
+                            <div class="area-list">
+                                ${areaList}
                             </div>
                         </div>
                     </div>
