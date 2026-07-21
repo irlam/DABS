@@ -539,6 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load email settings
     loadEmailSettings();
+    loadBrandingSettings();
     
     // User management event listeners
     document.getElementById('addUserBtn').addEventListener('click', showAddUserModal);
@@ -553,4 +554,47 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('smtpAuth').addEventListener('change', toggleSmtpAuth);
     document.getElementById('saveEmailConfigBtn').addEventListener('click', saveEmailSettings);
     document.getElementById('sendTestEmailBtn').addEventListener('click', testEmail);
+    document.getElementById('brandingForm').addEventListener('submit', saveBrandingSettings);
 });
+
+const brandingOptions = {
+    show_login: 'Show on login and password reset pages',
+    show_dashboard: 'Show on dashboard',
+    show_reports: 'Show on printed/PDF reports',
+    show_emails: 'Show in emails',
+    show_subcontractor_logos: 'Show subcontractor logos where relevant'
+};
+
+function loadBrandingSettings() {
+    fetch('ajax_branding.php?action=get').then(r => r.json()).then(data => {
+        if (!data.success) throw new Error(data.message || 'Unable to load branding settings');
+        const s = data.settings;
+        document.getElementById('companyName').value = s.company_name || 'DABS';
+        document.getElementById('companyTagline').value = s.tagline || '';
+        const fallback = 'images/logo.png';
+        document.getElementById('companyLogoPreview').src = s.company_logo || fallback;
+        document.getElementById('companyLogoDarkPreview').src = s.company_logo_dark || fallback;
+        document.getElementById('faviconPreview').src = s.favicon || fallback;
+        document.getElementById('brandingFlags').innerHTML = Object.entries(brandingOptions).map(([key, label]) => `
+            <div class="col-md-6"><div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" id="${key}" name="${key}" ${Number(s[key]) ? 'checked' : ''}>
+                <label class="form-check-label" for="${key}">${label}</label>
+            </div></div>`).join('');
+    }).catch(err => showNotification(err.message, 'danger'));
+}
+
+function saveBrandingSettings(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    data.append('action', 'save');
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    fetch('ajax_branding.php', {method: 'POST', body: data}).then(r => r.json()).then(result => {
+        if (!result.success) throw new Error(result.message || 'Unable to save branding');
+        showNotification(result.message, 'success');
+        form.querySelectorAll('input[type="file"]').forEach(input => input.value = '');
+        form.querySelectorAll('[id^="remove"]').forEach(input => input.checked = false);
+        loadBrandingSettings();
+    }).catch(err => showNotification(err.message, 'danger')).finally(() => button.disabled = false);
+}

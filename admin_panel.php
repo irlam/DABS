@@ -27,6 +27,7 @@ ini_set('error_log', __DIR__ . '/logs/php_errors.log');
 
 require_once 'includes/db_connect.php';
 require_once 'includes/functions.php';
+require_once 'includes/branding.php';
 require_once 'includes/auth.php';
 
 // Check if user is logged in
@@ -52,19 +53,21 @@ if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
 
 $currentDate = date('d/m/Y');
 $currentDateTime = date('d/m/Y H:i:s');
+if (empty($_SESSION['csrf_token'])) $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 try {
     $pdo = connectToDatabase();
 } catch (Exception $e) {
     die('Database connection error: ' . htmlspecialchars($e->getMessage()));
 }
+$branding = getBrandingSettings($pdo);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DABS - Admin Panel</title>
+    <title><?php echo htmlspecialchars($branding['company_name']); ?> - Admin Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="css/styles.css" rel="stylesheet">
@@ -119,9 +122,12 @@ try {
         <!-- Header -->
         <div class="admin-header">
             <div class="d-flex justify-content-between align-items-center">
-                <div>
+                <div class="d-flex align-items-center">
+                    <img src="<?php echo htmlspecialchars(companyLogoUrl($branding, true)); ?>" alt="<?php echo htmlspecialchars($branding['company_name']); ?> logo" class="me-3" style="max-width:120px;max-height:64px;object-fit:contain">
+                    <div>
                     <h1><i class="fas fa-user-shield me-2"></i>Admin Panel</h1>
                     <p class="mb-0">System Administration & Configuration</p>
+                    </div>
                 </div>
                 <div class="text-end">
                     <div class="mb-2">
@@ -155,6 +161,11 @@ try {
                 <button class="nav-link" id="email-tab" data-bs-toggle="tab" data-bs-target="#email" 
                         type="button" role="tab">
                     <i class="fas fa-envelope me-2"></i>Email Settings
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding" type="button" role="tab">
+                    <i class="fas fa-palette me-2"></i>Branding
                 </button>
             </li>
         </ul>
@@ -211,6 +222,31 @@ try {
                                 Select a log file from the dropdown and click "Load Log" to view its contents.
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Branding Tab -->
+            <div class="tab-pane fade" id="branding" role="tabpanel">
+                <div class="card admin-card">
+                    <div class="card-header bg-primary text-white"><h5 class="mb-0"><i class="fas fa-palette me-2"></i>Company Branding</h5></div>
+                    <div class="card-body">
+                        <form id="brandingForm" enctype="multipart/form-data">
+                            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+                            <div id="brandingStatus"></div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3"><label class="form-label" for="companyName">Company name</label><input class="form-control" id="companyName" name="company_name" maxlength="150" required></div>
+                                <div class="col-md-6 mb-3"><label class="form-label" for="companyTagline">Tagline (optional)</label><input class="form-control" id="companyTagline" name="tagline" maxlength="255"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3"><label class="form-label" for="companyLogo">Main logo</label><div><img id="companyLogoPreview" class="img-thumbnail mb-2" style="max-height:100px" alt="Current main logo"></div><input class="form-control" type="file" id="companyLogo" name="company_logo" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_company_logo" id="removeCompanyLogo"><label class="form-check-label" for="removeCompanyLogo">Restore default</label></div></div>
+                                <div class="col-md-4 mb-3"><label class="form-label" for="companyLogoDark">Dark-background logo</label><div><img id="companyLogoDarkPreview" class="img-thumbnail mb-2" style="max-height:100px" alt="Current dark logo"></div><input class="form-control" type="file" id="companyLogoDark" name="company_logo_dark" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_company_logo_dark" id="removeCompanyLogoDark"><label class="form-check-label" for="removeCompanyLogoDark">Remove</label></div></div>
+                                <div class="col-md-4 mb-3"><label class="form-label" for="brandingFavicon">Favicon</label><div><img id="faviconPreview" class="img-thumbnail mb-2" style="max-height:64px" alt="Current favicon"></div><input class="form-control" type="file" id="brandingFavicon" name="favicon" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_favicon" id="removeFavicon"><label class="form-check-label" for="removeFavicon">Remove</label></div></div>
+                            </div>
+                            <h6>Display options</h6>
+                            <div class="row mb-3" id="brandingFlags"></div>
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-save me-1"></i>Save Branding</button>
+                        </form>
                     </div>
                 </div>
             </div>

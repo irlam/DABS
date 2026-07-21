@@ -102,6 +102,7 @@ date_default_timezone_set('Europe/London');
 
 // Include the centralized database connection file for PDO connectivity
 require_once __DIR__ . '/includes/db_connect.php';
+require_once __DIR__ . '/includes/branding.php';
 
 // Start output buffering to prevent unwanted output before JSON responses
 ob_start();
@@ -225,6 +226,13 @@ try {
         'details' => 'Please check database configuration and try again'
     ]);
 }
+$subcontractorLogoColumnsAvailable = false;
+try {
+    $subcontractorLogoColumnsAvailable = (bool)$pdo->query("SHOW COLUMNS FROM dabs_subcontractors LIKE 'logo_path'")->fetch(PDO::FETCH_ASSOC);
+} catch (Throwable $e) {}
+$logoSelectSql = $subcontractorLogoColumnsAvailable
+    ? 'logo_path, logo_updated_at,'
+    : 'NULL AS logo_path, NULL AS logo_updated_at,';
 
 /**
  * LIST ACTION - Retrieve all subcontractors for current project
@@ -234,7 +242,7 @@ if ($action === 'list') {
     write_log('Processing LIST action for project', $project_id);
     try {
         // Enhanced SQL query with proper ordering and status prioritization
-        $sql = "SELECT id, name, trade, contact_name, phone, email, status, 
+        $sql = "SELECT id, name, trade, contact_name, phone, email, $logoSelectSql status,
                        created_by, created_at, updated_at 
                 FROM dabs_subcontractors 
                 WHERE project_id = ? 
@@ -374,7 +382,7 @@ if ($action === 'get') {
             'table' => 'dabs_subcontractors'
         ]);
         
-        $sql = "SELECT id, name, trade, contact_name, phone, email, status, 
+        $sql = "SELECT id, name, trade, contact_name, phone, email, $logoSelectSql status,
                        created_by, created_at, updated_at 
                 FROM dabs_subcontractors 
                 WHERE id = ? AND project_id = ?";
@@ -486,6 +494,9 @@ if ($action === 'get') {
 if ($action === 'add') {
     write_log('Processing ADD action');
     try {
+        if (!empty($_FILES['logo']['name']) && !$subcontractorLogoColumnsAvailable) {
+            throw new RuntimeException('Import database/branding_migration.sql before uploading subcontractor logos.');
+        }
         // Extract and validate input parameters with comprehensive data handling
         $name = isset($_POST['name']) && !empty(trim($_POST['name'])) 
             ? trim($_POST['name']) 
@@ -572,6 +583,12 @@ if ($action === 'add') {
         ]);
         
         $new_id = $pdo->lastInsertId();
+        $logo_path = null;
+        if (!empty($_FILES['logo']['name'])) {
+            $logo_path = saveUploadedLogo($_FILES['logo'], 'subcontractors/' . $new_id, 'logo');
+            $pdo->prepare("UPDATE dabs_subcontractors SET logo_path = ?, logo_updated_at = NOW() WHERE id = ? AND project_id = ?")
+                ->execute([$logo_path, $new_id, $project_id]);
+        }
         
         // Insert tasks if provided with comprehensive task management
         if (!empty($tasks) && $new_id) {
@@ -606,6 +623,7 @@ if ($action === 'add') {
             'contact_name' => $contact_name,
             'phone' => $phone,
             'email' => $email,
+            'logo_path' => $logo_path,
             'status' => $status,
             'contacts' => $contacts,
             'tasks' => $tasks,
@@ -651,7 +669,7 @@ if ($action === 'update') {
         }
         
         // Verify subcontractor exists and belongs to current project
-        $checkSql = "SELECT id, name FROM dabs_subcontractors WHERE id = ? AND project_id = ?";
+        $checkSql = "SELECT id, name, " . ($subcontractorLogoColumnsAvailable ? 'logo_path' : 'NULL AS logo_path') . " FROM dabs_subcontractors WHERE id = ? AND project_id = ?";
         $checkStmt = $pdo->prepare($checkSql);
         $checkStmt->execute([$id, $project_id]);
         $existingSubcontractor = $checkStmt->fetch(PDO::FETCH_ASSOC);
@@ -669,6 +687,9 @@ if ($action === 'update') {
                 'error_code' => 'NOT_FOUND',
                 'message' => 'The subcontractor could not be found or access is denied'
             ]);
+        }
+        if ((!empty($_POST['remove_logo']) || !empty($_FILES['logo']['name'])) && !$subcontractorLogoColumnsAvailable) {
+            throw new RuntimeException('Import database/branding_migration.sql before changing subcontractor logos.');
         }
         
         // Extract and validate update parameters
@@ -754,6 +775,15 @@ if ($action === 'update') {
         $updateStmt->execute([
             $name, $trade, $contact_name, $phone, $email, $status, $id, $project_id
         ]);
+        if (!empty($_POST['remove_logo'])) {
+            removeManagedLogo((string)$existingSubcontractor['logo_path']);
+            $pdo->prepare("UPDATE dabs_subcontractors SET logo_path = NULL, logo_updated_at = NOW() WHERE id = ? AND project_id = ?")->execute([$id, $project_id]);
+        }
+        if (!empty($_FILES['logo']['name'])) {
+            $logoPath = saveUploadedLogo($_FILES['logo'], 'subcontractors/' . $id, 'logo');
+            removeManagedLogo((string)$existingSubcontractor['logo_path']);
+            $pdo->prepare("UPDATE dabs_subcontractors SET logo_path = ?, logo_updated_at = NOW() WHERE id = ? AND project_id = ?")->execute([$logoPath, $id, $project_id]);
+        }
         
         $rowsAffected = $updateStmt->rowCount();
         
@@ -838,7 +868,7 @@ if ($action === 'delete') {
         }
         
         // Verify subcontractor exists and belongs to current project
-        $checkSql = "SELECT id, name FROM dabs_subcontractors WHERE id = ? AND project_id = ?";
+        $checkSql = "SELECT id, name, " . ($subcontractorLogoColumnsAvailable ? 'logo_path' : 'NULL AS logo_path') . " FROM dabs_subcontractors WHERE id = ? AND project_id = ?";
         $checkStmt = $pdo->prepare($checkSql);
         $checkStmt->execute([$id, $project_id]);
         $subcontractor = $checkStmt->fetch(PDO::FETCH_ASSOC);
@@ -878,6 +908,7 @@ if ($action === 'delete') {
         $deleteSubStmt = $pdo->prepare($deleteSubSql);
         $deleteSubStmt->execute([$id, $project_id]);
         $rowsDeleted = $deleteSubStmt->rowCount();
+        if ($rowsDeleted > 0) removeManagedLogo((string)($subcontractor['logo_path'] ?? ''));
         
         write_log('Subcontractor deletion completed', [
             'id' => $id,

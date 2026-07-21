@@ -186,7 +186,7 @@ class EmailConfig {
      * @param array $attachments - Optional array of file paths to attach
      * @return bool - True if sent successfully
      */
-    public function sendEmail($to, $subject, $body, $attachments = []) {
+    public function sendEmail($to, $subject, $body, $attachments = [], $embeddedImages = []) {
         try {
             $mail = $this->createMailer();
             
@@ -212,6 +212,9 @@ class EmailConfig {
                 if (file_exists($attachment)) {
                     $mail->addAttachment($attachment);
                 }
+            }
+            foreach ($embeddedImages as $cid => $imagePath) {
+                if (is_file($imagePath)) $mail->addEmbeddedImage($imagePath, $cid, basename($imagePath));
             }
             
             // Send email

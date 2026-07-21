@@ -137,6 +137,8 @@ function displaySubcontractors(subcontractors) {
 
     let html = '<div class="accordion" id="subcontractorAccordionMain">';
     subcontractors.forEach((sub, idx) => {
+        const showLogos = document.body.dataset.showSubcontractorLogos !== '0';
+        const logo = !showLogos ? '' : (sub.logo_path ? `<img src="${escapeHtml(sub.logo_path)}" alt="" class="me-3 rounded bg-white" style="width:48px;height:48px;object-fit:contain">` : `<span class="me-3 rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center fw-bold" style="width:48px;height:48px">${escapeHtml((sub.name || '?').split(/\s+/).map(word => word[0]).join('').slice(0,2).toUpperCase())}</span>`);
         const lastUpdated = sub.updated_at
             ? new Date(sub.updated_at).toLocaleString('en-GB', {
                 timeZone: 'Europe/London',
@@ -163,7 +165,7 @@ function displaySubcontractors(subcontractors) {
                         data-bs-target="#collapse${idx}"
                         aria-expanded="false"
                         aria-controls="collapse${idx}">
-                        <div class="d-flex flex-column flex-md-row w-100 align-items-center">
+                        ${logo}<div class="d-flex flex-column flex-md-row w-100 align-items-center">
                             <div class="me-auto">
                                 <span class="fw-bold fs-5 text-primary">${escapeHtml(sub.name || 'Unnamed')}</span>
                                 <span class="ms-2 badge bg-info">${escapeHtml(sub.trade || 'No trade')}</span>
@@ -290,6 +292,10 @@ function fillSubcontractorForm(sub) {
     document.getElementById('subcontractorName').value = sub.name || '';
     document.getElementById('subcontractorTrade').value = sub.trade || '';
     document.getElementById('subcontractorStatus').value = sub.status || 'Active';
+    const preview = document.getElementById('subcontractorLogoPreview');
+    preview.src = sub.logo_path || '';
+    preview.style.display = sub.logo_path ? '' : 'none';
+    document.getElementById('removeSubcontractorLogo').checked = false;
 
     // Prefer "contact_name/phone/email", but if empty, use first contacts array element
     let contactName = sub.contact_name || '';
@@ -318,13 +324,16 @@ function saveSubcontractor() {
         alert('Name and Trade are required.');
         return;
     }
-    const payload = new URLSearchParams();
+    const payload = new FormData();
     payload.append('name', name);
     payload.append('trade', trade);
     payload.append('status', status);
     payload.append('contact_name', contactName);
     payload.append('phone', contactPhone);
     payload.append('email', contactEmail);
+    const logoInput = document.getElementById('subcontractorLogo');
+    if (logoInput.files[0]) payload.append('logo', logoInput.files[0]);
+    if (document.getElementById('removeSubcontractorLogo').checked) payload.append('remove_logo', '1');
     if (editingSubcontractorId) {
         payload.append('action', 'update');
         payload.append('id', editingSubcontractorId);
@@ -338,7 +347,6 @@ function saveSubcontractor() {
 
     fetch('ajax_subcontractors.php', {
         method: 'POST',
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: payload
     })
     .then(r => r.json())

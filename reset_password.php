@@ -27,6 +27,8 @@ session_start();
 // Include essential files
 require_once 'includes/db_connect.php';
 require_once 'includes/functions.php';
+require_once 'includes/branding.php';
+$branding = getBrandingSettings();
 
 // Set timezone to UTC (dates will be formatted to UK format when displayed)
 date_default_timezone_set('UTC');
@@ -225,7 +227,7 @@ function sendPasswordChangeNotificationEmail($email, $name) {
     <div class="reset-container">
         <!-- Logo and App Name -->
         <div class="logo-container">
-            <img src="images/logo.png" alt="DABS Logo" class="logo">
+            <?php if ($branding['show_login']): ?><img src="<?php echo htmlspecialchars(companyLogoUrl($branding)); ?>" alt="<?php echo htmlspecialchars($branding['company_name']); ?> logo" class="logo"><?php endif; ?>
             <h1>Reset Your Password</h1>
             <div class="date-display">
                 <?php echo $currentUKDateTime; ?>

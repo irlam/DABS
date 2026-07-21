@@ -39,6 +39,7 @@ session_start();
 
 // Load database connection helper
 require_once __DIR__ . '/includes/db_connect.php';
+require_once __DIR__ . '/includes/branding.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
@@ -272,6 +273,7 @@ function getActivitiesForDate($date) {
  */
 function generatePDF($data) {
     global $project_name, $username;
+    $branding = getBrandingSettings();
     
     // TCPDF is now loaded via Composer autoloader
     if (!class_exists('TCPDF')) {
@@ -298,6 +300,12 @@ function generatePDF($data) {
     
     // Add a page
     $pdf->AddPage();
+    if ($branding['show_reports']) {
+        $logo = dirname(__FILE__) . '/' . companyLogoUrl($branding);
+        if (is_file($logo)) {
+            try { $pdf->Image($logo, 15, 12, 35, 0, '', '', '', true, 300); $pdf->Ln(8); } catch (Throwable $e) {}
+        }
+    }
     
     // Set font
     $pdf->SetFont('helvetica', 'B', 16);
@@ -440,7 +448,16 @@ function sendEmail($recipients, $pdf_path, $subject, $message) {
         $emailConfig = new EmailConfig();
         
         // Build HTML email body
+        $branding = getBrandingSettings();
+        $embedded = [];
         $htmlBody = "<html><body style='font-family: Arial, sans-serif;'>";
+        if ($branding['show_emails']) {
+            $logoPath = __DIR__ . '/' . companyLogoUrl($branding);
+            if (is_file($logoPath)) {
+                $htmlBody .= "<img src='cid:dabs-company-logo' alt='" . htmlspecialchars($branding['company_name']) . " logo' style='max-height:90px;max-width:260px'>";
+                $embedded['dabs-company-logo'] = $logoPath;
+            }
+        }
         $htmlBody .= "<h2>$project_name - Daily Activity Briefing</h2>";
         $htmlBody .= "<p>Please find attached the daily activity briefing report.</p>";
         
@@ -459,7 +476,8 @@ function sendEmail($recipients, $pdf_path, $subject, $message) {
             $recipients,
             $subject,
             $htmlBody,
-            [$pdf_path]
+            [$pdf_path],
+            $embedded
         );
         
         logMessage("Email sending " . ($success ? "successful" : "failed"), [

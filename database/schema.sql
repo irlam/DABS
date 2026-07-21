@@ -339,6 +339,31 @@ INSERT INTO `dabs_notes` (`id`, `project_id`, `note_date`, `notes`, `created_at`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `branding_settings`
+--
+
+DROP TABLE IF EXISTS `branding_settings`;
+CREATE TABLE `branding_settings` (
+  `id` tinyint unsigned NOT NULL DEFAULT 1,
+  `company_name` varchar(150) NOT NULL DEFAULT 'DABS',
+  `tagline` varchar(255) DEFAULT NULL,
+  `company_logo` varchar(255) NOT NULL DEFAULT 'images/logo.png',
+  `company_logo_dark` varchar(255) DEFAULT NULL,
+  `favicon` varchar(255) DEFAULT NULL,
+  `show_login` tinyint(1) NOT NULL DEFAULT 1,
+  `show_dashboard` tinyint(1) NOT NULL DEFAULT 1,
+  `show_reports` tinyint(1) NOT NULL DEFAULT 1,
+  `show_emails` tinyint(1) NOT NULL DEFAULT 1,
+  `show_subcontractor_logos` tinyint(1) NOT NULL DEFAULT 1,
+  `updated_by` int DEFAULT NULL,
+  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `branding_settings` (`id`) VALUES (1);
+
+-- --------------------------------------------------------
+
 -- Table structure for table `dabs_subcontractors`
 --
 
@@ -351,6 +376,8 @@ CREATE TABLE `dabs_subcontractors` (
   `contact_name` varchar(255) NOT NULL,
   `phone` varchar(50) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
+  `logo_path` varchar(255) DEFAULT NULL,
+  `logo_updated_at` datetime DEFAULT NULL,
   `status` varchar(50) DEFAULT 'Active',
   `created_by` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,

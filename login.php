@@ -23,7 +23,9 @@ ob_start();
 session_start();
 require_once 'includes/db_connect.php';
 require_once 'includes/functions.php';
+require_once 'includes/branding.php';
 date_default_timezone_set('Europe/London');
+$branding = getBrandingSettings();
 
 // ========================
 // AUTHENTICATION HELPERS
@@ -277,7 +279,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DABS - Login</title>
+    <title><?php echo htmlspecialchars($branding['company_name']); ?> - Login</title>
+    <?php if ($favicon = brandingAssetUrl((string)$branding['favicon'])): ?><link rel="icon" href="<?php echo htmlspecialchars($favicon); ?>"><?php endif; ?>
     <!-- Modern CSS Framework -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Consolidated Custom CSS -->
@@ -291,7 +294,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     <div class="login-container">
         <div class="system-title-top">Daily Activity Briefing System</div>
         <div class="logo-container">
-            <img src="images/logo.png" alt="DABS Logo" class="logo">
+            <?php if ($branding['show_login']): ?><img src="<?php echo htmlspecialchars(companyLogoUrl($branding)); ?>" alt="<?php echo htmlspecialchars($branding['company_name']); ?> logo" class="logo"><?php endif; ?>
+            <?php if ($branding['tagline']): ?><div class="text-muted mb-2"><?php echo htmlspecialchars($branding['tagline']); ?></div><?php endif; ?>
             <div class="date-display" id="liveClock">
                 <i class="fas fa-clock me-1"></i><span id="clockTime"><?php echo $currentDateTime; ?></span>
             </div>

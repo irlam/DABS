@@ -39,6 +39,7 @@ function logError($message, $context = []) {
 try {
     require_once 'includes/db_connect.php';
     require_once 'includes/functions.php';
+    require_once 'includes/branding.php';
     require_once 'includes/auth.php';
 } catch (Exception $e) {
     logError('Critical Error: Unable to load required system files', ['error' => $e->getMessage()]);
@@ -232,6 +233,7 @@ try {
     $systemErrors[] = 'Database connection error. Some features may not work properly.';
 }
 $_SESSION['current_project'] = $projectID;
+$branding = getBrandingSettings(isset($pdo) ? $pdo : null);
 // Export subcontractors and work areas for JS
 $jsContractors = json_encode($subcontractors, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|JSON_HEX_QUOT);
 $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|JSON_HEX_QUOT);
@@ -242,7 +244,8 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <!-- Meta tags for responsive design and character encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DABS - <?php echo htmlspecialchars($projectInfo['name']); ?> - <?php echo $currentDate; ?></title>
+    <title><?php echo htmlspecialchars($branding['company_name']); ?> - <?php echo htmlspecialchars($projectInfo['name']); ?> - <?php echo $currentDate; ?></title>
+    <?php if ($favicon = brandingAssetUrl((string)$branding['favicon'])): ?><link rel="icon" href="<?php echo htmlspecialchars($favicon); ?>"><?php endif; ?>
     <!-- Bootstrap 5.3.0, Font Awesome, and other CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -251,7 +254,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tiny.cloud/1/cx3e21j3t5yv0ukx72zuh02xf9o75o3bgencxrbbzmad1p5c/tinymce/5/tinymce.min.js"></script>
 </head>
-<body>
+<body data-show-subcontractor-logos="<?php echo $branding['show_subcontractor_logos'] ? '1' : '0'; ?>">
 <!-- Main Title Bar and Notification Area -->
 <div class="main-title-bar">
     <h1><i class="fas fa-clipboard-list me-3"></i>Daily Activity Briefing System</h1>
@@ -277,7 +280,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="logo-container">
-                    <img src="images/logo.png" alt="Company Logo" class="logo" onerror="this.style.display='none'">
+                    <?php if ($branding['show_dashboard']): ?><img src="<?php echo htmlspecialchars(companyLogoUrl($branding)); ?>" alt="<?php echo htmlspecialchars($branding['company_name']); ?> logo" class="logo" onerror="this.style.display='none'"><?php endif; ?>
                 </div>
             </div>
             <div class="col-md-4 text-center">
@@ -641,6 +644,17 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                             </label>
                             <input type="text" class="form-control" id="subcontractorTrade" 
                                 placeholder="e.g., Electrical, Plumbing, Roofing" required maxlength="100">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-8">
+                            <label for="subcontractorLogo" class="form-label"><i class="fas fa-image me-1"></i>Logo (optional)</label>
+                            <input type="file" class="form-control" id="subcontractorLogo" accept="image/png,image/jpeg,image/webp">
+                            <div class="form-text">PNG, JPG or WebP; maximum 5 MB.</div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img id="subcontractorLogoPreview" class="img-thumbnail me-2" style="display:none;max-height:72px;max-width:120px" alt="Subcontractor logo">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="removeSubcontractorLogo"><label class="form-check-label" for="removeSubcontractorLogo">Remove logo</label></div>
                         </div>
                     </div>
                     <div class="row mb-3">
