@@ -235,16 +235,20 @@ $branding = getBrandingSettings($pdo);
                             <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
                             <div id="brandingStatus"></div>
                             <div class="row">
-                                <div class="col-md-6 mb-3"><label class="form-label" for="companyName">Company name</label><input class="form-control" id="companyName" name="company_name" maxlength="150" required></div>
-                                <div class="col-md-6 mb-3"><label class="form-label" for="companyTagline">Tagline (optional)</label><input class="form-control" id="companyTagline" name="tagline" maxlength="255"></div>
+                                <div class="col-md-6 mb-3"><label class="form-label" for="companyName">Company name</label><input class="form-control" id="companyName" name="company_name" maxlength="150" value="<?php echo htmlspecialchars($branding['company_name']); ?>" required></div>
+                                <div class="col-md-6 mb-3"><label class="form-label" for="companyTagline">Tagline (optional)</label><input class="form-control" id="companyTagline" name="tagline" maxlength="255" value="<?php echo htmlspecialchars($branding['tagline']); ?>"></div>
                             </div>
                             <div class="row">
-                                <div class="col-md-4 mb-3"><label class="form-label" for="companyLogo">Main logo</label><div><img id="companyLogoPreview" class="img-thumbnail mb-2" style="max-height:100px" alt="Current main logo"></div><input class="form-control" type="file" id="companyLogo" name="company_logo" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_company_logo" id="removeCompanyLogo"><label class="form-check-label" for="removeCompanyLogo">Restore default</label></div></div>
-                                <div class="col-md-4 mb-3"><label class="form-label" for="companyLogoDark">Dark-background logo</label><div><img id="companyLogoDarkPreview" class="img-thumbnail mb-2" style="max-height:100px" alt="Current dark logo"></div><input class="form-control" type="file" id="companyLogoDark" name="company_logo_dark" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_company_logo_dark" id="removeCompanyLogoDark"><label class="form-check-label" for="removeCompanyLogoDark">Remove</label></div></div>
-                                <div class="col-md-4 mb-3"><label class="form-label" for="brandingFavicon">Favicon</label><div><img id="faviconPreview" class="img-thumbnail mb-2" style="max-height:64px" alt="Current favicon"></div><input class="form-control" type="file" id="brandingFavicon" name="favicon" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_favicon" id="removeFavicon"><label class="form-check-label" for="removeFavicon">Remove</label></div></div>
+                                <div class="col-md-4 mb-3"><label class="form-label" for="companyLogo">Main logo</label><div><img src="<?php echo htmlspecialchars(companyLogoUrl($branding)); ?>" id="companyLogoPreview" class="img-thumbnail mb-2" style="max-height:100px" alt="Current main logo"></div><input class="form-control" type="file" id="companyLogo" name="company_logo" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_company_logo" id="removeCompanyLogo"><label class="form-check-label" for="removeCompanyLogo">Restore default</label></div></div>
+                                <div class="col-md-4 mb-3"><label class="form-label" for="companyLogoDark">Dark-background logo</label><div><img src="<?php echo htmlspecialchars(companyLogoUrl($branding, true)); ?>" id="companyLogoDarkPreview" class="img-thumbnail mb-2" style="max-height:100px" alt="Current dark logo"></div><input class="form-control" type="file" id="companyLogoDark" name="company_logo_dark" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_company_logo_dark" id="removeCompanyLogoDark"><label class="form-check-label" for="removeCompanyLogoDark">Remove</label></div></div>
+                                <div class="col-md-4 mb-3"><label class="form-label" for="brandingFavicon">Favicon</label><div><img src="<?php echo htmlspecialchars(brandingAssetUrl((string)$branding['favicon'], companyLogoUrl($branding))); ?>" id="faviconPreview" class="img-thumbnail mb-2" style="max-height:64px" alt="Current favicon"></div><input class="form-control" type="file" id="brandingFavicon" name="favicon" accept="image/png,image/jpeg,image/webp"><div class="form-check mt-2"><input class="form-check-input" type="checkbox" name="remove_favicon" id="removeFavicon"><label class="form-check-label" for="removeFavicon">Remove</label></div></div>
                             </div>
                             <h6>Display options</h6>
-                            <div class="row mb-3" id="brandingFlags"></div>
+                            <div class="row mb-3" id="brandingFlags">
+                                <?php foreach (['show_login'=>'Show on login and password reset pages','show_dashboard'=>'Show on dashboard','show_reports'=>'Show on printed/PDF reports','show_emails'=>'Show in emails','show_subcontractor_logos'=>'Show subcontractor logos where relevant'] as $key => $label): ?>
+                                <div class="col-md-6"><div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox" id="<?php echo $key; ?>" name="<?php echo $key; ?>" <?php echo $branding[$key] ? 'checked' : ''; ?>><label class="form-check-label" for="<?php echo $key; ?>"><?php echo htmlspecialchars($label); ?></label></div></div>
+                                <?php endforeach; ?>
+                            </div>
                             <button class="btn btn-primary" type="submit"><i class="fas fa-save me-1"></i>Save Branding</button>
                         </form>
                     </div>
@@ -481,6 +485,6 @@ $branding = getBrandingSettings($pdo);
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/admin-panel.js"></script>
+<script src="js/admin-panel.js?v=<?php echo filemtime(__DIR__ . '/js/admin-panel.js'); ?>"></script>
 </body>
 </html>
