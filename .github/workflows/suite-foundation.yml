@@ -1,0 +1,20 @@
+name: Suite integration foundation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: pdo_mysql
+      - name: Configuration syntax
+        run: |
+          php -l includes/database_config.php
+          php -l includes/db_connect.php
+          php -l tests/database-config.php
+      - name: Private configuration and rejection cases
+        run: php tests/database-config.php

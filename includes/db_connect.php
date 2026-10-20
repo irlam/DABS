@@ -16,12 +16,15 @@
 // Set timezone to Europe/London for UK time formatting
 date_default_timezone_set('Europe/London');
 
-// Database Configuration
-$db_host = '10.35.233.124';
-$db_port = 3306;
-$db_name = 'k87747_dabs';
-$db_user = 'k87747_dabs';
-$db_pass = 'Subaru5554346';
+// Credentials belong to private deployment configuration, never source control.
+require_once __DIR__ . '/database_config.php';
+$dabsDatabase = dabsDatabaseConfig();
+$db_host = $dabsDatabase['host'];
+$db_port = $dabsDatabase['port'];
+$db_name = $dabsDatabase['name'];
+$db_user = $dabsDatabase['user'];
+$db_pass = $dabsDatabase['password'];
+unset($dabsDatabase);
 
 // PDO options
 $options = [
