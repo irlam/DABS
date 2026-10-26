@@ -19,7 +19,7 @@
  */
 
 date_default_timezone_set('Europe/London');
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);

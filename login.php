@@ -20,7 +20,7 @@ error_reporting(0);
 
 // Start session and include dependencies
 ob_start();
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 require_once 'includes/db_connect.php';
 require_once 'includes/functions.php';
 require_once 'includes/branding.php';

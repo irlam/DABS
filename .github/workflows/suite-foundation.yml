@@ -10,7 +10,7 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.4'
-          extensions: pdo_mysql
+          extensions: pdo_mysql, pdo_sqlite, mbstring
       - name: Configuration syntax
         run: |
           php -l includes/database_config.php
@@ -29,3 +29,39 @@ jobs:
         run: php tests/endpoint-rejection.php
       - name: Browser CSRF transport
         run: node tests/request-security.mjs
+      - name: Dedicated Suite binding, sessions, roles and private configuration
+        run: php tests/suite-gateway.php
+      - name: Clean deployment code package
+        run: python3 bin/package-suite.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dabs-suite-code
+          path: |
+            dist/dabs-suite.zip
+            dist/dabs-suite.sha256
+  clean-install:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: dabs-ci-only
+          MYSQL_DATABASE: dabs_ci
+          MYSQL_ROOT_HOST: '%'
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -pdabs-ci-only"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: pdo_mysql, mbstring
+      - name: Empty schema, preflight, provisioning and safe rerun
+        env:
+          DABS_CI_DATABASE: '1'
+        run: php tests/mysql-provision.php

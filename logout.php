@@ -27,7 +27,7 @@
 date_default_timezone_set('Europe/London');
 
 // Start the session (needed to destroy it)
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 // Store username before destroying session (for logging)
 $username = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Unknown user';
@@ -106,7 +106,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
 // Create a clean new session to use for login page (security best practice)
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 session_regenerate_id(true);
 
 // Set logout success message for login page

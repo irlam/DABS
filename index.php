@@ -22,7 +22,7 @@
  */
 
 date_default_timezone_set('Europe/London');
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -158,7 +158,7 @@ try {
     }
     // Load unique work areas from resources.location for this project
     try {
-        $stmt = $pdo->prepare("SELECT DISTINCT location FROM resources WHERE location IS NOT NULL AND location <> '' AND name IS NOT NULL AND project_id = ?");
+        $stmt = $pdo->prepare("SELECT DISTINCT r.location FROM resources r JOIN briefings b ON b.id=r.briefing_id WHERE r.location IS NOT NULL AND r.location <> '' AND r.name IS NOT NULL AND b.project_id = ?");
         $stmt->execute([$projectID]);
         $workAreas = $stmt->fetchAll(PDO::FETCH_COLUMN);
         $workAreas = array_unique(array_filter(array_map('trim', $workAreas)));
