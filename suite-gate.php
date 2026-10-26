@@ -8,18 +8,23 @@ define('DABS_SUITE_ACTIVE', true);
 ini_set('display_errors', '0');
 ini_set('log_errors', '1');
 require_once __DIR__ . '/includes/SuiteGateway.php';
+$gatePhase='private_configuration';
 try {
     $b=DabsSuiteGateway::configuration(__DIR__);
+    $gatePhase='host';
     if (($_SERVER['HTTP_HOST']??'') !== parse_url($b['origin'],PHP_URL_HOST)
         || ($_SERVER['HTTPS']??'') !== 'on') throw new RuntimeException('Wrong host.');
+    $gatePhase='session';
     if (session_status() === PHP_SESSION_ACTIVE) throw new RuntimeException('Suite gate must run before native sessions.');
     ini_set('session.use_strict_mode','1'); ini_set('session.use_only_cookies','1');
     session_save_path($b['session_path']); session_name('__Host-dabs-suite');
     session_set_cookie_params(['lifetime'=>0,'path'=>'/','secure'=>true,'httponly'=>true,'samesite'=>'Lax']);
     session_start();
     header('Cache-Control: private, no-store'); header('Referrer-Policy: no-referrer');
+    $gatePhase='database_connection';
     require_once __DIR__ . '/includes/db_connect.php';
-    $db=connectToDatabase(); DabsSuiteGateway::database($db,$b);
+    $db=connectToDatabase(); $gatePhase='database_binding'; DabsSuiteGateway::database($db,$b);
+    $gatePhase='request';
     $path=parse_url($_SERVER['REQUEST_URI']??'/',PHP_URL_PATH);
     if (!is_string($path) || preg_match('/[\x00-\x20\\\\]/',rawurldecode($path)) || str_contains(rawurldecode($path),'..')) throw new RuntimeException('Invalid path.');
     if ($path === '/health.php') {
@@ -36,6 +41,7 @@ try {
         }
         header('Location: /suite-login.php',true,303); exit;
     }
+    $gatePhase='suite_session';
     $i=DabsSuiteGateway::identity($b,DabsSuiteGateway::request($b,'module-session',['action'=>'validate','session_token'=>$auth['token']]));
     if (($auth['user_id']??null) !== $i['user_id']) throw new RuntimeException('Account changed.');
     $local=DabsSuiteGateway::localUser($db,$b,$i);
@@ -62,6 +68,7 @@ try {
         return preg_replace('/(<body\b[^>]*>)/i','$1'.$bar,$html,1)??$html;
     });
 } catch(Throwable $e) {
+    error_log('[DABS Suite gate] failed phase: '.$gatePhase);
     if(session_status()===PHP_SESSION_ACTIVE)$_SESSION=[];
     http_response_code(503); header('Cache-Control: no-store');
     echo '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><p>DABS project access could not be verified. <a href="https://suite.defecttracker.uk/">Return to Construction Suite</a>.</p>'; exit;
