@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * ajax_notes.php - DABS Notes & Updates AJAX Handler
  *
@@ -25,7 +27,7 @@ date_default_timezone_set('Europe/London');
 ob_start();
 
 // Start session to access authentication and project info
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 // Set up logging
 $log_file = __DIR__ . '/logs/notes_debug.log';
@@ -80,17 +82,8 @@ write_log('Action requested', $action);
 
 // --- Database connection (update credentials as needed) ---
 try {
-    $db_host = '10.35.233.124:3306';
-    $db_name = 'k87747_dabs';
-    $db_user = 'k87747_dabs';
-    $db_pass = 'Subaru5554346';
-
-    $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
-    $pdo = new PDO($dsn, $db_user, $db_pass, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::ATTR_EMULATE_PREPARES => false
-    ]);
+    require_once __DIR__ . '/includes/db_connect.php';
+    $pdo = connectToDatabase();
     write_log('Database connection OK');
 } catch (PDOException $e) {
     write_log('Database connection error', $e->getMessage());

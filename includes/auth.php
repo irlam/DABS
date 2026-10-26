@@ -15,6 +15,8 @@
  * @date 29/05/2025
  */
 
+require_once __DIR__ . '/request_policy.php';
+
 // Make sure session is started
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -27,16 +29,7 @@ if (session_status() === PHP_SESSION_NONE) {
  * @return bool True if user is logged in, false otherwise
  */
 function isUserLoggedIn() {
-    // Check if authenticated flag is set and is true
-    if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true) {
-        // Also verify we have a valid user_id
-        if (isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0) {
-            return true;
-        }
-    }
-    
-    // Not authenticated
-    return false;
+    return dabsPermissionAllowed($_SESSION, 'read');
 }
 
 /**
@@ -47,8 +40,7 @@ function isUserLoggedIn() {
  * @return bool True if user has permission, false otherwise
  */
 function hasPermission($permission) {
-    // Not implemented yet - always return true for now
-    return true;
+    return dabsPermissionAllowed($_SESSION, (string)$permission);
 }
 
 /**
@@ -77,4 +69,22 @@ function logoutUser() {
     
     // Destroy session
     session_destroy();
+}
+
+
+/** Reject requests before loading configuration, connecting to a database or logging data. */
+function dabsRequireEndpoint(string $endpoint): void {
+    $status = dabsRequestStatus($endpoint, $_SERVER['REQUEST_METHOD'] ?? '', $_GET, $_POST, $_SESSION, $_SERVER['HTTP_X_DABS_CSRF'] ?? '');
+    if ($status === 200) return;
+    http_response_code($status);
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: no-store');
+    if ($status === 405) header('Allow: POST');
+    echo json_encode(['ok'=>false,'success'=>false,'error'=>$status === 401 ? 'Authentication required' : 'Request not permitted']);
+    exit;
+}
+
+function dabsCsrfToken(): string {
+    if (!preg_match('/^[a-f0-9]{64}$/D', (string)($_SESSION['csrf_token'] ?? ''))) $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    return $_SESSION['csrf_token'];
 }

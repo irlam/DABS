@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * ============================================================================
  * ajax_activities.php - DABS Activity Schedule API (Fully Editable Backend)
@@ -19,7 +21,7 @@
 date_default_timezone_set('Europe/London');
 require_once __DIR__ . '/includes/db_connect.php';
 ob_start();
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 $log_file = __DIR__ . '/logs/activities_debug.log';
 if (!is_dir(__DIR__ . '/logs')) mkdir(__DIR__ . '/logs', 0755, true);
 

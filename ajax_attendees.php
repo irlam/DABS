@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * =========================================================================
  * ATTENDEES MANAGEMENT AJAX HANDLER
@@ -82,7 +84,7 @@ ob_start();
  * Initialize PHP session for user authentication and project management
  * Sessions store user login status and current project information
  */
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 // =========================================================================
 // LOGGING SYSTEM SETUP
@@ -290,58 +292,8 @@ write_log('API request initiated', [
  * Purpose: Provide secure, reliable database connectivity
  */
 function get_database_connection() {
-    try {
-        // Database configuration parameters - modify these for your environment
-        $config = [
-            'host' => '10.35.233.124',
-            'port' => '3306',
-            'dbname' => 'k87747_dabs',
-            'username' => 'k87747_dabs',
-            'password' => 'Subaru5554346',
-            'charset' => 'utf8mb4'
-        ];
-        
-        // Build the Data Source Name (DSN) string for PDO connection
-        $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset={$config['charset']}";
-        
-        // Configure PDO options for security, performance, and reliability
-        $options = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,           // Enable exception handling
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,     // Return associative arrays
-            PDO::ATTR_EMULATE_PREPARES => false,                  // Use real prepared statements
-            PDO::ATTR_PERSISTENT => false,                        // Disable persistent connections
-            PDO::ATTR_TIMEOUT => 30,                              // Set connection timeout
-            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci",
-            PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true            // Buffer query results in memory
-        ];
-        
-        // Create the PDO database connection with error handling
-        $pdo = new PDO($dsn, $config['username'], $config['password'], $options);
-        
-        write_log('Database connection established successfully', [
-            'host' => $config['host'],
-            'database' => $config['dbname'],
-            'charset' => $config['charset'],
-            'connection_time' => date('d/m/Y H:i:s')
-        ]);
-        
-        return $pdo;
-        
-    } catch (PDOException $e) {
-        // Log database connection errors with sanitized details for security
-        write_log('Database connection failed', [
-            'error_code' => $e->getCode(),
-            'error_message' => $e->getMessage(),
-            'timestamp' => date('d/m/Y H:i:s')
-        ], 'ERROR');
-        
-        // Send user-friendly error response without exposing sensitive details
-        send_json([
-            'error' => 'Database connection failed',
-            'message' => 'Unable to connect to the database. Please try again later.',
-            'timestamp' => date('d/m/Y H:i:s')
-        ], 500);
-    }
+    require_once __DIR__ . '/includes/db_connect.php';
+    return connectToDatabase();
 }
 
 /**
@@ -423,55 +375,13 @@ function validate_and_convert_date($date) {
  */
 function ensure_database_schema() {
     global $pdo;
-    
-    try {
-        // Check if the subcontractor_name column exists in the dabs_attendees table
-        $stmt = $pdo->query("SHOW COLUMNS FROM dabs_attendees LIKE 'subcontractor_name'");
-        
-        // If the column doesn't exist, add it to maintain compatibility
+    foreach (['subcontractor_name', 'email'] as $column) {
+        $stmt = $pdo->query("SHOW COLUMNS FROM dabs_attendees LIKE '" . $column . "'");
         if ($stmt->rowCount() === 0) {
-            write_log('Adding subcontractor_name column to dabs_attendees table');
-            
-            $pdo->exec("
-                ALTER TABLE dabs_attendees 
-                ADD COLUMN subcontractor_name VARCHAR(100) NULL 
-                AFTER attendee_name
-                COMMENT 'Name of the subcontractor company associated with this attendee'
-            ");
-            
-            write_log('Database schema upgraded successfully - subcontractor_name column added');
+            send_json(['error'=>'Database upgrade required. Contact the administrator.'], 503);
         }
-        
-        // Check if the email column exists in the dabs_attendees table
-        $stmt = $pdo->query("SHOW COLUMNS FROM dabs_attendees LIKE 'email'");
-        
-        // If the column doesn't exist, add it to maintain compatibility
-        if ($stmt->rowCount() === 0) {
-            write_log('Adding email column to dabs_attendees table');
-            
-            $pdo->exec("
-                ALTER TABLE dabs_attendees 
-                ADD COLUMN email VARCHAR(100) NULL 
-                AFTER subcontractor_name
-                COMMENT 'Email address for pre-filling reports'
-            ");
-            
-            write_log('Database schema upgraded successfully - email column added');
-        } else {
-            write_log('Database schema is current - all required columns present in dabs_attendees table');
-        }
-        
-        return true;
-        
-    } catch (PDOException $e) {
-        write_log('Database schema check/upgrade failed for dabs_attendees table', [
-            'error_message' => $e->getMessage(),
-            'error_code' => $e->getCode(),
-            'timestamp' => date('d/m/Y H:i:s')
-        ], 'ERROR');
-        
-        return false;
     }
+    return true;
 }
 
 /**

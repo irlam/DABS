@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * ************************************************************************
  * DAILY ACTIVITY BRIEFING SYSTEM (DABS) - EMAIL REPORT GENERATOR
@@ -35,7 +37,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 date_default_timezone_set('Europe/London');
 
 // Start session to access user information
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 // Load database connection helper
 require_once __DIR__ . '/includes/db_connect.php';
@@ -580,3 +582,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     outputResponse(['error' => 'Invalid request method']);
 }
 ?>
+

@@ -18,3 +18,14 @@ jobs:
           php -l tests/database-config.php
       - name: Private configuration and rejection cases
         run: php tests/database-config.php
+
+      - name: No legacy database shortcuts
+        run: |
+          find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+          php tests/central-database.php
+      - name: Authentication, roles, methods and CSRF rejection
+        run: php tests/request-policy.php
+      - name: Real entry points reject before database access
+        run: php tests/endpoint-rejection.php
+      - name: Browser CSRF transport
+        run: node tests/request-security.mjs

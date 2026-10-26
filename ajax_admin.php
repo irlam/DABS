@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * =========================================================================
  * ajax_admin.php - Admin Panel AJAX Handler
@@ -15,7 +17,7 @@
  */
 
 date_default_timezone_set('Europe/London');
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 header('Content-Type: application/json');
 
 require_once 'includes/db_connect.php';
@@ -460,3 +462,4 @@ function formatBytes($bytes, $precision = 2) {
     
     return round($bytes, $precision) . ' ' . $units[$i];
 }
+

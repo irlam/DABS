@@ -39,7 +39,9 @@ if (!isUserLoggedIn()) {
 // Check if user has admin role
 if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
     die('<!DOCTYPE html>
-    <html><head><title>Access Denied</title>
+    <html><head>
+    <meta name="dabs-csrf" content="<?php echo htmlspecialchars(dabsCsrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
+    <script src="js/request-security.js"></script><title>Access Denied</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head><body class="bg-light">
     <div class="container mt-5">
@@ -488,3 +490,4 @@ $branding = getBrandingSettings($pdo);
 <script src="js/admin-panel.js?v=<?php echo filemtime(__DIR__ . '/js/admin-panel.js'); ?>"></script>
 </body>
 </html>
+

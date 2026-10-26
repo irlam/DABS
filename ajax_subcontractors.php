@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * =========================================================================
  * ajax_subcontractors.php - Daily Activity Briefing System (DABS)
@@ -108,7 +110,7 @@ require_once __DIR__ . '/includes/branding.php';
 ob_start();
 
 // Start session for user authentication and comprehensive project context management
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 // Define log file path for comprehensive debugging and audit trail
 $log_file = __DIR__ . '/logs/subcontractor_debug.log';
@@ -978,3 +980,4 @@ if (!in_array($action, ['list', 'get', 'add', 'update', 'delete'])) {
  * =========================================================================
  */
 ?>
+

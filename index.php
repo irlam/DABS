@@ -44,7 +44,9 @@ try {
 } catch (Exception $e) {
     logError('Critical Error: Unable to load required system files', ['error' => $e->getMessage()]);
     die('<!DOCTYPE html>
-    <html><head><title>DABS System Error</title>
+    <html><head>
+    <meta name="dabs-csrf" content="<?php echo htmlspecialchars(dabsCsrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
+    <script src="js/request-security.js"></script><title>DABS System Error</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head><body class="bg-light">
     <div class="container mt-5">
@@ -87,38 +89,12 @@ try {
     $stmt = $pdo->prepare("SELECT * FROM projects WHERE id = ?");
     $stmt->execute([$projectID]);
     $projectInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (!$projectInfo) {
-        logError('No project found, creating default project', ['project_id' => $projectID]);
-        $stmt = $pdo->prepare("INSERT INTO projects (id, name, location, manager, start_date, end_date, status) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->execute([
-            $projectID,
-            'Default Construction Project',
-            'Construction Site',
-            $_SESSION['user_name'] ?? 'System Administrator',
-            $currentDateISO,
-            date('Y-m-d', strtotime('+1 year')),
-            'active'
-        ]);
-        $stmt = $pdo->prepare("SELECT * FROM projects WHERE id = ?");
-        $stmt->execute([$projectID]);
-        $projectInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    if (!$projectInfo) {
-        $projectInfo = [
-            'id' => $projectID,
-            'name' => 'Default Project',
-            'location' => 'Construction Site',
-            'manager' => $_SESSION['user_name'] ?? 'System Administrator',
-            'start_date' => $currentDateISO,
-            'end_date' => date('Y-m-d', strtotime('+1 year')),
-            'status' => 'active'
-        ];
-    }
+    if (!$projectInfo) throw new RuntimeException('Project unavailable.');
     // Get today's briefing
     $stmt = $pdo->prepare("SELECT * FROM briefings WHERE project_id = ? AND date = ?");
     $stmt->execute([$projectID, $currentDateISO]);
     $briefingData = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (!$briefingData) {
+    if (!$briefingData && hasPermission('write')) {
         logError('No briefing found for today, creating new briefing', [
             'project_id' => $projectID,
             'date' => $currentDateISO
@@ -1266,3 +1242,4 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- END Modernised DABS index.php (19/11/2025) -->
 </body>
 </html>
+
