@@ -44,9 +44,7 @@ try {
 } catch (Exception $e) {
     logError('Critical Error: Unable to load required system files', ['error' => $e->getMessage()]);
     die('<!DOCTYPE html>
-    <html><head>
-    <meta name="dabs-csrf" content="<?php echo htmlspecialchars(dabsCsrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
-    <script src="js/request-security.js"></script><title>DABS System Error</title>
+    <html><head><title>DABS System Error</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </head><body class="bg-light">
     <div class="container mt-5">
@@ -217,6 +215,8 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="dabs-csrf" content="<?php echo htmlspecialchars(dabsCsrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
+    <script src="js/request-security.js"></script>
     <!-- Meta tags for responsive design and character encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
