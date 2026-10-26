@@ -4,6 +4,9 @@ declare(strict_types=1);
 // check in db_connect.php, so a missing FPM prepend does not restore native login.
 if (PHP_SAPI === 'cli' || defined('DABS_SUITE_ACTIVE')) return;
 define('DABS_SUITE_ACTIVE', true);
+// Hosting warnings must never commit a 200 response before a denial.
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
 require_once __DIR__ . '/includes/SuiteGateway.php';
 try {
     $b=DabsSuiteGateway::configuration(__DIR__);

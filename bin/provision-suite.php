@@ -14,7 +14,9 @@ try{
  $phase='empty schema';$tables=$db->query('SHOW TABLES')->fetchAll(PDO::FETCH_COLUMN);
  if(in_array('suite_deployment',$tables,true)){
    DabsSuiteGateway::database($db,$b);
-   if(!is_file($root.'/.suite-required')||!is_file($root.'/.user.ini')||trim((string)file_get_contents($root.'/.user.ini'))!=='auto_prepend_file="'.$root.'/suite-gate.php"')throw new RuntimeException('Mandatory gate incomplete.');
+   if(!is_file($root.'/.suite-required')||!is_file($root.'/.user.ini')||is_link($root.'/.user.ini'))throw new RuntimeException('Mandatory gate incomplete.');
+   $ini=parse_ini_file($root.'/.user.ini',false,INI_SCANNER_RAW);
+   if(!is_array($ini)||($ini['auto_prepend_file']??null)!==$root.'/suite-gate.php')throw new RuntimeException('Mandatory gate incomplete.');
    echo json_encode(['ok'=>true,'already_provisioned'=>true,'writes_performed'=>0,'live_isolation_verified'=>false]).PHP_EOL;exit;
  }
  foreach(['users','projects','briefings','activities','resources','dabs_subcontractors','dabs_attendees','branding_settings','activity_log']as$table)if(!in_array($table,$tables,true))throw new RuntimeException();

@@ -31,6 +31,8 @@ jobs:
         run: node tests/request-security.mjs
       - name: Dedicated Suite binding, sessions, roles and private configuration
         run: php tests/suite-gateway.php
+      - name: Hosting warnings fail closed over HTTP
+        run: php tests/gateway-bootstrap.php
       - name: Clean deployment code package
         run: python3 bin/package-suite.py
       - uses: actions/upload-artifact@v4

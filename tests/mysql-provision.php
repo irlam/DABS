@@ -26,6 +26,7 @@ try{
  if((int)$db->query('SELECT COUNT(*) FROM projects')->fetchColumn()!==0)throw new RuntimeException('Preflight wrote records.');$checks++;
  $run('--install');DabsSuiteGateway::database($db,$b);$checks++;
  if((int)$db->query('SELECT COUNT(*) FROM users')->fetchColumn()!==0)throw new RuntimeException('Installer created native credentials.');$checks++;
+ file_put_contents($temp.'/web/.user.ini',"display_errors=Off\nlog_errors=On\n",FILE_APPEND);
  $r=$run('--install');if(($r['already_provisioned']??false)!==true||($r['writes_performed']??-1)!==0)throw new RuntimeException('Rerun changed installation.');
  if((int)$db->query('SELECT COUNT(*) FROM projects')->fetchColumn()!==1)throw new RuntimeException('Duplicate project.');$checks++;
  echo json_encode(['ok'=>true,'checks'=>$checks,'ci_database_only'=>true,'live_isolation_verified'=>false]).PHP_EOL;
