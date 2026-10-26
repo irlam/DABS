@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * =========================================================================
  * ajax_safety.php - Daily Activity Briefing System (DABS)
@@ -22,7 +24,7 @@
 
 date_default_timezone_set('Europe/London');
 ob_start();
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 $log_file = __DIR__ . '/logs/safety_errors.log';
 if (!is_dir(__DIR__ . '/logs')) {
@@ -81,16 +83,8 @@ write_log('Action requested', $action);
 
 // Connect to the database using PDO (same as in ajax_attendees.php).
 try {
-    $db_host = '10.35.233.124:3306';
-    $db_name = 'k87747_dabs';
-    $db_user = 'k87747_dabs';
-    $db_pass = 'Subaru5554346';
-    $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
-    $pdo = new PDO($dsn, $db_user, $db_pass, [
-        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::ATTR_EMULATE_PREPARES   => false,
-    ]);
+    require_once __DIR__ . '/includes/db_connect.php';
+    $pdo = connectToDatabase();
     write_log('Database connection successful');
 } catch (PDOException $e) {
     write_log('Database connection error', $e->getMessage());

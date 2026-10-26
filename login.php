@@ -20,7 +20,7 @@ error_reporting(0);
 
 // Start session and include dependencies
 ob_start();
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 require_once 'includes/db_connect.php';
 require_once 'includes/functions.php';
 require_once 'includes/branding.php';
@@ -194,6 +194,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $user = authenticateUser($username, $password);
 
             if ($user) {
+                $project = fetchOne("SELECT id FROM projects WHERE id = ? AND status = 'active'", [$selectedProjectId]);
+                if (!$project) { http_response_code(403); exit('Selected project unavailable.'); }
+                session_regenerate_id(true);
+                unset($_SESSION['csrf_token']);
                 addDebugMessage("Authentication successful for user ID: {$user['id']}");
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
@@ -411,3 +415,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     </script>
 </body>
 </html>
+

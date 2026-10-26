@@ -23,22 +23,17 @@ date_default_timezone_set('Europe/London');
 
 // Session management
 if (session_status() === PHP_SESSION_NONE) session_start();
-$current_project = $_SESSION['current_project'] ?? 1;
+require_once __DIR__ . '/includes/auth.php';
+if (!hasPermission('read')) { http_response_code(401); exit('Sign in to view this project.'); }
+$current_project = (int)$_SESSION['current_project'];
 $current_user = $_SESSION['user_name'] ?? 'irlam';
 
 // Load contractors for dropdown
 $contractors = [];
 $connection_status = 'disconnected';
 try {
-    $db_host = '10.35.233.124';
-    $db_name = 'k87747_dabs';
-    $db_user = 'k87747_dabs';
-    $db_pass = 'Subaru5554346';
-    $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
-    $pdo = new PDO($dsn, $db_user, $db_pass, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-    ]);
+    require_once __DIR__ . '/includes/db_connect.php';
+    $pdo = connectToDatabase();
     $connection_status = 'connected';
     $stmt = $pdo->prepare("SELECT id, name FROM dabs_subcontractors WHERE project_id = ? AND (status = 'Active' OR status IS NULL) ORDER BY name ASC");
     $stmt->execute([$current_project]);
@@ -70,6 +65,8 @@ try {
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+    <meta name="dabs-csrf" content="<?php echo htmlspecialchars(dabsCsrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
+    <script src="js/request-security.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>DABS Activity Schedule</title>

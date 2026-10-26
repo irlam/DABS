@@ -19,7 +19,7 @@
  */
 
 date_default_timezone_set('Europe/London');
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -65,6 +65,8 @@ $branding = getBrandingSettings($pdo);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="dabs-csrf" content="<?php echo htmlspecialchars(dabsCsrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
+    <script src="js/request-security.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($branding['company_name']); ?> - Admin Panel</title>
@@ -488,3 +490,4 @@ $branding = getBrandingSettings($pdo);
 <script src="js/admin-panel.js?v=<?php echo filemtime(__DIR__ . '/js/admin-panel.js'); ?>"></script>
 </body>
 </html>
+

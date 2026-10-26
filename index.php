@@ -22,7 +22,7 @@
  */
 
 date_default_timezone_set('Europe/London');
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -87,38 +87,12 @@ try {
     $stmt = $pdo->prepare("SELECT * FROM projects WHERE id = ?");
     $stmt->execute([$projectID]);
     $projectInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (!$projectInfo) {
-        logError('No project found, creating default project', ['project_id' => $projectID]);
-        $stmt = $pdo->prepare("INSERT INTO projects (id, name, location, manager, start_date, end_date, status) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->execute([
-            $projectID,
-            'Default Construction Project',
-            'Construction Site',
-            $_SESSION['user_name'] ?? 'System Administrator',
-            $currentDateISO,
-            date('Y-m-d', strtotime('+1 year')),
-            'active'
-        ]);
-        $stmt = $pdo->prepare("SELECT * FROM projects WHERE id = ?");
-        $stmt->execute([$projectID]);
-        $projectInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    if (!$projectInfo) {
-        $projectInfo = [
-            'id' => $projectID,
-            'name' => 'Default Project',
-            'location' => 'Construction Site',
-            'manager' => $_SESSION['user_name'] ?? 'System Administrator',
-            'start_date' => $currentDateISO,
-            'end_date' => date('Y-m-d', strtotime('+1 year')),
-            'status' => 'active'
-        ];
-    }
+    if (!$projectInfo) throw new RuntimeException('Project unavailable.');
     // Get today's briefing
     $stmt = $pdo->prepare("SELECT * FROM briefings WHERE project_id = ? AND date = ?");
     $stmt->execute([$projectID, $currentDateISO]);
     $briefingData = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (!$briefingData) {
+    if (!$briefingData && hasPermission('write')) {
         logError('No briefing found for today, creating new briefing', [
             'project_id' => $projectID,
             'date' => $currentDateISO
@@ -184,7 +158,7 @@ try {
     }
     // Load unique work areas from resources.location for this project
     try {
-        $stmt = $pdo->prepare("SELECT DISTINCT location FROM resources WHERE location IS NOT NULL AND location <> '' AND name IS NOT NULL AND project_id = ?");
+        $stmt = $pdo->prepare("SELECT DISTINCT r.location FROM resources r JOIN briefings b ON b.id=r.briefing_id WHERE r.location IS NOT NULL AND r.location <> '' AND r.name IS NOT NULL AND b.project_id = ?");
         $stmt->execute([$projectID]);
         $workAreas = $stmt->fetchAll(PDO::FETCH_COLUMN);
         $workAreas = array_unique(array_filter(array_map('trim', $workAreas)));
@@ -241,6 +215,8 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="dabs-csrf" content="<?php echo htmlspecialchars(dabsCsrfToken(), ENT_QUOTES, 'UTF-8'); ?>">
+    <script src="js/request-security.js"></script>
     <!-- Meta tags for responsive design and character encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1266,3 +1242,4 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- END Modernised DABS index.php (19/11/2025) -->
 </body>
 </html>
+

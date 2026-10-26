@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 /**
  * =========================================================================
  * ajax_resource_stats.php
@@ -19,11 +21,7 @@
 
 date_default_timezone_set('Europe/London');
 
-$db_host = '10.35.233.124';
-$db_name = 'k87747_dabs';
-$db_user = 'k87747_dabs';
-$db_pass = 'Subaru5554346';
-$db_charset = 'utf8mb4';
+require_once __DIR__ . '/includes/db_connect.php';
 
 $project_id = isset($_GET['project_id']) ? intval($_GET['project_id']) : 0;
 if ($project_id < 1) {
@@ -37,10 +35,7 @@ if ($project_id < 1) {
 }
 
 try {
-    $dsn = "mysql:host=$db_host;dbname=$db_name;charset=$db_charset";
-    $pdo = new PDO($dsn, $db_user, $db_pass, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
+    $pdo = connectToDatabase();
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode([

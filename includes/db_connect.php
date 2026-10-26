@@ -16,12 +16,15 @@
 // Set timezone to Europe/London for UK time formatting
 date_default_timezone_set('Europe/London');
 
-// Database Configuration
-$db_host = '10.35.233.124';
-$db_port = 3306;
-$db_name = 'k87747_dabs';
-$db_user = 'k87747_dabs';
-$db_pass = 'Subaru5554346';
+// Credentials belong to private deployment configuration, never source control.
+require_once __DIR__ . '/database_config.php';
+$dabsDatabase = dabsDatabaseConfig();
+$db_host = $dabsDatabase['host'];
+$db_port = $dabsDatabase['port'];
+$db_name = $dabsDatabase['name'];
+$db_user = $dabsDatabase['user'];
+$db_pass = $dabsDatabase['password'];
+unset($dabsDatabase);
 
 // PDO options
 $options = [
@@ -49,14 +52,7 @@ function connectToDatabase() {
         return $pdo;
     } catch (PDOException $e) {
         error_log('[DABS DB ERROR ' . date('d/m/Y H:i:s') . '] Connection failed: ' . $e->getMessage());
-        die(json_encode([
-            'ok' => false,
-            'error' => 'Database connection failed',
-            'error_code' => 'DB_CONNECTION_FAILED',
-            'message' => 'Unable to connect to the database server. Please check configuration.',
-            'timestamp_uk' => date('d/m/Y H:i:s'),
-            'details' => 'Contact system administrator if problem persists'
-        ]));
+        throw new RuntimeException('Database connection unavailable.', 0, $e);
     }
 }
 
@@ -111,4 +107,7 @@ function deleteData($table, $whereClause, $whereParams = []) {
     $stmt->execute($whereParams);
     return $stmt->rowCount();
 }
-?>
+// Dedicated installations carry a marker as well as the PHP auto-prepend.
+if (is_file(dirname(__DIR__) . '/.suite-required') && !defined('DABS_SUITE_ACTIVE')) {
+    require dirname(__DIR__) . '/suite-gate.php';
+}

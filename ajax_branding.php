@@ -1,6 +1,8 @@
 <?php
+require_once __DIR__ . '/includes/auth.php';
+dabsRequireEndpoint(basename(__FILE__));
 date_default_timezone_set('Europe/London');
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 header('Content-Type: application/json; charset=utf-8');
 require_once __DIR__ . '/includes/db_connect.php';
 require_once __DIR__ . '/includes/functions.php';
@@ -45,3 +47,4 @@ try {
 } catch (Throwable $e) {
     brandingResponse(false, $e->getMessage());
 }
+

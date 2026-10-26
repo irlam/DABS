@@ -1,0 +1,7 @@
+# Private configuration, logs, SQL, deployment code and generated reports.
+RewriteEngine On
+RewriteRule ^(?:includes|logs|database|docs|tests|vendor|reports|bin|\.git|\.github)(?:/|$) - [R=404,L,NC]
+RewriteRule (^|/)\.(?:env|user\.ini|htaccess)(?:\.|$) - [R=404,L,NC]
+RewriteRule \.(?:sql|log|zip|bak|ini|sqlite|sqlite3)(?:\.|$) - [R=404,L,NC]
+# Dedicated instance marker is deployment metadata.
+RewriteRule ^\.suite-required$ - [R=404,L,NC]

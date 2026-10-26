@@ -27,7 +27,7 @@
 date_default_timezone_set('Europe/London');
 
 // Start the session (needed to destroy it)
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 
 // Store username before destroying session (for logging)
 $username = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : 'Unknown user';
@@ -68,26 +68,11 @@ write_log("User logged out: $username (ID: $user_id) from IP: $ip_address");
 
 // Add logout action to database activity log if database connection exists
 try {
-    // Check if we have database connection details in a config file
-    if (file_exists('config.php') || file_exists('includes/config.php')) {
-        // Load configuration file that has DB connection details
-        if (file_exists('config.php')) {
-            require_once 'config.php';
-        } else {
-            require_once 'includes/config.php';
-        }
-        
-        // If we have DB connection details defined
-        if (defined('DB_HOST') && defined('DB_USER') && defined('DB_PASS') && defined('DB_NAME')) {
-            // Connect to database
-            $db = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            
-            // Insert logout activity
-            $stmt = $db->prepare("INSERT INTO activity_log (user_id, action, details, ip_address) 
-                                VALUES (?, 'logout', 'User logged out successfully', ?)");
-            $stmt->execute([$user_id, $ip_address]);
-        }
+    require_once __DIR__ . '/includes/db_connect.php';
+    $db = connectToDatabase();
+    if ($user_id > 0) {
+        $stmt = $db->prepare("INSERT INTO activity_log (user_id, action, details, ip_address, timestamp) VALUES (?, 'logout', 'User logged out successfully', ?, NOW())");
+        $stmt->execute([$user_id, $ip_address]);
     }
 } catch (Exception $e) {
     // If there's an error with database logging, just continue with the logout process
@@ -121,7 +106,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
 // Create a clean new session to use for login page (security best practice)
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 session_regenerate_id(true);
 
 // Set logout success message for login page
