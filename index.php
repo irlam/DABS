@@ -929,8 +929,9 @@ if (typeof showNotification !== "function") {
 // Helper: Format date in UK format (DD/MM/YYYY)
 function formatUKDate(iso) {
     if (!iso) return '';
-    const d = new Date(iso);
-    return d.toLocaleDateString('en-GB');
+    // Database dates are calendar days, not UTC instants.
+    const parts = String(iso).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    return parts ? `${parts[3]}/${parts[2]}/${parts[1]}` : '';
 }
 // Escape HTML for security (prevents XSS!)
 function escapeHtml(unsafe) {

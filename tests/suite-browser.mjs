@@ -24,7 +24,7 @@ let browser;
 try {
   const [alpha,beta,viewer]=await Promise.all([server('alpha'),server('beta'),server('alpha','viewer')]);
   browser=await chromium.launch({headless:true,...(process.env.DABS_TEST_CHROMIUM?{executablePath:process.env.DABS_TEST_CHROMIUM,args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader','--single-process','--no-zygote']}: {})});
-  const context=await browser.newContext({viewport:{width:1440,height:1000}});
+  const context=await browser.newContext({viewport:{width:1440,height:1000},timezoneId:'America/Los_Angeles'});
   const external=[];
   await context.route('**/*',async route=>{
     const u=new URL(route.request().url());
@@ -47,6 +47,7 @@ try {
   });
   const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(alpha);
+  assert.equal(await page.evaluate(()=>formatUKDate('2030-04-18')),'18/04/2030','Calendar dates must not shift with browser timezone');
   try {await page.waitForFunction(()=>window.tinymce?.get('safetyEditor')?.initialized&&window.tinymce?.get('notesEditor')?.initialized);}
   catch(e){throw Error('Editor setup failed: '+JSON.stringify(errors)+'; '+(await page.locator('body').innerText()).slice(0,1200));}
   await page.getByRole('navigation',{name:'Construction Suite'}).waitFor();
