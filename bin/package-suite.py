@@ -19,11 +19,16 @@ files += [str(p.relative_to(root)) for p in root.glob('ajax_*.php')]
 files += [str(p.relative_to(root)) for p in (root / 'includes').glob('*.php')
           if p.name in {'auth.php', 'request_policy.php', 'SuiteGateway.php',
                         'db_connect.php', 'database_config.php', 'functions.php',
-                        'branding.php', 'email_config.php'}]
+                        'branding.php', 'email_config.php', 'suite_ui.php'}]
 for directory, suffixes in [('css', {'.css'}), ('js', {'.js'}), ('images', {'.svg'})]:
     files += [str(p.relative_to(root)) for p in (root / directory).rglob('*')
               if p.is_file() and p.suffix in suffixes
               and not any(x.startswith('.') for x in p.relative_to(root).parts)]
+# Self-hosted editor runtime, skins and notices; exclude package metadata/source maps.
+files += [str(p.relative_to(root)) for p in (root / 'assets/vendor/tinymce').rglob('*')
+          if p.is_file() and not p.is_symlink()
+          and (p.suffix in {'.js', '.css', '.woff', '.woff2', '.ttf', '.svg', '.png', '.gif'}
+               or p.name == 'license.txt')]
 files = sorted(set(files))
 manifest = {}
 for name in files:

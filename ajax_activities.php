@@ -108,15 +108,39 @@ if ($action === 'add') {
     $contractors = trim($_POST['contractors'] ?? '');
     $assigned_to = trim($_POST['assigned_to'] ?? '');
     if (empty($title)) send_json(['ok'=>false,'error'=>'Title is required']);
-    if ($briefing_id <= 0) send_json(['ok'=>false,'error'=>'Briefing is required']);
-    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) $date = date('Y-m-d');
+    $parsedDate = DateTimeImmutable::createFromFormat('!Y-m-d', $date);
+    if (!$parsedDate || $parsedDate->format('Y-m-d') !== $date) {
+        http_response_code(422);
+        send_json(['ok'=>false,'error'=>'Invalid activity date']);
+    }
     if (!preg_match('/^\d{2}:\d{2}$/', $time)) $time = '08:00';
     $valid_priorities = ['low','medium','high','critical'];
     if (!in_array($priority, $valid_priorities)) $priority = 'medium';
-    // Verify briefing belongs to project
-    $b = $pdo->prepare("SELECT id FROM briefings WHERE id=? AND project_id=?");
-    $b->execute([$briefing_id, $project_id]);
-    if (!$b->fetch()) send_json(['ok'=>false,'error'=>'Invalid briefing']);
+    // A supplied briefing must match both the current project and selected day.
+    if ($briefing_id > 0) {
+        $b = $pdo->prepare("SELECT id FROM briefings WHERE id=? AND project_id=? AND date=?");
+        $b->execute([$briefing_id, $project_id, $date]);
+        if (!$b->fetch()) {
+            http_response_code(422);
+            send_json(['ok'=>false,'error'=>'Briefing does not match this project and date']);
+        }
+    } else {
+        $b = $pdo->prepare("SELECT id FROM briefings WHERE project_id=? AND date=?");
+        $b->execute([$project_id, $date]);
+        $briefing_id = (int)$b->fetchColumn();
+        if (!$briefing_id) {
+            try {
+                $create = $pdo->prepare("INSERT INTO briefings (project_id,date,overview,safety_info,notes,created_by,last_updated,status) VALUES (?,?,?,'','',?,NOW(),'draft')");
+                $create->execute([$project_id,$date,'Daily briefing for '.$parsedDate->format('d/m/Y'),$user_id]);
+                $briefing_id = (int)$pdo->lastInsertId();
+            } catch (PDOException $error) {
+                // The unique project/date key also handles simultaneous additions.
+                $b->execute([$project_id, $date]);
+                $briefing_id = (int)$b->fetchColumn();
+                if (!$briefing_id) throw $error;
+            }
+        }
+    }
     $sql = "INSERT INTO activities
         (briefing_id, date, time, title, description, area, priority, labor_count, contractors, assigned_to, created_at, updated_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
@@ -149,7 +173,11 @@ if ($action === 'update') {
     if ($id <= 0) send_json(['ok'=>false,'error'=>'Activity ID required']);
     if ($briefing_id <= 0) send_json(['ok'=>false,'error'=>'Briefing is required']);
     if (empty($title)) send_json(['ok'=>false,'error'=>'Title is required']);
-    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) $date = date('Y-m-d');
+    $parsedDate = DateTimeImmutable::createFromFormat('!Y-m-d', $date);
+    if (!$parsedDate || $parsedDate->format('Y-m-d') !== $date) {
+        http_response_code(422);
+        send_json(['ok'=>false,'error'=>'Invalid activity date']);
+    }
     if (!preg_match('/^\d{2}:\d{2}$/', $time)) $time = '08:00';
     $valid_priorities = ['low','medium','high','critical'];
     if (!in_array($priority, $valid_priorities)) $priority = 'medium';
@@ -160,8 +188,8 @@ if ($action === 'update') {
     if (!$stmt->fetch()) send_json(['ok'=>false,'error'=>'Not found or access denied (activity/project mismatch)']);
 
     // Check new briefing belongs to project
-    $b = $pdo->prepare("SELECT id FROM briefings WHERE id=? AND project_id=?");
-    $b->execute([$briefing_id, $project_id]);
+    $b = $pdo->prepare("SELECT id FROM briefings WHERE id=? AND project_id=? AND date=?");
+    $b->execute([$briefing_id, $project_id, $date]);
     if (!$b->fetch()) send_json(['ok'=>false,'error'=>'Invalid briefing for this project']);
 
     // Update
