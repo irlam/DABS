@@ -1072,6 +1072,8 @@ function setupContractorsDropdown(selected) {
 // ========== ACTIVITY MODAL: ADD/EDIT/DELETE ==========
 function openActivityModal(mode, activity = {}) {
     document.getElementById('activityId').value = activity.id || '';
+    // New records resolve their briefing on the server from the selected date.
+    document.getElementById('activityBriefingId').value = mode === 'edit' ? activity.briefing_id : '0';
     document.getElementById('activityFormDate').value = activity.date || document.getElementById('activityDate').value;
     document.getElementById('activityTitle').value = activity.title || '';
     document.getElementById('activityTime').value = activity.time || '08:00';

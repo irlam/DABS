@@ -35,6 +35,9 @@ try {
     require_once __DIR__ . '/includes/db_connect.php';
     $pdo = connectToDatabase();
     $connection_status = 'connected';
+    $projectStatement = $pdo->prepare('SELECT name FROM projects WHERE id=?');
+    $projectStatement->execute([$current_project]);
+    $projectInfo = ['name'=>(string)$projectStatement->fetchColumn()];
     $stmt = $pdo->prepare("SELECT id, name FROM dabs_subcontractors WHERE project_id = ? AND (status = 'Active' OR status IS NULL) ORDER BY name ASC");
     $stmt->execute([$current_project]);
     $contractors = $stmt->fetchAll();
@@ -81,15 +84,15 @@ if (!defined('DABS_SUITE_ACTIVE')) echo dabsSuiteNavigation($_SESSION, false, (s
 <?php if ($connection_status !== 'connected'): ?>
     <div class="alert alert-danger text-center">DB Connection Issue</div>
 <?php endif; ?>
-<div class="container-fluid py-4">
+<div class="container-fluid py-4" id="dabs-workspace" tabindex="-1">
     <!-- Page Header -->
     <div class="page-header d-flex flex-wrap align-items-center justify-content-between gap-3">
         <div class="d-flex align-items-center gap-3">
             <h1 class="mb-0 h2"><i class="fas fa-calendar-alt me-3"></i>Activity Schedule</h1>
             <div class="d-flex flex-column">
                 <span class="badge bg-light text-dark fs-6 uk-date" id="todayDate"></span>
-                <small class="text-light opacity-75">
-                    DVN - Rochdale Road | User: <?php echo htmlspecialchars($current_user); ?>
+                <small class="text-dark">
+                    <?php echo htmlspecialchars($projectInfo['name'] ?? 'Current project', ENT_QUOTES, 'UTF-8'); ?> | User: <?php echo htmlspecialchars($current_user); ?>
                 </small>
             </div>
         </div>
@@ -100,7 +103,7 @@ if (!defined('DABS_SUITE_ACTIVE')) echo dabsSuiteNavigation($_SESSION, false, (s
                 <i class="fas fa-plus me-2"></i>Add Activity
             </button>
             <div class="date-input-wrap">
-                <label for="activityDate" class="form-label mb-1 text-white">
+                <label for="activityDate" class="form-label mb-1 text-dark">
                     <i class="fa-solid fa-calendar-days me-1"></i>View Date:
                 </label>
                 <input type="date" id="activityDate" class="form-control">
@@ -355,7 +358,7 @@ function openModalInAddMode() {
     document.getElementById('submitBtn').className = 'btn btn-primary';
     document.getElementById('deleteActivityBtn').classList.add('d-none');
     resetForm();
-    populateBriefingsDropdown(BRIEFINGS_TODAY, true);
+    populateBriefingsDropdown(BRIEFINGS_ALL.filter(b => b.date === CURRENT_DATE), true);
     activityModal.show();
 }
 function openModalInEditMode(id) {
@@ -388,7 +391,7 @@ function resetForm() {
 }
 function populateBriefingsDropdown(briefings, isAdd, selectedId) {
     const select = document.getElementById('activity-briefing_id');
-    select.innerHTML = `<option value="" disabled selected>Select briefing...</option>`;
+    select.innerHTML = isAdd ? '<option value="0" selected>Use the selected date’s briefing (create if needed)</option>' : '<option value="" disabled selected>Select briefing...</option>';
     (briefings||[]).forEach(briefing => {
         const opt = document.createElement('option');
         opt.value = briefing.id;
@@ -449,7 +452,7 @@ function handleFormSubmission(e) {
             const activity = CURRENT_ACTIVITIES.find(a => a.id == editingActivityId);
             if (activity && activity.date) formData.set('date', activity.date);
         } else {
-            formData.set('date', getTodayISO());
+            formData.set('date', CURRENT_DATE);
         }
 
         // contractors field

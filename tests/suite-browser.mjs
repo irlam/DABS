@@ -58,6 +58,38 @@ try {
   await page.locator('#addActivityBtn').click();await page.locator('#activityModal').waitFor({state:'visible'});
   assert(await page.locator('#activityContractors.select2-hidden-accessible').count());
   await page.locator('#activityModal .btn-close').click();await page.locator('#activityModal').waitFor({state:'hidden'});
+  // A future activity must belong to that day's briefing, including after editing.
+  const selectedDay='2030-04-18';
+  await page.locator('#activityDate').fill(selectedDay);
+  await page.locator('#activityDate').dispatchEvent('change');
+  await page.locator('#addActivityBtn').click();
+  await page.locator('#activityModal').waitFor({state:'visible'});
+  assert.equal(await page.locator('#activityBriefingId').inputValue(),'0');
+  await page.locator('#activityTitle').fill('TEST future report assignment');
+  const createdResponse=page.waitForResponse(r=>r.url().includes('/ajax_activities.php')&&r.request().method()==='POST');
+  await page.locator('#activityForm button[type="submit"]').click();
+  const created=await (await createdResponse).json();assert.equal(created.ok,true);
+  const activityResult=await page.evaluate(async({id,date})=>{
+    const read=await (await fetch('ajax_activities.php?action=get&id='+id)).json();
+    const csrf=document.querySelector('meta[name="dabs-csrf"]').content;
+    const post=async values=>{const r=await fetch('ajax_activities.php',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','X-DABS-CSRF':csrf},body:new URLSearchParams(values)});return {status:r.status,body:await r.json()};};
+    const mismatch=await post({action:'add',briefing_id:'1',date,title:'TEST mismatched briefing'});
+    const edited=await post({action:'update',id,briefing_id:read.activity.briefing_id,date,title:'TEST future edited'});
+    const invalidDate=await post({action:'add',briefing_id:'0',date:'2030-02-31',title:'TEST invalid date'});
+    return {read,mismatch,edited,invalidDate};
+  },{id:created.id,date:selectedDay});
+  assert.notEqual(Number(activityResult.read.activity.briefing_id),1);
+  assert.equal(activityResult.read.activity.date,selectedDay);
+  assert.equal(activityResult.mismatch.status,422);
+  assert.equal(activityResult.mismatch.body.ok,false);
+  assert.equal(activityResult.edited.body.ok,true);
+  assert.equal(activityResult.invalidDate.status,422);
+  // Exercise the separate schedule's project context and keyboard target too.
+  const schedule=await context.newPage();await schedule.goto(alpha+'/activity_schedule_tabs.php');
+  assert((await schedule.locator('.page-header').innerText()).includes('TEST Riverside Training Project'));
+  assert.equal(await schedule.locator('#dabs-workspace[tabindex="-1"]').count(),1);
+  await schedule.close();
+  await page.reload();
   await page.locator('#editSafetyBtn').click();
   await page.evaluate(()=>tinymce.get('safetyEditor').setContent('<p>TEST Alpha briefing saved in browser.</p>'));
   const saved=page.waitForResponse(r=>r.url().includes('/ajax_safety.php')&&r.request().method()==='POST');
