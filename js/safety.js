@@ -24,12 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const safetyLoading = document.getElementById('safetyLoading');
 
     // Initialize TinyMCE on the safety editor textarea with a full menu bar and explicit white background.
-    tinymce.init({
+    if (typeof tinymce !== 'undefined') tinymce.init({
         selector: '#safetyEditor',
         height: 300,
         // Enable full menu bar (this makes options like File, Edit, View, etc. visible)
         menubar: 'file edit view insert format tools table help',
-        api_key: 'cx3e21j3t5yv0ukx72zuh02xf9o75o3bgencxrbbzmad1p5c',
         plugins: [
             'advlist autolink lists link image charmap',
             'searchreplace visualblocks code',
@@ -64,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     loadSafetyContent();
+    document.getElementById('safetyEditor').addEventListener('input', function () { safetyState.hasChanges = true; });
 
     // When the "Edit Safety Info" button is clicked, switch to edit mode.
     editSafetyBtn.addEventListener('click', function () {
@@ -73,9 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
         safetyEditContainer.style.display = 'block';
 
         // Load the current safety content into the TinyMCE editor.
-        if (tinymce.get('safetyEditor')) {
+        if (typeof tinymce !== 'undefined' && tinymce.get('safetyEditor')) {
             tinymce.get('safetyEditor').setContent(safetyState.content);
             tinymce.get('safetyEditor').focus();
+        } else {
+            document.getElementById('safetyEditor').value = safetyState.content;
+            document.getElementById('safetyEditor').focus();
         }
         safetyState.isEditing = true;
         safetyState.hasChanges = false;
@@ -96,8 +99,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // When the "Save" button is clicked, send updated safety content via AJAX.
     saveSafetyBtn.addEventListener('click', function () {
         let updatedSafety = '';
-        if (tinymce.get('safetyEditor')) {
+        if (typeof tinymce !== 'undefined' && tinymce.get('safetyEditor')) {
             updatedSafety = tinymce.get('safetyEditor').getContent();
+        } else {
+            updatedSafety = document.getElementById('safetyEditor').value;
         }
         
         // Display loading indicator.
@@ -122,6 +127,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Update the read-only content and UI state.
                 safetyState.content = updatedSafety;
                 safetyContent.innerHTML = updatedSafety;
+                safetyEditContainer.style.display = 'none';
+                safetyContent.style.display = 'block';
+                safetyState.isEditing = false;
+                safetyState.hasChanges = false;
                 if (typeof showNotification === 'function') {
                     showNotification('Safety Information updated successfully.', 'success');
                 }
@@ -140,9 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .finally(() => {
             safetyLoading.style.display = 'none';
-            safetyEditContainer.style.display = 'none';
-            safetyContent.style.display = 'block';
-            safetyState.isEditing = false;
         });
     });
 });

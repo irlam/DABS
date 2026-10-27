@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 menubar: false,
                 
                 // Your TinyMCE premium API key
-                api_key: 'cx3e21j3t5yv0ukx72zuh02xf9o75o3bgencxrbbzmad1p5c',
                 
                 // Enable useful features
                 plugins: [

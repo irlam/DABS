@@ -531,6 +531,9 @@ function showNotification(message, type = 'info') {
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
+    loadBrandingSettings();
+    document.getElementById('brandingForm').addEventListener('submit', saveBrandingSettings);
+    if (document.body.dataset.suiteManaged === '1') return;
     // Load users on page load
     loadUsers();
     
@@ -539,7 +542,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load email settings
     loadEmailSettings();
-    loadBrandingSettings();
     
     // User management event listeners
     document.getElementById('addUserBtn').addEventListener('click', showAddUserModal);
@@ -554,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('smtpAuth').addEventListener('change', toggleSmtpAuth);
     document.getElementById('saveEmailConfigBtn').addEventListener('click', saveEmailSettings);
     document.getElementById('sendTestEmailBtn').addEventListener('click', testEmail);
-    document.getElementById('brandingForm').addEventListener('submit', saveBrandingSettings);
+
 });
 
 const brandingOptions = {

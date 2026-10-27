@@ -37,7 +37,7 @@ function companyLogoUrl(?array $branding = null, bool $dark = false): string {
     $branding = $branding ?: getBrandingSettings();
     $preferred = $dark && !empty($branding['company_logo_dark'])
         ? $branding['company_logo_dark'] : $branding['company_logo'];
-    return brandingAssetUrl((string)$preferred, 'images/logo.png');
+    return brandingAssetUrl((string)$preferred, 'images/suite-dabs.svg');
 }
 
 function saveUploadedLogo(array $file, string $category, string $prefix): string {

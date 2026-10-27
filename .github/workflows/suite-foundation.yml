@@ -29,10 +29,26 @@ jobs:
         run: php tests/endpoint-rejection.php
       - name: Browser CSRF transport
         run: node tests/request-security.mjs
+      - name: Suite navigation and editor resilience
+        run: |
+          php tests/suite-ui.php
+          node tests/safety-editor.mjs
       - name: Dedicated Suite binding, sessions, roles and private configuration
         run: php tests/suite-gateway.php
       - name: Hosting warnings fail closed over HTTP
         run: php tests/gateway-bootstrap.php
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Suite desktop/mobile browser and disposable company fixtures
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+          npm run test:browser
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dabs-suite-ui-previews
+          path: test-output/
       - name: Clean deployment code package
         run: python3 bin/package-suite.py
       - uses: actions/upload-artifact@v4

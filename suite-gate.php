@@ -61,11 +61,12 @@ try {
     }
     if (!str_starts_with($path,'/ajax_') && $path!=='/email_briefing.php' && !in_array($_SERVER['REQUEST_METHOD']??'',['GET','HEAD'],true)) { http_response_code(405); exit; }
     $GLOBALS['dabs_suite_binding']=$b;
-    ob_start(static function(string $html): string {
+    require_once __DIR__ . '/includes/suite_ui.php';
+    $projectName=(string)$db->query('SELECT name FROM projects WHERE id='.(int)$b['local_project_id'])->fetchColumn();
+    ob_start(static function(string $html) use ($projectName): string {
         if (!preg_match('/<body\b/i',$html)) return $html;
-        $token=htmlspecialchars((string)($_SESSION['csrf_token']??''),ENT_QUOTES,'UTF-8');
-        $bar='<div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;padding:12px;background:#0b1220;color:white"><a style="color:#52c8e8" href="https://suite.defecttracker.uk/">Construction Suite</a><span>Project controlled access</span><form method="post" action="/logout.php"><input type="hidden" name="csrf_token" value="'.$token.'"><button type="submit">Sign out of DABS</button></form></div>';
-        return preg_replace('/(<body\b[^>]*>)/i','$1'.$bar,$html,1)??$html;
+        $bar=dabsSuiteNavigation($_SESSION,true,$projectName);
+        return preg_replace_callback('/<body\b[^>]*>/i',static fn(array $m): string => $m[0].$bar,$html,1)??$html;
     });
 } catch(Throwable $e) {
     error_log('[DABS Suite gate] failed phase: '.$gatePhase);

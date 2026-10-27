@@ -41,7 +41,8 @@ if (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin') {
     die('<!DOCTYPE html>
     <html><head><title>Access Denied</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head><body class="bg-light">
+        <link rel="stylesheet" href="css/suite-theme.css?v=20261027">
+</head><body class="bg-light">
     <div class="container mt-5">
         <div class="alert alert-danger">
             <h4><i class="fas fa-exclamation-triangle me-2"></i>Access Denied</h4>
@@ -117,10 +118,13 @@ $branding = getBrandingSettings($pdo);
             border-radius: 5px;
         }
     </style>
+    <link rel="stylesheet" href="css/suite-theme.css?v=20261027">
 </head>
-<body>
+<body data-suite-managed="<?= defined('DABS_SUITE_ACTIVE') ? '1' : '0' ?>">
+<?php require_once __DIR__ . '/includes/suite_ui.php';
+if (!defined('DABS_SUITE_ACTIVE')) echo dabsSuiteNavigation($_SESSION, false, (string)($projectInfo['name'] ?? 'Daily activity briefings')); ?>
 <div class="admin-panel">
-    <div class="container-fluid">
+    <div class="container-fluid" id="dabs-workspace" tabindex="-1">
         <!-- Header -->
         <div class="admin-header">
             <div class="d-flex justify-content-between align-items-center">
@@ -147,6 +151,7 @@ $branding = getBrandingSettings($pdo);
 
         <!-- Tabs Navigation -->
         <ul class="nav nav-tabs mb-4" id="adminTabs" role="tablist">
+            <?php if (!defined('DABS_SUITE_ACTIVE')): ?>
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" 
                         type="button" role="tab">
@@ -165,8 +170,9 @@ $branding = getBrandingSettings($pdo);
                     <i class="fas fa-envelope me-2"></i>Email Settings
                 </button>
             </li>
+            <?php endif; ?>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding" type="button" role="tab">
+                <button class="nav-link<?= defined('DABS_SUITE_ACTIVE') ? ' active' : '' ?>" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding" type="button" role="tab">
                     <i class="fas fa-palette me-2"></i>Branding
                 </button>
             </li>
@@ -174,6 +180,7 @@ $branding = getBrandingSettings($pdo);
 
         <!-- Tab Content -->
         <div class="tab-content" id="adminTabContent">
+            <?php if (!defined('DABS_SUITE_ACTIVE')): ?>
             <!-- User Management Tab -->
             <div class="tab-pane fade show active" id="users" role="tabpanel">
                 <div class="card admin-card">
@@ -229,7 +236,8 @@ $branding = getBrandingSettings($pdo);
             </div>
 
             <!-- Branding Tab -->
-            <div class="tab-pane fade" id="branding" role="tabpanel">
+            <?php endif; ?>
+            <div class="tab-pane fade<?= defined('DABS_SUITE_ACTIVE') ? ' show active' : '' ?>" id="branding" role="tabpanel">
                 <div class="card admin-card">
                     <div class="card-header bg-primary text-white"><h5 class="mb-0"><i class="fas fa-palette me-2"></i>Company Branding</h5></div>
                     <div class="card-body">
@@ -257,6 +265,7 @@ $branding = getBrandingSettings($pdo);
                 </div>
             </div>
 
+            <?php if (!defined('DABS_SUITE_ACTIVE')): ?>
             <!-- Email Settings Tab -->
             <div class="tab-pane fade" id="email" role="tabpanel">
                 <div class="card admin-card">
@@ -436,10 +445,12 @@ $branding = getBrandingSettings($pdo);
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>
 
+<?php if (!defined('DABS_SUITE_ACTIVE')): ?>
 <!-- Add/Edit User Modal -->
 <div class="modal fade" id="userModal" tabindex="-1">
     <div class="modal-dialog">
@@ -486,6 +497,7 @@ $branding = getBrandingSettings($pdo);
     </div>
 </div>
 
+<?php endif; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/admin-panel.js?v=<?php echo filemtime(__DIR__ . '/js/admin-panel.js'); ?>"></script>
 </body>

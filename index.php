@@ -46,7 +46,8 @@ try {
     die('<!DOCTYPE html>
     <html><head><title>DABS System Error</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head><body class="bg-light">
+        <link rel="stylesheet" href="css/suite-theme.css?v=20261027">
+</head><body class="bg-light">
     <div class="container mt-5">
         <div class="alert alert-danger">
             <h4><i class="fas fa-exclamation-triangle me-2"></i>System Error</h4>
@@ -228,12 +229,16 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.tiny.cloud/1/cx3e21j3t5yv0ukx72zuh02xf9o75o3bgencxrbbzmad1p5c/tinymce/5/tinymce.min.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <link rel="stylesheet" href="css/suite-theme.css?v=20261027">
 </head>
 <body data-show-subcontractor-logos="<?php echo $branding['show_subcontractor_logos'] ? '1' : '0'; ?>">
+<?php require_once __DIR__ . '/includes/suite_ui.php';
+if (!defined('DABS_SUITE_ACTIVE')) echo dabsSuiteNavigation($_SESSION, false, (string)($projectInfo['name'] ?? 'Daily activity briefings')); ?>
 <!-- Main Title Bar and Notification Area -->
 <div class="main-title-bar">
-    <h1><i class="fas fa-clipboard-list me-3"></i>Daily Activity Briefing System</h1>
+    <h1><i class="fas fa-clipboard-list me-3"></i>Daily activity briefings</h1>
+    <p>Plan the day. Coordinate your teams. Keep everyone informed.</p>
 </div>
 <div id="notificationArea"></div>
 <?php if (!empty($systemErrors)): ?>
@@ -250,7 +255,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
 <?php endif; ?>
 <!-- Debug Console removed for cleaner interface -->
 <!-- Main Dashboard Container -->
-<div class="container-fluid dashboard">
+<div class="container-fluid dashboard" id="dabs-workspace" tabindex="-1">
     <!-- Header Section: Logo | Date/Project | Controls -->
     <header class="mb-4">
         <div class="row align-items-center">
@@ -299,9 +304,11 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                             <i class="fas fa-sync-alt me-2"></i>Refresh Page
                         </a></li>
                         <li><hr class="dropdown-divider"></li>
+                        <?php if (!defined('DABS_SUITE_ACTIVE')): ?>
                         <li><a class="dropdown-item text-danger" href="logout.php">
                             <i class="fas fa-sign-out-alt me-2"></i>Logout
                         </a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
@@ -718,7 +725,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
                 <div class="modal-body">
                     <input type="hidden" id="activityId" name="id" value="">
                     <input type="hidden" id="activityBriefingId" name="briefing_id" value="<?php echo isset($briefingData['id']) ? $briefingData['id'] : '0'; ?>">
-                    <input type="hidden" id="activityDate" name="date" value="<?php echo $currentDateISO; ?>">
+                    <input type="hidden" id="activityFormDate" name="date" value="<?php echo $currentDateISO; ?>">
                     <div class="row mb-2">
                         <div class="col-md-12 mb-2">
                             <label for="activityTitle" class="form-label">
@@ -854,7 +861,7 @@ $jsWorkAreas = json_encode($workAreas, JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|J
 </div>
 
 	<!-- SCRIPTS: Bootstrap, Libraries, Global Variables -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
 <script>
@@ -862,8 +869,8 @@ window.CURRENT_BRIEFING_ID = <?php echo isset($briefingData['id']) ? $briefingDa
 window.CURRENT_PROJECT_ID = <?php echo $projectID; ?>;
 window.CURRENT_DATE = '<?php echo $currentDateISO; ?>';
 window.CURRENT_DATE_UK = '<?php echo $currentDate; ?>';
-window.username = '<?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Unknown'); ?>';
-window.userRole = 'System Administrator';
+window.username = <?php echo json_encode((string)($_SESSION['user_name'] ?? 'Unknown'), JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|JSON_HEX_QUOT); ?>;
+window.userRole = <?php echo json_encode((string)($_SESSION['user_role'] ?? 'viewer'), JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_AMP|JSON_HEX_QUOT); ?>;
 window.briefingData = {
     id: <?php echo isset($briefingData['id']) ? $briefingData['id'] : '0'; ?>,
     project_id: <?php echo $projectID; ?>,
@@ -1065,6 +1072,7 @@ function setupContractorsDropdown(selected) {
 // ========== ACTIVITY MODAL: ADD/EDIT/DELETE ==========
 function openActivityModal(mode, activity = {}) {
     document.getElementById('activityId').value = activity.id || '';
+    document.getElementById('activityFormDate').value = activity.date || document.getElementById('activityDate').value;
     document.getElementById('activityTitle').value = activity.title || '';
     document.getElementById('activityTime').value = activity.time || '08:00';
     document.getElementById('activityPriority').value = activity.priority || 'medium';

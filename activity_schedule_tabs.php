@@ -73,8 +73,11 @@ try {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/suite-theme.css?v=20261027">
 </head>
 <body>
+<?php require_once __DIR__ . '/includes/suite_ui.php';
+if (!defined('DABS_SUITE_ACTIVE')) echo dabsSuiteNavigation($_SESSION, false, (string)($projectInfo['name'] ?? 'Daily activity briefings')); ?>
 <?php if ($connection_status !== 'connected'): ?>
     <div class="alert alert-danger text-center">DB Connection Issue</div>
 <?php endif; ?>

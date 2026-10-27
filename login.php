@@ -118,7 +118,8 @@ function sendPasswordResetEmail($email, $name, $resetLink) {
     $subject = 'DABS Password Reset Request';
     $ukDateTime = date('d/m/Y H:i:s');
     $message = '<html>
-    <head><style>body{font-family:Arial,sans-serif;}</style></head>
+    <head><style>body{font-family:Arial,sans-serif;}</style>    <link rel="stylesheet" href="css/suite-theme.css?v=20261027">
+</head>
     <body>
     <h2>Password Reset Request</h2>
     <p>Hello '.htmlspecialchars($name).',</p>
@@ -293,9 +294,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/suite-theme.css?v=20261027">
 </head>
 <body class="login-page-main">
     <div class="login-container">
+        <p><a href="https://suite.defecttracker.uk/">← Back to Construction Suite</a></p>
         <div class="system-title-top">Daily Activity Briefing System</div>
         <div class="logo-container">
             <?php if ($branding['show_login']): ?><img src="<?php echo htmlspecialchars(companyLogoUrl($branding)); ?>" alt="<?php echo htmlspecialchars($branding['company_name']); ?> logo" class="logo"><?php endif; ?>
